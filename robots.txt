@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://srcresco.github.io/SR-CRESCO/sitemap.xml
