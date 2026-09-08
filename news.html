@@ -6,7 +6,7 @@
 
 <title>SR CRESCO | Agriculture News & Farming Updates</title>
 
-<meta name="description" content="Latest agriculture news, farming updates, market information, technology and useful information for farmers from SR CRESCO.">
+<meta name="description" content="Latest agriculture news, farming updates, market information, agricultural technology and useful information for farmers from SR CRESCO.">
 
 <meta name="keywords" content="SR CRESCO agriculture news, farming news, agriculture updates, farmer news, Karnataka agriculture, smart farming">
 
@@ -15,7 +15,14 @@
 
 <link rel="canonical" href="https://srcresco.github.io/SR-CRESCO/news.html">
 
+<meta property="og:title" content="SR CRESCO | Agriculture News">
+<meta property="og:description" content="Latest agriculture news, farming updates and smart agriculture information.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://srcresco.github.io/SR-CRESCO/news.html">
+<meta property="og:image" content="https://srcresco.github.io/SR-CRESCO/logo.png">
+
 <style>
+
 *{
     box-sizing:border-box;
 }
@@ -72,6 +79,7 @@ nav a{
 
 .hero p{
     font-size:18px;
+    margin-bottom:0;
 }
 
 section{
@@ -89,35 +97,54 @@ h2{
 .news-card{
     background:white;
     padding:28px;
-    margin-bottom:22px;
+    margin-bottom:24px;
     border-radius:18px;
     box-shadow:0 5px 18px #0001;
 }
 
 .news-card h3{
     color:#176b35;
-    margin-top:0;
+    margin-top:8px;
+    line-height:1.4;
 }
 
 .news-date{
     font-size:14px;
     font-weight:bold;
     color:#777;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .news-card p{
     line-height:1.7;
 }
 
-.btn{
+.share-btn{
     display:inline-block;
     background:#176b35;
+    color:white;
+    border:none;
+    padding:11px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    margin-top:12px;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.share-btn:hover{
+    opacity:0.9;
+}
+
+.back-btn{
+    display:inline-block;
+    background:#123d25;
     color:white;
     padding:11px 20px;
     border-radius:25px;
     text-decoration:none;
-    margin-top:10px;
+    font-weight:bold;
 }
 
 footer{
@@ -128,6 +155,7 @@ footer{
 }
 
 @media(max-width:700px){
+
     nav{
         padding:10px 4%;
     }
@@ -139,11 +167,18 @@ footer{
     .hero h1{
         font-size:32px;
     }
+
+    .news-card{
+        padding:22px;
+    }
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -163,9 +198,15 @@ footer{
 </nav>
 
 
+<!-- HERO -->
+
 <header class="hero">
 
-    <img class="hero-logo" src="logo.png" alt="SR CRESCO Logo">
+    <img
+        class="hero-logo"
+        src="logo.png"
+        alt="SR CRESCO Logo"
+    >
 
     <h1>🌱 Agriculture News</h1>
 
@@ -177,12 +218,14 @@ footer{
 </header>
 
 
+<!-- NEWS -->
+
 <section>
 
     <h2>📰 Latest Agriculture Updates</h2>
 
 
-    <!-- 8 September 2026 -->
+    <!-- 8 SEPTEMBER 2026 -->
 
     <article class="news-card">
 
@@ -213,8 +256,18 @@ footer{
             official guidelines before submitting new applications.
         </p>
 
+        <button class="share-btn"
+            onclick="shareNews(
+            'National Horticulture Board Subsidy Applications Temporarily Suspended',
+            'The National Horticulture Board has temporarily suspended fresh applications under two horticulture-related schemes for one month from September 4, 2026.'
+            )">
+            📤 Share News
+        </button>
+
     </article>
 
+
+    <!-- AI AGRICULTURE -->
 
     <article class="news-card">
 
@@ -243,8 +296,18 @@ footer{
             information and better resource management.
         </p>
 
+        <button class="share-btn"
+            onclick="shareNews(
+            'AI and Agriculture: Technology Supporting Smarter Farming',
+            'Artificial intelligence and satellite data are being explored to support smarter agricultural decision-making, crop monitoring and resource management.'
+            )">
+            📤 Share News
+        </button>
+
     </article>
 
+
+    <!-- PULSES -->
 
     <article class="news-card">
 
@@ -273,8 +336,18 @@ footer{
             food entrepreneurs and rural businesses.
         </p>
 
+        <button class="share-btn"
+            onclick="shareNews(
+            'Value Addition Creates New Opportunities for Pulses',
+            'Agricultural innovation is creating new opportunities to add value to locally produced pulses and develop higher-value food products.'
+            )">
+            📤 Share News
+        </button>
+
     </article>
 
+
+    <!-- ICAR TRAINING -->
 
     <article class="news-card">
 
@@ -298,10 +371,18 @@ footer{
             propagation techniques.
         </p>
 
+        <button class="share-btn"
+            onclick="shareNews(
+            'ICAR Training Focuses on Nursery Management and Grafting',
+            'ICAR-IIVR in Varanasi has started hands-on training focused on nursery management and grafting techniques in vegetable crops.'
+            )">
+            📤 Share News
+        </button>
+
     </article>
 
 
-    <!-- 7 September 2026 -->
+    <!-- 7 SEPTEMBER 2026 -->
 
     <article class="news-card">
 
@@ -325,10 +406,18 @@ footer{
             innovation and sustainable agriculture.
         </p>
 
+        <button class="share-btn"
+            onclick="shareNews(
+            'National Conference on Natural Farming 2026',
+            'The National Conference on Natural Farming 2026 is scheduled from September 9 to 11 in Meghalaya.'
+            )">
+            📤 Share News
+        </button>
+
     </article>
 
 
-    <!-- 6 September 2026 -->
+    <!-- 6 SEPTEMBER 2026 -->
 
     <article class="news-card">
 
@@ -357,12 +446,22 @@ footer{
             decisions.
         </p>
 
+        <button class="share-btn"
+            onclick="shareNews(
+            'Satellite Technology Supporting Modern Agriculture',
+            'Satellite-based monitoring can help observe crop conditions, vegetation, water resources and agricultural land.'
+            )">
+            📤 Share News
+        </button>
+
     </article>
 
 
+    <!-- BACK TO HOME -->
+
     <div style="text-align:center; margin-top:35px;">
 
-        <a class="btn" href="index.html">
+        <a class="back-btn" href="index.html">
             ← Back to SR CRESCO
         </a>
 
@@ -370,6 +469,8 @@ footer{
 
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -390,6 +491,53 @@ footer{
     </p>
 
 </footer>
+
+
+<!-- SHARE SCRIPT -->
+
+<script>
+
+function shareNews(title, description){
+
+    const website =
+        "https://srcresco.github.io/SR-CRESCO/news.html";
+
+    const shareText =
+        "🌱 SR CRESCO | Agriculture News\n\n" +
+        "📰 " + title + "\n\n" +
+        description + "\n\n" +
+        "Read more at SR CRESCO:\n" +
+        website;
+
+
+    if(navigator.share){
+
+        navigator.share({
+
+            title: "SR CRESCO | " + title,
+
+            text: shareText,
+
+            url: website
+
+        }).catch(() => {});
+
+    }else{
+
+        const whatsappURL =
+            "https://wa.me/?text=" +
+            encodeURIComponent(shareText);
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
