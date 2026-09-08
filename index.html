@@ -405,5 +405,27 @@ in Karnataka, India.
     <p>© 2026 SR CRESCO. All Rights Reserved.</p>
 </footer>
 
+<script>
+function shareNews() {
+    const shareText =
+        "🌱 SR CRESCO | Agriculture News\n\n" +
+        "Latest agriculture news and updates from SR CRESCO.\n\n" +
+        "Visit SR CRESCO:\n" +
+        "https://srcresco.github.io/SR-CRESCO/";
+
+    if (navigator.share) {
+        navigator.share({
+            title: "SR CRESCO | Agriculture News",
+            text: shareText
+        }).catch(() => {});
+    } else {
+        window.open(
+            "https://wa.me/?text=" + encodeURIComponent(shareText),
+            "_blank"
+        );
+    }
+}
+</script>
+
 </body>
   </html>
