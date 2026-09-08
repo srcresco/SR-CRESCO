@@ -4,537 +4,585 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SR CRESCO | Agriculture News & Farming Updates</title>
+<title>SR CRESCO | Agriculture News</title>
 
-<meta name="description" content="Latest agriculture news, farming updates, market information, agricultural technology and useful information for farmers from SR CRESCO.">
-
-<meta name="keywords" content="SR CRESCO agriculture news, farming news, agriculture updates, farmer news, Karnataka agriculture, smart farming">
-
-<meta name="author" content="Subhash V S">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://srcresco.github.io/SR-CRESCO/news.html">
-
-<meta property="og:title" content="SR CRESCO | Agriculture News">
-<meta property="og:description" content="Latest agriculture news, farming updates and smart agriculture information.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://srcresco.github.io/SR-CRESCO/news.html">
-<meta property="og:image" content="https://srcresco.github.io/SR-CRESCO/logo.png">
+<meta name="description"
+content="SR CRESCO Agriculture News – Latest farming news, technology, market updates, natural farming and useful information for farmers.">
 
 <style>
-
 *{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f7f3;
-    color:#18351f;
-}
-
-nav{
-    background:#123d25;
-    padding:12px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:sticky;
-    top:0;
-    z-index:10;
-}
-
-nav img{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:18px;
-    font-size:14px;
-}
-
-.hero{
-    background:linear-gradient(135deg,#123d25,#2f7044);
-    color:white;
-    text-align:center;
-    padding:55px 20px;
-}
-
-.hero-logo{
-    width:min(180px,60vw);
-    max-height:140px;
-    object-fit:contain;
-    margin-bottom:10px;
-}
-
-.hero h1{
-    font-size:38px;
-    margin:8px 0;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:0;
-}
-
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:45px 20px;
-}
-
-h2{
-    text-align:center;
-    font-size:30px;
-    margin-bottom:30px;
-}
-
-.news-card{
-    background:white;
-    padding:28px;
-    margin-bottom:24px;
-    border-radius:18px;
-    box-shadow:0 5px 18px #0001;
-}
-
-.news-card h3{
-    color:#176b35;
-    margin-top:8px;
-    line-height:1.4;
-}
-
-.news-date{
-    font-size:14px;
-    font-weight:bold;
-    color:#777;
-    margin-bottom:12px;
-}
-
-.news-card p{
+    font-family:Arial, sans-serif;
+    background:#f4f8f3;
+    color:#222;
     line-height:1.7;
 }
 
-.share-btn{
-    display:inline-block;
-    background:#176b35;
+header{
+    background:#166534;
     color:white;
-    border:none;
-    padding:11px 20px;
-    border-radius:25px;
+    text-align:center;
+    padding:25px 15px;
+}
+
+header h1{
+    font-size:30px;
+}
+
+header p{
+    margin-top:5px;
+    font-size:15px;
+}
+
+.container{
+    max-width:900px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:20px;
+    color:#166534;
     text-decoration:none;
-    margin-top:12px;
     font-weight:bold;
+}
+
+.article{
+    background:white;
+    padding:22px;
+    margin-bottom:25px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.date{
+    color:#166534;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.article h2{
+    color:#14532d;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.lang-title{
+    font-size:18px;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.english{
+    border-top:1px solid #ddd;
+    margin-top:18px;
+    padding-top:15px;
+}
+
+.share-buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.share-buttons button{
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
     cursor:pointer;
     font-size:14px;
-}
-
-.share-btn:hover{
-    opacity:0.9;
-}
-
-.back-btn{
-    display:inline-block;
-    background:#123d25;
-    color:white;
-    padding:11px 20px;
-    border-radius:25px;
-    text-decoration:none;
     font-weight:bold;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+}
+
+.copy-btn{
+    background:#166534;
+    color:white;
 }
 
 footer{
-    background:#0c2818;
+    background:#14532d;
     color:white;
     text-align:center;
-    padding:25px;
+    padding:20px;
+    margin-top:40px;
+    font-size:14px;
 }
 
-@media(max-width:700px){
-
-    nav{
-        padding:10px 4%;
+@media(max-width:600px){
+    header h1{
+        font-size:25px;
     }
 
-    nav div{
-        display:none;
+    .article{
+        padding:18px;
     }
 
-    .hero h1{
-        font-size:32px;
-    }
-
-    .news-card{
-        padding:22px;
+    .article h2{
+        font-size:20px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
-<nav>
-
-    <a href="index.html">
-        <img src="logo.png" alt="SR CRESCO Logo">
-    </a>
-
-    <div>
-        <a href="index.html">Home</a>
-        <a href="index.html#products">Products</a>
-        <a href="index.html#smart">Smart Agriculture</a>
-        <a href="index.html#knowledge">Knowledge</a>
-        <a href="news.html">News</a>
-        <a href="index.html#community">Community</a>
-    </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<header class="hero">
-
-    <img
-        class="hero-logo"
-        src="logo.png"
-        alt="SR CRESCO Logo"
-    >
-
-    <h1>🌱 Agriculture News</h1>
-
-    <p>
-        Latest agriculture news, farming updates,
-        technology and useful information for farmers.
-    </p>
-
+<header>
+    <h1>🌾 SR CRESCO</h1>
+    <p>Grow • Prosper • Thrive</p>
+    <p>🌱 Agriculture News</p>
 </header>
 
+<div class="container">
 
-<!-- NEWS -->
+<a href="index.html" class="back">← Back to SR CRESCO</a>
 
-<section>
 
-    <h2>📰 Latest Agriculture Updates</h2>
+<!-- ARTICLE 1 -->
+<div class="article">
 
+<div class="date">📅 8 September 2026</div>
 
-    <!-- 8 SEPTEMBER 2026 -->
+<h2>📰 National Horticulture Board Subsidy Applications Temporarily Suspended</h2>
 
-    <article class="news-card">
+<div class="lang-title">🇮🇳 ಕನ್ನಡ</div>
 
-        <div class="news-date">
-            📅 8 September 2026
-        </div>
+<p>
+ರಾಷ್ಟ್ರೀಯ ತೋಟಗಾರಿಕಾ ಮಂಡಳಿ (NHB) ತನ್ನ ಎರಡು ಪ್ರಮುಖ ಯೋಜನೆಗಳ ಅಡಿಯಲ್ಲಿ
+ಹೊಸ ಅರ್ಜಿಗಳನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ಒಂದು ತಿಂಗಳ ಕಾಲ ಸ್ಥಗಿತಗೊಳಿಸಿದೆ.
+ಈ ನಿರ್ಧಾರವು ಸೆಪ್ಟೆಂಬರ್ 4, 2026ರಿಂದ ಜಾರಿಗೆ ಬಂದಿದೆ.
+</p>
 
-        <h3>
-            🌱 National Horticulture Board Subsidy Applications Temporarily Suspended
-        </h3>
+<p>
+ವಾಣಿಜ್ಯ ತೋಟಗಾರಿಕಾ ಉತ್ಪಾದನೆ ಮತ್ತು ಕೊಯ್ಲಿನ ನಂತರದ ನಿರ್ವಹಣೆ ಯೋಜನೆ ಹಾಗೂ
+ಕೋಲ್ಡ್ ಸ್ಟೋರೇಜ್‌ಗಳ ನಿರ್ಮಾಣ, ವಿಸ್ತರಣೆ ಮತ್ತು ಆಧುನೀಕರಣಕ್ಕೆ ಸಂಬಂಧಿಸಿದ
+ಯೋಜನೆಗಳು ಇದರಲ್ಲಿ ಸೇರಿವೆ.
+</p>
 
-        <p>
-            The National Horticulture Board has temporarily suspended
-            fresh applications under two horticulture-related schemes
-            for one month from September 4, 2026.
-        </p>
+<p>
+ರೈತರು ಮತ್ತು ಕೃಷಿ ಉದ್ಯಮಿಗಳು ಹೊಸ ಅರ್ಜಿಗಳನ್ನು ಸಲ್ಲಿಸುವ ಮೊದಲು
+ಮುಂದಿನ ಅಧಿಕೃತ ಪ್ರಕಟಣೆಗಳನ್ನು ಪರಿಶೀಲಿಸುವುದು ಉತ್ತಮ.
+</p>
 
-        <p>
-            The schemes include support for commercial horticulture
-            production and post-harvest management, along with
-            assistance for construction, expansion and modernization
-            of cold storage facilities.
-        </p>
+<div class="english">
 
-        <p>
-            Farmers, entrepreneurs and agriculture businesses planning
-            horticulture or cold-storage projects should check the latest
-            official guidelines before submitting new applications.
-        </p>
+<div class="lang-title">🇬🇧 English</div>
 
-        <button class="share-btn"
-            onclick="shareNews(
-            'National Horticulture Board Subsidy Applications Temporarily Suspended',
-            'The National Horticulture Board has temporarily suspended fresh applications under two horticulture-related schemes for one month from September 4, 2026.'
-            )">
-            📤 Share News
-        </button>
+<p>
+The National Horticulture Board (NHB) has temporarily suspended
+fresh applications under two major schemes for one month.
+The decision came into effect from September 4, 2026.
+</p>
 
-    </article>
+<p>
+The schemes cover commercial horticulture production and
+post-harvest management, as well as construction, expansion
+and modernization of cold storages.
+</p>
 
+<p>
+Farmers and agri-entrepreneurs should check official updates
+before submitting new applications.
+</p>
 
-    <!-- AI AGRICULTURE -->
+</div>
 
-    <article class="news-card">
+<div class="share-buttons">
+<button class="whatsapp-btn"
+onclick="shareWhatsApp(
+'National Horticulture Board Subsidy Update',
+'NHB has temporarily suspended fresh applications under two major horticulture schemes.'
+)">
+🟢 WhatsApp
+</button>
 
-        <div class="news-date">
-            📅 8 September 2026
-        </div>
+<button class="copy-btn"
+onclick="copyNews('National Horticulture Board Subsidy Update')">
+🔗 Copy Link
+</button>
+</div>
 
-        <h3>
-            🤖 AI and Agriculture: Technology Supporting Smarter Farming
-        </h3>
+</div>
 
-        <p>
-            Artificial intelligence is increasingly being explored
-            alongside traditional farming practices to improve
-            agricultural decision-making.
-        </p>
 
-        <p>
-            AI models can use satellite imagery and agricultural data
-            to help understand crop conditions, water availability
-            and changes across farming areas.
-        </p>
+<!-- ARTICLE 2 -->
+<div class="article">
 
-        <p>
-            Such technologies could support farmers with more targeted
-            information and better resource management.
-        </p>
+<div class="date">📅 7 September 2026</div>
 
-        <button class="share-btn"
-            onclick="shareNews(
-            'AI and Agriculture: Technology Supporting Smarter Farming',
-            'Artificial intelligence and satellite data are being explored to support smarter agricultural decision-making, crop monitoring and resource management.'
-            )">
-            📤 Share News
-        </button>
+<h2>📰 National Conference on Natural Farming 2026</h2>
 
-    </article>
+<div class="lang-title">🇮🇳 ಕನ್ನಡ</div>
 
+<p>
+ನೈಸರ್ಗಿಕ ಕೃಷಿ ಕುರಿತು ರಾಷ್ಟ್ರೀಯ ಸಮ್ಮೇಳನ 2026 ಸೆಪ್ಟೆಂಬರ್ 9ರಿಂದ
+11ರವರೆಗೆ ಮೇಘಾಲಯದ ಉಮಿಯಾಮ್‌ನಲ್ಲಿರುವ College of Post Graduate
+Studies in Agricultural Sciences ನಲ್ಲಿ ನಡೆಯಲಿದೆ.
+</p>
 
-    <!-- PULSES -->
+<p>
+ಈ ಸಮ್ಮೇಳನದಲ್ಲಿ 21 ರಾಜ್ಯಗಳು ಮತ್ತು 51 ಕೃಷಿ ಸಂಸ್ಥೆಗಳಿಂದ
+400ಕ್ಕೂ ಹೆಚ್ಚು ಪ್ರತಿನಿಧಿಗಳು ಭಾಗವಹಿಸುವ ನಿರೀಕ್ಷೆಯಿದೆ.
+</p>
 
-    <article class="news-card">
+<p>
+ನೈಸರ್ಗಿಕ ಕೃಷಿ, ಮಣ್ಣಿನ ಆರೋಗ್ಯ, ಸುಸ್ಥಿರ ಕೃಷಿ ಪದ್ಧತಿಗಳು ಮತ್ತು
+ರೈತರಿಗೆ ಉಪಯುಕ್ತವಾದ ತಂತ್ರಜ್ಞಾನಗಳ ಕುರಿತು ಚರ್ಚೆ ನಡೆಯಲಿದೆ.
+</p>
 
-        <div class="news-date">
-            📅 8 September 2026
-        </div>
+<div class="english">
 
-        <h3>
-            🌾 Value Addition Creates New Opportunities for Pulses
-        </h3>
-
-        <p>
-            Agricultural innovation is also focusing on adding value
-            to locally produced crops.
-        </p>
+<div class="lang-title">🇬🇧 English</div>
 
-        <p>
-            A Bangalore-based agricultural innovation centre has
-            developed ready-to-eat energy bars using pulses from
-            Kalaburagi, demonstrating how farm produce can be converted
-            into higher-value food products.
-        </p>
+<p>
+The National Conference on Natural Farming 2026 will be held
+from September 9 to 11 at the College of Post Graduate Studies
+in Agricultural Sciences, Umiam, Meghalaya.
+</p>
 
-        <p>
-            Value addition can create new opportunities for farmers,
-            food entrepreneurs and rural businesses.
-        </p>
+<p>
+More than 400 participants from 21 states and 51 agricultural
+institutions are expected to participate.
+</p>
 
-        <button class="share-btn"
-            onclick="shareNews(
-            'Value Addition Creates New Opportunities for Pulses',
-            'Agricultural innovation is creating new opportunities to add value to locally produced pulses and develop higher-value food products.'
-            )">
-            📤 Share News
-        </button>
-
-    </article>
-
-
-    <!-- ICAR TRAINING -->
-
-    <article class="news-card">
-
-        <div class="news-date">
-            📅 8 September 2026
-        </div>
-
-        <h3>
-            🌿 ICAR Training Focuses on Nursery Management and Grafting
-        </h3>
-
-        <p>
-            ICAR-IIVR in Varanasi has started a five-day hands-on
-            training programme focusing on nursery management and
-            grafting techniques in vegetable crops.
-        </p>
+<p>
+The conference will focus on natural farming, soil health,
+sustainable farming practices and technologies useful for farmers.
+</p>
 
-        <p>
-            The programme is designed to provide practical skills to
-            farmers and strengthen knowledge of improved plant
-            propagation techniques.
-        </p>
+</div>
 
-        <button class="share-btn"
-            onclick="shareNews(
-            'ICAR Training Focuses on Nursery Management and Grafting',
-            'ICAR-IIVR in Varanasi has started hands-on training focused on nursery management and grafting techniques in vegetable crops.'
-            )">
-            📤 Share News
-        </button>
+<div class="share-buttons">
+<button class="whatsapp-btn"
+onclick="shareWhatsApp(
+'National Conference on Natural Farming 2026',
+'National Conference on Natural Farming 2026 will be held from September 9 to 11 in Meghalaya.'
+)">
+🟢 WhatsApp
+</button>
 
-    </article>
+<button class="copy-btn"
+onclick="copyNews('National Conference on Natural Farming 2026')">
+🔗 Copy Link
+</button>
+</div>
 
+</div>
 
-    <!-- 7 SEPTEMBER 2026 -->
 
-    <article class="news-card">
+<!-- ARTICLE 3 -->
+<div class="article">
 
-        <div class="news-date">
-            📅 7 September 2026
-        </div>
+<div class="date">📅 6 September 2026</div>
 
-        <h3>
-            🌱 National Conference on Natural Farming 2026
-        </h3>
+<h2>📰 AI and Traditional Farming Can Work Together</h2>
 
-        <p>
-            The National Conference on Natural Farming 2026 is scheduled
-            to be held from September 9 to 11 in Meghalaya.
-        </p>
+<div class="lang-title">🇮🇳 ಕನ್ನಡ</div>
 
-        <p>
-            The conference is expected to bring together farmers,
-            agricultural institutions, researchers and other
-            stakeholders to discuss natural farming practices,
-            innovation and sustainable agriculture.
-        </p>
+<p>
+ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (AI) ಮತ್ತು ಸಾಂಪ್ರದಾಯಿಕ ಕೃಷಿ ಪದ್ಧತಿಗಳು
+ಒಟ್ಟಿಗೆ ಕೆಲಸ ಮಾಡಬಹುದು ಎಂಬ ಅಭಿಪ್ರಾಯ ಕೃಷಿ ತಂತ್ರಜ್ಞಾನ ಕ್ಷೇತ್ರದಲ್ಲಿ
+ಹೆಚ್ಚು ಗಮನ ಸೆಳೆಯುತ್ತಿದೆ.
+</p>
 
-        <button class="share-btn"
-            onclick="shareNews(
-            'National Conference on Natural Farming 2026',
-            'The National Conference on Natural Farming 2026 is scheduled from September 9 to 11 in Meghalaya.'
-            )">
-            📤 Share News
-        </button>
+<p>
+AI ಮಾದರಿಗಳು ಹಲವು ವರ್ಷಗಳ ಉಪಗ್ರಹ ಚಿತ್ರಗಳು, ಹೊಲಗಳ ಮಾಹಿತಿ,
+ಬೆಳೆಗಳ ಸ್ಥಿತಿ ಮತ್ತು ನೀರಿನ ಬಳಕೆಯ ಮಾಹಿತಿಯನ್ನು ವಿಶ್ಲೇಷಿಸಿ
+ರೈತರಿಗೆ ಹೆಚ್ಚು ನಿಖರವಾದ ಸಲಹೆಗಳನ್ನು ನೀಡಲು ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+<p>
+ಇಂತಹ ತಂತ್ರಜ್ಞಾನಗಳು ಕೀಟ ನಿರ್ವಹಣೆ, ನೀರಿನ ಬಳಕೆ ಮತ್ತು
+ಬೆಳೆ ಮೇಲ್ವಿಚಾರಣೆಯಲ್ಲಿ ರೈತರಿಗೆ ಸಹಾಯ ಮಾಡುವ ಸಾಧ್ಯತೆಯಿದೆ.
+</p>
 
-    </article>
+<div class="english">
 
+<div class="lang-title">🇬🇧 English</div>
 
-    <!-- 6 SEPTEMBER 2026 -->
+<p>
+Artificial Intelligence (AI) and traditional farming practices
+can work together, creating new opportunities in modern agriculture.
+</p>
 
-    <article class="news-card">
+<p>
+AI models can analyse years of satellite imagery along with
+field, crop and water data to provide more targeted support
+to farmers.
+</p>
 
-        <div class="news-date">
-            📅 6 September 2026
-        </div>
+<p>
+Such technology could help farmers with pest management,
+water use and crop monitoring.
+</p>
 
-        <h3>
-            🛰️ Satellite Technology Supporting Modern Agriculture
-        </h3>
+</div>
 
-        <p>
-            Satellite-based monitoring is becoming an important tool
-            in modern agriculture.
-        </p>
+<div class="share-buttons">
+<button class="whatsapp-btn"
+onclick="shareWhatsApp(
+'AI and Agriculture',
+'AI and traditional farming can work together to support farmers through better crop and resource monitoring.'
+)">
+🟢 WhatsApp
+</button>
 
-        <p>
-            Satellite imagery can help monitor vegetation, crop
-            conditions, water resources and changes in agricultural
-            land over large areas.
-        </p>
+<button class="copy-btn"
+onclick="copyNews('AI and Agriculture')">
+🔗 Copy Link
+</button>
+</div>
 
-        <p>
-            Combining satellite data with field-level information and
-            farmer knowledge can support more informed agricultural
-            decisions.
-        </p>
+</div>
 
-        <button class="share-btn"
-            onclick="shareNews(
-            'Satellite Technology Supporting Modern Agriculture',
-            'Satellite-based monitoring can help observe crop conditions, vegetation, water resources and agricultural land.'
-            )">
-            📤 Share News
-        </button>
 
-    </article>
+<!-- ARTICLE 4 -->
+<div class="article">
 
+<div class="date">📅 8 September 2026</div>
 
-    <!-- BACK TO HOME -->
+<h2>📰 Kalaburagi Pulses Turned Into Ready-to-Eat Energy Bars</h2>
 
-    <div style="text-align:center; margin-top:35px;">
+<div class="lang-title">🇮🇳 ಕನ್ನಡ</div>
 
-        <a class="back-btn" href="index.html">
-            ← Back to SR CRESCO
-        </a>
+<p>
+ಕರ್ನಾಟಕದ ಕಲಬುರಗಿ ಭಾಗದಲ್ಲಿ ಬೆಳೆಯುವ ಬೇಳೆಕಾಳುಗಳಿಗೆ ಹೆಚ್ಚಿನ
+ಮೌಲ್ಯವನ್ನು ಸೇರಿಸುವ ಉದ್ದೇಶದಿಂದ Bangalore Bioinnovation Centre
+ಬೇಳೆ ಆಧಾರಿತ ready-to-eat energy bars ಅಭಿವೃದ್ಧಿಪಡಿಸಿದೆ.
+</p>
 
-    </div>
+<p>
+ಬೇಳೆಕಾಳುಗಳನ್ನು ಕೇವಲ ಕಚ್ಚಾ ಉತ್ಪನ್ನವಾಗಿ ಮಾರಾಟ ಮಾಡುವ ಬದಲು
+ಮೌಲ್ಯವರ್ಧಿತ ಆಹಾರ ಉತ್ಪನ್ನಗಳಾಗಿ ಪರಿವರ್ತಿಸುವ ಮೂಲಕ ರೈತರಿಗೆ
+ಹೆಚ್ಚಿನ ಮಾರುಕಟ್ಟೆ ಅವಕಾಶಗಳನ್ನು ಸೃಷ್ಟಿಸುವ ಸಾಧ್ಯತೆಯಿದೆ.
+</p>
 
-</section>
+<div class="english">
 
+<div class="lang-title">🇬🇧 English</div>
 
-<!-- FOOTER -->
+<p>
+The Bangalore Bioinnovation Centre has developed ready-to-eat
+energy bars using pulses from Kalaburagi, Karnataka.
+</p>
+
+<p>
+The initiative aims to add value to pulses and create more
+opportunities for value-added agricultural products instead of
+selling pulses only as raw commodities.
+</p>
+
+</div>
+
+<div class="share-buttons">
+<button class="whatsapp-btn"
+onclick="shareWhatsApp(
+'Value Addition for Kalaburagi Pulses',
+'Ready-to-eat energy bars using Kalaburagi pulses highlight new opportunities for value addition in agriculture.'
+)">
+🟢 WhatsApp
+</button>
+
+<button class="copy-btn"
+onclick="copyNews('Value Addition for Kalaburagi Pulses')">
+🔗 Copy Link
+</button>
+</div>
+
+</div>
+
+
+<!-- ARTICLE 5 -->
+<div class="article">
+
+<div class="date">📅 8 September 2026</div>
+
+<h2>📰 Jute – The Golden Fibre</h2>
+
+<div class="lang-title">🇮🇳 ಕನ್ನಡ</div>
+
+<p>
+ಸೆಣಬು (Jute) ಅನ್ನು “Golden Fibre” ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ.
+ಇದು ರೈತರ ಜೀವನೋಪಾಯಕ್ಕೆ ಪ್ರಮುಖವಾದ ಬೆಳೆಗಳಲ್ಲಿ ಒಂದಾಗಿದ್ದು,
+ಪರಿಸರ ಸ್ನೇಹಿ ಮತ್ತು ಸುಸ್ಥಿರ ಉತ್ಪನ್ನಗಳ ತಯಾರಿಕೆಯಲ್ಲಿ ಪ್ರಮುಖ
+ಪಾತ್ರ ವಹಿಸುತ್ತದೆ.
+</p>
+
+<p>
+ಪ್ಲಾಸ್ಟಿಕ್‌ಗೆ ಪರ್ಯಾಯವಾಗಿ ಜ್ಯೂಟ್ ಆಧಾರಿತ ಉತ್ಪನ್ನಗಳಿಗೆ
+ಮಾರುಕಟ್ಟೆಯಲ್ಲಿ ಹೆಚ್ಚಿನ ಅವಕಾಶಗಳಿವೆ. ಇದರಿಂದ ರೈತರು ಮತ್ತು
+ಸುಸ್ಥಿರ ಕೈಗಾರಿಕೆ ಎರಡಕ್ಕೂ ಪ್ರಯೋಜನವಾಗಬಹುದು.
+</p>
+
+<div class="english">
+
+<div class="lang-title">🇬🇧 English</div>
+
+<p>
+Jute is widely known as the “Golden Fibre”. It plays an
+important role in farmer livelihoods and supports sustainable
+and environmentally friendly industries.
+</p>
+
+<p>
+Jute-based products also have opportunities as alternatives
+to plastic, creating potential benefits for farmers and
+sustainable industries.
+</p>
+
+</div>
+
+<div class="share-buttons">
+<button class="whatsapp-btn"
+onclick="shareWhatsApp(
+'Jute – The Golden Fibre',
+'Jute is an important crop for farmer livelihoods and sustainable industries.'
+)">
+🟢 WhatsApp
+</button>
+
+<button class="copy-btn"
+onclick="copyNews('Jute – The Golden Fibre')">
+🔗 Copy Link
+</button>
+</div>
+
+</div>
+
+
+<!-- ARTICLE 6 -->
+<div class="article">
+
+<div class="date">📅 8 September 2026</div>
+
+<h2>📰 ICAR Training on Nursery Management and Grafting</h2>
+
+<div class="lang-title">🇮🇳 ಕನ್ನಡ</div>
+
+<p>
+ICAR-Indian Institute of Vegetable Research (ICAR-IIVR),
+ವಾರಾಣಸಿಯಲ್ಲಿ ತರಕಾರಿ ಬೆಳೆಗಳ ನರ್ಸರಿ ನಿರ್ವಹಣೆ ಮತ್ತು grafting
+ತಂತ್ರಗಳ ಕುರಿತು ಐದು ದಿನಗಳ ಪ್ರಾಯೋಗಿಕ ತರಬೇತಿಯನ್ನು ಆರಂಭಿಸಿದೆ.
+</p>
+
+<p>
+10 ರಾಜ್ಯಗಳಿಂದ 30 ರೈತರು ಈ ತರಬೇತಿಯಲ್ಲಿ ಭಾಗವಹಿಸುತ್ತಿದ್ದಾರೆ.
+ಉತ್ತಮ ಗುಣಮಟ್ಟದ ಸಸಿಗಳ ಉತ್ಪಾದನೆ ಮತ್ತು ಆಧುನಿಕ ನರ್ಸರಿ ತಂತ್ರಜ್ಞಾನಗಳ
+ಬಗ್ಗೆ ರೈತರಿಗೆ ಪ್ರಾಯೋಗಿಕ ಜ್ಞಾನ ನೀಡುವುದು ಇದರ ಉದ್ದೇಶವಾಗಿದೆ.
+</p>
+
+<div class="english">
+
+<div class="lang-title">🇬🇧 English</div>
+
+<p>
+ICAR-Indian Institute of Vegetable Research (ICAR-IIVR),
+Varanasi, has started a five-day hands-on training programme
+on nursery management and grafting techniques in vegetable crops.
+</p>
+
+<p>
+Thirty farmers from 10 states are participating in the programme.
+The training aims to provide practical knowledge on quality
+seedling production and modern nursery techniques.
+</p>
+
+</div>
+
+<div class="share-buttons">
+<button class="whatsapp-btn"
+onclick="shareWhatsApp(
+'ICAR Nursery and Grafting Training',
+'ICAR-IIVR has started a five-day hands-on training programme on nursery management and grafting techniques.'
+)">
+🟢 WhatsApp
+</button>
+
+<button class="copy-btn"
+onclick="copyNews('ICAR Nursery and Grafting Training')">
+🔗 Copy Link
+</button>
+</div>
+
+</div>
+
+
+</div>
+
 
 <footer>
-
-    <h3>🌾 SR CRESCO</h3>
-
-    <p>Grow • Prosper • Thrive</p>
-
-    <p>
-        Smart Agriculture • Farming Knowledge • Farmer Community
-    </p>
-
-    <p>
-        Chamarajanagar, Karnataka, India
-    </p>
-
-    <p>
-        © 2026 SR CRESCO. All Rights Reserved.
-    </p>
-
+    © 2026 SR CRESCO • Grow • Prosper • Thrive
 </footer>
 
 
-<!-- SHARE SCRIPT -->
-
 <script>
 
-function shareNews(title, description){
+function shareWhatsApp(title, description){
 
-    const website =
-        "https://srcresco.github.io/SR-CRESCO/news.html";
+    const url = "https://srcresco.github.io/SR-CRESCO/news.html";
 
-    const shareText =
-        "🌱 SR CRESCO | Agriculture News\n\n" +
-        "📰 " + title + "\n\n" +
+    const message =
+        "🌾 SR CRESCO – Agriculture News\n\n" +
+        title + "\n\n" +
         description + "\n\n" +
-        "Read more at SR CRESCO:\n" +
-        website;
+        "Read more:\n" + url;
+
+    const whatsappURL =
+        "https://wa.me/?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+}
 
 
-    if(navigator.share){
+function copyNews(title){
 
-        navigator.share({
+    const url = "https://srcresco.github.io/SR-CRESCO/news.html";
 
-            title: "SR CRESCO | " + title,
+    const text =
+        "🌾 SR CRESCO – " + title + "\n\n" +
+        "Read more: " + url;
 
-            text: shareText,
+    if(navigator.clipboard){
 
-            url: website
-
-        }).catch(() => {});
+        navigator.clipboard.writeText(text)
+        .then(function(){
+            alert("✅ News link copied!");
+        })
+        .catch(function(){
+            fallbackCopy(text);
+        });
 
     }else{
-
-        const whatsappURL =
-            "https://wa.me/?text=" +
-            encodeURIComponent(shareText);
-
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
-
+        fallbackCopy(text);
     }
+}
 
+
+function fallbackCopy(text){
+
+    const textarea = document.createElement("textarea");
+
+    textarea.value = text;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand("copy");
+
+    document.body.removeChild(textarea);
+
+    alert("✅ News link copied!");
 }
 
 </script>
