@@ -1,112 +1,568 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html lang="kn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Founder | SR CRESCO</title>
+
+<title>ಸುಭಾಷ್ ವಿ ಎಸ್ | SR CRESCO</title>
+
+<meta name="description" content="ಸುಭಾಷ್ ವಿ ಎಸ್ — SR CRESCO ಸಂಸ್ಥಾಪಕರು. ಆಧುನಿಕ ಕೃಷಿ, ತಂತ್ರಜ್ಞಾನ, ಜ್ಞಾನ ಮತ್ತು ರೈತ ಸಮುದಾಯದ ಕುರಿತು.">
 
 <style>
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
     font-family:Arial,sans-serif;
     background:#f5f7f3;
     color:#18351f;
-}
-header{
-    background:#123d25;
-    padding:15px 20px;
-}
-header img{
-    width:60px;
-    height:60px;
-    object-fit:contain;
-}
-main{
-    max-width:850px;
-    margin:auto;
-    padding:50px 20px;
-}
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 20px #0001;
+    line-height:1.8;
 }
 
-h1{
-    margin-bottom:5px;
+nav{
+    background:#123d25;
+    padding:12px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:10;
 }
-h2{
-    margin-top:30px;
+
+nav img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
 }
-p{
-    line-height:1.7;
-}
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:11px 22px;
-    background:#176b35;
+
+nav a{
     color:white;
     text-decoration:none;
+    margin-left:16px;
+    font-size:14px;
+}
+
+.hero{
+    background:linear-gradient(135deg,#123d25,#2f7044);
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin:0 0 10px;
+}
+
+.hero p{
+    font-size:18px;
+    margin:5px 0;
+}
+
+section{
+    max-width:1050px;
+    margin:auto;
+    padding:45px 20px;
+}
+
+.card{
+    background:white;
+    padding:32px;
+    border-radius:20px;
+    box-shadow:0 5px 20px #0001;
+    margin-bottom:25px;
+}
+
+.card h2{
+    color:#176b35;
+    text-align:center;
+    margin-top:0;
+    margin-bottom:25px;
+}
+
+.card h3{
+    color:#176b35;
+}
+
+.intro{
+    text-align:center;
+}
+
+.highlight{
+    background:#edf5ee;
+    border-left:5px solid #176b35;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.quote{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:#176b35;
+    padding:15px;
+}
+
+.btn{
+    display:inline-block;
+    background:#176b35;
+    color:white;
+    padding:12px 22px;
     border-radius:25px;
+    text-decoration:none;
+    margin-top:12px;
+}
+
+footer{
+    background:#0c2818;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+}
+
+footer h3{
+    color:white;
+}
+
+@media(max-width:700px){
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin:5px;
+        font-size:12px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .card{
+        padding:24px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <a href="index.html">
-        <img src="logo.png" alt="SR CRESCO Logo">
-    </a>
+<nav>
+
+<a href="index.html">
+<img src="logo.png" alt="SR CRESCO LOGO">
+</a>
+
+<div>
+<a href="index.html">HOME</a>
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#products">PRODUCTS</a>
+<a href="index.html#smart">SMART AGRICULTURE</a>
+<a href="news.html">NEWS</a>
+</div>
+
+</nav>
+
+
+<header class="hero">
+
+<h1>ಸುಭಾಷ್ ವಿ ಎಸ್</h1>
+
+<p>ಸಂಸ್ಥಾಪಕರು — SR CRESCO</p>
+
+<p>ಬೆಳೆಯಿರಿ • ಸಮೃದ್ಧರಾಗಿರಿ • ಪ್ರಗತಿಪಥದಲ್ಲಿ ಸಾಗಿರಿ</p>
+
 </header>
 
-<main>
-<div class="card">
 
-    <img src="founder.png" alt="Subhash V S" class="founder-photo">
+<section>
 
-    <h1>Subhash V S</h1>
-    <p><strong>Founder & Visionary — SR CRESCO</strong></p>
+<!-- KANNADA -->
 
-    <h2>About the Founder</h2>
+<div class="card intro">
 
-    <p>
-        Subhash V S is the founder and visionary behind SR CRESCO,
-        focused on building a smarter, sustainable and connected future
-        for agriculture.
-    </p>
+<h2>ಸುಭಾಷ್ ವಿ ಎಸ್</h2>
 
-    <h2>Vision</h2>
+<p><strong>ಸಂಸ್ಥಾಪಕರು — SR CRESCO</strong></p>
 
-    <p>
-        To connect agriculture with modern technology, knowledge and
-        innovation while creating better opportunities for farmers.
-    </p>
+<p>
+ಆಧುನಿಕ ಕೃಷಿ, ತಂತ್ರಜ್ಞಾನ, ಜ್ಞಾನ ಮತ್ತು ರೈತ ಸಮುದಾಯವನ್ನು
+ಒಂದೇ ವೇದಿಕೆಯಲ್ಲಿ ಸಂಪರ್ಕಿಸುವ ದೃಷ್ಟಿಕೋನದೊಂದಿಗೆ SR CRESCO
+ಅನ್ನು ರೂಪಿಸಲಾಗಿದೆ.
+</p>
 
-    <h2>Focus Areas</h2>
+<div class="highlight">
 
-    <p>
-        Agriculture • Smart Farming • Technology • Farmer Development
-        • Sustainable Agriculture • Community
-    </p>
-
-    <h2>SR CRESCO Mission</h2>
-
-    <p>
-        <strong>Grow • Prosper • Thrive</strong>
-    </p>
-
-    <p>
-        Based in Chamarajanagar, Karnataka, India.
-    </p>
-
-    <a href="index.html" class="btn">← Back to SR CRESCO</a>
+<strong>ಬೆಳೆಯಿರಿ • ಸಮೃದ್ಧರಾಗಿರಿ • ಪ್ರಗತಿಪಥದಲ್ಲಿ ಸಾಗಿರಿ</strong>
 
 </div>
-</main>
+
+</div>
+
+
+<div class="card">
+
+<h2>ಸಂಸ್ಥಾಪಕರ ಬಗ್ಗೆ</h2>
+
+<p>
+ಸುಭಾಷ್ ವಿ ಎಸ್ ಅವರು SR CRESCO ಸಂಸ್ಥಾಪಕರು.
+ಕೃಷಿಯಲ್ಲಿ ಆಧುನಿಕ ತಂತ್ರಜ್ಞಾನ, ನವೀನತೆ ಮತ್ತು ಸುಸ್ಥಿರ
+ಕೃಷಿ ಪದ್ಧತಿಗಳ ಬಳಕೆಯ ಮೂಲಕ ಹೊಸ ಅವಕಾಶಗಳನ್ನು
+ಅನ್ವೇಷಿಸುವುದು ಅವರ ಪ್ರಮುಖ ದೃಷ್ಟಿಕೋನವಾಗಿದೆ.
+</p>
+
+<p>
+ಕೃಷಿ ಕೇವಲ ಬೆಳೆ ಬೆಳೆಯುವುದಕ್ಕೆ ಸೀಮಿತವಾಗದೆ,
+ಜ್ಞಾನ, ಯೋಜನೆ, ತಂತ್ರಜ್ಞಾನ, ಮಾರುಕಟ್ಟೆ ಮತ್ತು
+ಸುಸ್ಥಿರತೆಯೊಂದಿಗೆ ಮುಂದುವರಿಯಬೇಕು ಎಂಬ ಉದ್ದೇಶದಿಂದ
+SR CRESCO ಅನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲಾಗುತ್ತಿದೆ.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>ಕೃಷಿ ಪಯಣ</h2>
+
+<p>
+ಕೃಷಿಯ ಭವಿಷ್ಯವನ್ನು ಉತ್ತಮಗೊಳಿಸಲು ಸಾಂಪ್ರದಾಯಿಕ ಕೃಷಿ
+ಜ್ಞಾನವನ್ನು ಆಧುನಿಕ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ನವೀನತೆಯೊಂದಿಗೆ
+ಸಂಪರ್ಕಿಸುವುದು SR CRESCO ಯ ಪ್ರಮುಖ ಉದ್ದೇಶವಾಗಿದೆ.
+</p>
+
+<p>
+ರೈತರಿಗೆ ಉಪಯುಕ್ತ ಮಾಹಿತಿಯನ್ನು ತಲುಪಿಸುವುದು,
+ಹೊಸ ಕೃಷಿ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸುವುದು ಮತ್ತು
+ಆಧುನಿಕ ಕೃಷಿ ಪದ್ಧತಿಗಳ ಕುರಿತು ಜ್ಞಾನ ಹಂಚಿಕೊಳ್ಳುವುದು
+ಈ ಪಯಣದ ಪ್ರಮುಖ ಭಾಗವಾಗಿದೆ.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>ನಮ್ಮ ದೃಷ್ಟಿಕೋನ</h2>
+
+<p>
+ರೈತರು, ಕೃಷಿ ಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ನವೀನತೆಯನ್ನು
+ಸಂಪರ್ಕಿಸುವ ಮೂಲಕ ಹೆಚ್ಚು ಸ್ಮಾರ್ಟ್, ಸುಸ್ಥಿರ ಮತ್ತು
+ಸಂಪರ್ಕಿತ ಕೃಷಿಯ ಭವಿಷ್ಯವನ್ನು ನಿರ್ಮಿಸುವುದು.
+</p>
+
+<div class="quote">
+“ಜ್ಞಾನ + ತಂತ್ರಜ್ಞಾನ + ಸುಸ್ಥಿರತೆ = ಕೃಷಿಯ ಉತ್ತಮ ಭವಿಷ್ಯ”
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ನವೀನತೆ</h2>
+
+<p>
+SR CRESCO ಕೃಷಿಯಲ್ಲಿ ಉಪಯೋಗವಾಗಬಹುದಾದ ಹೊಸ
+ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಅನ್ವೇಷಿಸುತ್ತದೆ.
+</p>
+
+<p>
+🤖 ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ — AI<br>
+🚁 ಡ್ರೋನ್ ತಂತ್ರಜ್ಞಾನ<br>
+🛰️ ಉಪಗ್ರಹ ಆಧಾರಿತ ಮೇಲ್ವಿಚಾರಣೆ<br>
+📊 ಡೇಟಾ ಆಧಾರಿತ ಕೃಷಿ<br>
+💧 ಸ್ಮಾರ್ಟ್ ನೀರಿನ ನಿರ್ವಹಣೆ<br>
+🌱 ಸುಸ್ಥಿರ ಕೃಷಿ
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>ರೈತ ಸಮುದಾಯ</h2>
+
+<p>
+ಬಲವಾದ ಕೃಷಿ ಪರಿಸರ ವ್ಯವಸ್ಥೆಗೆ ಜ್ಞಾನ ಹಂಚಿಕೆ,
+ಸಹಕಾರ ಮತ್ತು ಸಂಪರ್ಕ ಅತ್ಯಂತ ಮುಖ್ಯ.
+</p>
+
+<p>
+ರೈತರು ಮತ್ತು ಕೃಷಿ ಆಸಕ್ತರನ್ನು ಸಂಪರ್ಕಿಸಿ,
+ಉಪಯುಕ್ತ ಕೃಷಿ ಮಾಹಿತಿ ಮತ್ತು ಹೊಸ ಅವಕಾಶಗಳನ್ನು
+ಹಂಚಿಕೊಳ್ಳುವ ಸಮುದಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
+SR CRESCO ಯ ಉದ್ದೇಶವಾಗಿದೆ.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>ಆಸಕ್ತಿಯ ಕೃಷಿ ಕ್ಷೇತ್ರಗಳು</h2>
+
+<p>
+🥑 ಅವಕಾಡೊ ಕೃಷಿ<br>
+🥥 ತೆಂಗಿನ ಕೃಷಿ<br>
+🌰 ಮಕಾಡಾಮಿಯಾ ಕೃಷಿ<br>
+🍄 ಅಣಬೆ ಕೃಷಿ<br>
+🐝 ಜೇನು ಸಾಕಾಣಿಕೆ<br>
+🐄 ಹೈನುಗಾರಿಕೆ<br>
+🤖 ಕೃಷಿಯಲ್ಲಿ AI<br>
+🚁 ಡ್ರೋನ್ ಆಧಾರಿತ ಕೃಷಿ<br>
+🛰️ ಉಪಗ್ರಹ ಆಧಾರಿತ ಕೃಷಿ
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>SR CRESCO ಯ ಉದ್ದೇಶ</h2>
+
+<p>
+ಕೃಷಿ ಜ್ಞಾನವನ್ನು ಉತ್ತೇಜಿಸುವುದು, ನವೀನತೆಯನ್ನು
+ಪ್ರೋತ್ಸಾಹಿಸುವುದು, ಆಧುನಿಕ ಕೃಷಿ ಅವಕಾಶಗಳನ್ನು
+ಅನ್ವೇಷಿಸುವುದು ಮತ್ತು ರೈತ ಸಮುದಾಯವನ್ನು
+ಬಲಪಡಿಸುವುದು SR CRESCO ಯ ಪ್ರಮುಖ ಉದ್ದೇಶವಾಗಿದೆ.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>ಭವಿಷ್ಯದ ದೃಷ್ಟಿಕೋನ</h2>
+
+<p>
+ಕೃಷಿ ಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ, ಉತ್ಪನ್ನಗಳು, ನವೀನತೆ
+ಮತ್ತು ರೈತ ಸಮುದಾಯವನ್ನು ಸಂಪರ್ಕಿಸುವ ಪ್ರಮುಖ
+ಆಧುನಿಕ ಕೃಷಿ ವೇದಿಕೆಯಾಗಿ SR CRESCO ಅನ್ನು
+ಬೆಳೆಸುವುದು ನಮ್ಮ ಭವಿಷ್ಯದ ದೃಷ್ಟಿಕೋನವಾಗಿದೆ.
+</p>
+
+</div>
+
+
+<!-- ENGLISH -->
+
+<div class="card intro">
+
+<h2>SUBHASH V S</h2>
+
+<p><strong>FOUNDER — SR CRESCO</strong></p>
+
+<p>
+SR CRESCO IS BUILT WITH A VISION TO CONNECT
+MODERN AGRICULTURE, TECHNOLOGY, KNOWLEDGE,
+INNOVATION AND FARMER COMMUNITY.
+</p>
+
+<div class="highlight">
+
+<strong>GROW • PROSPER • THRIVE</strong>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>ABOUT THE FOUNDER</h2>
+
+<p>
+SUBHASH V S IS THE FOUNDER OF SR CRESCO.
+HIS VISION IS TO EXPLORE NEW POSSIBILITIES
+IN AGRICULTURE BY CONNECTING TRADITIONAL
+FARMING KNOWLEDGE WITH MODERN TECHNOLOGY,
+INNOVATION AND SUSTAINABLE PRACTICES.
+</p>
+
+<p>
+AGRICULTURE IS NOT ONLY ABOUT CULTIVATION.
+IT IS ALSO ABOUT KNOWLEDGE, PLANNING,
+TECHNOLOGY, MARKETS AND SUSTAINABILITY.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>AGRICULTURE JOURNEY</h2>
+
+<p>
+SR CRESCO AIMS TO EXPLORE MODERN AGRICULTURE
+AND SHARE USEFUL KNOWLEDGE WITH FARMERS
+AND AGRICULTURE ENTHUSIASTS.
+</p>
+
+<p>
+THE JOURNEY FOCUSES ON LEARNING, INNOVATION,
+SUSTAINABLE FARMING AND EXPLORING NEW
+AGRICULTURAL OPPORTUNITIES.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>OUR VISION</h2>
+
+<p>
+TO BUILD A SMARTER, SUSTAINABLE AND CONNECTED
+FUTURE FOR AGRICULTURE BY BRINGING TOGETHER
+FARMERS, KNOWLEDGE, TECHNOLOGY AND INNOVATION.
+</p>
+
+<div class="quote">
+“KNOWLEDGE + TECHNOLOGY + SUSTAINABILITY = A BETTER FUTURE FOR AGRICULTURE”
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>TECHNOLOGY & INNOVATION</h2>
+
+<p>
+SR CRESCO EXPLORES EMERGING TECHNOLOGIES
+THAT CAN SUPPORT BETTER AGRICULTURAL
+DECISIONS AND FARM MANAGEMENT.
+</p>
+
+<p>
+🤖 ARTIFICIAL INTELLIGENCE — AI<br>
+🚁 DRONE TECHNOLOGY<br>
+🛰️ SATELLITE MONITORING<br>
+📊 DATA-DRIVEN AGRICULTURE<br>
+💧 SMART WATER MANAGEMENT<br>
+🌱 SUSTAINABLE FARMING
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>FARMER COMMUNITY</h2>
+
+<p>
+A STRONG AGRICULTURE ECOSYSTEM GROWS THROUGH
+KNOWLEDGE SHARING, COLLABORATION AND CONNECTION.
+</p>
+
+<p>
+SR CRESCO AIMS TO CONNECT FARMERS AND
+AGRICULTURE ENTHUSIASTS THROUGH A USEFUL,
+INFORMATIVE AND GROWING COMMUNITY.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>AREAS OF INTEREST</h2>
+
+<p>
+🥑 AVOCADO FARMING<br>
+🥥 COCONUT FARMING<br>
+🌰 MACADAMIA FARMING<br>
+🍄 MUSHROOM CULTIVATION<br>
+🐝 BEEKEEPING<br>
+🐄 DAIRY FARMING<br>
+🤖 AI IN AGRICULTURE<br>
+🚁 DRONE AGRICULTURE<br>
+🛰️ SATELLITE AGRICULTURE
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>OUR MISSION</h2>
+
+<p>
+THE MISSION OF SR CRESCO IS TO PROMOTE
+AGRICULTURE KNOWLEDGE, ENCOURAGE INNOVATION,
+EXPLORE MODERN FARMING OPPORTUNITIES AND
+BUILD A CONNECTED FARMER ECOSYSTEM.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>FUTURE VISION</h2>
+
+<p>
+SR CRESCO AIMS TO GROW AS A MODERN AGRICULTURE
+PLATFORM THAT CONNECTS FARMING KNOWLEDGE,
+TECHNOLOGY, PRODUCTS, INNOVATION AND
+FARMER COMMUNITY.
+</p>
+
+<p>
+THE LONG-TERM VISION IS TO CONTRIBUTE TOWARDS
+A MORE PRODUCTIVE, SUSTAINABLE AND
+TECHNOLOGY-ENABLED AGRICULTURE ECOSYSTEM.
+</p>
+
+</div>
+
+
+<div class="card intro">
+
+<h2>SR CRESCO</h2>
+
+<p>
+<strong>SUBHASH V S</strong>
+</p>
+
+<p>
+<strong>FOUNDER — SR CRESCO</strong>
+</p>
+
+<p>
+CHAMARAJANAGAR, KARNATAKA, INDIA
+</p>
+
+<p>
+<strong>GROW • PROSPER • THRIVE</strong>
+</p>
+
+<a class="btn" href="index.html">
+← BACK TO SR CRESCO
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h3>🌾 SR CRESCO</h3>
+
+<p>GROW • PROSPER • THRIVE</p>
+
+<p>CHAMARAJANAGAR, KARNATAKA, INDIA</p>
+
+<p>© 2026 SR CRESCO. ALL RIGHTS RESERVED.</p>
+
+</footer>
 
 </body>
-</html>
+    </html>
