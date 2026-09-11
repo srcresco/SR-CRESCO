@@ -489,10 +489,10 @@ function trackOption(option){
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
 
 <script>
@@ -505,182 +505,171 @@ gtag('config', 'G-W9695JZYKH');
 <title>SR CRESCO | Poll Options</title>
 
 <meta name="description"
-content="SR CRESCO Farmer Poll – Select the technology you think will have the biggest impact on farming.">
-
-<link rel="canonical"
-href="https://srcresco.github.io/SR-CRESCO/poll-options.html">
+content="SR CRESCO Farmer Poll – Farming technology options.">
 
 <style>
 
-*{box-sizing:border-box;}
+*{
+    box-sizing:border-box;
+}
 
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f5f7f3;
-color:#18351f;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7f3;
+    color:#18351f;
 }
 
 nav{
-background:#123d25;
-padding:12px 6%;
-display:flex;
-align-items:center;
-justify-content:space-between;
+    background:#123d25;
+    padding:10px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 nav img{
-width:55px;
-height:55px;
-object-fit:contain;
+    width:48px;
+    height:48px;
+    object-fit:contain;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:18px;
-font-size:14px;
-}
-
-.hero{
-background:linear-gradient(135deg,#123d25,#2f7044);
-color:white;
-text-align:center;
-padding:45px 20px;
-}
-
-.hero-logo{
-width:160px;
-max-height:120px;
-object-fit:contain;
-}
-
-.hero h1{
-font-size:36px;
-margin:10px 0;
-}
-
-.hero p{
-font-size:19px;
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
 }
 
 .container{
-max-width:850px;
-margin:auto;
-padding:45px 20px;
+    max-width:850px;
+    margin:auto;
+    padding:30px 18px;
 }
 
-.poll-card{
-background:white;
-padding:32px;
-border-radius:20px;
-box-shadow:0 5px 20px #0001;
+.card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 20px #0001;
 }
 
 .category{
-color:#176b35;
-font-weight:bold;
+    color:#176b35;
+    font-weight:bold;
+    font-size:13px;
 }
 
 .date{
-color:#176b35;
-font-weight:bold;
-margin:10px 0 20px;
+    color:#176b35;
+    font-weight:bold;
+    font-size:13px;
+    margin:8px 0 18px;
 }
 
-h2{
-color:#123d25;
-font-size:29px;
-line-height:1.4;
+.card h1{
+    color:#123d25;
+    font-size:25px;
+    margin:0 0 18px;
 }
 
 .question{
-background:#f1f8f2;
-border-left:5px solid #176b35;
-padding:20px;
-border-radius:12px;
-margin:20px 0;
+    background:#f1f8f2;
+    border-left:4px solid #176b35;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
 }
 
-.question h3{
-color:#176b35;
-line-height:1.6;
-margin:0;
+.question h2{
+    color:#176b35;
+    font-size:19px;
+    line-height:1.6;
+    margin:0 0 8px;
+}
+
+.question p{
+    font-size:14px;
+    font-weight:bold;
+    margin:0;
 }
 
 .option{
-display:block;
-background:white;
-border:2px solid #dce9df;
-border-radius:14px;
-padding:18px 20px;
-margin:14px 0;
-text-decoration:none;
-color:#18351f;
-font-size:17px;
-font-weight:bold;
-line-height:1.5;
+    display:block;
+    background:#176b35;
+    color:white;
+    text-decoration:none;
+    padding:14px 17px;
+    border-radius:25px;
+    margin:10px 0;
+    font-size:14px;
+    font-weight:bold;
 }
 
 .option:hover{
-border-color:#176b35;
-background:#f1f8f2;
-}
-
-.option-number{
-display:inline-block;
-background:#176b35;
-color:white;
-width:32px;
-height:32px;
-line-height:32px;
-text-align:center;
-border-radius:50%;
-margin-right:10px;
+    opacity:.9;
 }
 
 .back{
-display:inline-block;
-margin-top:20px;
-color:#176b35;
-text-decoration:none;
-font-weight:bold;
+    display:inline-block;
+    margin-top:18px;
+    padding:10px 18px;
+    border:2px solid #176b35;
+    border-radius:25px;
+    color:#176b35;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
 }
 
 footer{
-background:#0c2818;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:30px;
+    background:#0c2818;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:15px;
 }
 
-@media(max-width:700px){
-
-nav div{display:none;}
-
-.hero h1{font-size:29px;}
-
-.container{
-padding:30px 15px;
+footer p{
+    margin:6px;
+    font-size:12px;
 }
 
-.poll-card{
-padding:22px;
-}
+@media(max-width:600px){
 
-h2{
-font-size:25px;
-}
+    nav{
+        padding:9px 15px;
+    }
 
-.option{
-font-size:16px;
-}
+    nav img{
+        width:42px;
+        height:42px;
+    }
+
+    nav a{
+        margin-left:10px;
+        font-size:12px;
+    }
+
+    .container{
+        padding:22px 14px;
+    }
+
+    .card{
+        padding:21px;
+    }
+
+    .card h1{
+        font-size:23px;
+    }
+
+    .question h2{
+        font-size:18px;
+    }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -699,19 +688,10 @@ font-size:16px;
 
 </nav>
 
-<header class="hero">
-
-<img src="logo.png" class="hero-logo" alt="SR CRESCO Logo">
-
-<h1>SR CRESCO</h1>
-
-<p>Grow • Prosper • Thrive</p>
-
-</header>
 
 <main class="container">
 
-<article class="poll-card">
+<div class="card">
 
 <div class="category">
 📊 WhatsApp Poll
@@ -721,78 +701,66 @@ font-size:16px;
 September 10, 2026
 </div>
 
-<h2>
+<h1>
 SR CRESCO Farmer Poll
-</h2>
+</h1>
 
 <div class="question">
 
-<h3>
+<h2>
 ಭವಿಷ್ಯದಲ್ಲಿ ಕೃಷಿಯ ಮೇಲೆ ಯಾವ ತಂತ್ರಜ್ಞಾನ ಹೆಚ್ಚು ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂದು ನೀವು ಭಾವಿಸುತ್ತೀರಿ?
-</h3>
+</h2>
 
 <p>
-<strong>
 Which technology do you think will have the biggest impact on farming in the future?
-</strong>
 </p>
 
 </div>
 
-<p>
-ಕೆಳಗಿನ ಆಯ್ಕೆಗಳಲ್ಲಿ ನಿಮ್ಮ ಅಭಿಪ್ರಾಯಕ್ಕೆ ಹೊಂದುವ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ.
-</p>
 
-<p>
-Select the option that best represents your opinion.
-</p>
-
-<a href="poll-details.html?option=1"
+<a href="poll-details-sep10.html?option=1"
 class="option"
 onclick="trackOption(1)">
-<span class="option-number">1</span>
-AI & Smart Farming
+1. AI & Smart Farming
 </a>
 
-<a href="poll-details.html?option=2"
+<a href="poll-details-sep10.html?option=2"
 class="option"
 onclick="trackOption(2)">
-<span class="option-number">2</span>
-Drones
+2. Drones
 </a>
 
-<a href="poll-details.html?option=3"
+<a href="poll-details-sep10.html?option=3"
 class="option"
 onclick="trackOption(3)">
-<span class="option-number">3</span>
-Satellite Monitoring
+3. Satellite Monitoring
 </a>
 
-<a href="poll-details.html?option=4"
+<a href="poll-details-sep10.html?option=4"
 class="option"
 onclick="trackOption(4)">
-<span class="option-number">4</span>
-Drip Irrigation
+4. Drip Irrigation
 </a>
 
-<a href="poll-details.html?option=5"
+<a href="poll-details-sep10.html?option=5"
 class="option"
 onclick="trackOption(5)">
-<span class="option-number">5</span>
-All of the above
+5. All of the above
 </a>
+
 
 <a href="poll.html" class="back">
-← Back to Poll
+← Back to Polls
 </a>
 
-</article>
+</div>
 
 </main>
 
+
 <footer>
 
-<h3>🌾 SR CRESCO</h3>
+<p><strong>SR CRESCO</strong></p>
 
 <p>Grow • Prosper • Thrive</p>
 
@@ -802,6 +770,7 @@ All of the above
 
 </footer>
 
+
 <script>
 
 function trackOption(option){
@@ -810,7 +779,7 @@ if(typeof gtag === "function"){
 
 gtag("event","poll_option_selected",{
 poll_date:"2026-09-10",
-selected_option:option
+poll_option:option
 });
 
 }
