@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +11,11 @@
 
 <script>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
 gtag('js', new Date());
 gtag('config', 'G-W9695JZYKH');
 </script>
@@ -33,7 +38,7 @@ body{
     color:#18351f;
 }
 
-/* HEADER */
+/* NAV */
 
 nav{
     background:#123d25;
@@ -56,13 +61,15 @@ nav a{
     font-size:14px;
 }
 
-/* POLLS */
+/* CONTAINER */
 
 .container{
     max-width:850px;
     margin:auto;
     padding:30px 18px;
 }
+
+/* POLL CARD */
 
 .poll-card{
     background:white;
@@ -85,7 +92,7 @@ nav a{
     margin:8px 0 18px;
 }
 
-.poll-card h2{
+.poll-card h1{
     color:#123d25;
     font-size:25px;
     margin:0 0 18px;
@@ -99,7 +106,7 @@ nav a{
     margin-bottom:18px;
 }
 
-.question h3{
+.question h2{
     color:#176b35;
     font-size:19px;
     line-height:1.6;
@@ -109,17 +116,15 @@ nav a{
 .question p{
     font-size:14px;
     font-weight:bold;
+    line-height:1.6;
     margin:0;
 }
 
-.poll-card p{
-    font-size:14px;
-    line-height:1.7;
-}
+/* BUTTONS */
 
 .buttons{
     display:flex;
-    gap:8px;
+    gap:10px;
     flex-wrap:wrap;
     margin-top:18px;
 }
@@ -128,7 +133,7 @@ nav a{
     display:inline-block;
     background:#176b35;
     color:white;
-    padding:10px 17px;
+    padding:11px 18px;
     border-radius:25px;
     text-decoration:none;
     font-size:13px;
@@ -139,10 +144,12 @@ nav a{
     background:#25D366;
 }
 
+/* BACK */
+
 .back{
     display:inline-block;
-    margin-top:15px;
-    padding:9px 17px;
+    margin-top:5px;
+    padding:10px 18px;
     border:2px solid #176b35;
     border-radius:25px;
     color:#176b35;
@@ -158,7 +165,6 @@ footer{
     color:white;
     text-align:center;
     padding:25px 15px;
-    margin-top:15px;
 }
 
 footer p{
@@ -192,11 +198,11 @@ footer p{
         padding:21px;
     }
 
-    .poll-card h2{
+    .poll-card h1{
         font-size:23px;
     }
 
-    .question h3{
+    .question h2{
         font-size:18px;
     }
 
@@ -212,18 +218,19 @@ footer p{
     }
 
     .back{
-        display:block;
         width:100%;
         text-align:center;
     }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- NAV -->
 
 <nav>
 
@@ -232,9 +239,11 @@ footer p{
 </a>
 
 <div>
+
 <a href="index.html">Home</a>
 <a href="news.html">News</a>
 <a href="poll.html">Poll</a>
+
 </div>
 
 </nav>
@@ -243,9 +252,9 @@ footer p{
 <main class="container">
 
 
-<!-- ========================= -->
+<!-- ============================= -->
 <!-- SEPTEMBER 11 POLL -->
-<!-- ========================= -->
+<!-- ============================= -->
 
 <article class="poll-card">
 
@@ -257,15 +266,15 @@ footer p{
 September 11, 2026
 </div>
 
-<h2>
+<h1>
 SR CRESCO Farmer Poll
-</h2>
+</h1>
 
 <div class="question">
 
-<h3>
+<h2>
 ನಿಮ್ಮ ಜಮೀನಿಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
-</h3>
+</h2>
 
 <p>
 Have you tested your farm soil?
@@ -274,13 +283,11 @@ Have you tested your farm soil?
 </div>
 
 <p>
-ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡುವುದರಿಂದ ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಗುಣಲಕ್ಷಣಗಳು
-ಮತ್ತು ಪೋಷಕಾಂಶಗಳ ಸ್ಥಿತಿಯನ್ನು ತಿಳಿದುಕೊಳ್ಳಲು ಸಹಾಯವಾಗುತ್ತದೆ.
+ನಿಮ್ಮ ಅನುಭವಕ್ಕೆ ಹೊಂದುವ ಆಯ್ಕೆಯನ್ನು ನೋಡಿ.
 </p>
 
 <p>
-ನಿಮ್ಮ ಅನುಭವವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ಮಣ್ಣು ಪರೀಕ್ಷೆಯ ಬಗ್ಗೆ
-ಉಪಯುಕ್ತ ಮಾಹಿತಿಯನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ.
+Check the options and learn more about soil testing.
 </p>
 
 <div class="buttons">
@@ -306,9 +313,9 @@ WhatsApp Share →
 </article>
 
 
-<!-- ========================= -->
+<!-- ============================= -->
 <!-- SEPTEMBER 10 POLL -->
-<!-- ========================= -->
+<!-- ============================= -->
 
 <article class="poll-card">
 
@@ -320,15 +327,15 @@ WhatsApp Share →
 September 10, 2026
 </div>
 
-<h2>
+<h1>
 SR CRESCO Farmer Poll
-</h2>
+</h1>
 
 <div class="question">
 
-<h3>
+<h2>
 ಭವಿಷ್ಯದಲ್ಲಿ ಕೃಷಿಯ ಮೇಲೆ ಯಾವ ತಂತ್ರಜ್ಞಾನ ಹೆಚ್ಚು ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂದು ನೀವು ಭಾವಿಸುತ್ತೀರಿ?
-</h3>
+</h2>
 
 <p>
 Which technology do you think will have the biggest impact on farming in the future?
@@ -337,14 +344,11 @@ Which technology do you think will have the biggest impact on farming in the fut
 </div>
 
 <p>
-ಕೃಷಿಯಲ್ಲಿ ತಂತ್ರಜ್ಞಾನ ವೇಗವಾಗಿ ಬೆಳೆಯುತ್ತಿದೆ.
-AI, Drones, Satellite Monitoring ಮತ್ತು Drip Irrigation
-ಮುಂತಾದ ತಂತ್ರಜ್ಞಾನಗಳು ರೈತರಿಗೆ ಹೊಸ ಅವಕಾಶಗಳನ್ನು ನೀಡುತ್ತಿವೆ.
+ಕೃಷಿಯಲ್ಲಿ ತಂತ್ರಜ್ಞಾನದ ಬೆಳವಣಿಗೆ ವೇಗವಾಗಿ ನಡೆಯುತ್ತಿದೆ.
 </p>
 
 <p>
-ನಿಮ್ಮ ಅಭಿಪ್ರಾಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ಕೆಳಗಿನ ಆಯ್ಕೆಗಳಲ್ಲಿ
-ನಿಮ್ಮ ಉತ್ತರವನ್ನು ಆಯ್ಕೆಮಾಡಿ.
+Explore the options and learn more.
 </p>
 
 <div class="buttons">
@@ -378,7 +382,7 @@ WhatsApp Share →
 </main>
 
 
-<!-- ONE FOOTER ONLY -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -395,50 +399,53 @@ WhatsApp Share →
 
 <script>
 
+/* READ MORE TRACKING */
+
 function trackPoll(date,type){
 
-if(typeof gtag === "function"){
+    if(typeof gtag === "function"){
 
-gtag("event","poll_read_more",{
-poll_date:date,
-poll_type:type
-});
+        gtag("event","poll_read_more",{
+            poll_date:date,
+            poll_type:type
+        });
+
+    }
 
 }
 
-}
 
+/* WHATSAPP SHARE */
 
 function sharePoll(kannada,english,date){
 
-const pageUrl = window.location.href;
+    const pageUrl = window.location.href;
 
-const message =
-"SR CRESCO Farmer Poll\n\n" +
-kannada +
-"\n\n" +
-english +
-"\n\n" +
-"Participate in the poll:\n" +
-pageUrl;
+    const message =
+        "SR CRESCO Farmer Poll\n\n" +
+        kannada + "\n\n" +
+        english + "\n\n" +
+        "Participate in the poll:\n" +
+        pageUrl;
 
-const whatsappUrl =
-"https://wa.me/?text=" +
-encodeURIComponent(message);
+    const whatsappUrl =
+        "https://wa.me/?text=" +
+        encodeURIComponent(message);
 
-window.open(whatsappUrl,"_blank");
+    window.open(whatsappUrl,"_blank");
 
-if(typeof gtag === "function"){
+    if(typeof gtag === "function"){
 
-gtag("event","poll_whatsapp_share",{
-poll_date:date
-});
+        gtag("event","poll_whatsapp_share",{
+            poll_date:date
+        });
 
-}
+    }
 
 }
 
 </script>
 
 </body>
+
 </html>
