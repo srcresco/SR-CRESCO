@@ -88,7 +88,7 @@ nav a{
     font-size:19px;
 }
 
-/* CONTENT */
+/* CONTAINER */
 
 .container{
     max-width:850px;
@@ -96,7 +96,7 @@ nav a{
     padding:45px 20px;
 }
 
-/* MAIN CARD */
+/* POLL CARD */
 
 .poll-card{
     background:white;
@@ -105,16 +105,12 @@ nav a{
     box-shadow:0 5px 20px #0001;
 }
 
-/* DATE */
-
 .date{
     color:#176b35;
     font-weight:bold;
     font-size:16px;
     margin-bottom:20px;
 }
-
-/* CATEGORY */
 
 .category{
     color:#176b35;
@@ -123,16 +119,12 @@ nav a{
     margin-bottom:12px;
 }
 
-/* TITLE */
-
 .poll-card h2{
     color:#123d25;
     font-size:32px;
     line-height:1.4;
     margin-top:10px;
 }
-
-/* QUESTION */
 
 .question-card{
     background:#f1f8f2;
@@ -154,14 +146,12 @@ nav a{
     line-height:1.7;
 }
 
-/* TEXT */
-
 .poll-card > p{
     font-size:17px;
     line-height:1.8;
 }
 
-/* BUTTON */
+/* READ MORE BUTTON */
 
 .btn{
     display:inline-block;
@@ -176,6 +166,24 @@ nav a{
 
 .btn:hover{
     background:#0f5429;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:13px 24px;
+    border-radius:25px;
+    text-decoration:none;
+    margin-top:15px;
+    margin-left:8px;
+    font-weight:bold;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
 }
 
 /* FOOTER */
@@ -228,6 +236,17 @@ footer p{
         font-size:21px;
     }
 
+    .btn{
+        display:block;
+        text-align:center;
+    }
+
+    .whatsapp-btn{
+        display:block;
+        text-align:center;
+        margin-left:0;
+    }
+
 }
 
 </style>
@@ -236,7 +255,6 @@ footer p{
 
 
 <body>
-
 
 <!-- NAV -->
 
@@ -291,7 +309,7 @@ footer p{
 </header>
 
 
-<!-- POLL ARTICLE -->
+<!-- POLL CONTENT -->
 
 <main class="container">
 
@@ -310,8 +328,6 @@ footer p{
             SR CRESCO Farmer Poll
         </h2>
 
-
-        <!-- QUESTION CARD -->
 
         <div class="question-card">
 
@@ -348,7 +364,7 @@ footer p{
         </p>
 
 
-        <!-- NEXT PAGE -->
+        <!-- BUTTONS -->
 
         <a
             href="poll-options.html"
@@ -356,6 +372,17 @@ footer p{
             onclick="trackPollReadMore()"
         >
             Read More →
+        </a>
+
+
+        <a
+            href="https://chat.whatsapp.com/K1CE6RH9eDP7M3OoUISTG5?s=cl&p=a&mlu=4"
+            class="whatsapp-btn"
+            target="_blank"
+            rel="noopener"
+            onclick="trackWhatsAppPoll()"
+        >
+            WhatsApp Group →
         </a>
 
     </article>
@@ -386,7 +413,7 @@ footer p{
 </footer>
 
 
-<!-- GOOGLE ANALYTICS EVENT -->
+<!-- ANALYTICS -->
 
 <script>
 
@@ -397,6 +424,25 @@ function trackPollReadMore(){
         gtag(
             "event",
             "poll_read_more",
+            {
+                poll_date:"2026-09-11",
+                poll_question:
+                "Have you tested your farm soil?"
+            }
+        );
+
+    }
+
+}
+
+
+function trackWhatsAppPoll(){
+
+    if(typeof gtag === "function"){
+
+        gtag(
+            "event",
+            "poll_whatsapp_click",
             {
                 poll_date:"2026-09-11",
                 poll_question:
