@@ -2,520 +2,6 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-    dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-gtag('config', 'G-W9695JZYKH');
-</script>
-
-<title>SR CRESCO | WhatsApp Poll</title>
-
-<meta name="description"
-content="SR CRESCO Farmer Poll – Have you tested your farm soil?">
-
-<link rel="canonical"
-href="https://srcresco.github.io/SR-CRESCO/poll.html">
-
-<style>
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f7f3;
-    color:#18351f;
-}
-
-nav{
-    background:#123d25;
-    padding:12px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-nav img{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:18px;
-    font-size:14px;
-}
-
-.hero{
-    background:linear-gradient(135deg,#123d25,#2f7044);
-    color:white;
-    text-align:center;
-    padding:45px 20px;
-}
-
-.hero-logo{
-    width:160px;
-    max-height:120px;
-    object-fit:contain;
-}
-
-.hero h1{
-    font-size:36px;
-    margin:10px 0;
-}
-
-.hero p{
-    font-size:19px;
-}
-
-.container{
-    max-width:850px;
-    margin:auto;
-    padding:45px 20px;
-}
-
-.poll-card{
-    background:white;
-    padding:32px;
-    border-radius:20px;
-    box-shadow:0 5px 20px #0001;
-}
-
-.date{
-    color:#176b35;
-    font-weight:bold;
-    font-size:16px;
-    margin-bottom:20px;
-}
-
-.category{
-    color:#176b35;
-    font-weight:bold;
-    font-size:16px;
-    margin-bottom:12px;
-}
-
-.poll-card h2{
-    color:#123d25;
-    font-size:32px;
-    line-height:1.4;
-    margin-top:10px;
-}
-
-.question-card{
-    background:#f1f8f2;
-    border-left:5px solid #176b35;
-    padding:25px;
-    border-radius:14px;
-    margin:25px 0;
-}
-
-.question-card h3{
-    color:#176b35;
-    font-size:24px;
-    line-height:1.6;
-    margin:0 0 12px;
-}
-
-.question-card p{
-    font-size:18px;
-    line-height:1.7;
-}
-
-.poll-card > p{
-    font-size:17px;
-    line-height:1.8;
-}
-
-/* BUTTONS */
-
-.button-row{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:20px;
-}
-
-.btn{
-    display:inline-block;
-    background:#176b35;
-    color:white;
-    padding:13px 24px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#0f5429;
-}
-
-.whatsapp-btn{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:13px 24px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.whatsapp-btn:hover{
-    background:#1ebe5d;
-}
-
-/* BACK BUTTON */
-
-.back-btn{
-    display:block;
-    width:max-content;
-    margin-top:22px;
-    padding:11px 20px;
-    border:2px solid #176b35;
-    border-radius:25px;
-    color:#176b35;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.back-btn:hover{
-    background:#f1f8f2;
-}
-
-/* FOOTER */
-
-footer{
-    background:#0c2818;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:30px;
-}
-
-footer p{
-    line-height:1.6;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-    nav{
-        padding:10px 15px;
-    }
-
-    nav div{
-        display:none;
-    }
-
-    .hero{
-        padding:35px 20px;
-    }
-
-    .hero h1{
-        font-size:29px;
-    }
-
-    .container{
-        padding:30px 15px;
-    }
-
-    .poll-card{
-        padding:22px;
-    }
-
-    .poll-card h2{
-        font-size:27px;
-    }
-
-    .question-card h3{
-        font-size:21px;
-    }
-
-    .button-row{
-        display:block;
-    }
-
-    .btn,
-    .whatsapp-btn{
-        display:block;
-        width:100%;
-        text-align:center;
-        margin-bottom:10px;
-    }
-
-    .back-btn{
-        width:100%;
-        text-align:center;
-    }
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-<!-- NAV -->
-
-<nav>
-
-    <a href="index.html">
-
-        <img
-            src="logo.png"
-            alt="SR CRESCO Logo"
-        >
-
-    </a>
-
-    <div>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="news.html">
-            News
-        </a>
-
-        <a href="poll.html">
-            Poll
-        </a>
-
-    </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<header class="hero">
-
-    <img
-        src="logo.png"
-        class="hero-logo"
-        alt="SR CRESCO Logo"
-    >
-
-    <h1>
-        SR CRESCO
-    </h1>
-
-    <p>
-        Grow • Prosper • Thrive
-    </p>
-
-</header>
-
-
-<!-- POLL CONTENT -->
-
-<main class="container">
-
-    <article class="poll-card">
-
-        <div class="category">
-            📊 WhatsApp Poll
-        </div>
-
-        <div class="date">
-            September 11, 2026
-        </div>
-
-
-        <h2>
-            SR CRESCO Farmer Poll
-        </h2>
-
-
-        <div class="question-card">
-
-            <h3>
-                ನಿಮ್ಮ ಜಮೀನಿಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
-            </h3>
-
-            <p>
-                <strong>
-                    Have you tested your farm soil?
-                </strong>
-            </p>
-
-        </div>
-
-
-        <p>
-            ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡುವುದರಿಂದ ನಿಮ್ಮ ಜಮೀನಿನ
-            ಮಣ್ಣಿನ ಗುಣಲಕ್ಷಣಗಳು ಮತ್ತು ಪೋಷಕಾಂಶಗಳ
-            ಸ್ಥಿತಿಯನ್ನು ತಿಳಿದುಕೊಳ್ಳಲು ಸಹಾಯವಾಗುತ್ತದೆ.
-        </p>
-
-
-        <p>
-            ನಿಮ್ಮ ಅನುಭವವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು
-            ಮಣ್ಣು ಪರೀಕ್ಷೆಯ ಬಗ್ಗೆ ಉಪಯುಕ್ತ ಮಾಹಿತಿಯನ್ನು
-            ತಿಳಿದುಕೊಳ್ಳಿ.
-        </p>
-
-
-        <p>
-            ನಿಮ್ಮ ಉತ್ತರಕ್ಕೆ ಹೊಂದುವ ಆಯ್ಕೆಯನ್ನು
-            ಮುಂದಿನ ಪುಟದಲ್ಲಿ ಆಯ್ಕೆಮಾಡಿ.
-        </p>
-
-
-        <!-- MAIN BUTTONS -->
-
-        <div class="button-row">
-
-            <a
-                href="poll-options.html"
-                class="btn"
-                onclick="trackPollReadMore()"
-            >
-                Read More →
-            </a>
-
-
-            <a
-                href="#"
-                class="whatsapp-btn"
-                onclick="sharePollOnWhatsApp(); return false;"
-            >
-                WhatsApp Share →
-            </a>
-
-        </div>
-
-
-        <!-- BACK BUTTON -->
-
-        <a
-            href="index.html"
-            class="back-btn"
-        >
-            ← Back to Home
-        </a>
-
-    </article>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <h3>
-        🌾 SR CRESCO
-    </h3>
-
-    <p>
-        Grow • Prosper • Thrive
-    </p>
-
-    <p>
-        Chamarajanagar, Karnataka, India
-    </p>
-
-    <p>
-        © 2026 SR CRESCO. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<!-- ANALYTICS + WHATSAPP -->
-
-<script>
-
-function trackPollReadMore(){
-
-    if(typeof gtag === "function"){
-
-        gtag(
-            "event",
-            "poll_read_more",
-            {
-                poll_date:"2026-09-11",
-                poll_question:
-                "Have you tested your farm soil?"
-            }
-        );
-
-    }
-
-}
-
-
-function sharePollOnWhatsApp(){
-
-    const pageUrl = window.location.href;
-
-    const message =
-        "SR CRESCO Farmer Poll\n\n" +
-        "ನಿಮ್ಮ ಜಮೀನಿಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?\n" +
-        "Have you tested your farm soil?\n\n" +
-        "Participate in the poll:\n" +
-        pageUrl;
-
-    const whatsappUrl =
-        "https://wa.me/?text=" +
-        encodeURIComponent(message);
-
-    window.open(
-        whatsappUrl,
-        "_blank"
-    );
-
-
-    if(typeof gtag === "function"){
-
-        gtag(
-            "event",
-            "poll_whatsapp_share",
-            {
-                poll_date:"2026-09-11",
-                poll_question:
-                "Have you tested your farm soil?"
-            }
-        );
-
-    }
-
-}
-
-</script>
-
-
-</body>
-
-</html>
-
-
-    <!DOCTYPE html>
-<html lang="en">
-
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -529,13 +15,10 @@ gtag('js', new Date());
 gtag('config', 'G-W9695JZYKH');
 </script>
 
-<title>SR CRESCO | Farmer Poll</title>
+<title>SR CRESCO | Farmer Polls</title>
 
 <meta name="description"
-content="SR CRESCO Farmer Poll – Which technology will have the biggest impact on farming in the future?">
-
-<link rel="canonical"
-href="https://srcresco.github.io/SR-CRESCO/poll.html">
+content="SR CRESCO Farmer Polls – Agriculture and farming polls for farmers.">
 
 <style>
 
@@ -573,104 +56,99 @@ nav a{
     font-size:14px;
 }
 
-/* MAIN */
+/* POLLS */
 
 .container{
     max-width:850px;
     margin:auto;
-    padding:40px 20px;
+    padding:30px 18px;
 }
 
 .poll-card{
     background:white;
-    padding:32px;
+    padding:25px;
     border-radius:18px;
+    margin-bottom:22px;
     box-shadow:0 5px 20px #0001;
 }
 
 .category{
     color:#176b35;
     font-weight:bold;
-    font-size:15px;
+    font-size:13px;
 }
 
 .date{
     color:#176b35;
     font-weight:bold;
-    margin:10px 0 20px;
+    font-size:13px;
+    margin:8px 0 18px;
 }
 
-.poll-card h1{
+.poll-card h2{
     color:#123d25;
-    font-size:30px;
-    margin:0 0 22px;
+    font-size:25px;
+    margin:0 0 18px;
 }
 
-.question-card{
+.question{
     background:#f1f8f2;
-    border-left:5px solid #176b35;
-    padding:22px;
-    border-radius:12px;
-    margin:20px 0;
+    border-left:4px solid #176b35;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:18px;
 }
 
-.question-card h2{
+.question h3{
     color:#176b35;
-    font-size:22px;
+    font-size:19px;
     line-height:1.6;
-    margin:0 0 10px;
+    margin:0 0 8px;
 }
 
-.question-card p{
-    font-size:17px;
-    line-height:1.6;
+.question p{
+    font-size:14px;
+    font-weight:bold;
     margin:0;
 }
 
-.poll-card > p{
-    font-size:16px;
-    line-height:1.8;
+.poll-card p{
+    font-size:14px;
+    line-height:1.7;
 }
 
-.button-row{
+.buttons{
     display:flex;
-    gap:10px;
+    gap:8px;
     flex-wrap:wrap;
-    margin-top:22px;
+    margin-top:18px;
 }
 
 .btn{
     display:inline-block;
     background:#176b35;
     color:white;
-    padding:12px 22px;
+    padding:10px 17px;
     border-radius:25px;
     text-decoration:none;
+    font-size:13px;
     font-weight:bold;
-    font-size:14px;
 }
 
-.whatsapp-btn{
-    display:inline-block;
+.whatsapp{
     background:#25D366;
-    color:white;
-    padding:12px 22px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:14px;
 }
 
-.back-btn{
+.back{
     display:inline-block;
-    margin-top:18px;
-    padding:10px 20px;
+    margin-top:15px;
+    padding:9px 17px;
     border:2px solid #176b35;
     border-radius:25px;
     color:#176b35;
     text-decoration:none;
+    font-size:13px;
     font-weight:bold;
-    font-size:14px;
 }
 
 /* FOOTER */
@@ -679,21 +157,21 @@ footer{
     background:#0c2818;
     color:white;
     text-align:center;
-    padding:25px;
-    margin-top:30px;
+    padding:25px 15px;
+    margin-top:15px;
 }
 
 footer p{
-    margin:7px 0;
-    font-size:13px;
+    margin:6px;
+    font-size:12px;
 }
 
 /* MOBILE */
 
-@media(max-width:700px){
+@media(max-width:600px){
 
     nav{
-        padding:10px 15px;
+        padding:9px 15px;
     }
 
     nav img{
@@ -707,38 +185,34 @@ footer p{
     }
 
     .container{
-        padding:25px 15px;
+        padding:22px 14px;
     }
 
     .poll-card{
-        padding:22px;
+        padding:21px;
     }
 
-    .poll-card h1{
-        font-size:25px;
+    .poll-card h2{
+        font-size:23px;
     }
 
-    .question-card h2{
-        font-size:19px;
+    .question h3{
+        font-size:18px;
     }
 
-    .question-card p{
-        font-size:15px;
-    }
-
-    .button-row{
+    .buttons{
         display:block;
     }
 
-    .btn,
-    .whatsapp-btn{
+    .btn{
         display:block;
         width:100%;
         text-align:center;
-        margin-bottom:10px;
+        margin-bottom:9px;
     }
 
-    .back-btn{
+    .back{
+        display:block;
         width:100%;
         text-align:center;
     }
@@ -753,155 +227,214 @@ footer p{
 
 <nav>
 
-    <a href="index.html">
-        <img src="logo.png" alt="SR CRESCO Logo">
-    </a>
+<a href="index.html">
+<img src="logo.png" alt="SR CRESCO Logo">
+</a>
 
-    <div>
-        <a href="index.html">Home</a>
-        <a href="news.html">News</a>
-        <a href="poll.html">Poll</a>
-    </div>
+<div>
+<a href="index.html">Home</a>
+<a href="news.html">News</a>
+<a href="poll.html">Poll</a>
+</div>
 
 </nav>
 
 
-<!-- POLL -->
-
 <main class="container">
+
+
+<!-- ========================= -->
+<!-- SEPTEMBER 11 POLL -->
+<!-- ========================= -->
 
 <article class="poll-card">
 
-    <div class="category">
-        📊 WhatsApp Poll
-    </div>
+<div class="category">
+📊 WhatsApp Poll
+</div>
 
-    <div class="date">
-        September 10, 2026
-    </div>
+<div class="date">
+September 11, 2026
+</div>
 
-    <h1>
-        SR CRESCO Farmer Poll
-    </h1>
+<h2>
+SR CRESCO Farmer Poll
+</h2>
 
-    <div class="question-card">
+<div class="question">
 
-        <h2>
-            ಭವಿಷ್ಯದಲ್ಲಿ ಕೃಷಿಯ ಮೇಲೆ ಯಾವ ತಂತ್ರಜ್ಞಾನ ಹೆಚ್ಚು ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂದು ನೀವು ಭಾವಿಸುತ್ತೀರಿ?
-        </h2>
+<h3>
+ನಿಮ್ಮ ಜಮೀನಿಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
+</h3>
 
-        <p>
-            <strong>
-                Which technology do you think will have the biggest impact on farming in the future?
-            </strong>
-        </p>
+<p>
+Have you tested your farm soil?
+</p>
 
-    </div>
+</div>
 
-    <p>
-        ಕೃಷಿಯಲ್ಲಿ ತಂತ್ರಜ್ಞಾನ ವೇಗವಾಗಿ ಬೆಳೆಯುತ್ತಿದೆ.
-        AI, Drones, Satellite Monitoring ಮತ್ತು Drip Irrigation
-        ಮುಂತಾದ ತಂತ್ರಜ್ಞಾನಗಳು ರೈತರಿಗೆ ಹೊಸ ಅವಕಾಶಗಳನ್ನು ನೀಡುತ್ತಿವೆ.
-    </p>
+<p>
+ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡುವುದರಿಂದ ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಗುಣಲಕ್ಷಣಗಳು
+ಮತ್ತು ಪೋಷಕಾಂಶಗಳ ಸ್ಥಿತಿಯನ್ನು ತಿಳಿದುಕೊಳ್ಳಲು ಸಹಾಯವಾಗುತ್ತದೆ.
+</p>
 
-    <p>
-        ನಿಮ್ಮ ಅಭಿಪ್ರಾಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ಕೆಳಗಿನ ಆಯ್ಕೆಗಳಲ್ಲಿ
-        ನಿಮ್ಮ ಉತ್ತರವನ್ನು ಆಯ್ಕೆಮಾಡಿ.
-    </p>
+<p>
+ನಿಮ್ಮ ಅನುಭವವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ಮಣ್ಣು ಪರೀಕ್ಷೆಯ ಬಗ್ಗೆ
+ಉಪಯುಕ್ತ ಮಾಹಿತಿಯನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ.
+</p>
 
-    <div class="button-row">
+<div class="buttons">
 
-        <a href="poll-options.html"
-           class="btn"
-           onclick="trackPollReadMore()">
-            Read More →
-        </a>
+<a href="poll-options.html"
+class="btn"
+onclick="trackPoll('2026-09-11','soil')">
+Read More →
+</a>
 
-        <a href="#"
-           class="whatsapp-btn"
-           onclick="sharePollOnWhatsApp(); return false;">
-            WhatsApp Share →
-        </a>
+<a href="#"
+class="btn whatsapp"
+onclick="sharePoll(
+'ನಿಮ್ಮ ಜಮೀನಿಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?',
+'Have you tested your farm soil?',
+'2026-09-11'
+); return false;">
+WhatsApp Share →
+</a>
 
-    </div>
-
-    <a href="index.html" class="back-btn">
-        ← Back to Home
-    </a>
+</div>
 
 </article>
+
+
+<!-- ========================= -->
+<!-- SEPTEMBER 10 POLL -->
+<!-- ========================= -->
+
+<article class="poll-card">
+
+<div class="category">
+📊 WhatsApp Poll
+</div>
+
+<div class="date">
+September 10, 2026
+</div>
+
+<h2>
+SR CRESCO Farmer Poll
+</h2>
+
+<div class="question">
+
+<h3>
+ಭವಿಷ್ಯದಲ್ಲಿ ಕೃಷಿಯ ಮೇಲೆ ಯಾವ ತಂತ್ರಜ್ಞಾನ ಹೆಚ್ಚು ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂದು ನೀವು ಭಾವಿಸುತ್ತೀರಿ?
+</h3>
+
+<p>
+Which technology do you think will have the biggest impact on farming in the future?
+</p>
+
+</div>
+
+<p>
+ಕೃಷಿಯಲ್ಲಿ ತಂತ್ರಜ್ಞಾನ ವೇಗವಾಗಿ ಬೆಳೆಯುತ್ತಿದೆ.
+AI, Drones, Satellite Monitoring ಮತ್ತು Drip Irrigation
+ಮುಂತಾದ ತಂತ್ರಜ್ಞಾನಗಳು ರೈತರಿಗೆ ಹೊಸ ಅವಕಾಶಗಳನ್ನು ನೀಡುತ್ತಿವೆ.
+</p>
+
+<p>
+ನಿಮ್ಮ ಅಭಿಪ್ರಾಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ಕೆಳಗಿನ ಆಯ್ಕೆಗಳಲ್ಲಿ
+ನಿಮ್ಮ ಉತ್ತರವನ್ನು ಆಯ್ಕೆಮಾಡಿ.
+</p>
+
+<div class="buttons">
+
+<a href="poll-options-sep10.html"
+class="btn"
+onclick="trackPoll('2026-09-10','technology')">
+Read More →
+</a>
+
+<a href="#"
+class="btn whatsapp"
+onclick="sharePoll(
+'ಭವಿಷ್ಯದಲ್ಲಿ ಕೃಷಿಯ ಮೇಲೆ ಯಾವ ತಂತ್ರಜ್ಞಾನ ಹೆಚ್ಚು ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂದು ನೀವು ಭಾವಿಸುತ್ತೀರಿ?',
+'Which technology do you think will have the biggest impact on farming in the future?',
+'2026-09-10'
+); return false;">
+WhatsApp Share →
+</a>
+
+</div>
+
+</article>
+
+
+<a href="index.html" class="back">
+← Back to Home
+</a>
+
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- ONE FOOTER ONLY -->
 
 <footer>
 
-    <p><strong>SR CRESCO</strong></p>
+<p><strong>SR CRESCO</strong></p>
 
-    <p>Grow • Prosper • Thrive</p>
+<p>Grow • Prosper • Thrive</p>
 
-    <p>Chamarajanagar, Karnataka, India</p>
+<p>Chamarajanagar, Karnataka, India</p>
 
-    <p>© 2026 SR CRESCO. All Rights Reserved.</p>
+<p>© 2026 SR CRESCO. All Rights Reserved.</p>
 
 </footer>
 
 
 <script>
 
-function trackPollReadMore(){
+function trackPoll(date,type){
 
-    if(typeof gtag === "function"){
+if(typeof gtag === "function"){
 
-        gtag("event","poll_read_more",{
+gtag("event","poll_read_more",{
+poll_date:date,
+poll_type:type
+});
 
-            poll_date:"2026-09-10",
-
-            poll_question:
-            "Which technology do you think will have the biggest impact on farming in the future?"
-
-        });
-
-    }
+}
 
 }
 
 
-function sharePollOnWhatsApp(){
+function sharePoll(kannada,english,date){
 
-    const pageUrl = window.location.href;
+const pageUrl = window.location.href;
 
-    const message =
-        "SR CRESCO Farmer Poll\n\n" +
+const message =
+"SR CRESCO Farmer Poll\n\n" +
+kannada +
+"\n\n" +
+english +
+"\n\n" +
+"Participate in the poll:\n" +
+pageUrl;
 
-        "ಭವಿಷ್ಯದಲ್ಲಿ ಕೃಷಿಯ ಮೇಲೆ ಯಾವ ತಂತ್ರಜ್ಞಾನ ಹೆಚ್ಚು ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂದು ನೀವು ಭಾವಿಸುತ್ತೀರಿ?\n\n" +
+const whatsappUrl =
+"https://wa.me/?text=" +
+encodeURIComponent(message);
 
-        "Which technology do you think will have the biggest impact on farming in the future?\n\n" +
+window.open(whatsappUrl,"_blank");
 
-        "Participate in the poll:\n" +
+if(typeof gtag === "function"){
 
-        pageUrl;
+gtag("event","poll_whatsapp_share",{
+poll_date:date
+});
 
-    const whatsappUrl =
-        "https://wa.me/?text=" +
-        encodeURIComponent(message);
-
-    window.open(whatsappUrl,"_blank");
-
-    if(typeof gtag === "function"){
-
-        gtag("event","poll_whatsapp_share",{
-
-            poll_date:"2026-09-10",
-
-            poll_question:
-            "Which technology do you think will have the biggest impact on farming in the future?"
-
-        });
-
-    }
+}
 
 }
 
