@@ -659,3 +659,502 @@ if(typeof gtag === "function" && option){
 </body>
 
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9695JZYKH');
+</script>
+
+<title>SR CRESCO | Poll Details</title>
+
+<meta name="description"
+content="SR CRESCO Farmer Poll – Agriculture technology information.">
+
+<link rel="canonical"
+href="https://srcresco.github.io/SR-CRESCO/poll-details.html">
+
+<style>
+
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f7f3;
+color:#18351f;
+}
+
+nav{
+background:#123d25;
+padding:12px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+nav img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:14px;
+}
+
+.hero{
+background:linear-gradient(135deg,#123d25,#2f7044);
+color:white;
+text-align:center;
+padding:45px 20px;
+}
+
+.hero-logo{
+width:160px;
+max-height:120px;
+object-fit:contain;
+}
+
+.hero h1{
+font-size:36px;
+margin:10px 0;
+}
+
+.hero p{
+font-size:19px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:45px 20px;
+}
+
+.card{
+background:white;
+padding:32px;
+border-radius:20px;
+box-shadow:0 5px 20px #0001;
+}
+
+.category{
+color:#176b35;
+font-weight:bold;
+}
+
+.date{
+color:#176b35;
+font-weight:bold;
+margin:10px 0 20px;
+}
+
+h2{
+color:#123d25;
+font-size:30px;
+line-height:1.4;
+}
+
+.selected{
+background:#f1f8f2;
+border-left:5px solid #176b35;
+padding:20px;
+border-radius:12px;
+margin:25px 0;
+}
+
+.selected h3{
+margin:0;
+color:#176b35;
+line-height:1.6;
+}
+
+.info h3{
+color:#176b35;
+font-size:21px;
+margin-top:25px;
+}
+
+.info p,
+.info li{
+font-size:17px;
+line-height:1.8;
+}
+
+.info ul{
+padding-left:22px;
+}
+
+.tip{
+background:#fff8df;
+border-left:5px solid #d4a500;
+padding:20px;
+border-radius:12px;
+margin-top:25px;
+}
+
+.btn{
+display:inline-block;
+background:#176b35;
+color:white;
+padding:13px 24px;
+border-radius:25px;
+text-decoration:none;
+margin-top:25px;
+font-weight:bold;
+}
+
+footer{
+background:#0c2818;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:30px;
+}
+
+@media(max-width:700px){
+
+nav div{display:none;}
+
+.hero h1{font-size:29px;}
+
+.container{
+padding:30px 15px;
+}
+
+.card{
+padding:22px;
+}
+
+h2{
+font-size:26px;
+}
+
+.info p,
+.info li{
+font-size:16px;
+}
+
+.btn{
+display:block;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">
+<img src="logo.png" alt="SR CRESCO Logo">
+</a>
+
+<div>
+<a href="index.html">Home</a>
+<a href="news.html">News</a>
+<a href="poll.html">Poll</a>
+</div>
+
+</nav>
+
+<header class="hero">
+
+<img src="logo.png" class="hero-logo" alt="SR CRESCO Logo">
+
+<h1>SR CRESCO</h1>
+
+<p>Grow • Prosper • Thrive</p>
+
+</header>
+
+<main class="container">
+
+<article class="card">
+
+<div class="category">
+📊 WhatsApp Poll
+</div>
+
+<div class="date">
+September 10, 2026
+</div>
+
+<h2>
+SR CRESCO Farmer Poll
+</h2>
+
+<div class="selected">
+
+<h3 id="selectedOption">
+Loading...
+</h3>
+
+</div>
+
+<div id="details"></div>
+
+<a href="poll-options.html" class="btn">
+← Back to Poll Options
+</a>
+
+</article>
+
+</main>
+
+<footer>
+
+<h3>🌾 SR CRESCO</h3>
+
+<p>Grow • Prosper • Thrive</p>
+
+<p>Chamarajanagar, Karnataka, India</p>
+
+<p>© 2026 SR CRESCO. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const option = params.get("option");
+
+const selectedOption =
+document.getElementById("selectedOption");
+
+const details =
+document.getElementById("details");
+
+
+if(option === "1"){
+
+selectedOption.innerHTML =
+"AI & Smart Farming";
+
+details.innerHTML = `
+
+<div class="info">
+
+<h3>🤖 AI & Smart Farming</h3>
+
+<p>
+Artificial Intelligence ಮತ್ತು Smart Farming ತಂತ್ರಜ್ಞಾನಗಳು ರೈತರಿಗೆ data ಆಧಾರಿತ ಕೃಷಿ ನಿರ್ಧಾರಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+<p>
+ಬೆಳೆ ಆರೋಗ್ಯ, ಹವಾಮಾನ, ನೀರಿನ ಬಳಕೆ ಮತ್ತು farm management ಮುಂತಾದ ವಿಷಯಗಳಲ್ಲಿ technology ಸಹಾಯವಾಗಬಹುದು.
+</p>
+
+<h3>🌾 Farmer Benefit</h3>
+
+<p>
+ಸರಿಯಾದ data ಮತ್ತು ಸ್ಥಳೀಯ ಕೃಷಿ ಜ್ಞಾನವನ್ನು ಬಳಸಿಕೊಂಡು input management ಮತ್ತು farm planning ಅನ್ನು ಉತ್ತಮಗೊಳಿಸಲು ಸಹಾಯವಾಗಬಹುದು.
+</p>
+
+</div>
+
+`;
+
+}
+
+else if(option === "2"){
+
+selectedOption.innerHTML =
+"Drones";
+
+details.innerHTML = `
+
+<div class="info">
+
+<h3>🚁 Drones in Agriculture</h3>
+
+<p>
+ಕೃಷಿಯಲ್ಲಿ drones ಅನ್ನು crop monitoring, field observation ಮತ್ತು ಕೆಲವು farm operationsಗಾಗಿ ಬಳಸಬಹುದು.
+</p>
+
+<p>
+ದೊಡ್ಡ ಪ್ರದೇಶಗಳನ್ನು ವೇಗವಾಗಿ ಗಮನಿಸಲು ಮತ್ತು crop condition ಬಗ್ಗೆ ಮಾಹಿತಿ ಪಡೆಯಲು drones ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+<h3>🌱 Farmer Benefit</h3>
+
+<p>
+ಸಮಯ ಉಳಿತಾಯ ಮತ್ತು field monitoring ಅನ್ನು ಹೆಚ್ಚು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಮಾಡಲು drone technology ಉಪಯುಕ್ತವಾಗಬಹುದು.
+</p>
+
+</div>
+
+`;
+
+}
+
+else if(option === "3"){
+
+selectedOption.innerHTML =
+"Satellite Monitoring";
+
+details.innerHTML = `
+
+<div class="info">
+
+<h3>🛰️ Satellite Monitoring</h3>
+
+<p>
+Satellite technology ಮೂಲಕ ದೊಡ್ಡ ಕೃಷಿ ಪ್ರದೇಶಗಳನ್ನು ದೂರದಿಂದ monitor ಮಾಡಬಹುದು.
+</p>
+
+<p>
+Vegetation condition, crop growth ಮತ್ತು field changes ಮುಂತಾದ ಮಾಹಿತಿಯನ್ನು satellite-based systems ಮೂಲಕ ವಿಶ್ಲೇಷಿಸಬಹುದು.
+</p>
+
+<h3>🌍 Farmer Benefit</h3>
+
+<p>
+ದೊಡ್ಡ ಪ್ರದೇಶಗಳ crop monitoring ಮತ್ತು farm planningಗೆ satellite data ಸಹಾಯಕವಾಗಬಹುದು.
+</p>
+
+</div>
+
+`;
+
+}
+
+else if(option === "4"){
+
+selectedOption.innerHTML =
+"Drip Irrigation";
+
+details.innerHTML = `
+
+<div class="info">
+
+<h3>💧 Drip Irrigation</h3>
+
+<p>
+Drip irrigation ಮೂಲಕ ನೀರನ್ನು ಬೆಳೆಗಳ root zoneಗೆ ನಿಯಂತ್ರಿತ ರೀತಿಯಲ್ಲಿ ನೀಡಬಹುದು.
+</p>
+
+<p>
+ನೀರಿನ ಲಭ್ಯತೆ ಕಡಿಮೆ ಇರುವ ಪ್ರದೇಶಗಳಲ್ಲಿ ಸರಿಯಾದ irrigation planning ಬಹಳ ಮುಖ್ಯ.
+</p>
+
+<h3>🌱 Farmer Benefit</h3>
+
+<p>
+ನೀರಿನ ಬಳಕೆಯನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ನಿರ್ವಹಿಸಲು ಮತ್ತು crop water management ಅನ್ನು ಸುಧಾರಿಸಲು drip irrigation ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+</div>
+
+`;
+
+}
+
+else if(option === "5"){
+
+selectedOption.innerHTML =
+"All of the above";
+
+details.innerHTML = `
+
+<div class="info">
+
+<h3>🌾 Future Farming = Technology + Knowledge</h3>
+
+<p>
+AI & Smart Farming, Drones, Satellite Monitoring ಮತ್ತು Drip Irrigation — ಪ್ರತಿಯೊಂದು technologyಗೂ ಕೃಷಿಯಲ್ಲಿ ವಿಭಿನ್ನ ಪಾತ್ರವಿದೆ.
+</p>
+
+<h3>🤖 AI & Smart Farming</h3>
+
+<p>
+Farm data ಆಧಾರಿತ decision-making ಮತ್ತು smart farm managementಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+<h3>🚁 Drones</h3>
+
+<p>
+Crop ಮತ್ತು field monitoring ಅನ್ನು ವೇಗವಾಗಿ ಮಾಡಲು ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+<h3>🛰️ Satellite Monitoring</h3>
+
+<p>
+ದೊಡ್ಡ ಪ್ರದೇಶಗಳಲ್ಲಿ crop ಮತ್ತು field conditions monitor ಮಾಡಲು ಉಪಯುಕ್ತವಾಗಬಹುದು.
+</p>
+
+<h3>💧 Drip Irrigation</h3>
+
+<p>
+ನೀರನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಬಳಸಲು ಮತ್ತು crop water management ಸುಧಾರಿಸಲು ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+<div class="tip">
+
+<strong>Farmer Tip:</strong>
+
+<p>
+Technology ಮಾತ್ರವಲ್ಲ — ಸರಿಯಾದ ಕೃಷಿ ಜ್ಞಾನ + ಸ್ಥಳೀಯ ಪರಿಸ್ಥಿತಿ + ರೈತರ ಅನುಭವ + Technology ಸೇರಿ ಉತ್ತಮ farming decisionsಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+else{
+
+selectedOption.innerHTML =
+"Poll option not found";
+
+details.innerHTML = `
+
+<div class="info">
+
+<p>
+Please return to the poll and select a valid option.
+</p>
+
+</div>
+
+`;
+
+}
+
+
+if(typeof gtag === "function" && option){
+
+gtag("event","poll_details_view",{
+poll_date:"2026-09-10",
+selected_option:option
+});
+
+}
+
+</script>
+
+</body>
+</html>
