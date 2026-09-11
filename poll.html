@@ -41,8 +41,6 @@ body{
     color:#18351f;
 }
 
-/* NAV */
-
 nav{
     background:#123d25;
     padding:12px 6%;
@@ -63,8 +61,6 @@ nav a{
     margin-left:18px;
     font-size:14px;
 }
-
-/* HERO */
 
 .hero{
     background:linear-gradient(135deg,#123d25,#2f7044);
@@ -88,15 +84,11 @@ nav a{
     font-size:19px;
 }
 
-/* CONTAINER */
-
 .container{
     max-width:850px;
     margin:auto;
     padding:45px 20px;
 }
-
-/* POLL CARD */
 
 .poll-card{
     background:white;
@@ -151,7 +143,14 @@ nav a{
     line-height:1.8;
 }
 
-/* READ MORE BUTTON */
+/* BUTTONS */
+
+.button-row{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
 
 .btn{
     display:inline-block;
@@ -160,15 +159,12 @@ nav a{
     padding:13px 24px;
     border-radius:25px;
     text-decoration:none;
-    margin-top:15px;
     font-weight:bold;
 }
 
 .btn:hover{
     background:#0f5429;
 }
-
-/* WHATSAPP BUTTON */
 
 .whatsapp-btn{
     display:inline-block;
@@ -177,13 +173,30 @@ nav a{
     padding:13px 24px;
     border-radius:25px;
     text-decoration:none;
-    margin-top:15px;
-    margin-left:8px;
     font-weight:bold;
+    cursor:pointer;
 }
 
 .whatsapp-btn:hover{
     background:#1ebe5d;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+    display:block;
+    width:max-content;
+    margin-top:22px;
+    padding:11px 20px;
+    border:2px solid #176b35;
+    border-radius:25px;
+    color:#176b35;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    background:#f1f8f2;
 }
 
 /* FOOTER */
@@ -236,15 +249,21 @@ footer p{
         font-size:21px;
     }
 
-    .btn{
+    .button-row{
         display:block;
-        text-align:center;
     }
 
+    .btn,
     .whatsapp-btn{
         display:block;
+        width:100%;
         text-align:center;
-        margin-left:0;
+        margin-bottom:10px;
+    }
+
+    .back-btn{
+        width:100%;
+        text-align:center;
     }
 
 }
@@ -364,25 +383,37 @@ footer p{
         </p>
 
 
-        <!-- BUTTONS -->
+        <!-- MAIN BUTTONS -->
+
+        <div class="button-row">
+
+            <a
+                href="poll-options.html"
+                class="btn"
+                onclick="trackPollReadMore()"
+            >
+                Read More →
+            </a>
+
+
+            <a
+                href="#"
+                class="whatsapp-btn"
+                onclick="sharePollOnWhatsApp(); return false;"
+            >
+                WhatsApp Share →
+            </a>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
 
         <a
-            href="poll-options.html"
-            class="btn"
-            onclick="trackPollReadMore()"
+            href="index.html"
+            class="back-btn"
         >
-            Read More →
-        </a>
-
-
-        <a
-            href="https://chat.whatsapp.com/K1CE6RH9eDP7M3OoUISTG5?s=cl&p=a&mlu=4"
-            class="whatsapp-btn"
-            target="_blank"
-            rel="noopener"
-            onclick="trackWhatsAppPoll()"
-        >
-            WhatsApp Group →
+            ← Back to Home
         </a>
 
     </article>
@@ -413,7 +444,7 @@ footer p{
 </footer>
 
 
-<!-- ANALYTICS -->
+<!-- ANALYTICS + WHATSAPP -->
 
 <script>
 
@@ -436,13 +467,32 @@ function trackPollReadMore(){
 }
 
 
-function trackWhatsAppPoll(){
+function sharePollOnWhatsApp(){
+
+    const pageUrl = window.location.href;
+
+    const message =
+        "SR CRESCO Farmer Poll\n\n" +
+        "ನಿಮ್ಮ ಜಮೀನಿಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?\n" +
+        "Have you tested your farm soil?\n\n" +
+        "Participate in the poll:\n" +
+        pageUrl;
+
+    const whatsappUrl =
+        "https://wa.me/?text=" +
+        encodeURIComponent(message);
+
+    window.open(
+        whatsappUrl,
+        "_blank"
+    );
+
 
     if(typeof gtag === "function"){
 
         gtag(
             "event",
-            "poll_whatsapp_click",
+            "poll_whatsapp_share",
             {
                 poll_date:"2026-09-11",
                 poll_question:
