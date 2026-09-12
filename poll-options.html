@@ -6,6 +6,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SR CRESCO | Poll Options</title>
+
+<meta name="description"
+content="SR CRESCO Farmer Poll Options – Beekeeping and Soil Testing awareness polls for farmers.">
+
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
 
@@ -20,182 +25,165 @@ gtag('js', new Date());
 gtag('config', 'G-W9695JZYKH');
 </script>
 
-<title>SR CRESCO | Soil Test Poll Options</title>
-
-<meta name="description"
-content="SR CRESCO Soil Test Farmer Poll options and agriculture information.">
-
 <style>
 
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f7f3;
-    color:#18351f;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7f3;
+    color: #222;
 }
 
-nav{
-    background:#123d25;
-    padding:10px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+nav {
+    background: #123d25;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:18px;
-    font-size:14px;
+.logo-area img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
 }
 
-.container{
-    max-width:850px;
-    margin:auto;
-    padding:30px 18px;
+.logo-area h2 {
+    color: white;
+    margin: 0;
+    font-size: 20px;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 5px 20px #0001;
+.nav-links {
+    display: flex;
+    gap: 18px;
 }
 
-.category{
-    color:#176b35;
-    font-weight:bold;
-    font-size:13px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.date{
-    color:#176b35;
-    font-weight:bold;
-    font-size:13px;
-    margin:8px 0 18px;
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
-h1{
-    color:#123d25;
-    font-size:25px;
-    margin:0 0 18px;
+.poll-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.question{
-    background:#f1f8f2;
-    border-left:4px solid #176b35;
-    padding:18px;
-    border-radius:10px;
-    margin-bottom:20px;
+.category {
+    color: #176b35;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.question h2{
-    color:#176b35;
-    font-size:19px;
-    line-height:1.6;
-    margin:0 0 8px;
+.date {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-.question p{
-    font-size:14px;
-    font-weight:bold;
-    line-height:1.6;
-    margin:0;
+h1 {
+    color: #123d25;
+    font-size: 27px;
 }
 
-.intro{
-    font-size:14px;
-    line-height:1.7;
+h2 {
+    color: #176b35;
+    margin-top: 25px;
 }
 
-.option{
-    display:block;
-    background:white;
-    border:2px solid #dce9df;
-    border-radius:14px;
-    padding:17px;
-    margin:12px 0;
-    color:#18351f;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:bold;
+.option {
+    display: block;
+    background: #f5f7f3;
+    border: 1px solid #d8e2d9;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 12px 0;
+    text-decoration: none;
+    color: #123d25;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
-.option:hover{
-    background:#f1f8f2;
-    border-color:#176b35;
+.option:hover {
+    background: #e7f2e9;
+    transform: translateY(-2px);
 }
 
-.back{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 18px;
-    border:2px solid #176b35;
-    border-radius:25px;
-    color:#176b35;
-    text-decoration:none;
-    font-size:13px;
-    font-weight:bold;
+.back {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 18px;
+    background: #176b35;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-footer{
-    background:#0c2818;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-    margin-top:30px;
+.share-btn {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 8px;
+    padding: 11px 18px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-footer p{
-    margin:6px;
-    font-size:12px;
+footer {
+    background: #123d25;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
 }
 
-@media(max-width:600px){
+footer p {
+    margin: 6px 0;
+}
 
-    nav{
-        padding:9px 15px;
+@media (max-width: 600px) {
+
+    nav {
+        padding: 10px 12px;
     }
 
-    nav img{
-        width:42px;
-        height:42px;
+    .nav-links {
+        gap: 10px;
     }
 
-    nav a{
-        margin-left:10px;
-        font-size:12px;
+    .nav-links a {
+        font-size: 14px;
     }
 
-    .container{
-        padding:22px 14px;
+    .poll-card {
+        padding: 20px;
     }
 
-    .card{
-        padding:21px;
-    }
-
-    h1{
-        font-size:23px;
-    }
-
-    .question h2{
-        font-size:18px;
-    }
-
-    .option{
-        font-size:14px;
-        padding:16px;
+    h1 {
+        font-size: 23px;
     }
 
 }
@@ -206,145 +194,292 @@ footer p{
 
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 
 <nav>
 
-<a href="index.html">
-<img src="logo.png" alt="SR CRESCO Logo">
-</a>
+    <div class="logo-area">
 
-<div>
+        <img src="logo.png" alt="SR CRESCO Logo">
 
-<a href="index.html">Home</a>
-<a href="news.html">News</a>
-<a href="poll.html">Poll</a>
+        <h2>SR CRESCO</h2>
 
-</div>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="news.html">News</a>
+
+        <a href="poll.html">Poll</a>
+
+    </div>
 
 </nav>
 
 
-<main class="container">
+<div class="container">
 
-<div class="card">
 
-<div class="category">
-📊 WhatsApp Poll
+<!-- ================================================= -->
+<!-- SEPTEMBER 12 – BEEKEEPING POLL -->
+<!-- ================================================= -->
+
+<div class="poll-card">
+
+    <div class="category">
+        📊 WhatsApp Poll
+    </div>
+
+    <div class="date">
+        September 12, 2026
+    </div>
+
+    <h1>
+        ಜೇನು ಸಾಕಾಣಿಕೆ – ರೈತರಿಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಅವಕಾಶ
+    </h1>
+
+    <h2>
+        ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಜೇನು ಸಾಕಾಣಿಕೆ ಆರಂಭಿಸಲು ನಿಮಗೆ ಆಸಕ್ತಿ ಇದೆಯೇ?
+    </h2>
+
+    <p>
+        Would you be interested in starting beekeeping on your farm?
+    </p>
+
+
+    <!-- OPTION 1 -->
+
+    <a
+        href="beekeeping-beginner-guide.html"
+        class="option"
+        onclick="trackOption('beekeeping_option1')">
+
+        1️⃣ ಹೌದು, ಆಸಕ್ತಿ ಇದೆ / Yes, I’m interested →
+
+    </a>
+
+
+    <!-- OPTION 2 -->
+
+    <a
+        href="beekeeping-beginner-guide.html"
+        class="option"
+        onclick="trackOption('beekeeping_option2')">
+
+        2️⃣ ಮಾಹಿತಿ ಸಿಕ್ಕರೆ ಆರಂಭಿಸುತ್ತೇನೆ / I would start if I get more information →
+
+    </a>
+
+
+    <!-- OPTION 3 -->
+
+    <a
+        href="beekeeping-beginner-guide.html"
+        class="option"
+        onclick="trackOption('beekeeping_option3')">
+
+        3️⃣ ಈಗಾಗಲೇ ಮಾಡುತ್ತಿದ್ದೇನೆ / I’m already doing it →
+
+    </a>
+
+
+    <!-- OPTION 4 -->
+
+    <a
+        href="beekeeping-beginner-guide.html"
+        class="option"
+        onclick="trackOption('beekeeping_option4')">
+
+        4️⃣ ಆಸಕ್ತಿ ಇಲ್ಲ / Not interested →
+
+    </a>
+
+
+    <!-- BACK TO POLLS -->
+
+    <a href="poll.html" class="back">
+        ← Back to Polls
+    </a>
+
+
+    <!-- SHARE -->
+
+    <a
+        href="javascript:void(0)"
+        class="share-btn"
+        onclick="shareBeekeeping()">
+
+        Share on WhatsApp
+
+    </a>
+
 </div>
 
-<div class="date">
-September 11, 2026
+
+
+<!-- ================================================= -->
+<!-- SEPTEMBER 11 – SOIL TEST POLL -->
+<!-- ================================================= -->
+
+<div class="poll-card">
+
+    <div class="category">
+        📊 WhatsApp Poll
+    </div>
+
+    <div class="date">
+        September 11, 2026
+    </div>
+
+    <h1>
+        ಮಣ್ಣು ಪರೀಕ್ಷೆ – ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಸ್ಥಿತಿ ನಿಮಗೆ ಗೊತ್ತಿದೆಯೇ?
+    </h1>
+
+    <h2>
+        ನೀವು ಇತ್ತೀಚೆಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
+    </h2>
+
+    <p>
+        Have you tested your farm soil recently?
+    </p>
+
+
+    <!-- SOIL OPTION 1 -->
+
+    <a
+        href="poll-details.html#option1"
+        class="option"
+        onclick="trackOption('soil_option1')">
+
+        1️⃣ ಹೌದು, ಇತ್ತೀಚೆಗೆ ಮಾಡಿಸಿದ್ದೇನೆ →
+
+    </a>
+
+
+    <!-- SOIL OPTION 2 -->
+
+    <a
+        href="poll-details.html#option2"
+        class="option"
+        onclick="trackOption('soil_option2')">
+
+        2️⃣ ಹೌದು, ಆದರೆ ಬಹಳ ಹಿಂದೆಯೇ →
+
+    </a>
+
+
+    <!-- SOIL OPTION 3 -->
+
+    <a
+        href="poll-details.html#option3"
+        class="option"
+        onclick="trackOption('soil_option3')">
+
+        3️⃣ ಇನ್ನೂ ಮಾಡಿಸಿಲ್ಲ →
+
+    </a>
+
+
+    <!-- SOIL OPTION 4 -->
+
+    <a
+        href="poll-details.html#option4"
+        class="option"
+        onclick="trackOption('soil_option4')">
+
+        4️⃣ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿ ಬೇಕು →
+
+    </a>
+
+
+    <!-- BACK TO POLLS -->
+
+    <a href="poll.html" class="back">
+        ← Back to Polls
+    </a>
+
 </div>
 
-<h1>
-SR CRESCO Farmer Poll
-</h1>
-
-<div class="question">
-
-<h2>
-ನಿಮ್ಮ ಜಮೀನಿಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
-</h2>
-
-<p>
-Have you tested your farm soil?
-</p>
-
 </div>
 
-<p class="intro">
-ನಿಮ್ಮ ಉತ್ತರಕ್ಕೆ ಹೊಂದುವ ಆಯ್ಕೆಯನ್ನು ಕೆಳಗಿನಿಂದ ಆಯ್ಕೆಮಾಡಿ.
-</p>
-
-<p class="intro">
-Select the option that best matches your experience.
-</p>
 
 
-<!-- OPTION 1 -->
-
-<a class="option"
-href="poll-details.html#option1"
-onclick="trackOption('option1')">
-
-1. ಹೌದು, ಇತ್ತೀಚೆಗೆ ಮಾಡಿಸಿದ್ದೇನೆ →
-
-</a>
-
-
-<!-- OPTION 2 -->
-
-<a class="option"
-href="poll-details.html#option2"
-onclick="trackOption('option2')">
-
-2. ಹೌದು, ಆದರೆ ಬಹಳ ಹಿಂದೆಯೇ →
-
-</a>
-
-
-<!-- OPTION 3 -->
-
-<a class="option"
-href="poll-details.html#option3"
-onclick="trackOption('option3')">
-
-3. ಇನ್ನೂ ಮಾಡಿಸಿಲ್ಲ →
-
-</a>
-
-
-<!-- OPTION 4 -->
-
-<a class="option"
-href="poll-details.html#option4"
-onclick="trackOption('option4')">
-
-4. ಮಣ್ಣು ಪರೀಕ್ಷೆ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿ ಬೇಕು →
-
-</a>
-
-
-<a href="poll.html" class="back">
-← Back to Polls
-</a>
-
-</div>
-
-</main>
-
+<!-- FOOTER -->
 
 <footer>
 
-<p><strong>SR CRESCO</strong></p>
+    <p><strong>SR CRESCO</strong></p>
 
-<p>Grow • Prosper • Thrive</p>
+    <p>Grow • Prosper • Thrive</p>
 
-<p>Chamarajanagar, Karnataka, India</p>
+    <p>Chamarajanagar, Karnataka, India</p>
 
-<p>© 2026 SR CRESCO. All Rights Reserved.</p>
+    <p>
+        © 2026 SR CRESCO. All Rights Reserved.
+    </p>
 
 </footer>
 
 
+
 <script>
 
-function trackOption(option){
+/* =========================================
+   POLL OPTION TRACKING
+========================================= */
 
-    if(typeof gtag === "function"){
+function trackOption(optionName) {
 
-        gtag("event","poll_option_selected",{
+    if (typeof gtag === "function") {
 
-            poll_date:"2026-09-11",
+        gtag('event', 'poll_option_selected', {
 
-            poll_type:"soil",
+            option: optionName,
 
-            poll_option:option
+            poll_date:
+                optionName.startsWith('beekeeping')
+                ? '2026-09-12'
+                : '2026-09-11',
+
+            poll_type:
+                optionName.startsWith('beekeeping')
+                ? 'beekeeping'
+                : 'soil'
 
         });
 
     }
+
+}
+
+
+/* =========================================
+   WHATSAPP SHARE – BEEKEEPING POLL
+========================================= */
+
+function shareBeekeeping() {
+
+    const text =
+`🌿 SR CRESCO Agriculture Poll
+
+ಜೇನು ಸಾಕಾಣಿಕೆ – ರೈತರಿಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಅವಕಾಶ
+
+ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಜೇನು ಸಾಕಾಣಿಕೆ ಆರಂಭಿಸಲು ನಿಮಗೆ ಆಸಕ್ತಿ ಇದೆಯೇ?
+
+Would you be interested in starting beekeeping on your farm?
+
+Vote here:
+https://srcresco.github.io/SR-CRESCO/poll.html
+
+September 12, 2026`;
+
+    const url =
+        "https://wa.me/?text=" +
+        encodeURIComponent(text);
+
+    window.open(url, "_blank");
 
 }
 
