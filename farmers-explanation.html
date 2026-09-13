@@ -1,0 +1,683 @@
+ <!DOCTYPE html>
+<html lang="kn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SR CRESCO | Farmer's Explanation</title>
+
+<meta name="description"
+content="SR CRESCO Farmer's Explanation about market power, fair prices, FPOs, direct selling and real-time market information.">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-W9695JZYKH');
+</script>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7f3;
+    color:#222;
+    line-height:1.7;
+}
+
+nav{
+    background:#123d25;
+    padding:10px 16px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:0 16px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:28px;
+    margin-bottom:22px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.date{
+    color:#777;
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.category{
+    color:#16733a;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+h1{
+    color:#123d25;
+    font-size:28px;
+    margin-top:5px;
+}
+
+h2{
+    color:#123d25;
+    font-size:22px;
+    margin-top:0;
+}
+
+.english{
+    color:#555;
+    margin-top:8px;
+}
+
+.highlight{
+    background:#eef7ef;
+    border-left:5px solid #16733a;
+    padding:16px;
+    border-radius:8px;
+    margin:18px 0;
+    font-weight:bold;
+}
+
+.example{
+    background:#fafafa;
+    border:1px solid #ddd;
+    padding:18px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.step{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.step:last-child{
+    border-bottom:none;
+}
+
+.step strong{
+    color:#123d25;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.back-btn{
+    background:#123d25;
+    color:white;
+}
+
+.share-btn{
+    background:#25D366;
+    color:white;
+}
+
+footer{
+    text-align:center;
+    padding:25px 15px;
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .container{
+        margin:20px auto;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    h1{
+        font-size:23px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+}
+
+</style>
+
+<script>
+
+function sharePoll(){
+
+    const text =
+`🌾 SR CRESCO – Farmer's Explanation
+
+ರೈತನು ತನ್ನ ಉತ್ಪನ್ನವನ್ನು ಕಡಿಮೆ ಬೆಲೆಗೆ ಮಾರಲೇಬೇಕು ಎನ್ನುವ ಪರಿಸ್ಥಿತಿ ಬರಬಾರದು.
+
+ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ನ್ಯಾಯಯುತ ಬೆಲೆ ಕೇಳುವ ಮತ್ತು ಉತ್ತಮ ಬೆಲೆಗೆ ಮಾರಾಟ ಮಾಡುವಷ್ಟು ಮಾರುಕಟ್ಟೆ ಶಕ್ತಿ ರೈತನಿಗೆ ಇರಬೇಕು.
+
+Should Farmers Have More Control Over the Price of Their Produce?
+
+Read Farmer's Explanation:
+https://srcresco.github.io/SR-CRESCO/farmers-explanation.html
+
+SR CRESCO
+Grow • Prosper • Thrive`;
+
+    if(navigator.share){
+
+        navigator.share({
+            title:"SR CRESCO – Farmer's Explanation",
+            text:text
+        });
+
+    }else{
+
+        const url =
+        "https://wa.me/?text=" +
+        encodeURIComponent(text);
+
+        window.open(url,"_blank");
+    }
+}
+
+function trackDetails(section){
+
+    if(typeof gtag === "function"){
+        gtag("event","farmer_explanation_view",{
+            date:"2026-09-13",
+            section:section
+        });
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">
+<img src="logo.png" alt="SR CRESCO Logo">
+</a>
+
+<a href="index.html">Home</a>
+<a href="news.html">News</a>
+<a href="poll.html">Poll</a>
+
+</nav>
+
+
+<main class="container">
+
+<!-- HEADER -->
+
+<section class="card">
+
+<div class="date">September 13, 2026</div>
+
+<div class="category">
+🌾 SR CRESCO – Farmer's Explanation
+</div>
+
+<h1>
+ರೈತನೇ ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡಬೇಕಾ?
+</h1>
+
+<div class="english">
+<strong>
+Should Farmers Have More Control Over the Price of Their Produce?
+</strong>
+</div>
+
+<div class="highlight">
+
+ರೈತನು ತನ್ನ ಉತ್ಪನ್ನವನ್ನು ಕಡಿಮೆ ಬೆಲೆಗೆ ಮಾರಲೇಬೇಕು ಎನ್ನುವ ಪರಿಸ್ಥಿತಿ ಬರಬಾರದು.
+
+ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ನ್ಯಾಯಯುತ ಬೆಲೆ ಕೇಳುವ ಮತ್ತು ಉತ್ತಮ ಬೆಲೆಗೆ ಮಾರಾಟ ಮಾಡುವಷ್ಟು ಮಾರುಕಟ್ಟೆ ಶಕ್ತಿ ರೈತನಿಗೆ ಇರಬೇಕು.
+
+</div>
+
+<div class="english">
+
+Farmers should not be forced to sell their produce at very low prices.
+They should have enough market power to negotiate and receive a fair price.
+
+</div>
+
+</section>
+
+
+<!-- OPTION 1 -->
+
+<section class="card" id="option1"
+onclick="trackDetails('market-power')">
+
+<h2>
+1. ರೈತನಿಗೆ ಹೆಚ್ಚಿನ ಬೆಲೆ ನಿರ್ಧಾರ ಅಧಿಕಾರ
+</h2>
+
+<div class="english">
+<strong>
+More Pricing Power for Farmers
+</strong>
+</div>
+
+<p>
+ರೈತನು ಬೀಜ, ಗೊಬ್ಬರ, ಕೀಟನಾಶಕ, ನೀರಾವರಿ, ಕಾರ್ಮಿಕರ ಕೂಲಿ,
+ಯಂತ್ರೋಪಕರಣ, ವಿದ್ಯುತ್ ಮತ್ತು ಸಾಗಣೆ ಸೇರಿದಂತೆ ಹಲವು ವೆಚ್ಚಗಳನ್ನು
+ಭರಿಸುತ್ತಾನೆ.
+</p>
+
+<p>
+ಆದರೆ ಮಾರುಕಟ್ಟೆಯಲ್ಲಿ ರೈತನೇ ಸಂಪೂರ್ಣವಾಗಿ ಬೆಲೆಯನ್ನು ನಿರ್ಧರಿಸಲು
+ಸಾಧ್ಯವಿಲ್ಲ. ಬೇಡಿಕೆ, ಪೂರೈಕೆ, ಗುಣಮಟ್ಟ ಮತ್ತು ಮಾರುಕಟ್ಟೆ ಪರಿಸ್ಥಿತಿ
+ಬೆಲೆಯ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುತ್ತವೆ.
+</p>
+
+<div class="highlight">
+
+ಪ್ರಾಯೋಗಿಕವಾಗಿ, ರೈತನು ಕಡಿಮೆ ಬೆಲೆಗೆ ಮಾರಲೇಬೇಕು ಎನ್ನುವ
+ಪರಿಸ್ಥಿತಿಯಿಂದ ಹೊರಬಂದು, ತನ್ನ ಉತ್ಪಾದನಾ ವೆಚ್ಚ, ಗುಣಮಟ್ಟ ಮತ್ತು
+ಮಾರುಕಟ್ಟೆ ಬೆಲೆಯನ್ನು ಆಧರಿಸಿ ಉತ್ತಮ ಬೆಲೆಗಾಗಿ ಮಾತುಕತೆ ನಡೆಸುವಷ್ಟು
+<strong>market power / bargaining power</strong> ಹೊಂದಿರಬೇಕು.
+
+</div>
+
+<div class="example">
+
+<strong>ಉದಾಹರಣೆ:</strong>
+
+<p>
+ರೈತನ ಉತ್ಪಾದನಾ ವೆಚ್ಚ ₹20/kg ಇದೆ.
+</p>
+
+<p>
+ಆದರೆ ಒಬ್ಬ ವ್ಯಾಪಾರಿ ₹14/kg ಮಾತ್ರ ನೀಡುತ್ತಿದ್ದಾನೆ.
+</p>
+
+<p>
+ರೈತನಿಗೆ ಬೇರೆ ಮಾರುಕಟ್ಟೆಗಳ ಬೆಲೆ ಮಾಹಿತಿ, FPO,
+ಸಂಗ್ರಹಣೆ ಅಥವಾ ಬೇರೆ ಖರೀದಿದಾರರ ಸಂಪರ್ಕ ಇದ್ದರೆ,
+₹14ಕ್ಕೆ ತಕ್ಷಣ ಮಾರಲೇಬೇಕು ಎಂಬ ಒತ್ತಡ ಕಡಿಮೆಯಾಗುತ್ತದೆ.
+</p>
+
+</div>
+
+<div class="english">
+
+Farmers may not completely control the market price.
+However, they should have enough bargaining power to negotiate
+a fair price based on production cost, quality and market conditions.
+
+</div>
+
+</section>
+
+
+<!-- OPTION 2 -->
+
+<section class="card" id="option2"
+onclick="trackDetails('fpo')">
+
+<h2>
+2. FPO ಮೂಲಕ ಒಟ್ಟಾಗಿ ಮಾರಾಟ
+</h2>
+
+<div class="english">
+<strong>
+Collective Selling Through FPOs
+</strong>
+</div>
+
+<p>
+ಒಬ್ಬ ಸಣ್ಣ ರೈತ ಕಡಿಮೆ ಪ್ರಮಾಣದ ಉತ್ಪನ್ನವನ್ನು ಮಾರಾಟ ಮಾಡುವಾಗ
+ದೊಡ್ಡ ಖರೀದಿದಾರರೊಂದಿಗೆ ಮಾತುಕತೆ ನಡೆಸುವುದು ಕಷ್ಟವಾಗಬಹುದು.
+</p>
+
+<p>
+ಆದರೆ 50 ಅಥವಾ 100 ರೈತರು ಒಟ್ಟಾಗಿ ತಮ್ಮ ಉತ್ಪನ್ನವನ್ನು
+ಸಂಗ್ರಹಿಸಿ ಮಾರಾಟ ಮಾಡಿದರೆ ಪ್ರಮಾಣ ಹೆಚ್ಚಾಗುತ್ತದೆ.
+</p>
+
+<div class="highlight">
+
+ಒಟ್ಟಾಗಿ ಮಾರಾಟ → ಹೆಚ್ಚಿನ ಪ್ರಮಾಣ → ಉತ್ತಮ bargaining power
+
+</div>
+
+<p>
+FPO ಮೂಲಕ grading, sorting, packaging, transportation ಮತ್ತು
+bulk selling ಮುಂತಾದ ವ್ಯವಸ್ಥೆಗಳನ್ನು ಉತ್ತಮವಾಗಿ ಮಾಡಬಹುದು.
+</p>
+
+<p>
+ಆದರೆ FPO ಹೆಸರು ಇದ್ದರೆ ಮಾತ್ರ ಸಾಕಾಗುವುದಿಲ್ಲ.
+ಉತ್ತಮ ನಿರ್ವಹಣೆ, ಪಾರದರ್ಶಕ ಲೆಕ್ಕಪತ್ರ ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ
+ಖರೀದಿದಾರರ ಸಂಪರ್ಕ ಅಗತ್ಯ.
+</p>
+
+<div class="english">
+
+Collective selling through an FPO can improve bargaining power
+and provide access to larger buyers, but good management and
+reliable market connections are essential.
+
+</div>
+
+</section>
+
+
+<!-- OPTION 3 -->
+
+<section class="card" id="option3"
+onclick="trackDetails('direct-selling')">
+
+<h2>
+3. ನೇರವಾಗಿ ಗ್ರಾಹಕರಿಗೆ ಮಾರಾಟ
+</h2>
+
+<div class="english">
+<strong>
+Direct Selling to Consumers
+</strong>
+</div>
+
+<p>
+ಕೆಲವು ಕೃಷಿ ಉತ್ಪನ್ನಗಳನ್ನು ರೈತರು ನೇರವಾಗಿ ಗ್ರಾಹಕರಿಗೆ ಮಾರಾಟ
+ಮಾಡಬಹುದು.
+</p>
+
+<p>
+ಉದಾಹರಣೆಗೆ:
+</p>
+
+<ul>
+<li>ತರಕಾರಿಗಳು</li>
+<li>ಹಣ್ಣುಗಳು</li>
+<li>ತೆಂಗಿನಕಾಯಿ</li>
+<li>ಜೇನುತುಪ್ಪ</li>
+<li>ಹಾಲು</li>
+<li>ಇತರೆ farm products</li>
+</ul>
+
+<p>
+WhatsApp orders, local delivery, farmers markets ಮತ್ತು
+farm-gate sales ಮೂಲಕ ನೇರ ಮಾರಾಟ ಮಾಡಲು ಸಾಧ್ಯ.
+</p>
+
+<div class="highlight">
+
+ಗ್ರಾಹಕರಿಂದ ಸಿಗುವ ಹೆಚ್ಚಿನ ಬೆಲೆ = ರೈತನ ಹೆಚ್ಚಿನ ಲಾಭ
+ಎಂದೇನಿಲ್ಲ.
+
+</div>
+
+<p>
+Packing, delivery, transportation, wastage ಮತ್ತು customer
+management ವೆಚ್ಚಗಳನ್ನು ಕೂಡ ಲೆಕ್ಕ ಹಾಕಬೇಕು.
+</p>
+
+<div class="english">
+
+Direct selling can improve margins for suitable products,
+but farmers must calculate packaging, delivery, transport,
+wastage and customer-management costs.
+
+</div>
+
+</section>
+
+
+<!-- OPTION 4 -->
+
+<section class="card" id="option4"
+onclick="trackDetails('market-price')">
+
+<h2>
+4. Real-time market price ಮಾಹಿತಿ
+</h2>
+
+<div class="english">
+<strong>
+Real-time Market Price Information
+</strong>
+</div>
+
+<p>
+ಇದು ರೈತನಿಗೆ ಅತ್ಯಂತ ಪ್ರಾಯೋಗಿಕವಾದ ವಿಷಯಗಳಲ್ಲಿ ಒಂದು.
+</p>
+
+<p>
+ಇಂದಿನ Mysuru APMC, Bengaluru APMC, Mangaluru ಅಥವಾ ಇತರೆ
+ಮಾರುಕಟ್ಟೆಗಳ ಬೆಲೆ ಮಾಹಿತಿ ರೈತನಿಗೆ ತಿಳಿದಿದ್ದರೆ,
+ಖರೀದಿದಾರರು ಹೇಳುವ ಮೊದಲ ಬೆಲೆಯನ್ನೇ ಒಪ್ಪಿಕೊಳ್ಳಬೇಕಾದ
+ಅವಶ್ಯಕತೆ ಕಡಿಮೆಯಾಗುತ್ತದೆ.
+</p>
+
+<div class="example">
+
+<strong>ಉದಾಹರಣೆ:</strong>
+
+<p>
+Market A: ₹3,000 / quintal<br>
+Transport: ₹300
+</p>
+
+<p>
+Market B: ₹3,200 / quintal<br>
+Transport: ₹800
+</p>
+
+<p>
+Market B ಬೆಲೆ ಹೆಚ್ಚು ಇದ್ದರೂ, ಸಾಗಣೆ ವೆಚ್ಚದ ನಂತರ
+Market A ರೈತನಿಗೆ ಉತ್ತಮ net return ಕೊಡಬಹುದು.
+</p>
+
+</div>
+
+<div class="highlight">
+
+ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ಮಾತ್ರ ನೋಡಬೇಡಿ.
+
+<br><br>
+
+Price + Transport + Commission + Quality + Quantity + Wastage
+ಎಲ್ಲವನ್ನೂ ಲೆಕ್ಕ ಹಾಕಿ ಅಂತಿಮ net return ನೋಡಿ.
+
+</div>
+
+<div class="english">
+
+Real-time market information helps farmers compare markets.
+But the highest quoted price is not always the best option.
+Farmers should compare the final net return after transport,
+commission and other costs.
+
+</div>
+
+</section>
+
+
+<!-- CONCLUSION -->
+
+<section class="card">
+
+<h2>
+ಪ್ರಾಯೋಗಿಕವಾಗಿ ರೈತನಿಗೆ ಬೇಕಾಗಿರುವುದು ಏನು?
+</h2>
+
+<div class="english">
+<strong>
+What Does the Farmer Actually Need?
+</strong>
+</div>
+
+<div class="step">
+
+<strong>1. Real-time Price Information</strong>
+
+<br>
+
+ಇಂದಿನ ವಿವಿಧ ಮಾರುಕಟ್ಟೆಗಳ ಬೆಲೆ ತಿಳಿದುಕೊಳ್ಳುವುದು.
+
+</div>
+
+<div class="step">
+
+<strong>2. FPO / Collective Selling</strong>
+
+<br>
+
+ಒಟ್ಟಾಗಿ ಹೆಚ್ಚಿನ ಪ್ರಮಾಣದಲ್ಲಿ ಮಾರಾಟ ಮಾಡಿ bargaining power ಹೆಚ್ಚಿಸುವುದು.
+
+</div>
+
+<div class="step">
+
+<strong>3. Direct Buyers</strong>
+
+<br>
+
+ಸಾಧ್ಯವಾದಲ್ಲಿ ನೇರ ಖರೀದಿದಾರರನ್ನು ಸಂಪರ್ಕಿಸುವುದು.
+
+</div>
+
+<div class="step">
+
+<strong>4. Strong Negotiation Power</strong>
+
+<br>
+
+ಉತ್ಪಾದನಾ ವೆಚ್ಚ, ಗುಣಮಟ್ಟ ಮತ್ತು ಮಾರುಕಟ್ಟೆ ಪರಿಸ್ಥಿತಿಯನ್ನು
+ಆಧರಿಸಿ ನ್ಯಾಯಯುತ ಬೆಲೆಗಾಗಿ ಮಾತುಕತೆ ನಡೆಸುವುದು.
+
+</div>
+
+<div class="highlight">
+
+🌾 <strong>
+ಗುರಿ ರೈತನೇ ಒಬ್ಬನೇ ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡುವುದು ಅಲ್ಲ.
+</strong>
+
+<br><br>
+
+<strong>
+ರೈತನು ಕಡಿಮೆ ಬೆಲೆಗೆ ಮಾರಲೇಬೇಕು ಎನ್ನುವ ಪರಿಸ್ಥಿತಿ ಬರದಂತೆ
+ಅವನಿಗೆ ಸಾಕಷ್ಟು market power ಇರಬೇಕು.
+</strong>
+
+</div>
+
+<div class="english">
+
+The goal is not for one farmer to unilaterally set the market price.
+
+The goal is to give farmers enough market power so that
+they are not forced to sell their produce at an unfair or
+very low price.
+
+</div>
+
+</section>
+
+
+<!-- BUTTONS -->
+
+<section class="card">
+
+<div class="buttons">
+
+<a href="poll-options.html"
+class="btn back-btn"
+onclick="gtag('event','back_to_poll_options');">
+
+← Back to Poll Options
+
+</a>
+
+<button class="btn share-btn"
+onclick="sharePoll();">
+
+Share on WhatsApp
+
+</button>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<strong>SR CRESCO</strong><br>
+Grow • Prosper • Thrive<br>
+Agriculture • Innovation • Growth
+
+</footer>
+
+</body>
+
+  </html>
