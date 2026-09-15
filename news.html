@@ -1,176 +1,184 @@
-<!DOCTYPE html>
-<html lang="kn">
-
+ <!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SR CRESCO | Agriculture News Today – 14 September 2026</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>SR CRESCO | Agriculture News – September 15, 2026</title>
 
 <meta name="description"
-content="Today's agriculture news – 14 September 2026. Kannada first and English agriculture updates for farmers across Karnataka and India.">
+content="SR CRESCO Agriculture News – September 15, 2026. Latest Karnataka and India farmer news, rainfall, crops, MSP, technology and agriculture updates in Kannada and English.">
 
 <link rel="canonical"
 href="https://srcresco.github.io/SR-CRESCO/news.html">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
+<meta property="og:title"
+content="SR CRESCO Agriculture News – September 15, 2026">
 
-<script>
-window.dataLayer = window.dataLayer || [];
+<meta property="og:description"
+content="Latest agriculture and farmer updates from Karnataka and India – Kannada first, English next.">
 
-function gtag(){
-    dataLayer.push(arguments);
-}
+<meta property="og:image"
+content="https://srcresco.github.io/SR-CRESCO/logo.png">
 
-gtag('js', new Date());
-gtag('config', 'G-W9695JZYKH');
-</script>
+<meta property="og:url"
+content="https://srcresco.github.io/SR-CRESCO/news.html">
+
+<meta property="og:type" content="website">
 
 <style>
 
 *{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f8f4;
-    color:#222;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7f4;
+    color:#1b1b1b;
     line-height:1.65;
 }
 
 header{
-    background:linear-gradient(135deg,#176b35,#2e8b57);
+    background:linear-gradient(135deg,#0b5d1e,#16823b);
     color:white;
     text-align:center;
-    padding:28px 15px;
+    padding:30px 15px 25px;
+}
+
+.logo{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:5px;
+    margin-bottom:10px;
 }
 
 header h1{
-    margin:0;
-    font-size:30px;
+    font-size:27px;
+    margin-bottom:5px;
 }
 
 header p{
-    margin:8px 0 0;
-    font-size:15px;
+    font-size:14px;
+    opacity:.95;
+}
+
+.date-banner{
+    background:white;
+    max-width:900px;
+    margin:18px auto;
+    padding:14px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    font-weight:bold;
+    color:#176b2d;
 }
 
 .container{
     max-width:900px;
     margin:auto;
-    padding:18px 12px 40px;
-}
-
-.top-date{
-    text-align:center;
-    background:white;
-    padding:12px;
-    border-radius:12px;
-    margin-bottom:18px;
-    font-weight:bold;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    padding:0 14px 40px;
 }
 
 .news-card{
     background:white;
-    margin-bottom:20px;
+    margin:18px 0;
     padding:20px;
     border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-    border-left:5px solid #2e8b57;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    border-left:5px solid #16823b;
 }
 
 .category{
     display:inline-block;
-    background:#e7f5ea;
-    color:#176b35;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
-}
-
-.date{
-    color:#777;
-    font-size:13px;
-    margin-top:7px;
+    color:#16823b;
+    background:#e9f6ec;
+    padding:5px 9px;
+    border-radius:20px;
+    margin-bottom:9px;
 }
 
 .news-card h2{
     font-size:21px;
-    color:#176b35;
-    margin:12px 0;
+    color:#124c22;
+    margin-bottom:8px;
 }
 
 .kannada{
     font-size:17px;
     font-weight:500;
+    margin-bottom:14px;
 }
 
 .english{
     font-size:15px;
-    color:#444;
-    margin-top:12px;
+    color:#555;
+    border-top:1px solid #eee;
+    padding-top:12px;
 }
 
-.highlight{
-    background:#f1f8f2;
-    padding:12px;
-    border-radius:10px;
-    margin-top:12px;
+.source{
+    margin-top:13px;
+    font-size:12px;
+    color:#777;
 }
 
 .buttons{
     display:flex;
-    gap:10px;
+    gap:8px;
     flex-wrap:wrap;
-    margin-top:17px;
+    margin-top:15px;
 }
 
-button,
-.share-btn{
+.buttons button{
     border:none;
-    padding:10px 15px;
+    padding:9px 13px;
     border-radius:8px;
     cursor:pointer;
-    font-size:14px;
-    text-decoration:none;
     font-weight:bold;
+    font-size:13px;
 }
 
 .share-btn{
-    background:#176b35;
+    background:#1769aa;
     color:white;
 }
 
-.whatsapp{
+.whatsapp-btn{
     background:#25D366;
     color:white;
 }
 
 footer{
-    background:#123d23;
+    background:#123d1d;
     color:white;
     text-align:center;
     padding:25px 15px;
-    font-size:14px;
+    font-size:13px;
 }
 
 footer strong{
-    font-size:18px;
+    font-size:17px;
 }
 
 @media(max-width:600px){
 
     header h1{
-        font-size:25px;
+        font-size:23px;
     }
 
     .news-card{
-        padding:16px;
+        padding:17px;
     }
 
     .news-card h2{
@@ -181,59 +189,32 @@ footer strong{
         font-size:16px;
     }
 
-    .buttons{
-        flex-direction:column;
+    .english{
+        font-size:14px;
     }
 
-    button,
-    .share-btn{
-        width:100%;
-        text-align:center;
-    }
 }
 
 </style>
 
+<!-- ================================================= -->
+<!-- GOOGLE ANALYTICS 4 -->
+<!-- ================================================= -->
+
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH">
+</script>
+
 <script>
+window.dataLayer = window.dataLayer || [];
 
-function shareNews(title){
-
-    if(navigator.share){
-
-        navigator.share({
-            title:title,
-            text:title + " | SR CRESCO Agriculture News",
-            url:window.location.href
-        });
-
-    }else{
-
-        const text=encodeURIComponent(
-            title + "\n\nSR CRESCO Agriculture News\n" +
-            window.location.href
-        );
-
-        window.open(
-            "https://wa.me/?text=" + text,
-            "_blank"
-        );
-    }
+function gtag(){
+    dataLayer.push(arguments);
 }
 
-function whatsappShare(title){
+gtag('js', new Date());
 
-    const text=encodeURIComponent(
-        title +
-        "\n\nSR CRESCO Agriculture News\n" +
-        window.location.href
-    );
-
-    window.open(
-        "https://wa.me/?text=" + text,
-        "_blank"
-    );
-}
-
+gtag('config', 'G-W9695JZYKH');
 </script>
 
 </head>
@@ -242,74 +223,66 @@ function whatsappShare(title){
 
 <header>
 
+<img src="logo.png"
+     alt="SR CRESCO Logo"
+     class="logo">
+
 <h1>SR CRESCO</h1>
 
 <p>Grow • Prosper • Thrive</p>
 
-<p>
-🌾 Today's Agriculture News
-</p>
-
 </header>
 
+<div class="date-banner">
+
+🌾 Agriculture News Update<br>
+
+September 15, 2026
+
+</div>
 
 <div class="container">
 
-<div class="top-date">
-📅 14 September 2026
-<br>
-Karnataka • India
-</div>
 
-
+<!-- ================================================= -->
 <!-- NEWS 1 -->
+<!-- ================================================= -->
 
 <div class="news-card">
 
-<span class="category">
-🌧️ ಮಳೆ & ಕೃಷಿ
-</span>
-
-<div class="date">
-14 September 2026
+<div class="category">
+KARNATAKA • FARMERS
 </div>
 
 <h2>
-ಕರ್ನಾಟಕದ 9 ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಇಂದು ಗುಡುಗು ಸಹಿತ ಮಳೆಯ ಸಾಧ್ಯತೆ
+ಕರ್ನಾಟಕದಲ್ಲಿ ಬರ ಪರಿಸ್ಥಿತಿ ಗಂಭೀರ: ನೀರು ಮತ್ತು ವಿದ್ಯುತ್ ಕೊರತೆ ಬಗ್ಗೆ ಎಚ್ಚರಿಕೆ
 </h2>
 
 <div class="kannada">
 
-ಭಾರತೀಯ ಹವಾಮಾನ ಇಲಾಖೆಯ ಮುನ್ಸೂಚನೆಯ ಪ್ರಕಾರ ಸೆಪ್ಟೆಂಬರ್ 14ರಂದು ಕರ್ನಾಟಕದ ಹಲವು ಭಾಗಗಳಲ್ಲಿ ಗುಡುಗು ಸಹಿತ ಮಳೆಯ ಸಾಧ್ಯತೆ ಇದೆ.
-
-ದಕ್ಷಿಣ ಒಳನಾಡಿನ ಕೆಲವು ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಮಳೆಯ ಅವಕಾಶವಿದ್ದು, ಕರಾವಳಿ ಹಾಗೂ ಉತ್ತರ ಒಳನಾಡಿನ ಕೆಲವು ಪ್ರದೇಶಗಳಲ್ಲಿ ಒಣ ಹವಾಮಾನ ಮುಂದುವರಿಯುವ ಸಾಧ್ಯತೆ ಇದೆ.
-
-ರೈತರು ಸ್ಥಳೀಯ ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯನ್ನು ಗಮನಿಸಿ ಕೃಷಿ ಚಟುವಟಿಕೆಗಳನ್ನು ಯೋಜಿಸುವುದು ಉತ್ತಮ.
+ಕರ್ನಾಟಕದಲ್ಲಿ ದುರ್ಬಲ ಮುಂಗಾರು ಮಳೆಯ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಹಲವು ಭಾಗಗಳಲ್ಲಿ ಕೃಷಿ ಮತ್ತು ನೀರಿನ ಪರಿಸ್ಥಿತಿ ಗಂಭೀರವಾಗುತ್ತಿದೆ. ಮುಖ್ಯಮಂತ್ರಿ ಡಿ.ಕೆ. ಶಿವಕುಮಾರ್ ಅವರು ನೀರು ಮತ್ತು ವಿದ್ಯುತ್ ಕೊರತೆಯ ಸಾಧ್ಯತೆ ಬಗ್ಗೆ ಎಚ್ಚರಿಕೆ ನೀಡಿದ್ದಾರೆ. ರಾಜ್ಯದ ಅನೇಕ ತಾಲ್ಲೂಕುಗಳಲ್ಲಿ ಮಳೆಯ ಕೊರತೆ ಮತ್ತು ಬೆಳೆ ನಷ್ಟದ ಆತಂಕ ಮುಂದುವರಿದಿದೆ.
 
 </div>
 
 <div class="english">
 
-The weather forecast indicates chances of thunderstorms and rain in several parts of Karnataka on September 14.
-
-Farmers are advised to monitor local weather updates before spraying pesticides, applying fertilizers or carrying out other field operations.
+Karnataka is facing increasing agricultural pressure due to weak monsoon rainfall. Chief Minister D.K. Shivakumar has warned about possible water and power shortages, while crop losses and falling groundwater levels remain concerns in several parts of the state.
 
 </div>
 
-<div class="highlight">
-<strong>ರೈತರಿಗೆ ಸೂಚನೆ:</strong>
-ಮಳೆ ಮುನ್ಸೂಚನೆ ಇರುವ ಪ್ರದೇಶಗಳಲ್ಲಿ ಸಿಂಪಡಣೆ ಕಾರ್ಯವನ್ನು ಮುಂದೂಡಿದರೆ ಔಷಧಿ ವ್ಯರ್ಥವಾಗುವುದನ್ನು ತಪ್ಪಿಸಬಹುದು.
+<div class="source">
+Source: Indian Express • September 14, 2026
 </div>
 
 <div class="buttons">
 
 <button class="share-btn"
-onclick="shareNews('ಕರ್ನಾಟಕದ 9 ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಇಂದು ಗುಡುಗು ಸಹಿತ ಮಳೆಯ ಸಾಧ್ಯತೆ')">
+onclick="shareNews('ಕರ್ನಾಟಕದಲ್ಲಿ ಬರ ಪರಿಸ್ಥಿತಿ ಗಂಭೀರ – SR CRESCO Agriculture News')">
 Share
 </button>
 
-<button class="share-btn whatsapp"
-onclick="whatsappShare('ಕರ್ನಾಟಕದ 9 ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಇಂದು ಗುಡುಗು ಸಹಿತ ಮಳೆಯ ಸಾಧ್ಯತೆ')">
+<button class="whatsapp-btn"
+onclick="whatsappNews('ಕರ್ನಾಟಕದಲ್ಲಿ ಬರ ಪರಿಸ್ಥಿತಿ ಗಂಭೀರ. ನೀರು ಮತ್ತು ವಿದ್ಯುತ್ ಕೊರತೆ ಬಗ್ಗೆ ಎಚ್ಚರಿಕೆ. – SR CRESCO')">
 WhatsApp
 </button>
 
@@ -318,54 +291,45 @@ WhatsApp
 </div>
 
 
+<!-- ================================================= -->
 <!-- NEWS 2 -->
+<!-- ================================================= -->
 
 <div class="news-card">
 
-<span class="category">
-🌾 Kharif Crops
-</span>
-
-<div class="date">
-14 September 2026
+<div class="category">
+RAINFALL • MONSOON
 </div>
 
 <h2>
-ಅಸಮರ್ಪಕ ಮಳೆಯಿಂದ ಖಾರಿಫ್ ಬೆಳೆ ಇಳುವರಿ ಬಗ್ಗೆ ಆತಂಕ
+ಮುಂಗಾರು ಹಿಂತೆಗೆದುಕೊಳ್ಳುವಿಕೆ ಸೆಪ್ಟೆಂಬರ್ 19ರ ಸುಮಾರಿಗೆ ಆರಂಭವಾಗುವ ಸಾಧ್ಯತೆ
 </h2>
 
 <div class="kannada">
 
-ಈ ವರ್ಷದ ಮುಂಗಾರು ಮಳೆಯ ಹಂಚಿಕೆ ಸಮವಾಗಿರದ ಕಾರಣ ಖಾರಿಫ್ ಬೆಳೆಗಳ ಇಳುವರಿ ಕುರಿತು ಆತಂಕ ಮುಂದುವರಿದಿದೆ.
-
-ದೇಶದ ಒಟ್ಟಾರೆ ಬಿತ್ತನೆ ಪ್ರದೇಶದಲ್ಲಿ ದೊಡ್ಡ ಪ್ರಮಾಣದ ಕುಸಿತ ಕಂಡುಬರದಿದ್ದರೂ, ಕೆಲವು ಪ್ರಮುಖ ಬೆಳೆ ಪ್ರದೇಶಗಳಲ್ಲಿ ಮಳೆ ಕೊರತೆ ಪರಿಣಾಮ ಬೀರುತ್ತಿದೆ.
-
-ವಿಶೇಷವಾಗಿ ಅಕ್ಕಿ ಮತ್ತು ರಾಗಿ ಸೇರಿದಂತೆ ಕೆಲವು ಬೆಳೆಗಳ ಮೇಲೆ ಮಳೆಯ ಅಸಮತೋಲನದ ಪರಿಣಾಮ ಉಂಟಾಗುವ ಸಾಧ್ಯತೆ ಇದೆ.
+ಭಾರತ ಹವಾಮಾನ ಇಲಾಖೆ ಪ್ರಕಾರ, ನೈರುತ್ಯ ಮುಂಗಾರು ಸೆಪ್ಟೆಂಬರ್ 19ರ ಸುಮಾರಿಗೆ ವಾಯುವ್ಯ ಭಾರತದ ಕೆಲವು ಭಾಗಗಳಿಂದ ಹಿಂತೆಗೆದುಕೊಳ್ಳಲು ಆರಂಭಿಸುವ ಸಾಧ್ಯತೆ ಇದೆ. ಆದರೆ ಕೆಲವು ಪ್ರದೇಶಗಳಲ್ಲಿ ಮಳೆ ಮುಂದುವರಿಯುವ ಸಾಧ್ಯತೆ ಇದೆ.
 
 </div>
 
 <div class="english">
 
-Uneven monsoon rainfall is raising concerns over Kharif crop yields in several parts of India.
-
-Although the overall sowing area has remained relatively stable, rainfall distribution and soil moisture remain important factors for final productivity.
+The IMD has indicated that Southwest Monsoon withdrawal from parts of Northwest India could begin around September 19. Rainfall activity may continue over several regions before the withdrawal progresses.
 
 </div>
 
-<div class="highlight">
-<strong>ಮುಖ್ಯ ಅಂಶ:</strong>
-ಬಿತ್ತನೆ ಪ್ರದೇಶ ಮಾತ್ರವಲ್ಲ, ಬೆಳೆಯ ಬೆಳವಣಿಗೆ ಹಂತದಲ್ಲಿನ ಮಳೆ ಮತ್ತು ಮಣ್ಣಿನ ತೇವಾಂಶವೂ ಇಳುವರಿಗೆ ಪ್ರಮುಖವಾಗಿದೆ.
+<div class="source">
+Source: India Meteorological Department / Indian Express • September 14, 2026
 </div>
 
 <div class="buttons">
 
 <button class="share-btn"
-onclick="shareNews('ಅಸಮರ್ಪಕ ಮಳೆಯಿಂದ ಖಾರಿಫ್ ಬೆಳೆ ಇಳುವರಿ ಬಗ್ಗೆ ಆತಂಕ')">
+onclick="shareNews('ಮುಂಗಾರು ಹಿಂತೆಗೆದುಕೊಳ್ಳುವಿಕೆ ಸೆಪ್ಟೆಂಬರ್ 19ರ ಸುಮಾರಿಗೆ – SR CRESCO')">
 Share
 </button>
 
-<button class="share-btn whatsapp"
-onclick="whatsappShare('ಅಸಮರ್ಪಕ ಮಳೆಯಿಂದ ಖಾರಿಫ್ ಬೆಳೆ ಇಳುವರಿ ಬಗ್ಗೆ ಆತಂಕ')">
+<button class="whatsapp-btn"
+onclick="whatsappNews('ಮುಂಗಾರು ಹಿಂತೆಗೆದುಕೊಳ್ಳುವಿಕೆ ಸೆಪ್ಟೆಂಬರ್ 19ರ ಸುಮಾರಿಗೆ ಆರಂಭವಾಗುವ ಸಾಧ್ಯತೆ. – SR CRESCO')">
 WhatsApp
 </button>
 
@@ -374,54 +338,45 @@ WhatsApp
 </div>
 
 
+<!-- ================================================= -->
 <!-- NEWS 3 -->
+<!-- ================================================= -->
 
 <div class="news-card">
 
-<span class="category">
-🌱 ರಾಗಿ ಬೆಳೆ
-</span>
-
-<div class="date">
-14 September 2026
+<div class="category">
+KHARIF • PADDY
 </div>
 
 <h2>
-ಮಳೆ ಕೊರತೆಯಿಂದ ಕರ್ನಾಟಕದ ಕೆಲವು ಪ್ರದೇಶಗಳಲ್ಲಿ ರಾಗಿ ಬೆಳೆ ಸಂಕಷ್ಟ
+2026 ಖರೀಫ್ ಹಂಗಾಮಿನಲ್ಲಿ ಭತ್ತದ ಬಿತ್ತನೆ ಪ್ರದೇಶ ಶೇ.4ರಷ್ಟು ಇಳಿಕೆ
 </h2>
 
 <div class="kannada">
 
-ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಸೇರಿದಂತೆ ದಕ್ಷಿಣ ಕರ್ನಾಟಕದ ಕೆಲವು ಪ್ರದೇಶಗಳಲ್ಲಿ ದೀರ್ಘಕಾಲ ಮಳೆ ಇಲ್ಲದಿರುವುದರಿಂದ ರಾಗಿ ಬೆಳೆಯ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುತ್ತಿದೆ.
-
-ಕೆಲವು ಪ್ರದೇಶಗಳಲ್ಲಿ ಬಿತ್ತನೆ ಮಾಡಿದ ನಂತರ ಸಾಕಷ್ಟು ಮಳೆ ಸಿಗದ ಕಾರಣ ಮೊಳಕೆ ಮತ್ತು ಬೆಳವಣಿಗೆ ಸಮಸ್ಯೆಗಳು ಎದುರಾಗಿವೆ.
-
-ಇದು ರೈತರ ಆದಾಯದ ಜೊತೆಗೆ ರಾಗಿ ಪೂರೈಕೆಯ ಮೇಲೂ ಪರಿಣಾಮ ಬೀರುವ ಸಾಧ್ಯತೆ ಬಗ್ಗೆ ವರದಿಗಳು ಸೂಚಿಸುತ್ತವೆ.
+2026ರ ಖರೀಫ್ ಹಂಗಾಮಿನಲ್ಲಿ ದೇಶದ ಭತ್ತದ ಬಿತ್ತನೆ ಪ್ರದೇಶ ಸುಮಾರು ಶೇ.4ರಷ್ಟು ಇಳಿಕೆಯಾಗಿದೆ. ಸರ್ಕಾರಿ ಮಾಹಿತಿಯ ಪ್ರಕಾರ ಭತ್ತದ ಪ್ರದೇಶವು ಸುಮಾರು 426.81 ಲಕ್ಷ ಹೆಕ್ಟೇರ್‌ಗೆ ಇಳಿದಿದೆ. ಕರ್ನಾಟಕ ಸೇರಿದಂತೆ ಕೆಲವು ಪ್ರಮುಖ ರಾಜ್ಯಗಳಲ್ಲಿ ಭತ್ತದ ಪ್ರದೇಶದ ಬದಲಾವಣೆ ಗಮನಾರ್ಹವಾಗಿದೆ.
 
 </div>
 
 <div class="english">
 
-Parts of southern Karnataka are facing pressure on ragi crops due to prolonged dry conditions.
-
-Insufficient rainfall after sowing has affected germination and crop growth in some areas.
+Government data indicates that paddy acreage during the 2026 Kharif season has declined by around 4% to approximately 426.81 lakh hectares. Changes in paddy acreage are being observed across several major producing states, including Karnataka.
 
 </div>
 
-<div class="highlight">
-<strong>ರೈತರಿಗೆ ಸಲಹೆ:</strong>
-ಮಣ್ಣಿನಲ್ಲಿ ತೇವಾಂಶ ಉಳಿಸಲು ಹೊಲದಲ್ಲಿ ಲಭ್ಯವಿರುವ ನೀರನ್ನು ಸಮರ್ಪಕವಾಗಿ ಬಳಸುವುದು ಮತ್ತು ಮಣ್ಣಿನ ಮುಚ್ಚಳಿಕೆ ಕ್ರಮಗಳನ್ನು ಪರಿಗಣಿಸುವುದು ಸಹಾಯಕವಾಗಬಹುದು.
+<div class="source">
+Source: Government data reported by Rediff • September 14, 2026
 </div>
 
 <div class="buttons">
 
 <button class="share-btn"
-onclick="shareNews('ಮಳೆ ಕೊರತೆಯಿಂದ ಕರ್ನಾಟಕದ ಕೆಲವು ಪ್ರದೇಶಗಳಲ್ಲಿ ರಾಗಿ ಬೆಳೆ ಸಂಕಷ್ಟ')">
+onclick="shareNews('2026 ಖರೀಫ್ ಭತ್ತದ ಬಿತ್ತನೆ ಪ್ರದೇಶ ಶೇ.4ರಷ್ಟು ಇಳಿಕೆ – SR CRESCO')">
 Share
 </button>
 
-<button class="share-btn whatsapp"
-onclick="whatsappShare('ಮಳೆ ಕೊರತೆಯಿಂದ ಕರ್ನಾಟಕದ ಕೆಲವು ಪ್ರದೇಶಗಳಲ್ಲಿ ರಾಗಿ ಬೆಳೆ ಸಂಕಷ್ಟ')">
+<button class="whatsapp-btn"
+onclick="whatsappNews('2026 ಖರೀಫ್ ಹಂಗಾಮಿನಲ್ಲಿ ಭತ್ತದ ಬಿತ್ತನೆ ಪ್ರದೇಶ ಶೇ.4ರಷ್ಟು ಇಳಿಕೆಯಾಗಿದೆ. – SR CRESCO')">
 WhatsApp
 </button>
 
@@ -430,54 +385,45 @@ WhatsApp
 </div>
 
 
+<!-- ================================================= -->
 <!-- NEWS 4 -->
+<!-- ================================================= -->
 
 <div class="news-card">
 
-<span class="category">
-💰 ಕೃಷಿ ಮಾರುಕಟ್ಟೆ
-</span>
-
-<div class="date">
-14 September 2026
+<div class="category">
+CLIMATE • CROP RISK
 </div>
 
 <h2>
-ಮಳೆ ಕೊರತೆ ಪರಿಣಾಮ ತೊಗರಿ ಬೇಳೆ ಬೆಲೆ ಏರಿಕೆ
+ಮಳೆಯ ಅಸಮ ಹಂಚಿಕೆ: ಖರೀಫ್ ಬೆಳೆ ಇಳುವರಿ ಮೇಲೆ ಆತಂಕ
 </h2>
 
 <div class="kannada">
 
-ಮಳೆ ಕೊರತೆ ಮತ್ತು ಬೆಳೆ ಇಳುವರಿ ಕುರಿತ ಆತಂಕದ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ತೊಗರಿ ಬೇಳೆ ಬೆಲೆಗಳಲ್ಲಿ ಏರಿಕೆ ಕಂಡುಬರುತ್ತಿದೆ.
-
-ಕರ್ನಾಟಕ ಮತ್ತು ಮಹಾರಾಷ್ಟ್ರದ ತೊಗರಿ ಬೆಳೆ ಪರಿಸ್ಥಿತಿಯ ಬಗ್ಗೆ ಮಾರುಕಟ್ಟೆಯಲ್ಲಿ ಗಮನ ಹೆಚ್ಚಾಗಿದೆ.
-
-ಹಬ್ಬದ ಸಮಯದಲ್ಲಿ ಬೇಡಿಕೆ ಹೆಚ್ಚುತ್ತಿರುವುದೂ ಬೆಲೆಗಳ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುತ್ತಿದೆ ಎಂದು ವರದಿಗಳು ತಿಳಿಸಿವೆ.
+ದೇಶದಾದ್ಯಂತ ಮಳೆಯ ಪ್ರಮಾಣ ಮಾತ್ರವಲ್ಲದೆ ಅದರ ಹಂಚಿಕೆಯಲ್ಲಿಯೂ ದೊಡ್ಡ ವ್ಯತ್ಯಾಸ ಕಂಡುಬರುತ್ತಿದೆ. ದಕ್ಷಿಣ ಮತ್ತು ಪೂರ್ವ ಭಾರತದ ಕೆಲವು ಭಾಗಗಳಲ್ಲಿ ಮಳೆ ಕೊರತೆ ಹಾಗೂ ಜಲಾಶಯಗಳ ನೀರಿನ ಮಟ್ಟದ ಬಗ್ಗೆ ಆತಂಕವಿದೆ. ಭತ್ತ ಮತ್ತು ರಾಗಿ ಸೇರಿದಂತೆ ಕೆಲವು ಬೆಳೆಗಳ ಇಳುವರಿ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುವ ಸಾಧ್ಯತೆ ಬಗ್ಗೆ ತಜ್ಞರು ಎಚ್ಚರಿಸಿದ್ದಾರೆ.
 
 </div>
 
 <div class="english">
 
-Tur dal prices have come under pressure as rainfall concerns affect crop prospects in Karnataka and Maharashtra.
-
-Higher seasonal demand around festivals is also contributing to market pressure.
+Uneven rainfall distribution is becoming a major concern for Kharif crop yields. Southern and eastern regions are facing rainfall deficits and reservoir concerns, while crops such as paddy and ragi could face productivity risks if dry conditions persist.
 
 </div>
 
-<div class="highlight">
-<strong>ರೈತರಿಗೆ:</strong>
-ಮಾರುಕಟ್ಟೆಗೆ ಉತ್ಪನ್ನ ಕಳುಹಿಸುವ ಮೊದಲು ಸ್ಥಳೀಯ APMC ದರಗಳನ್ನು ಪರಿಶೀಲಿಸುವುದು ಉತ್ತಮ.
+<div class="source">
+Source: Financial Express • September 13, 2026
 </div>
 
 <div class="buttons">
 
 <button class="share-btn"
-onclick="shareNews('ಮಳೆ ಕೊರತೆ ಪರಿಣಾಮ ತೊಗರಿ ಬೇಳೆ ಬೆಲೆ ಏರಿಕೆ')">
+onclick="shareNews('ಮಳೆಯ ಅಸಮ ಹಂಚಿಕೆ ಖರೀಫ್ ಬೆಳೆಗಳಿಗೆ ಆತಂಕ – SR CRESCO')">
 Share
 </button>
 
-<button class="share-btn whatsapp"
-onclick="whatsappShare('ಮಳೆ ಕೊರತೆ ಪರಿಣಾಮ ತೊಗರಿ ಬೇಳೆ ಬೆಲೆ ಏರಿಕೆ')">
+<button class="whatsapp-btn"
+onclick="whatsappNews('ಮಳೆಯ ಅಸಮ ಹಂಚಿಕೆಯಿಂದ ಖರೀಫ್ ಬೆಳೆಗಳ ಇಳುವರಿ ಮೇಲೆ ಆತಂಕ. – SR CRESCO')">
 WhatsApp
 </button>
 
@@ -486,54 +432,45 @@ WhatsApp
 </div>
 
 
+<!-- ================================================= -->
 <!-- NEWS 5 -->
+<!-- ================================================= -->
 
 <div class="news-card">
 
-<span class="category">
-🏛️ ಕೃಷಿ ಇಲಾಖೆ
-</span>
-
-<div class="date">
-14 September 2026
+<div class="category">
+DRYLAND FARMING
 </div>
 
 <h2>
-ಬೆಂಗಳೂರಿನಲ್ಲಿ ಸೆಪ್ಟೆಂಬರ್ 18–20: Forest & Farm Herbal Expo
+ಡ್ರೈಲ್ಯಾಂಡ್ ಕೃಷಿಗೆ ಹೆಚ್ಚಿನ ಗಮನ: Dryland Congress 2026 ಮುಕ್ತಾಯ
 </h2>
 
 <div class="kannada">
 
-ಕರ್ನಾಟಕದಲ್ಲಿ 2ನೇ Forest & Farm Herbal Expo 2026 ಅನ್ನು ಸೆಪ್ಟೆಂಬರ್ 18ರಿಂದ 20ರವರೆಗೆ ಬೆಂಗಳೂರಿನ ಕರ್ನಾಟಕ ಚಿತ್ರಕಲಾ ಪರಿಷತ್, ಕುಮಾರಕೃಪಾ ರಸ್ತೆಯಲ್ಲಿ ಆಯೋಜಿಸಲಾಗಿದೆ.
-
-ಕರ್ನಾಟಕ ರಾಜ್ಯ ಔಷಧೀಯ ಸಸ್ಯ ಪ್ರಾಧಿಕಾರ ಮತ್ತು ಕರ್ನಾಟಕ ಅರಣ್ಯ ಇಲಾಖೆ ಕಾರ್ಯಕ್ರಮವನ್ನು ಆಯೋಜಿಸುತ್ತಿವೆ.
-
-ಔಷಧೀಯ ಸಸ್ಯಗಳು, ಕೃಷಿ ಮತ್ತು ಸಂಬಂಧಿತ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಆಸಕ್ತಿ ಹೊಂದಿರುವವರಿಗೆ ಇದು ಉಪಯುಕ್ತ ಕಾರ್ಯಕ್ರಮವಾಗಬಹುದು.
+ನವದೆಹಲಿ‌ನಲ್ಲಿ ನಡೆದ Dryland Congress 2026ರಲ್ಲಿ ಮಳೆ ಆಧಾರಿತ ಮತ್ತು ಬರ ಪ್ರದೇಶದ ಕೃಷಿಯನ್ನು ಹೆಚ್ಚು ಸ್ಥಿರಗೊಳಿಸುವ ಕುರಿತು ಚರ್ಚೆಗಳು ನಡೆದವು. ಹವಾಮಾನ ಬದಲಾವಣೆ ಮತ್ತು ನೀರಿನ ಕೊರತೆಯ ನಡುವೆ ಕಡಿಮೆ ನೀರಿನಲ್ಲಿ ಉತ್ತಮ ಉತ್ಪಾದನೆ ನೀಡುವ ಕೃಷಿ ವಿಧಾನಗಳಿಗೆ ಹೆಚ್ಚಿನ ಒತ್ತು ನೀಡಲಾಗುತ್ತಿದೆ.
 
 </div>
 
 <div class="english">
 
-The 2nd Forest & Farm Herbal Expo 2026 will be held from September 18 to 20 at Karnataka Chitrakala Parishath, Bengaluru.
-
-The event is organised by the Karnataka State Medicinal Plants Authority and Karnataka Forest Department.
+The Dryland Congress 2026 concluded in New Delhi with renewed attention on strengthening dryland and rainfed agriculture. The focus included resilient farming approaches that can perform better under water stress and changing climate conditions.
 
 </div>
 
-<div class="highlight">
-<strong>ದಿನಾಂಕ:</strong> 18–20 September 2026<br>
-<strong>ಸ್ಥಳ:</strong> Karnataka Chitrakala Parishath, Bengaluru
+<div class="source">
+Source: Global Agriculture • September 14, 2026
 </div>
 
 <div class="buttons">
 
 <button class="share-btn"
-onclick="shareNews('ಸೆಪ್ಟೆಂಬರ್ 18–20 ಬೆಂಗಳೂರಿನಲ್ಲಿ Forest & Farm Herbal Expo 2026')">
+onclick="shareNews('Dryland Congress 2026 – ಬರ ಪ್ರದೇಶ ಕೃಷಿಗೆ ಹೊಸ ಗಮನ – SR CRESCO')">
 Share
 </button>
 
-<button class="share-btn whatsapp"
-onclick="whatsappShare('ಸೆಪ್ಟೆಂಬರ್ 18–20 ಬೆಂಗಳೂರಿನಲ್ಲಿ Forest & Farm Herbal Expo 2026')">
+<button class="whatsapp-btn"
+onclick="whatsappNews('Dryland Congress 2026ರಲ್ಲಿ ಬರ ಪ್ರದೇಶ ಮತ್ತು ಮಳೆ ಆಧಾರಿತ ಕೃಷಿಯ ಸ್ಥಿರತೆ ಕುರಿತು ಗಮನ. – SR CRESCO')">
 WhatsApp
 </button>
 
@@ -542,52 +479,45 @@ WhatsApp
 </div>
 
 
+<!-- ================================================= -->
 <!-- NEWS 6 -->
+<!-- ================================================= -->
 
 <div class="news-card">
 
-<span class="category">
-💧 ನೀರು & ಕೃಷಿ
-</span>
-
-<div class="date">
-14 September 2026
+<div class="category">
+AGRI TECHNOLOGY • AI
 </div>
 
 <h2>
-ಮಳೆ ಕೊರತೆ ನಡುವೆ ನೀರು ಸಂರಕ್ಷಣೆ ಮತ್ತು ಕೃಷಿ ನಿರ್ವಹಣೆಗೆ ಒತ್ತು
+AI ಮೂಲಕ ರೈತರಿಗೆ ಬೆಳೆ ರೋಗ ಪತ್ತೆ ಮತ್ತು ಕೃಷಿ ಸಲಹೆ
 </h2>
 
 <div class="kannada">
 
-ಮಳೆ ಹಂಚಿಕೆ ಅಸಮತೋಲನವಾಗಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಕಡಿಮೆ ಮಳೆಯ ಪ್ರದೇಶಗಳಲ್ಲಿ ನೀರು ಸಂರಕ್ಷಣೆ, ಅಂತರಬೆಳೆ ಪದ್ಧತಿ ಮತ್ತು ಪರ್ಯಾಯ ಬೆಳೆಗಳಂತಹ ಕ್ರಮಗಳಿಗೆ ಹೆಚ್ಚಿನ ಮಹತ್ವ ನೀಡಲಾಗುತ್ತಿದೆ.
-
-ಮಣ್ಣಿನ ತೇವಾಂಶ ಉಳಿಸುವುದು ಮತ್ತು ಲಭ್ಯವಿರುವ ನೀರನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಬಳಸುವುದು ರೈತರಿಗೆ ಪ್ರಮುಖವಾಗಿದೆ.
+ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಆಧಾರಿತ ಕೃಷಿ ಸಾಧನಗಳು ರೈತರಿಗೆ ಬೆಳೆ ರೋಗಗಳನ್ನು ಬೇಗ ಗುರುತಿಸಲು ಮತ್ತು ಸ್ಥಳೀಯ ಭಾಷೆಯಲ್ಲಿ ಕೃಷಿ ಸಲಹೆ ಪಡೆಯಲು ಸಹಾಯ ಮಾಡುತ್ತಿವೆ. AI ಆಧಾರಿತ crop diagnosis ಮತ್ತು weather intelligence ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ರೈತರ ನಿರ್ಧಾರ ತೆಗೆದುಕೊಳ್ಳುವಿಕೆಯಲ್ಲಿ ಪ್ರಮುಖ ಪಾತ್ರ ವಹಿಸುವ ಸಾಧ್ಯತೆ ಇದೆ.
 
 </div>
 
 <div class="english">
 
-With rainfall remaining uneven, water conservation, intercropping and alternative crop planning are gaining importance in low-rainfall areas.
-
-Efficient use of available water and moisture conservation can help farmers reduce weather-related production risks.
+AI-powered agriculture tools are increasingly helping farmers identify crop diseases and access localized farming advice. Crop diagnosis and weather intelligence are emerging as important tools for faster and more informed farm decisions.
 
 </div>
 
-<div class="highlight">
-<strong>SR CRESCO FARM TIP:</strong>
-ನೀರಿನ ಲಭ್ಯತೆ ಕಡಿಮೆ ಇರುವ ಪ್ರದೇಶಗಳಲ್ಲಿ ಬೆಳೆ ಆಯ್ಕೆ ಮಾಡುವಾಗ ನೀರಿನ ಅವಶ್ಯಕತೆ ಮತ್ತು ಮಣ್ಣಿನ ತೇವಾಂಶವನ್ನು ಗಮನಿಸಿ.
+<div class="source">
+Source: The Better India • September 14, 2026
 </div>
 
 <div class="buttons">
 
 <button class="share-btn"
-onclick="shareNews('ಮಳೆ ಕೊರತೆ ನಡುವೆ ನೀರು ಸಂರಕ್ಷಣೆ ಮತ್ತು ಕೃಷಿ ನಿರ್ವಹಣೆಗೆ ಒತ್ತು')">
+onclick="shareNews('AI ಕೃಷಿ ತಂತ್ರಜ್ಞಾನ ರೈತರಿಗೆ ಹೊಸ ಸಹಾಯ – SR CRESCO')">
 Share
 </button>
 
-<button class="share-btn whatsapp"
-onclick="whatsappShare('ಮಳೆ ಕೊರತೆ ನಡುವೆ ನೀರು ಸಂರಕ್ಷಣೆ ಮತ್ತು ಕೃಷಿ ನಿರ್ವಹಣೆಗೆ ಒತ್ತು')">
+<button class="whatsapp-btn"
+onclick="whatsappNews('AI ಆಧಾರಿತ ಕೃಷಿ ಸಾಧನಗಳು ಬೆಳೆ ರೋಗ ಪತ್ತೆ ಮತ್ತು ಕೃಷಿ ಸಲಹೆಗೆ ಸಹಾಯ ಮಾಡುತ್ತಿವೆ. – SR CRESCO')">
 WhatsApp
 </button>
 
@@ -596,54 +526,45 @@ WhatsApp
 </div>
 
 
+<!-- ================================================= -->
 <!-- NEWS 7 -->
+<!-- ================================================= -->
 
 <div class="news-card">
 
-<span class="category">
-🤖 Smart Agriculture
-</span>
-
-<div class="date">
-14 September 2026
+<div class="category">
+LIVESTOCK • DAIRY
 </div>
 
 <h2>
-ಭಾರತೀಯ ಕೃಷಿಯಲ್ಲಿ AI ಮತ್ತು ಡಿಜಿಟಲ್ ತಂತ್ರಜ್ಞಾನ ಬಳಕೆ ವೇಗ ಪಡೆಯುತ್ತಿದೆ
+ಭಾರತದ ಪಶುಸಂಗೋಪನೆಯಲ್ಲಿ ಹೊಸ ತಂತ್ರಜ್ಞಾನಗಳತ್ತ ಗಮನ
 </h2>
 
 <div class="kannada">
 
-ಕೃಷಿಯಲ್ಲಿ ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಮತ್ತು ಡಿಜಿಟಲ್ ತಂತ್ರಜ್ಞಾನಗಳ ಬಳಕೆ ಹೆಚ್ಚುತ್ತಿದೆ.
-
-ಬೆಳೆ ಮಾಹಿತಿ, ರೈತರ ಡಿಜಿಟಲ್ ಗುರುತು, ಬೆಳೆ ಪ್ರದೇಶದ ಮಾಹಿತಿ ಮತ್ತು ಡೇಟಾ ಆಧಾರಿತ ಕೃಷಿ ನಿರ್ಧಾರಗಳಲ್ಲಿ ತಂತ್ರಜ್ಞಾನಕ್ಕೆ ಹೆಚ್ಚಿನ ಪ್ರಾಮುಖ್ಯತೆ ಸಿಗುತ್ತಿದೆ.
-
-ಭವಿಷ್ಯದಲ್ಲಿ AI ಆಧಾರಿತ ಸಲಹೆಗಳು ರೈತರಿಗೆ ಹವಾಮಾನ, ಬೆಳೆ ಮತ್ತು ಕೃಷಿ ನಿರ್ವಹಣೆಯಲ್ಲಿ ನೆರವಾಗುವ ಸಾಧ್ಯತೆ ಇದೆ.
+ಭಾರತದ ಪಶುಸಂಗೋಪನೆ ಮತ್ತು ಹೈನುಗಾರಿಕೆ ಕ್ಷೇತ್ರದಲ್ಲಿ ಆಧುನಿಕ ತಂತ್ರಜ್ಞಾನಗಳ ಬಳಕೆ ಹೆಚ್ಚುತ್ತಿದೆ. ಪಶು ಆರೋಗ್ಯ, ಸಂತಾನೋತ್ಪತ್ತಿ ಮತ್ತು ಉತ್ಪಾದಕತೆ ಹೆಚ್ಚಿಸಲು ಹೊಸ ತಂತ್ರಜ್ಞಾನಗಳು ಬಳಕೆಯಾಗುತ್ತಿವೆ. ಸಣ್ಣ ರೈತರಿಗೆ ಹೈನುಗಾರಿಕೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಪ್ರಮುಖ ಮೂಲವಾಗಿಯೂ ಮುಂದುವರಿದಿದೆ.
 
 </div>
 
 <div class="english">
 
-Artificial intelligence and digital technologies are becoming increasingly important in Indian agriculture.
-
-Digital farmer databases, crop information and data-driven decision-making are helping build a stronger digital agriculture ecosystem.
+Technology is playing an increasing role in India's livestock and dairy sector, particularly in animal health, breeding and productivity. Dairy farming continues to provide an important additional income opportunity for small and marginal farmers.
 
 </div>
 
-<div class="highlight">
-<strong>SR CRESCO:</strong>
-Smart Agriculture ಎಂದರೆ ತಂತ್ರಜ್ಞಾನವನ್ನು ಬಳಸಿ ಕಡಿಮೆ ಸಂಪನ್ಮೂಲದಲ್ಲಿ ಉತ್ತಮ ನಿರ್ಧಾರ ತೆಗೆದುಕೊಳ್ಳುವುದು.
+<div class="source">
+Source: Agriculture and livestock sector reports • September 2026
 </div>
 
 <div class="buttons">
 
 <button class="share-btn"
-onclick="shareNews('ಭಾರತೀಯ ಕೃಷಿಯಲ್ಲಿ AI ಮತ್ತು ಡಿಜಿಟಲ್ ತಂತ್ರಜ್ಞಾನ ಬಳಕೆ ವೇಗ ಪಡೆಯುತ್ತಿದೆ')">
+onclick="shareNews('ಹೈನುಗಾರಿಕೆಯಲ್ಲಿ ಹೊಸ ತಂತ್ರಜ್ಞಾನ – SR CRESCO Agriculture News')">
 Share
 </button>
 
-<button class="share-btn whatsapp"
-onclick="whatsappShare('ಭಾರತೀಯ ಕೃಷಿಯಲ್ಲಿ AI ಮತ್ತು ಡಿಜಿಟಲ್ ತಂತ್ರಜ್ಞಾನ ಬಳಕೆ ವೇಗ ಪಡೆಯುತ್ತಿದೆ')">
+<button class="whatsapp-btn"
+onclick="whatsappNews('ಹೈನುಗಾರಿಕೆಯಲ್ಲಿ ಹೊಸ ತಂತ್ರಜ್ಞಾನಗಳ ಬಳಕೆ ಹೆಚ್ಚುತ್ತಿದೆ. – SR CRESCO')">
 WhatsApp
 </button>
 
@@ -652,24 +573,22 @@ WhatsApp
 </div>
 
 
-<!-- JOIN SR CRESCO -->
+<!-- ================================================= -->
+<!-- DISCLAIMER -->
+<!-- ================================================= -->
 
-<div class="news-card" style="text-align:center;">
+<div style="
+background:#fff8e6;
+padding:16px;
+border-radius:12px;
+font-size:13px;
+color:#555;
+margin-top:20px;
+">
 
-<h2>
-🌱 SR CRESCO Farmer Community
-</h2>
+<strong>SR CRESCO News Note:</strong><br>
 
-<p>
-ಕೃಷಿ ಸುದ್ದಿ • ಮಾರುಕಟ್ಟೆ ಮಾಹಿತಿ • ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು • ಕೃಷಿ ಜ್ಞಾನ • Smart Agriculture
-</p>
-
-<a
-class="share-btn whatsapp"
-href="https://chat.whatsapp.com/K1CE6RH9eDP7M3OoUISTG5?s=cl&p=a&mlu=4"
-target="_blank">
-Join SR CRESCO WhatsApp Community
-</a>
+ಈ ಸುದ್ದಿ ಅಪ್‌ಡೇಟ್‌ಗಳು ಸೆಪ್ಟೆಂಬರ್ 14, 2026ರವರೆಗೆ ಲಭ್ಯವಿದ್ದ ವರದಿಗಳು ಮತ್ತು ಅಧಿಕೃತ ಮಾಹಿತಿಯನ್ನು ಆಧರಿಸಿವೆ. ರೈತರು ಸ್ಥಳೀಯ ಕೃಷಿ ಇಲಾಖೆ, IMD ಮತ್ತು ಅಧಿಕೃತ ಸರ್ಕಾರಿ ಸೂಚನೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಕೃಷಿ ನಿರ್ಧಾರಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುವುದು ಉತ್ತಮ.
 
 </div>
 
@@ -688,11 +607,81 @@ Grow • Prosper • Thrive
 
 Agriculture • Innovation • Growth
 
-<br>
+<br><br>
 
-© 2026 SR CRESCO
+Chamarajanagar, Karnataka, India
 
 </footer>
 
+
+<script>
+
+function shareNews(text){
+
+    const url =
+    "https://srcresco.github.io/SR-CRESCO/news.html";
+
+    if(navigator.share){
+
+        navigator.share({
+            title:"SR CRESCO Agriculture News",
+            text:text,
+            url:url
+        });
+
+    }else{
+
+        const shareUrl =
+        "https://wa.me/?text=" +
+        encodeURIComponent(text + "\n" + url);
+
+        window.open(shareUrl,"_blank");
+
+    }
+
+}
+
+
+function whatsappNews(text){
+
+    const url =
+    "https://srcresco.github.io/SR-CRESCO/news.html";
+
+    const message =
+    text + "\n\nRead more:\n" + url;
+
+    window.open(
+        "https://wa.me/?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+
+}
+
+
+/* Google Analytics button tracking */
+
+document.querySelectorAll("button").forEach(function(button){
+
+    button.addEventListener("click",function(){
+
+        if(typeof gtag === "function"){
+
+            gtag("event","news_share_click",{
+
+                news_date:"2026-09-15",
+
+                button_text:this.innerText
+
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
 </body>
- </html>
+</html>
