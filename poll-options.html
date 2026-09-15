@@ -9,12 +9,17 @@
 <title>SR CRESCO | Poll Options</title>
 
 <meta name="description"
-content="SR CRESCO Farmer Poll Options – Beekeeping and Soil Testing awareness polls for farmers.">
+content="SR CRESCO Farmer Poll Options – Robots & Machines, Farmer Price, Beekeeping and Soil Testing awareness polls.">
+
+<link rel="canonical"
+href="https://srcresco.github.io/SR-CRESCO/poll-options.html">
 
 <!-- Google Analytics -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
 
 <script>
+
 window.dataLayer = window.dataLayer || [];
 
 function gtag(){
@@ -22,168 +27,350 @@ function gtag(){
 }
 
 gtag('js', new Date());
+
 gtag('config', 'G-W9695JZYKH');
+
 </script>
+
 
 <style>
 
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7f3;
-    color: #222;
+body{
+
+    margin:0;
+
+    font-family:Arial,sans-serif;
+
+    background:#f5f7f3;
+
+    color:#222;
+
+    line-height:1.7;
+
 }
 
-nav {
-    background: #123d25;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+/* ================= NAVIGATION ================= */
+
+nav{
+
+    background:#123d25;
+
+    padding:12px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
 }
 
-.logo-area img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
+.logo-area img{
+
+    width:45px;
+
+    height:45px;
+
+    object-fit:contain;
+
 }
 
-.logo-area h2 {
-    color: white;
-    margin: 0;
-    font-size: 20px;
+.logo-area h2{
+
+    color:white;
+
+    margin:0;
+
+    font-size:20px;
+
 }
 
-.nav-links {
-    display: flex;
-    gap: 18px;
+.nav-links{
+
+    display:flex;
+
+    gap:18px;
+
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
 }
 
-.container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 15px;
+.nav-links a:hover{
+
+    text-decoration:underline;
+
 }
 
-.poll-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+    max-width:800px;
+
+    margin:30px auto;
+
+    padding:0 15px;
+
 }
 
-.category {
-    color: #176b35;
-    font-weight: bold;
-    margin-bottom: 8px;
+
+/* ================= POLL CARD ================= */
+
+.poll-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.08);
+
 }
 
-.date {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 20px;
+
+/* ================= LATEST POLL ================= */
+
+.latest{
+
+    border-left:5px solid #0b6b3a;
+
 }
 
-h1 {
-    color: #123d25;
-    font-size: 27px;
+
+/* ================= TEXT ================= */
+
+.category{
+
+    color:#176b35;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
 }
 
-h2 {
-    color: #176b35;
-    margin-top: 25px;
+.date{
+
+    color:#777;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
 }
 
-.option {
-    display: block;
-    background: #f5f7f3;
-    border: 1px solid #d8e2d9;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 12px 0;
-    text-decoration: none;
-    color: #123d25;
-    font-weight: bold;
-    transition: 0.2s;
+h1{
+
+    color:#123d25;
+
+    font-size:27px;
+
+    line-height:1.5;
+
 }
 
-.option:hover {
-    background: #e7f2e9;
-    transform: translateY(-2px);
+h2{
+
+    color:#176b35;
+
+    margin-top:25px;
+
 }
 
-.back {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 11px 18px;
-    background: #176b35;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+.english{
+
+    color:#555;
+
 }
 
-.share-btn {
-    display: inline-block;
-    margin-top: 15px;
-    margin-left: 8px;
-    padding: 11px 18px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+
+/* ================= OPTION ================= */
+
+.option{
+
+    display:block;
+
+    background:#f5f7f3;
+
+    border:1px solid #d8e2d9;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin:12px 0;
+
+    text-decoration:none;
+
+    color:#123d25;
+
+    font-weight:bold;
+
+    transition:0.2s;
+
 }
 
-footer {
-    background: #123d25;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 40px;
+.option:hover{
+
+    background:#e7f2e9;
+
+    transform:translateY(-2px);
+
 }
 
-footer p {
-    margin: 6px 0;
+
+/* ================= BUTTONS ================= */
+
+.back{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:11px 18px;
+
+    background:#176b35;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
 }
 
-@media (max-width: 600px) {
+.share-btn{
 
-    nav {
-        padding: 10px 12px;
+    display:inline-block;
+
+    margin-top:15px;
+
+    margin-left:8px;
+
+    padding:11px 18px;
+
+    background:#25D366;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+.btn-row{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+.btn-row .share-btn{
+
+    margin-left:0;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#123d25;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px 15px;
+
+    margin-top:40px;
+
+}
+
+footer p{
+
+    margin:6px 0;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    nav{
+
+        padding:10px 12px;
+
     }
 
-    .nav-links {
-        gap: 10px;
+    .nav-links{
+
+        gap:10px;
+
     }
 
-    .nav-links a {
-        font-size: 14px;
+    .nav-links a{
+
+        font-size:14px;
+
     }
 
-    .poll-card {
-        padding: 20px;
+    .poll-card{
+
+        padding:20px;
+
     }
 
-    h1 {
-        font-size: 23px;
+    h1{
+
+        font-size:23px;
+
+    }
+
+    .option{
+
+        padding:14px;
+
     }
 
 }
@@ -192,335 +379,531 @@ footer p {
 
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- ================= NAVIGATION ================= -->
 
 <nav>
 
-    <div class="logo-area">
+<div class="logo-area">
 
-        <img src="logo.png" alt="SR CRESCO Logo">
+<img
+src="logo.png"
+alt="SR CRESCO Logo">
 
-        <h2>SR CRESCO</h2>
+<h2>
+SR CRESCO
+</h2>
 
-    </div>
+</div>
 
-    <div class="nav-links">
 
-        <a href="index.html">Home</a>
+<div class="nav-links">
 
-        <a href="news.html">News</a>
+<a href="index.html">
+Home
+</a>
 
-        <a href="poll.html">Poll</a>
+<a href="news.html">
+News
+</a>
 
-    </div>
+<a href="poll.html">
+Poll
+</a>
+
+</div>
 
 </nav>
 
 
+
 <div class="container">
 
- <!-- ================================================= -->
-<!-- SEPTEMBER 13, 2026 – TODAY'S FARMER PRICE POLL -->
+
+<!-- ================================================= -->
+<!-- SEPTEMBER 15, 2026 – ROBOTS & MACHINES POLL -->
+<!-- ================================================= -->
+
+<div class="poll-card latest">
+
+<div class="category">
+
+🤖🌾 Future Farming Poll
+
+</div>
+
+
+<div class="date">
+
+September 15, 2026
+
+</div>
+
+
+<h1>
+
+🤖🌾 ನಾಳೆ ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಕೆಲಸ ಮಾಡುವವರು
+ಮನುಷ್ಯರಲ್ಲ — Machines ಆಗಿದ್ರೆ?
+
+</h1>
+
+
+<p class="english">
+
+<strong>
+
+What if machines worked on your farm tomorrow?
+
+</strong>
+
+</p>
+
+
+<p>
+
+<strong>
+ವಿಷಯ / Topic:
+</strong>
+
+ಕೃಷಿಯಲ್ಲಿ Robots, Smart Machines ಮತ್ತು Automation
+
+</p>
+
+
+<p>
+
+ಕೃಷಿಯಲ್ಲಿ ಕಾರ್ಮಿಕರ ಕೊರತೆ, ಹೆಚ್ಚುತ್ತಿರುವ ಕೂಲಿ ವೆಚ್ಚ
+ಮತ್ತು ಸಮಯದ ಒತ್ತಡ ರೈತರಿಗೆ ಸವಾಲಾಗುತ್ತಿದೆ.
+
+ಇಂತಹ ಸಂದರ್ಭದಲ್ಲಿ Robots ಮತ್ತು Smart Machines
+ಕೆಲವು ಕೃಷಿ ಕೆಲಸಗಳನ್ನು ಮಾಡಿದರೆ,
+ನೀವು ಅವುಗಳನ್ನು ಸ್ವೀಕರಿಸುತ್ತೀರಾ?
+
+</p>
+
+
+<p>
+
+<strong>
+
+Labour shortages, rising labour costs and time pressure
+are major challenges in agriculture.
+
+If robots and smart machines could perform some
+farm tasks, would you accept them?
+
+</strong>
+
+</p>
+
+
+<h2>
+
+🗳️ ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ
+
+</h2>
+
+
+<!-- OPTION A -->
+
+<a
+href="farmers-explanation.html#robots-option-a"
+class="option"
+onclick="trackOption('robots_option_a')">
+
+<strong>
+
+A. ✅ ಹೌದು — Labour ಸಮಸ್ಯೆ ಕಡಿಮೆಯಾಗುತ್ತದೆ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+Yes — It can reduce labour problems
+
+</span>
+
+</a>
+
+
+<!-- OPTION B -->
+
+<a
+href="farmers-explanation.html#robots-option-b"
+class="option"
+onclick="trackOption('robots_option_b')">
+
+<strong>
+
+B. 💰 ಸಣ್ಣ ರೈತರಿಗೆ affordable ಇದ್ದರೆ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+If affordable for small farmers
+
+</span>
+
+</a>
+
+
+<!-- OPTION C -->
+
+<a
+href="farmers-explanation.html#robots-option-c"
+class="option"
+onclick="trackOption('robots_option_c')">
+
+<strong>
+
+C. 👨‍🌾 ಮನುಷ್ಯರ ಕೆಲಸವೇ ಉತ್ತಮ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+Human workers are better
+
+</span>
+
+</a>
+
+
+<!-- OPTION D -->
+
+<a
+href="farmers-explanation.html#robots-option-d"
+class="option"
+onclick="trackOption('robots_option_d')">
+
+<strong>
+
+D. 👀 ಮೊದಲು ನೋಡಿ, ನಂತರ ನಿರ್ಧಾರ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+I’ll watch first and decide
+
+</span>
+
+</a>
+
+
+<div class="btn-row">
+
+<a
+href="poll.html"
+class="back">
+
+← Back to Poll
+
+</a>
+
+
+<a
+href="javascript:void(0)"
+class="share-btn"
+onclick="shareRobotsPoll()">
+
+Share on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- SEPTEMBER 13, 2026 – FARMER PRICE POLL -->
 <!-- ================================================= -->
 
 <div class="poll-card">
 
-    <div class="category">
-        📊 WhatsApp Poll
-    </div>
+<div class="category">
 
-    <div class="date">
-        September 13, 2026
-    </div>
-
-    <h1>
-        🌾💰 ರೈತನೇ ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡಬೇಕಾ?
-    </h1>
-
-    <p class="english">
-        <strong>
-            Should Farmers Have More Control Over the Price of Their Produce?
-        </strong>
-    </p>
-
-    <h2>
-        🗳️ ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ
-    </h2>
-
-    <!-- OPTION A -->
-
-    <a href="farmers-explanation.html#option1"
-       class="option"
-       onclick="trackOption('farmer_price_option1')">
-
-        <strong>
-            A. ✅ ರೈತನಿಗೆ ಹೆಚ್ಚಿನ ಬೆಲೆ ನಿರ್ಧಾರ ಅಧಿಕಾರ
-        </strong>
-
-        <br>
-
-        <span class="english">
-            More pricing power for farmers
-        </span>
-
-    </a>
-
-
-    <!-- OPTION B -->
-
-    <a href="farmers-explanation.html#option2"
-       class="option"
-       onclick="trackOption('farmer_price_option2')">
-
-        <strong>
-            B. 🤝 FPO ಮೂಲಕ ಒಟ್ಟಾಗಿ ಮಾರಾಟ
-        </strong>
-
-        <br>
-
-        <span class="english">
-            Collective selling through FPOs
-        </span>
-
-    </a>
-
-
-    <!-- OPTION C -->
-
-    <a href="farmers-explanation.html#option3"
-       class="option"
-       onclick="trackOption('farmer_price_option3')">
-
-        <strong>
-            C. 📱 ನೇರವಾಗಿ ಗ್ರಾಹಕರಿಗೆ ಮಾರಾಟ
-        </strong>
-
-        <br>
-
-        <span class="english">
-            Direct selling to consumers
-        </span>
-
-    </a>
-
-
-    <!-- OPTION D -->
-
-    <a href="farmers-explanation.html#option4"
-       class="option"
-       onclick="trackOption('farmer_price_option4')">
-
-        <strong>
-            D. 📊 Real-time market price ಮಾಹಿತಿ
-        </strong>
-
-        <br>
-
-        <span class="english">
-            Real-time market price information
-        </span>
-
-    </a>
-
-
-    <!-- BACK BUTTON -->
-
-    <a href="poll.html" class="back">
-        ← Back to Poll
-    </a>
-
-
-    <!-- WHATSAPP SHARE -->
-
-    <a href="javascript:void(0)"
-       class="share-btn"
-       onclick="shareFarmerPrice()">
-
-        Share on WhatsApp
-
-    </a>
+📊 WhatsApp Poll
 
 </div>
- 
-<!-- ================================================= -->
-<!-- SEPTEMBER 12 – BEEKEEPING POLL -->
-<!-- ================================================= -->
-
-<div class="poll-card">
-
-    <div class="category">
-        📊 WhatsApp Poll
-    </div>
-
-    <div class="date">
-        September 12, 2026
-    </div>
-
-    <h1>
-        ಜೇನು ಸಾಕಾಣಿಕೆ – ರೈತರಿಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಅವಕಾಶ
-    </h1>
-
-    <h2>
-        ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಜೇನು ಸಾಕಾಣಿಕೆ ಆರಂಭಿಸಲು ನಿಮಗೆ ಆಸಕ್ತಿ ಇದೆಯೇ?
-    </h2>
-
-    <p>
-        Would you be interested in starting beekeeping on your farm?
-    </p>
 
 
-    <!-- OPTION 1 -->
+<div class="date">
 
-    <a
-        href="beekeeping-beginner-guide.html"
-        class="option"
-        onclick="trackOption('beekeeping_option1')">
+September 13, 2026
 
-        1️⃣ ಹೌದು, ಆಸಕ್ತಿ ಇದೆ / Yes, I’m interested →
-
-    </a>
+</div>
 
 
-    <!-- OPTION 2 -->
+<h1>
 
-    <a
-        href="beekeeping-beginner-guide.html"
-        class="option"
-        onclick="trackOption('beekeeping_option2')">
+🌾💰 ರೈತನೇ ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡಬೇಕಾ?
 
-        2️⃣ ಮಾಹಿತಿ ಸಿಕ್ಕರೆ ಆರಂಭಿಸುತ್ತೇನೆ / I would start if I get more information →
-
-    </a>
+</h1>
 
 
-    <!-- OPTION 3 -->
+<p class="english">
 
-    <a
-        href="beekeeping-beginner-guide.html"
-        class="option"
-        onclick="trackOption('beekeeping_option3')">
+<strong>
 
-        3️⃣ ಈಗಾಗಲೇ ಮಾಡುತ್ತಿದ್ದೇನೆ / I’m already doing it →
+Should Farmers Have More Control Over the Price
+of Their Produce?
 
-    </a>
+</strong>
 
-
-    <!-- OPTION 4 -->
-
-    <a
-        href="beekeeping-beginner-guide.html"
-        class="option"
-        onclick="trackOption('beekeeping_option4')">
-
-        4️⃣ ಆಸಕ್ತಿ ಇಲ್ಲ / Not interested →
-
-    </a>
+</p>
 
 
-    <!-- BACK TO POLLS -->
+<h2>
 
-    <a href="poll.html" class="back">
-        ← Back to Polls
-    </a>
+🗳️ ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ
+
+</h2>
 
 
-    <!-- SHARE -->
+<!-- OPTION A -->
 
-    <a
-        href="javascript:void(0)"
-        class="share-btn"
-        onclick="shareBeekeeping()">
+<a
+href="farmers-explanation.html#option1"
+class="option"
+onclick="trackOption('farmer_price_option1')">
 
-        Share on WhatsApp
+<strong>
 
-    </a>
+A. ✅ ರೈತನಿಗೆ ಹೆಚ್ಚಿನ ಬೆಲೆ ನಿರ್ಧಾರ ಅಧಿಕಾರ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+More pricing power for farmers
+
+</span>
+
+</a>
+
+
+<!-- OPTION B -->
+
+<a
+href="farmers-explanation.html#option2"
+class="option"
+onclick="trackOption('farmer_price_option2')">
+
+<strong>
+
+B. 🤝 FPO ಮೂಲಕ ಒಟ್ಟಾಗಿ ಮಾರಾಟ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+Collective selling through FPOs
+
+</span>
+
+</a>
+
+
+<!-- OPTION C -->
+
+<a
+href="farmers-explanation.html#option3"
+class="option"
+onclick="trackOption('farmer_price_option3')">
+
+<strong>
+
+C. 📱 ನೇರವಾಗಿ ಗ್ರಾಹಕರಿಗೆ ಮಾರಾಟ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+Direct selling to consumers
+
+</span>
+
+</a>
+
+
+<!-- OPTION D -->
+
+<a
+href="farmers-explanation.html#option4"
+class="option"
+onclick="trackOption('farmer_price_option4')">
+
+<strong>
+
+D. 📊 Real-time market price ಮಾಹಿತಿ
+
+</strong>
+
+<br>
+
+<span class="english">
+
+Real-time market price information
+
+</span>
+
+</a>
+
+
+<div class="btn-row">
+
+<a
+href="poll.html"
+class="back">
+
+← Back to Poll
+
+</a>
+
+
+<a
+href="javascript:void(0)"
+class="share-btn"
+onclick="shareFarmerPrice()">
+
+Share on WhatsApp
+
+</a>
+
+</div>
 
 </div>
 
 
 
 <!-- ================================================= -->
-<!-- SEPTEMBER 11 – SOIL TEST POLL -->
+<!-- SEPTEMBER 12, 2026 – BEEKEEPING POLL -->
 <!-- ================================================= -->
 
 <div class="poll-card">
 
-    <div class="category">
-        📊 WhatsApp Poll
-    </div>
+<div class="category">
 
-    <div class="date">
-        September 11, 2026
-    </div>
+📊 WhatsApp Poll
 
-    <h1>
-        ಮಣ್ಣು ಪರೀಕ್ಷೆ – ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಸ್ಥಿತಿ ನಿಮಗೆ ಗೊತ್ತಿದೆಯೇ?
-    </h1>
-
-    <h2>
-        ನೀವು ಇತ್ತೀಚೆಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
-    </h2>
-
-    <p>
-        Have you tested your farm soil recently?
-    </p>
+</div>
 
 
-    <!-- SOIL OPTION 1 -->
+<div class="date">
 
-    <a
-        href="poll-details.html#option1"
-        class="option"
-        onclick="trackOption('soil_option1')">
+September 12, 2026
 
-        1️⃣ ಹೌದು, ಇತ್ತೀಚೆಗೆ ಮಾಡಿಸಿದ್ದೇನೆ →
-
-    </a>
+</div>
 
 
-    <!-- SOIL OPTION 2 -->
+<h1>
 
-    <a
-        href="poll-details.html#option2"
-        class="option"
-        onclick="trackOption('soil_option2')">
+ಜೇನು ಸಾಕಾಣಿಕೆ –
+ರೈತರಿಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಅವಕಾಶ
 
-        2️⃣ ಹೌದು, ಆದರೆ ಬಹಳ ಹಿಂದೆಯೇ →
-
-    </a>
+</h1>
 
 
-    <!-- SOIL OPTION 3 -->
+<h2>
 
-    <a
-        href="poll-details.html#option3"
-        class="option"
-        onclick="trackOption('soil_option3')">
+ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಜೇನು ಸಾಕಾಣಿಕೆ
+ಆರಂಭಿಸಲು ನಿಮಗೆ ಆಸಕ್ತಿ ಇದೆಯೇ?
 
-        3️⃣ ಇನ್ನೂ ಮಾಡಿಸಿಲ್ಲ →
-
-    </a>
+</h2>
 
 
-    <!-- SOIL OPTION 4 -->
+<p class="english">
 
-    <a
-        href="poll-details.html#option4"
-        class="option"
-        onclick="trackOption('soil_option4')">
+Would you be interested in starting
+beekeeping on your farm?
 
-        4️⃣ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿ ಬೇಕು →
-
-    </a>
+</p>
 
 
-    <!-- BACK TO POLLS -->
+<a
+href="beekeeping-beginner-guide.html"
+class="option"
+onclick="trackOption('beekeeping_option1')">
 
-    <a href="poll.html" class="back">
-        ← Back to Polls
-    </a>
+1️⃣ ಹೌದು, ಆಸಕ್ತಿ ಇದೆ /
+Yes, I’m interested →
+
+</a>
+
+
+<a
+href="beekeeping-beginner-guide.html"
+class="option"
+onclick="trackOption('beekeeping_option2')">
+
+2️⃣ ಮಾಹಿತಿ ಸಿಕ್ಕರೆ ಆರಂಭಿಸುತ್ತೇನೆ /
+I would start if I get more information →
+
+</a>
+
+
+<a
+href="beekeeping-beginner-guide.html"
+class="option"
+onclick="trackOption('beekeeping_option3')">
+
+3️⃣ ಈಗಾಗಲೇ ಮಾಡುತ್ತಿದ್ದೇನೆ /
+I’m already doing it →
+
+</a>
+
+
+<a
+href="beekeeping-beginner-guide.html"
+class="option"
+onclick="trackOption('beekeeping_option4')">
+
+4️⃣ ಆಸಕ್ತಿ ಇಲ್ಲ /
+Not interested →
+
+</a>
+
+
+<div class="btn-row">
+
+<a
+href="poll.html"
+class="back">
+
+← Back to Polls
+
+</a>
+
+
+<a
+href="javascript:void(0)"
+class="share-btn"
+onclick="shareBeekeeping()">
+
+Share on WhatsApp
+
+</a>
 
 </div>
 
@@ -528,19 +911,135 @@ footer p {
 
 
 
-<!-- FOOTER -->
+<!-- ================================================= -->
+<!-- SEPTEMBER 11, 2026 – SOIL TEST POLL -->
+<!-- ================================================= -->
+
+<div class="poll-card">
+
+<div class="category">
+
+📊 WhatsApp Poll
+
+</div>
+
+
+<div class="date">
+
+September 11, 2026
+
+</div>
+
+
+<h1>
+
+ಮಣ್ಣು ಪರೀಕ್ಷೆ –
+ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಸ್ಥಿತಿ ನಿಮಗೆ ಗೊತ್ತಿದೆಯೇ?
+
+</h1>
+
+
+<h2>
+
+ನೀವು ಇತ್ತೀಚೆಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
+
+</h2>
+
+
+<p class="english">
+
+Have you tested your farm soil recently?
+
+</p>
+
+
+<a
+href="poll-details.html#option1"
+class="option"
+onclick="trackOption('soil_option1')">
+
+1️⃣ ಹೌದು, ಇತ್ತೀಚೆಗೆ ಮಾಡಿಸಿದ್ದೇನೆ →
+
+</a>
+
+
+<a
+href="poll-details.html#option2"
+class="option"
+onclick="trackOption('soil_option2')">
+
+2️⃣ ಹೌದು, ಆದರೆ ಬಹಳ ಹಿಂದೆಯೇ →
+
+</a>
+
+
+<a
+href="poll-details.html#option3"
+class="option"
+onclick="trackOption('soil_option3')">
+
+3️⃣ ಇನ್ನೂ ಮಾಡಿಸಿಲ್ಲ →
+
+</a>
+
+
+<a
+href="poll-details.html#option4"
+class="option"
+onclick="trackOption('soil_option4')">
+
+4️⃣ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿ ಬೇಕು →
+
+</a>
+
+
+<a
+href="poll.html"
+class="back">
+
+← Back to Polls
+
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <p><strong>SR CRESCO</strong></p>
+<p>
 
-    <p>Grow • Prosper • Thrive</p>
+<strong>
+SR CRESCO
+</strong>
 
-    <p>Chamarajanagar, Karnataka, India</p>
+</p>
 
-    <p>
-        © 2026 SR CRESCO. All Rights Reserved.
-    </p>
+
+<p>
+
+Grow • Prosper • Thrive
+
+</p>
+
+
+<p>
+
+Chamarajanagar, Karnataka, India
+
+</p>
+
+
+<p>
+
+© 2026 SR CRESCO. All Rights Reserved.
+
+</p>
 
 </footer>
 
@@ -548,27 +1047,60 @@ footer p {
 
 <script>
 
+
 /* =========================================
    POLL OPTION TRACKING
 ========================================= */
 
-function trackOption(optionName) {
+function trackOption(optionName){
 
-    if (typeof gtag === "function") {
+    if(typeof gtag === "function"){
 
-        gtag('event', 'poll_option_selected', {
+        let pollDate = "";
+        let pollType = "";
 
-            option: optionName,
+        if(optionName.startsWith("robots")){
 
-            poll_date:
-                optionName.startsWith('beekeeping')
-                ? '2026-09-12'
-                : '2026-09-11',
+            pollDate = "2026-09-15";
 
-            poll_type:
-                optionName.startsWith('beekeeping')
-                ? 'beekeeping'
-                : 'soil'
+            pollType = "robots-machines-farming";
+
+        }
+
+        else if(optionName.startsWith("farmer_price")){
+
+            pollDate = "2026-09-13";
+
+            pollType = "farmer-price";
+
+        }
+
+        else if(optionName.startsWith("beekeeping")){
+
+            pollDate = "2026-09-12";
+
+            pollType = "beekeeping";
+
+        }
+
+        else if(optionName.startsWith("soil")){
+
+            pollDate = "2026-09-11";
+
+            pollType = "soil";
+
+        }
+
+
+        gtag('event','poll_option_selected',{
+
+            option:optionName,
+
+            poll_date:pollDate,
+
+            poll_type:pollType,
+
+            page_location:window.location.href
 
         });
 
@@ -578,13 +1110,118 @@ function trackOption(optionName) {
 
 
 /* =========================================
-   WHATSAPP SHARE – BEEKEEPING POLL
+   ROBOTS POLL SHARE
 ========================================= */
 
-function shareBeekeeping() {
+function shareRobotsPoll(){
+
+    if(typeof gtag === "function"){
+
+        gtag('event','poll_share',{
+
+            poll_date:'2026-09-15',
+
+            poll_topic:'robots-machines-farming'
+
+        });
+
+    }
+
 
     const text =
-`🌿 SR CRESCO Agriculture Poll
+`🤖🌾 SR CRESCO Future Farming Poll
+
+ನಾಳೆ ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಕೆಲಸ ಮಾಡುವವರು
+ಮನುಷ್ಯರಲ್ಲ — Machines ಆಗಿದ್ರೆ?
+
+What if machines worked on your farm tomorrow?
+
+A. ಹೌದು — Labour ಸಮಸ್ಯೆ ಕಡಿಮೆಯಾಗುತ್ತದೆ
+B. ಸಣ್ಣ ರೈತರಿಗೆ affordable ಇದ್ದರೆ
+C. ಮನುಷ್ಯರ ಕೆಲಸವೇ ಉತ್ತಮ
+D. ಮೊದಲು ನೋಡಿ, ನಂತರ ನಿರ್ಧಾರ
+
+Vote now on SR CRESCO 👇
+
+https://srcresco.github.io/SR-CRESCO/poll.html
+
+September 15, 2026`;
+
+
+    const url =
+    "https://wa.me/?text=" +
+    encodeURIComponent(text);
+
+
+    window.open(url,"_blank");
+
+}
+
+
+/* =========================================
+   FARMER PRICE SHARE
+========================================= */
+
+function shareFarmerPrice(){
+
+    if(typeof gtag === "function"){
+
+        gtag('event','poll_share',{
+
+            poll_date:'2026-09-13',
+
+            poll_topic:'farmer-price'
+
+        });
+
+    }
+
+
+    const text =
+`🌾💰 SR CRESCO Farmer Poll
+
+ರೈತನೇ ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡಬೇಕಾ?
+
+Should Farmers Have More Control Over the Price of Their Produce?
+
+Vote now on SR CRESCO 👇
+
+https://srcresco.github.io/SR-CRESCO/poll.html
+
+September 13, 2026`;
+
+
+    const url =
+    "https://wa.me/?text=" +
+    encodeURIComponent(text);
+
+
+    window.open(url,"_blank");
+
+}
+
+
+/* =========================================
+   BEEKEEPING SHARE
+========================================= */
+
+function shareBeekeeping(){
+
+    if(typeof gtag === "function"){
+
+        gtag('event','poll_share',{
+
+            poll_date:'2026-09-12',
+
+            poll_topic:'beekeeping'
+
+        });
+
+    }
+
+
+    const text =
+`🐝 SR CRESCO Agriculture Poll
 
 ಜೇನು ಸಾಕಾಣಿಕೆ – ರೈತರಿಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಅವಕಾಶ
 
@@ -592,20 +1229,24 @@ function shareBeekeeping() {
 
 Would you be interested in starting beekeeping on your farm?
 
-Vote here:
+Vote here 👇
+
 https://srcresco.github.io/SR-CRESCO/poll.html
 
 September 12, 2026`;
 
-    const url =
-        "https://wa.me/?text=" +
-        encodeURIComponent(text);
 
-    window.open(url, "_blank");
+    const url =
+    "https://wa.me/?text=" +
+    encodeURIComponent(text);
+
+
+    window.open(url,"_blank");
 
 }
 
 </script>
+
 
 </body>
 
