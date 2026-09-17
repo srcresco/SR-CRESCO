@@ -6,11 +6,11 @@
   }
 
   try {
-    const { message } = req.body || {};
+    const { messages } = req.body || {};
 
-    if (!message) {
+    if (!Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({
-        error: "Message is required"
+        error: "Messages are required"
       });
     }
 
@@ -22,9 +22,16 @@
       },
       body: JSON.stringify({
         model: "gpt-5.6-luna",
+
         instructions:
-          "You are SR CRESCO KNOWLEDGE AI. Help farmers with agriculture, crops, soil, weather, government schemes, markets and smart farming. Answer clearly and practically.",
-        input: message
+          "You are SR CRESCO KNOWLEDGE AI. You are an agriculture-focused AI assistant. Help farmers with crops, soil, irrigation, pests, diseases, weather, government schemes, market information, livestock, beekeeping, smart farming and modern agricultural technology. Understand conversation context and answer follow-up questions naturally. You can answer in Kannada, English, or a mix based on the user's language. Give clear, practical and responsible answers.",
+
+        input: messages.map(function(item) {
+          return {
+            role: item.role,
+            content: item.content
+          };
+        })
       })
     });
 
@@ -44,9 +51,12 @@
           for (const content of item.content) {
             if (content.text) {
               reply = content.text;
+              break;
             }
           }
         }
+
+        if (reply) break;
       }
     }
 
@@ -55,6 +65,8 @@
     });
 
   } catch (error) {
+    console.error(error);
+
     return res.status(500).json({
       error: error.message || "Server error"
     });
