@@ -1,1562 +1,707 @@
  <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>SR CRESCO KNOWLEDGE AI</title>
+
+<meta name="description"
+      content="SR CRESCO KNOWLEDGE AI - Agriculture Knowledge Assistant">
+
+<link rel="canonical"
+      href="https://srcresco.github.io/SR-CRESCO/knowledge-ai.html">
+
+<!-- Google Analytics -->
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
 
 function gtag(){
-    dataLayer.push(arguments);
+  dataLayer.push(arguments);
 }
 
-gtag('js', new Date());
-gtag('config', 'G-W9695JZYKH');
+gtag("js", new Date());
+gtag("config", "G-W9695JZYKH");
 </script>
 
-<title>SR CRESCO KNOWLEDGE AI</title>
-
-<meta name="description"
-content="SR CRESCO KNOWLEDGE AI — an AI assistant for agriculture, farming, technology, knowledge and everyday questions.">
-
-<meta name="author" content="SUBHASH V S">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical"
-href="https://srcresco.github.io/SR-CRESCO/knowledge-ai.html">
 
 <style>
 
 *{
-box-sizing:border-box;
-}
-
-html,
-body{
-margin:0;
-height:100%;
-font-family:Arial,Helvetica,sans-serif;
-background:#ffffff;
-color:#1f2937;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-display:flex;
-overflow:hidden;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7f5;
+  color:#1b1b1b;
+  height:100vh;
+  overflow:hidden;
 }
 
-/* ================= SIDEBAR ================= */
+
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar{
-width:270px;
-height:100vh;
-background:#123d25;
-color:white;
-display:flex;
-flex-direction:column;
-padding:14px;
-flex-shrink:0;
+  position:fixed;
+  left:0;
+  top:0;
+  width:270px;
+  height:100vh;
+  background:#ffffff;
+  border-right:1px solid #ddd;
+  display:flex;
+  flex-direction:column;
+  z-index:1000;
 }
 
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-padding:8px 5px 18px;
+.logo-area{
+  padding:20px;
+  text-align:center;
+  border-bottom:1px solid #eee;
 }
 
-.brand a{
-display:flex;
+.logo-area img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
 }
 
-.brand img{
-width:42px;
-height:42px;
-object-fit:contain;
+.logo-area h2{
+  margin-top:10px;
+  font-size:18px;
+  color:#1d6b35;
 }
 
-.brand-text{
-font-size:15px;
-font-weight:bold;
-line-height:1.25;
+.logo-area p{
+  font-size:11px;
+  color:#777;
+  margin-top:4px;
 }
 
 .new-chat{
-width:100%;
-border:1px solid rgba(255,255,255,.25);
-background:rgba(255,255,255,.08);
-color:white;
-padding:12px 14px;
-border-radius:10px;
-cursor:pointer;
-font-size:14px;
-text-align:left;
+  margin:18px;
+  padding:13px;
+  border:none;
+  border-radius:10px;
+  background:#1d6b35;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
 }
 
 .new-chat:hover{
-background:rgba(255,255,255,.15);
+  background:#15552a;
 }
 
 .history-title{
-font-size:12px;
-opacity:.65;
-margin:22px 8px 8px;
+  padding:0 18px 10px;
+  font-size:12px;
+  font-weight:bold;
+  color:#777;
 }
 
 .history{
-flex:1;
-overflow-y:auto;
+  flex:1;
+  overflow-y:auto;
+  padding:0 10px;
 }
 
 .history-item{
-padding:10px 11px;
-border-radius:8px;
-font-size:13px;
-cursor:pointer;
-white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis;
-margin-bottom:3px;
+  padding:11px;
+  margin-bottom:5px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:13px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .history-item:hover{
-background:rgba(255,255,255,.10);
-}
-
-.sidebar-bottom{
-border-top:1px solid rgba(255,255,255,.15);
-padding-top:12px;
+  background:#f0f5f1;
 }
 
 .clear-all{
-width:100%;
-border:0;
-background:transparent;
-color:white;
-opacity:.8;
-padding:10px;
-cursor:pointer;
-text-align:left;
-border-radius:8px;
+  margin:12px 18px 18px;
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:white;
+  color:#555;
+  cursor:pointer;
 }
 
-.clear-all:hover{
-background:rgba(255,255,255,.08);
-opacity:1;
-}
 
-/* ================= MAIN ================= */
+/* =========================
+   MAIN
+========================= */
 
 .main{
-height:100vh;
-flex:1;
-display:flex;
-flex-direction:column;
-min-width:0;
+  margin-left:270px;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
 }
 
-/* ================= TOP BAR ================= */
+
+/* =========================
+   TOPBAR
+========================= */
 
 .topbar{
-height:64px;
-border-bottom:1px solid #e5e7eb;
-display:flex;
-align-items:center;
-padding:0 18px;
-gap:14px;
-background:#fff;
-flex-shrink:0;
+  height:65px;
+  background:white;
+  border-bottom:1px solid #ddd;
+  display:flex;
+  align-items:center;
+  padding:0 22px;
+  gap:15px;
 }
 
 .back-btn{
-text-decoration:none;
-color:#176b35;
-background:#edf7ef;
-border:1px solid #d5e7d9;
-padding:8px 13px;
-border-radius:9px;
-font-size:13px;
-font-weight:bold;
-white-space:nowrap;
-transition:.2s;
+  border:none;
+  background:#f2f2f2;
+  padding:9px 13px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
 }
 
 .back-btn:hover{
-background:#dfeee2;
-transform:translateX(-2px);
+  background:#e7e7e7;
 }
 
 .menu-btn{
-display:none;
-border:0;
-background:transparent;
-font-size:24px;
-cursor:pointer;
+  display:none;
+  border:none;
+  background:#f2f2f2;
+  padding:9px 12px;
+  border-radius:8px;
+  cursor:pointer;
 }
 
 .top-title{
-font-size:17px;
-font-weight:bold;
-color:#18351f;
-flex:1;
+  flex:1;
 }
 
-.status{
-font-size:11px;
-color:#176b35;
-background:#edf7ef;
-padding:5px 9px;
-border-radius:20px;
-white-space:nowrap;
+.top-title h1{
+  font-size:18px;
+  color:#1d6b35;
 }
 
-/* ================= CHAT ================= */
-
-.chat-container{
-flex:1;
-overflow-y:auto;
-padding:30px 15px 150px;
+.top-title p{
+  font-size:11px;
+  color:#777;
+  margin-top:2px;
 }
 
-.chat-inner{
-max-width:820px;
-margin:auto;
+.online{
+  font-size:12px;
+  color:#1d6b35;
+}
+
+
+/* =========================
+   CHAT AREA
+========================= */
+
+.chat-area{
+  flex:1;
+  overflow-y:auto;
+  padding:25px;
 }
 
 .welcome{
-text-align:center;
-padding:70px 15px 30px;
+  max-width:700px;
+  margin:60px auto;
+  text-align:center;
 }
 
 .welcome-logo{
-width:70px;
-height:70px;
-object-fit:contain;
-margin-bottom:15px;
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  margin-bottom:18px;
 }
 
-.welcome h1{
-font-size:27px;
-margin:5px 0 10px;
-color:#18351f;
+.welcome h2{
+  color:#1d6b35;
+  margin-bottom:10px;
 }
 
 .welcome p{
-color:#6b7280;
-margin:0;
-font-size:14px;
-line-height:1.6;
+  color:#666;
+  line-height:1.6;
+  font-size:14px;
 }
 
-/* ================= MESSAGE ================= */
-
 .message{
-display:flex;
-gap:12px;
-margin:25px 0;
+  max-width:850px;
+  margin:0 auto 18px;
+  display:flex;
+  gap:10px;
 }
 
 .message.user{
-justify-content:flex-end;
+  justify-content:flex-end;
 }
 
 .avatar{
-width:32px;
-height:32px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-shrink:0;
-font-size:15px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#1d6b35;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:12px;
+  font-weight:bold;
 }
 
-.ai-avatar{
-background:#e8f2ea;
+.message.user .avatar{
+  background:#333;
+  order:2;
 }
 
-.user-avatar{
-background:#176b35;
-color:white;
+.bubble{
+  max-width:75%;
+  padding:12px 15px;
+  border-radius:13px;
+  background:white;
+  border:1px solid #e2e2e2;
+  line-height:1.55;
+  font-size:14px;
+  white-space:pre-wrap;
 }
 
-.message-content{
-max-width:78%;
-font-size:15px;
-line-height:1.7;
-word-wrap:break-word;
-overflow-wrap:anywhere;
+.message.user .bubble{
+  background:#1d6b35;
+  color:white;
+  border:none;
 }
 
-.message.user .message-content{
-background:#176b35;
-color:white;
-padding:11px 15px;
-border-radius:17px;
-border-bottom-right-radius:5px;
-}
 
-.message.ai .message-content{
-color:#1f2937;
-padding-top:2px;
-}
+/* =========================
+   ACTIONS
+========================= */
 
-/* ================= ACTIONS ================= */
-
-.message-actions{
-display:flex;
-gap:5px;
-margin-top:7px;
+.actions{
+  display:flex;
+  gap:6px;
+  margin-top:6px;
 }
 
 .action-btn{
-border:0;
-background:transparent;
-color:#6b7280;
-cursor:pointer;
-font-size:12px;
-padding:5px 7px;
-border-radius:6px;
+  border:none;
+  background:transparent;
+  color:#777;
+  cursor:pointer;
+  font-size:11px;
+  padding:4px 7px;
 }
 
 .action-btn:hover{
-background:#f1f3f1;
-color:#176b35;
+  color:#1d6b35;
 }
 
-/* ================= TYPING ================= */
+
+/* =========================
+   TYPING
+========================= */
 
 .typing{
-display:flex;
-gap:5px;
-align-items:center;
-padding:8px 0;
+  max-width:850px;
+  margin:0 auto 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-.dot{
-width:7px;
-height:7px;
-background:#176b35;
-border-radius:50%;
-animation:blink 1.2s infinite;
+.typing-bubble{
+  background:white;
+  border:1px solid #ddd;
+  border-radius:13px;
+  padding:12px 16px;
+  color:#777;
+  font-size:13px;
 }
 
-.dot:nth-child(2){
-animation-delay:.2s;
-}
 
-.dot:nth-child(3){
-animation-delay:.4s;
-}
-
-@keyframes blink{
-
-0%,80%,100%{
-opacity:.25;
-}
-
-40%{
-opacity:1;
-}
-
-}
-
-/* ================= INPUT ================= */
+/* =========================
+   INPUT
+========================= */
 
 .input-area{
-position:fixed;
-bottom:0;
-left:270px;
-right:0;
-background:
-linear-gradient(
-to top,
-#ffffff 75%,
-rgba(255,255,255,0)
-);
-padding:20px 15px 18px;
-z-index:20;
-}
-
-.input-inner{
-max-width:820px;
-margin:auto;
+  background:white;
+  border-top:1px solid #ddd;
+  padding:15px 20px;
 }
 
 .input-box{
-display:flex;
-align-items:flex-end;
-gap:8px;
-border:1px solid #cfd5cf;
-border-radius:17px;
-padding:8px 9px 8px 15px;
-background:white;
-box-shadow:
-0 2px 12px
-rgba(0,0,0,.06);
+  max-width:850px;
+  margin:auto;
+  display:flex;
+  gap:10px;
+  align-items:flex-end;
 }
 
-.input-box:focus-within{
-border-color:#176b35;
-box-shadow:
-0 2px 15px
-rgba(23,107,53,.12);
+textarea{
+  flex:1;
+  resize:none;
+  min-height:45px;
+  max-height:130px;
+  border:1px solid #ccc;
+  border-radius:12px;
+  padding:13px;
+  font-family:inherit;
+  font-size:14px;
+  outline:none;
 }
 
-#userMessage{
-flex:1;
-border:0;
-outline:0;
-resize:none;
-font-family:Arial,Helvetica,sans-serif;
-font-size:15px;
-line-height:1.5;
-max-height:150px;
-min-height:26px;
-background:transparent;
-color:#1f2937;
-}
-
-#userMessage::placeholder{
-color:#8a918b;
+textarea:focus{
+  border-color:#1d6b35;
 }
 
 .send-btn{
-width:40px;
-height:40px;
-border:0;
-border-radius:11px;
-background:#176b35;
-color:white;
-cursor:pointer;
-font-size:18px;
-flex-shrink:0;
+  width:48px;
+  height:45px;
+  border:none;
+  border-radius:11px;
+  background:#1d6b35;
+  color:white;
+  cursor:pointer;
+  font-size:18px;
 }
 
 .send-btn:hover{
-background:#12552a;
+  background:#15552a;
 }
 
 .send-btn:disabled{
-opacity:.5;
-cursor:not-allowed;
+  opacity:.5;
+  cursor:not-allowed;
 }
 
-.input-note{
-text-align:center;
-font-size:10px;
-color:#8a918b;
-margin-top:7px;
+.note{
+  max-width:850px;
+  margin:7px auto 0;
+  text-align:center;
+  font-size:10px;
+  color:#999;
 }
 
-/* ================= MOBILE ================= */
 
-.overlay{
-display:none;
-}
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:750px){
+@media(max-width:800px){
 
-.sidebar{
-position:fixed;
-left:-280px;
-top:0;
-z-index:100;
-transition:left .25s ease;
-box-shadow:
-5px 0 20px
-rgba(0,0,0,.15);
-}
+  .sidebar{
+    transform:translateX(-100%);
+    transition:.25s;
+  }
 
-.sidebar.open{
-left:0;
-}
+  .sidebar.open{
+    transform:translateX(0);
+  }
 
-.overlay.show{
-display:block;
-position:fixed;
-inset:0;
-background:
-rgba(0,0,0,.35);
-z-index:90;
-}
+  .main{
+    margin-left:0;
+  }
 
-.menu-btn{
-display:block;
-}
+  .menu-btn{
+    display:block;
+  }
 
-.back-btn{
-padding:7px 10px;
-font-size:12px;
-}
+  .chat-area{
+    padding:15px;
+  }
 
-.input-area{
-left:0;
-}
+  .topbar{
+    padding:0 12px;
+  }
 
-.topbar{
-height:58px;
-padding:0 10px;
-gap:8px;
-}
+  .welcome{
+    margin:45px auto;
+  }
 
-.top-title{
-font-size:14px;
-white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis;
-}
-
-.status{
-display:none;
-}
-
-.chat-container{
-padding:
-20px 10px 140px;
-}
-
-.welcome{
-padding:
-55px 10px 25px;
-}
-
-.welcome h1{
-font-size:22px;
-}
-
-.message-content{
-max-width:88%;
-font-size:14px;
-}
-
-.avatar{
-width:29px;
-height:29px;
-font-size:13px;
-}
-
-.input-area{
-padding:
-14px 10px 13px;
-}
+  .bubble{
+    max-width:85%;
+  }
 
 }
 
-/* ================= SCROLLBAR ================= */
 
-::-webkit-scrollbar{
-width:7px;
-}
+/* =========================
+   ERROR
+========================= */
 
-::-webkit-scrollbar-thumb{
-background:#cfd5cf;
-border-radius:10px;
+.error-box{
+  background:#fff0f0;
+  border:1px solid #ffcccc;
+  color:#a40000;
+  padding:12px;
+  border-radius:10px;
+  margin-top:8px;
+  font-size:13px;
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<!-- MOBILE OVERLAY -->
 
-<div
-class="overlay"
-id="overlay">
-</div>
+<!-- =========================
+     SIDEBAR
+========================= -->
 
-<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
 
-<aside
-class="sidebar"
-id="sidebar">
+  <div class="logo-area">
 
-<div class="brand">
+    <img
+      src="logo.png"
+      alt="SR CRESCO Logo"
+      onerror="this.style.display='none';"
+    >
 
-<a href="index.html">
+    <h2>SR CRESCO</h2>
 
-<img
-src="logo.png"
-alt="SR CRESCO Logo">
+    <p>GROW • PROSPER • THRIVE</p>
 
-</a>
+  </div>
 
-<div class="brand-text">
 
-SR CRESCO<br>
-KNOWLEDGE AI
+  <button
+    class="new-chat"
+    onclick="newChat()">
+    ＋ New Chat
+  </button>
 
-</div>
 
-</div>
+  <div class="history-title">
+    CHAT HISTORY
+  </div>
 
-<button
-class="new-chat"
-id="newChat">
 
-＋ New chat
+  <div
+    class="history"
+    id="history">
+  </div>
 
-</button>
 
-<div class="history-title">
-
-CHAT HISTORY
-
-</div>
-
-<div
-class="history"
-id="history">
-</div>
-
-<div class="sidebar-bottom">
-
-<button
-class="clear-all"
-id="clearAll">
-
-🗑 Clear all chats
-
-</button>
-
-</div>
+  <button
+    class="clear-all"
+    onclick="clearAllChats()">
+    Clear All Chats
+  </button>
 
 </aside>
 
-<!-- MAIN -->
 
-<section class="main">
 
-<header class="topbar">
+<!-- =========================
+     MAIN
+========================= -->
 
-<a
-href="index.html"
-class="back-btn"
-title="Back to SR CRESCO">
+<main class="main">
 
-← Back
 
-</a>
+  <div class="topbar">
 
-<button
-class="menu-btn"
-id="menuBtn"
-title="Open menu">
+    <button
+      class="menu-btn"
+      onclick="toggleSidebar()">
+      ☰
+    </button>
 
-☰
 
-</button>
+    <button
+      class="back-btn"
+      onclick="window.location.href='./index.html'">
+      ← Back
+    </button>
 
-<div class="top-title">
 
-SR CRESCO KNOWLEDGE AI
+    <div class="top-title">
 
-</div>
+      <h1>
+        SR CRESCO KNOWLEDGE AI
+      </h1>
 
-<div class="status">
+      <p>
+        Agriculture Knowledge Assistant
+      </p>
 
-● AI Online
+    </div>
 
-</div>
 
-</header>
+    <div class="online">
+      ● AI Online
+    </div>
 
-<!-- CHAT -->
+  </div>
 
-<div
-class="chat-container"
-id="chatContainer">
 
-<div
-class="chat-inner"
-id="chatMessages">
 
-<div
-class="welcome"
-id="welcome">
+  <!-- =========================
+       CHAT
+  ========================= -->
 
-<img
-src="logo.png"
-class="welcome-logo"
-alt="SR CRESCO">
+  <section
+    class="chat-area"
+    id="chatArea">
 
-<h1>
+    <div
+      class="welcome"
+      id="welcome">
 
-How can I help you?
+      <img
+        class="welcome-logo"
+        src="logo.png"
+        alt="SR CRESCO"
+        onerror="this.style.display='none';"
+      >
 
-</h1>
+      <h2>
+        Welcome to SR CRESCO KNOWLEDGE AI
+      </h2>
 
-<p>
+      <p>
+        Ask questions about agriculture, farming,
+        crops, livestock, technology, soil,
+        irrigation, market information and more.
+      </p>
 
-I'm <b>SR CRESCO KNOWLEDGE AI</b>.<br>
+    </div>
 
-Ask questions, learn, create,
-research or get help with
-agriculture and technology.
+  </section>
 
-</p>
 
-</div>
 
-</div>
+  <!-- =========================
+       INPUT
+  ========================= -->
 
-</div>
+  <div class="input-area">
 
-<!-- INPUT -->
+    <div class="input-box">
 
-<div class="input-area">
+      <textarea
+        id="messageInput"
+        placeholder="Ask your agriculture question..."
+        rows="1"></textarea>
 
-<div class="input-inner">
 
-<div class="input-box">
+      <button
+        class="send-btn"
+        id="sendBtn"
+        onclick="sendMessage()">
+        ➤
+      </button>
 
-<textarea
-id="userMessage"
-rows="1"
-placeholder="Message SR CRESCO KNOWLEDGE AI..."
-autocomplete="off">
-</textarea>
+    </div>
 
-<button
-class="send-btn"
-id="sendBtn"
-title="Send">
 
-➤
+    <div class="note">
+      SR CRESCO KNOWLEDGE AI • Agriculture Information Assistant
+    </div>
 
-</button>
+  </div>
 
-</div>
 
-<div class="input-note">
+</main>
 
-SR CRESCO KNOWLEDGE AI can make mistakes.
-Check important information.
 
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 <script>
 
+
 /* =====================================================
-   SR CRESCO KNOWLEDGE AI
+   IMPORTANT API URL
 ===================================================== */
-
-
-/* ================= VERCEL API ================= */
-
-/*
- GitHub Pages:
- https://srcresco.github.io/SR-CRESCO/
-
- Vercel backend:
- https://sr-cresco-knowledge-l5l5yy3qk-sr-cresco-ai.vercel.app/api/chat
-*/
 
 const API_URL =
 "https://sr-cresco-knowledge-l5l5yy3qk-sr-cresco-ai.vercel.app/api/chat";
 
 
-/* ================= ELEMENTS ================= */
+/* =====================================================
+   DEBUG
+===================================================== */
 
-const input =
-document.getElementById("userMessage");
-
-const sendBtn =
-document.getElementById("sendBtn");
-
-const chatMessages =
-document.getElementById("chatMessages");
-
-const chatContainer =
-document.getElementById("chatContainer");
-
-const sidebar =
-document.getElementById("sidebar");
-
-const menuBtn =
-document.getElementById("menuBtn");
-
-const overlay =
-document.getElementById("overlay");
-
-const newChatBtn =
-document.getElementById("newChat");
-
-const clearAllBtn =
-document.getElementById("clearAll");
-
-const historyDiv =
-document.getElementById("history");
+console.log(
+  "SR CRESCO API URL:",
+  API_URL
+);
 
 
-/* ================= STATE ================= */
+/* =====================================================
+   VARIABLES
+===================================================== */
 
 let conversation = [];
-
-let chats = [];
 
 let currentChatId = null;
 
 
-/* ================= LOAD CHATS ================= */
+/* =====================================================
+   LOCAL STORAGE
+===================================================== */
 
-try{
-
-chats =
-JSON.parse(
-localStorage.getItem(
-"srcresco_chats"
-) || "[]"
-);
-
-if(!Array.isArray(chats)){
-
-chats = [];
-
-}
-
-}catch(error){
-
-chats = [];
-
-}
-
-
-/* ================= SEND ================= */
-
-sendBtn.addEventListener(
-"click",
-function(){
-
-sendMessage();
-
-});
-
-
-/* ================= MOBILE MENU ================= */
-
-menuBtn.addEventListener(
-"click",
-function(){
-
-sidebar.classList.add("open");
-
-overlay.classList.add("show");
-
-});
-
-
-overlay.addEventListener(
-"click",
-function(){
-
-sidebar.classList.remove("open");
-
-overlay.classList.remove("show");
-
-});
-
-
-/* ================= NEW CHAT ================= */
-
-newChatBtn.addEventListener(
-"click",
-function(){
-
-startNewChat();
-
-sidebar.classList.remove("open");
-
-overlay.classList.remove("show");
-
-});
-
-
-function startNewChat(){
-
-conversation = [];
-
-currentChatId = null;
-
-chatMessages.innerHTML = `
-
-<div
-class="welcome"
-id="welcome">
-
-<img
-src="logo.png"
-class="welcome-logo"
-alt="SR CRESCO">
-
-<h1>
-How can I help you?
-</h1>
-
-<p>
-I'm <b>SR CRESCO KNOWLEDGE AI</b>.<br>
-Ask questions, learn, create,
-research or get help with
-agriculture and technology.
-</p>
-
-</div>
-
-`;
-
-input.value = "";
-
-autoResize();
-
-input.focus();
-
-}
+const STORAGE_KEY =
+"sr_cresco_knowledge_ai_chats";
 
 
 /* =====================================================
-   SEND MESSAGE
+   LOAD HISTORY
 ===================================================== */
 
-async function sendMessage(){
+function loadHistory(){
 
-const message =
-input.value.trim();
+  const history =
+    JSON.parse(
+      localStorage.getItem(STORAGE_KEY) || "[]"
+    );
 
+  const historyBox =
+    document.getElementById("history");
 
-if(
-!message ||
-sendBtn.disabled
-){
+  historyBox.innerHTML = "";
 
-return;
+  history.reverse().forEach(chat => {
 
-}
+    const item =
+      document.createElement("div");
 
+    item.className =
+      "history-item";
 
-/* REMOVE WELCOME */
+    item.textContent =
+      chat.title || "New Chat";
 
-const welcome =
-document.getElementById(
-"welcome"
-);
+    item.onclick =
+      () => loadChat(chat.id);
 
-if(welcome){
+    historyBox.appendChild(item);
 
-welcome.remove();
-
-}
-
-
-/* USER MESSAGE */
-
-addMessage(
-"user",
-message
-);
-
-
-conversation.push({
-
-role:"user",
-
-content:message
-
-});
-
-
-input.value = "";
-
-autoResize();
-
-sendBtn.disabled = true;
-
-
-/* TYPING */
-
-const typing =
-createTyping();
-
-chatMessages.appendChild(
-typing
-);
-
-scrollBottom();
-
-
-/* ================= API ================= */
-
-try{
-
-const response =
-await fetch(
-API_URL,
-{
-
-method:"POST",
-
-headers:{
-"Content-Type":
-"application/json"
-},
-
-body:JSON.stringify({
-
-messages:
-conversation
-
-})
-
-}
-);
-
-
-/* SAFE RESPONSE */
-
-const rawText =
-await response.text();
-
-
-let data = {};
-
-
-try{
-
-data =
-JSON.parse(rawText);
-
-}catch(parseError){
-
-data = {
-
-error:
-rawText ||
-"Invalid response from server."
-
-};
-
-}
-
-
-if(typing){
-
-typing.remove();
-
-}
-
-
-/* ERROR */
-
-if(!response.ok){
-
-addMessage(
-"ai",
-"❌ " +
-(
-data.error ||
-data.message ||
-`Server error (${response.status})`
-)
-);
-
-}
-
-
-/* SUCCESS */
-
-else{
-
-const reply =
-data.reply ||
-data.message ||
-"No response received from SR CRESCO KNOWLEDGE AI.";
-
-
-conversation.push({
-
-role:"assistant",
-
-content:reply
-
-});
-
-
-addMessage(
-"ai",
-reply
-);
-
-
-saveCurrentChat();
-
-}
-
-
-}catch(error){
-
-console.error(
-"SR CRESCO AI Error:",
-error
-);
-
-
-if(typing){
-
-typing.remove();
-
-}
-
-
-addMessage(
-"ai",
-"❌ Unable to connect to SR CRESCO KNOWLEDGE AI. Please try again."
-);
-
-}
-
-
-sendBtn.disabled = false;
-
-input.focus();
-
-scrollBottom();
-
-renderHistory();
-
-}
-
-
-/* =====================================================
-   TYPING
-===================================================== */
-
-function createTyping(){
-
-const typing =
-document.createElement("div");
-
-typing.className =
-"message ai";
-
-typing.id =
-"typing";
-
-
-typing.innerHTML = `
-
-<div class="avatar ai-avatar">
-🌱
-</div>
-
-<div class="message-content">
-
-<div class="typing">
-
-<span class="dot"></span>
-
-<span class="dot"></span>
-
-<span class="dot"></span>
-
-</div>
-
-</div>
-
-`;
-
-return typing;
-
-}
-
-
-/* =====================================================
-   ADD MESSAGE
-===================================================== */
-
-function addMessage(
-type,
-text
-){
-
-const messageDiv =
-document.createElement("div");
-
-messageDiv.className =
-"message " + type;
-
-
-const avatar =
-document.createElement("div");
-
-avatar.className =
-"avatar " +
-(
-type === "ai"
-?
-"ai-avatar"
-:
-"user-avatar"
-);
-
-
-avatar.textContent =
-type === "ai"
-?
-"🌱"
-:
-"U";
-
-
-const content =
-document.createElement("div");
-
-content.className =
-"message-content";
-
-
-content.innerHTML =
-escapeHTML(
-String(text)
-).replace(
-/\n/g,
-"<br>"
-);
-
-
-/* ================= AI ACTIONS ================= */
-
-if(type === "ai"){
-
-const actions =
-document.createElement("div");
-
-actions.className =
-"message-actions";
-
-
-const copyBtn =
-document.createElement("button");
-
-copyBtn.className =
-"action-btn";
-
-copyBtn.textContent =
-"📋 Copy";
-
-
-const regenerateBtn =
-document.createElement("button");
-
-regenerateBtn.className =
-"action-btn";
-
-regenerateBtn.textContent =
-"↻ Regenerate";
-
-
-/* COPY */
-
-copyBtn.addEventListener(
-"click",
-async function(){
-
-try{
-
-await navigator.clipboard.writeText(
-String(text)
-);
-
-copyBtn.textContent =
-"✓ Copied";
-
-}catch(error){
-
-copyBtn.textContent =
-"Copy failed";
-
-}
-
-
-setTimeout(
-function(){
-
-copyBtn.textContent =
-"📋 Copy";
-
-},
-1500
-);
-
-});
-
-
-/* REGENERATE */
-
-regenerateBtn.addEventListener(
-"click",
-function(){
-
-regenerateLast();
-
-});
-
-
-actions.appendChild(
-copyBtn
-);
-
-actions.appendChild(
-regenerateBtn
-);
-
-content.appendChild(
-actions
-);
-
-}
-
-
-/* ================= POSITION ================= */
-
-if(type === "user"){
-
-messageDiv.appendChild(
-content
-);
-
-messageDiv.appendChild(
-avatar
-);
-
-}else{
-
-messageDiv.appendChild(
-avatar
-);
-
-messageDiv.appendChild(
-content
-);
-
-}
-
-
-chatMessages.appendChild(
-messageDiv
-);
-
-scrollBottom();
-
-}
-
-
-/* =====================================================
-   REGENERATE
-===================================================== */
-
-async function regenerateLast(){
-
-if(sendBtn.disabled){
-
-return;
-
-}
-
-
-if(conversation.length < 2){
-
-return;
-
-}
-
-
-/* Last item must be AI */
-
-if(
-conversation[
-conversation.length - 1
-].role !== "assistant"
-){
-
-return;
-
-}
-
-
-/* Remove previous AI */
-
-conversation.pop();
-
-
-const aiMessages =
-chatMessages.querySelectorAll(
-".message.ai"
-);
-
-
-if(aiMessages.length){
-
-aiMessages[
-aiMessages.length - 1
-].remove();
-
-}
-
-
-sendBtn.disabled = true;
-
-
-/* TYPING */
-
-const typing =
-createTyping();
-
-chatMessages.appendChild(
-typing
-);
-
-scrollBottom();
-
-
-try{
-
-const response =
-await fetch(
-API_URL,
-{
-
-method:"POST",
-
-headers:{
-"Content-Type":
-"application/json"
-},
-
-body:JSON.stringify({
-
-messages:
-conversation
-
-})
-
-}
-);
-
-
-const rawText =
-await response.text();
-
-
-let data = {};
-
-
-try{
-
-data =
-JSON.parse(rawText);
-
-}catch(error){
-
-data = {
-
-error:
-rawText ||
-"Invalid response from server."
-
-};
-
-}
-
-
-if(typing){
-
-typing.remove();
-
-}
-
-
-if(!response.ok){
-
-addMessage(
-"ai",
-"❌ " +
-(
-data.error ||
-data.message ||
-`Server error (${response.status})`
-)
-);
-
-}else{
-
-const reply =
-data.reply ||
-data.message ||
-"No response received.";
-
-
-conversation.push({
-
-role:"assistant",
-
-content:reply
-
-});
-
-
-addMessage(
-"ai",
-reply
-);
-
-
-saveCurrentChat();
-
-}
-
-
-}catch(error){
-
-console.error(
-"Regenerate Error:",
-error
-);
-
-
-if(typing){
-
-typing.remove();
-
-}
-
-
-addMessage(
-"ai",
-"❌ Unable to regenerate response. Please try again."
-);
-
-}
-
-
-sendBtn.disabled = false;
-
-input.focus();
-
-scrollBottom();
-
-renderHistory();
+  });
 
 }
 
@@ -1565,151 +710,73 @@ renderHistory();
    SAVE CHAT
 ===================================================== */
 
-function saveCurrentChat(){
+function saveChat(){
 
-if(!conversation.length){
+  if(conversation.length === 0){
+    return;
+  }
 
-return;
+  let chats =
+    JSON.parse(
+      localStorage.getItem(STORAGE_KEY) || "[]"
+    );
 
-}
+  const firstUserMessage =
+    conversation.find(
+      m => m.role === "user"
+    );
 
-
-if(!currentChatId){
-
-currentChatId =
-Date.now();
-
-}
-
-
-const firstUser =
-conversation.find(
-x => x.role === "user"
-);
-
-
-const title =
-firstUser
-?
-firstUser.content
-.substring(0,35)
-:
-"New chat";
+  const title =
+    firstUserMessage
+      ? firstUserMessage.content.substring(0,45)
+      : "New Chat";
 
 
-const existing =
-chats.find(
-x =>
-x.id === currentChatId
-);
+  if(!currentChatId){
+
+    currentChatId =
+      Date.now().toString();
+
+  }
 
 
-if(existing){
-
-existing.messages =
-[...conversation];
-
-existing.title =
-title;
-
-}else{
-
-chats.unshift({
-
-id:
-currentChatId,
-
-title:
-title,
-
-messages:
-[...conversation]
-
-});
-
-}
+  const existing =
+    chats.find(
+      c => c.id === currentChatId
+    );
 
 
-/* KEEP LAST 30 */
+  if(existing){
 
-chats =
-chats.slice(0,30);
+    existing.messages =
+      conversation;
 
+    existing.title =
+      title;
 
-try{
+  }else{
 
-localStorage.setItem(
-"srcresco_chats",
-JSON.stringify(chats)
-);
+    chats.push({
 
-}catch(error){
+      id:currentChatId,
 
-console.error(
-"Chat save error:",
-error
-);
+      title:title,
 
-}
+      messages:conversation,
 
-}
+      createdAt:Date.now()
 
+    });
 
-/* =====================================================
-   HISTORY
-===================================================== */
-
-function renderHistory(){
-
-historyDiv.innerHTML = "";
+  }
 
 
-chats.forEach(
-function(chat){
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(chats)
+  );
 
-const item =
-document.createElement("div");
-
-
-item.className =
-"history-item";
-
-
-item.textContent =
-chat.title ||
-"New chat";
-
-
-item.title =
-chat.title ||
-"New chat";
-
-
-item.addEventListener(
-"click",
-function(){
-
-loadChat(
-chat.id
-);
-
-
-sidebar.classList.remove(
-"open"
-);
-
-overlay.classList.remove(
-"show"
-);
-
-});
-
-
-historyDiv.appendChild(
-item
-);
-
-});
+  loadHistory();
 
 }
 
@@ -1720,51 +787,87 @@ item
 
 function loadChat(id){
 
-const chat =
-chats.find(
-x => x.id === id
-);
+  const chats =
+    JSON.parse(
+      localStorage.getItem(STORAGE_KEY) || "[]"
+    );
+
+  const chat =
+    chats.find(
+      c => c.id === id
+    );
+
+  if(!chat){
+    return;
+  }
 
 
-if(!chat){
+  conversation =
+    chat.messages || [];
 
-return;
+  currentChatId =
+    chat.id;
+
+
+  const chatArea =
+    document.getElementById("chatArea");
+
+  chatArea.innerHTML = "";
+
+
+  conversation.forEach(message => {
+
+    addMessageToScreen(
+      message.role,
+      message.content,
+      false
+    );
+
+  });
+
+
+  scrollBottom();
 
 }
 
 
-currentChatId =
-chat.id;
+/* =====================================================
+   NEW CHAT
+===================================================== */
+
+function newChat(){
+
+  conversation = [];
+
+  currentChatId = null;
 
 
-conversation =
-[...chat.messages];
+  document.getElementById(
+    "chatArea"
+  ).innerHTML = `
 
+    <div class="welcome" id="welcome">
 
-chatMessages.innerHTML =
-"";
+      <img
+        class="welcome-logo"
+        src="logo.png"
+        alt="SR CRESCO"
+        onerror="this.style.display='none';"
+      >
 
+      <h2>
+        Welcome to SR CRESCO KNOWLEDGE AI
+      </h2>
 
-conversation.forEach(
-function(message){
+      <p>
+        Ask questions about agriculture,
+        farming, crops, livestock,
+        technology and more.
+      </p>
 
-addMessage(
+    </div>
 
-message.role ===
-"assistant"
-?
-"ai"
-:
-"user",
-
-message.content
-
-);
-
-});
-
-
-scrollBottom();
+  `;
 
 }
 
@@ -1773,102 +876,581 @@ scrollBottom();
    CLEAR ALL
 ===================================================== */
 
-clearAllBtn.addEventListener(
-"click",
-function(){
+function clearAllChats(){
 
-if(
-!confirm(
-"Delete all saved chats?"
-)
-){
+  if(
+    !confirm(
+      "Clear all chat history?"
+    )
+  ){
+    return;
+  }
 
-return;
+
+  localStorage.removeItem(
+    STORAGE_KEY
+  );
+
+  conversation = [];
+
+  currentChatId = null;
+
+  loadHistory();
+
+  newChat();
 
 }
 
 
-chats = [];
-
-conversation = [];
-
-currentChatId = null;
-
-
-localStorage.removeItem(
-"srcresco_chats"
-);
-
-
-startNewChat();
-
-renderHistory();
-
-});
-
-
 /* =====================================================
-   ENTER TO SEND
+   ADD MESSAGE
 ===================================================== */
 
-input.addEventListener(
-"keydown",
-function(event){
-
-if(
-event.key === "Enter" &&
-!event.shiftKey
+function addMessageToScreen(
+  role,
+  content,
+  scroll = true
 ){
 
-event.preventDefault();
+  const welcome =
+    document.getElementById("welcome");
 
-sendMessage();
+  if(welcome){
+    welcome.remove();
+  }
+
+
+  const chatArea =
+    document.getElementById("chatArea");
+
+
+  const message =
+    document.createElement("div");
+
+  message.className =
+    "message " + role;
+
+
+  const avatar =
+    document.createElement("div");
+
+  avatar.className =
+    "avatar";
+
+  avatar.textContent =
+    role === "user"
+      ? "YOU"
+      : "AI";
+
+
+  const container =
+    document.createElement("div");
+
+
+  const bubble =
+    document.createElement("div");
+
+  bubble.className =
+    "bubble";
+
+
+  bubble.innerHTML =
+    escapeHTML(content)
+      .replace(/\n/g,"<br>");
+
+
+  container.appendChild(
+    bubble
+  );
+
+
+  if(role === "assistant"){
+
+    const actions =
+      document.createElement("div");
+
+    actions.className =
+      "actions";
+
+
+    const copyBtn =
+      document.createElement("button");
+
+    copyBtn.className =
+      "action-btn";
+
+    copyBtn.textContent =
+      "Copy";
+
+    copyBtn.onclick =
+      () => copyText(content);
+
+
+    const regenerateBtn =
+      document.createElement("button");
+
+    regenerateBtn.className =
+      "action-btn";
+
+    regenerateBtn.textContent =
+      "Regenerate";
+
+    regenerateBtn.onclick =
+      regenerate;
+
+
+    actions.appendChild(
+      copyBtn
+    );
+
+    actions.appendChild(
+      regenerateBtn
+    );
+
+    container.appendChild(
+      actions
+    );
+
+  }
+
+
+  message.appendChild(
+    avatar
+  );
+
+  message.appendChild(
+    container
+  );
+
+
+  chatArea.appendChild(
+    message
+  );
+
+
+  if(scroll){
+    scrollBottom();
+  }
 
 }
 
-});
-
 
 /* =====================================================
-   AUTO RESIZE
-===================================================== */
-
-input.addEventListener(
-"input",
-autoResize
-);
-
-
-function autoResize(){
-
-input.style.height =
-"auto";
-
-
-input.style.height =
-Math.min(
-input.scrollHeight,
-150
-) + "px";
-
-}
-
-
-/* =====================================================
-   SECURITY
+   ESCAPE HTML
 ===================================================== */
 
 function escapeHTML(text){
 
-const div =
-document.createElement("div");
+  return String(text)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
 
 
-div.textContent =
-text;
+/* =====================================================
+   TYPING
+===================================================== */
+
+function showTyping(){
+
+  const chatArea =
+    document.getElementById("chatArea");
 
 
-return div.innerHTML;
+  const typing =
+    document.createElement("div");
+
+  typing.className =
+    "typing";
+
+  typing.id =
+    "typing";
+
+
+  typing.innerHTML = `
+
+    <div class="avatar">
+      AI
+    </div>
+
+    <div class="typing-bubble">
+      SR CRESCO AI is thinking...
+    </div>
+
+  `;
+
+
+  chatArea.appendChild(
+    typing
+  );
+
+  scrollBottom();
+
+}
+
+
+/* =====================================================
+   HIDE TYPING
+===================================================== */
+
+function hideTyping(){
+
+  const typing =
+    document.getElementById(
+      "typing"
+    );
+
+  if(typing){
+    typing.remove();
+  }
+
+}
+
+
+/* =====================================================
+   SEND MESSAGE
+===================================================== */
+
+async function sendMessage(){
+
+  const input =
+    document.getElementById(
+      "messageInput"
+    );
+
+  const sendBtn =
+    document.getElementById(
+      "sendBtn"
+    );
+
+
+  const text =
+    input.value.trim();
+
+
+  if(!text){
+    return;
+  }
+
+
+  addMessageToScreen(
+    "user",
+    text
+  );
+
+
+  conversation.push({
+
+    role:"user",
+
+    content:text
+
+  });
+
+
+  input.value = "";
+
+  input.style.height =
+    "45px";
+
+
+  sendBtn.disabled = true;
+
+  showTyping();
+
+
+  console.log(
+    "Sending request to:",
+    API_URL
+  );
+
+
+  try{
+
+
+    const response =
+      await fetch(
+        API_URL,
+        {
+          method:"POST",
+
+          headers:{
+            "Content-Type":
+              "application/json"
+          },
+
+          body:JSON.stringify({
+
+            messages:
+              conversation
+
+          })
+        }
+      );
+
+
+    console.log(
+      "API response status:",
+      response.status
+    );
+
+
+    const raw =
+      await response.text();
+
+
+    console.log(
+      "API raw response:",
+      raw
+    );
+
+
+    let data = null;
+
+
+    try{
+
+      data =
+        JSON.parse(raw);
+
+    }catch(parseError){
+
+      throw new Error(
+        "Server returned an invalid response."
+      );
+
+    }
+
+
+    if(!response.ok){
+
+      throw new Error(
+        data?.error ||
+        `API error: ${response.status}`
+      );
+
+    }
+
+
+    const reply =
+      data.reply ||
+      data.message;
+
+
+    if(
+      !reply ||
+      typeof reply !== "string"
+    ){
+
+      throw new Error(
+        "API returned no AI reply."
+      );
+
+    }
+
+
+    hideTyping();
+
+
+    conversation.push({
+
+      role:"assistant",
+
+      content:reply
+
+    });
+
+
+    addMessageToScreen(
+      "assistant",
+      reply
+    );
+
+
+    saveChat();
+
+
+  }catch(error){
+
+    console.error(
+      "SR CRESCO KNOWLEDGE AI ERROR:",
+      error
+    );
+
+
+    hideTyping();
+
+
+    const chatArea =
+      document.getElementById(
+        "chatArea"
+      );
+
+
+    const errorMessage =
+      document.createElement("div");
+
+    errorMessage.className =
+      "message assistant";
+
+
+    errorMessage.innerHTML = `
+
+      <div class="avatar">
+        AI
+      </div>
+
+      <div>
+
+        <div class="error-box">
+
+          ❌ Unable to connect to
+          SR CRESCO KNOWLEDGE AI.
+
+          <br><br>
+
+          <b>Error:</b>
+          ${escapeHTML(
+            error.message ||
+            "Unknown error"
+          )}
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    chatArea.appendChild(
+      errorMessage
+    );
+
+    scrollBottom();
+
+  }
+
+
+  sendBtn.disabled = false;
+
+  input.focus();
+
+}
+
+
+/* =====================================================
+   REGENERATE
+===================================================== */
+
+async function regenerate(){
+
+  if(
+    conversation.length === 0
+  ){
+    return;
+  }
+
+
+  if(
+    conversation[
+      conversation.length - 1
+    ].role === "assistant"
+  ){
+
+    conversation.pop();
+
+  }
+
+
+  const chatArea =
+    document.getElementById(
+      "chatArea"
+    );
+
+
+  const messages =
+    chatArea.querySelectorAll(
+      ".message.assistant"
+    );
+
+
+  if(messages.length){
+
+    messages[
+      messages.length - 1
+    ].remove();
+
+  }
+
+
+  const lastUser =
+    conversation[
+      conversation.length - 1
+    ];
+
+
+  if(
+    !lastUser ||
+    lastUser.role !== "user"
+  ){
+    return;
+  }
+
+
+  const input =
+    document.getElementById(
+      "messageInput"
+    );
+
+
+  input.value =
+    lastUser.content;
+
+
+  await sendMessage();
+
+}
+
+
+/* =====================================================
+   COPY
+===================================================== */
+
+async function copyText(text){
+
+  try{
+
+    await navigator.clipboard.writeText(
+      text
+    );
+
+  }catch(error){
+
+    const textarea =
+      document.createElement(
+        "textarea"
+      );
+
+    textarea.value =
+      text;
+
+    document.body.appendChild(
+      textarea
+    );
+
+    textarea.select();
+
+    document.execCommand(
+      "copy"
+    );
+
+    textarea.remove();
+
+  }
 
 }
 
@@ -1879,28 +1461,102 @@ return div.innerHTML;
 
 function scrollBottom(){
 
-setTimeout(
-function(){
+  const chatArea =
+    document.getElementById(
+      "chatArea"
+    );
 
-chatContainer.scrollTop =
-chatContainer.scrollHeight;
+  setTimeout(() => {
 
-},
-50);
+    chatArea.scrollTop =
+      chatArea.scrollHeight;
+
+  },50);
 
 }
 
 
 /* =====================================================
-   START
+   SIDEBAR MOBILE
 ===================================================== */
 
-renderHistory();
+function toggleSidebar(){
 
-input.focus();
+  document
+    .getElementById("sidebar")
+    .classList.toggle("open");
+
+}
+
+
+/* =====================================================
+   TEXTAREA AUTO HEIGHT
+===================================================== */
+
+const messageInput =
+  document.getElementById(
+    "messageInput"
+  );
+
+
+messageInput.addEventListener(
+  "input",
+  function(){
+
+    this.style.height =
+      "45px";
+
+    this.style.height =
+      Math.min(
+        this.scrollHeight,
+        130
+      ) + "px";
+
+  }
+);
+
+
+/* =====================================================
+   ENTER TO SEND
+===================================================== */
+
+messageInput.addEventListener(
+  "keydown",
+  function(event){
+
+    if(
+      event.key === "Enter" &&
+      !event.shiftKey
+    ){
+
+      event.preventDefault();
+
+      sendMessage();
+
+    }
+
+  }
+);
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+loadHistory();
+
+
+console.log(
+  "SR CRESCO KNOWLEDGE AI loaded successfully."
+);
+
+console.log(
+  "API endpoint:",
+  API_URL
+);
 
 </script>
 
-</body>
 
+</body>
 </html>
