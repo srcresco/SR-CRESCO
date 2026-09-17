@@ -1,0 +1,1226 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ================= GOOGLE ANALYTICS ================= -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-W9695JZYKH');
+</script>
+
+
+<!-- ================= SEO ================= -->
+
+<title>AI in Agriculture | SR CRESCO</title>
+
+<meta name="description"
+content="Learn how Artificial Intelligence is transforming agriculture through crop monitoring, disease detection, smart irrigation, yield prediction, weather insights and precision farming.">
+
+<meta name="keywords"
+content="AI in Agriculture, Artificial Intelligence Farming, Smart Farming, Agriculture Technology, Crop Disease Detection, Precision Agriculture, SR CRESCO">
+
+<meta name="author" content="SUBHASH V S">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical"
+href="https://srcresco.github.io/SR-CRESCO/ai.html">
+
+
+<!-- ================= OPEN GRAPH ================= -->
+
+<meta property="og:title"
+content="AI in Agriculture | SR CRESCO">
+
+<meta property="og:description"
+content="Artificial Intelligence for smarter farming, crop monitoring, disease detection, irrigation and agricultural decision-making.">
+
+<meta property="og:type"
+content="article">
+
+<meta property="og:url"
+content="https://srcresco.github.io/SR-CRESCO/ai.html">
+
+<meta property="og:image"
+content="https://srcresco.github.io/SR-CRESCO/logo.png">
+
+<meta property="og:site_name"
+content="SR CRESCO">
+
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7f3;
+    color:#18351f;
+    line-height:1.7;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+
+    background:#123d25;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px 20px;
+
+    box-shadow:
+    0 3px 15px
+    rgba(0,0,0,.15);
+}
+
+.logo{
+
+    width:75px;
+
+    height:75px;
+
+    object-fit:contain;
+
+    margin-bottom:8px;
+}
+
+header h1{
+
+    margin:5px 0;
+
+    font-size:32px;
+}
+
+header p{
+
+    margin:5px 0;
+
+    font-size:16px;
+
+    opacity:.9;
+}
+
+
+/* ================= NAV ================= */
+
+nav{
+
+    background:#0c2818;
+
+    text-align:center;
+
+    padding:12px 10px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 10px;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+nav a:hover{
+
+    opacity:.75;
+}
+
+
+/* ================= MAIN ================= */
+
+main{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:20px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    background:white;
+
+    margin-top:25px;
+
+    padding:45px 25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 6px 25px
+    rgba(0,0,0,.08);
+}
+
+.hero-icon{
+
+    font-size:55px;
+
+    margin-bottom:10px;
+}
+
+.hero h2{
+
+    color:#176b35;
+
+    font-size:30px;
+
+    margin:5px 0 15px;
+}
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#526158;
+
+    font-size:16px;
+}
+
+
+/* ================= SECTION ================= */
+
+section{
+
+    margin-top:25px;
+
+    background:white;
+
+    padding:30px 25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 20px
+    rgba(0,0,0,.06);
+}
+
+section h2{
+
+    color:#176b35;
+
+    text-align:center;
+
+    margin-top:0;
+
+    font-size:26px;
+}
+
+
+/* ================= BILINGUAL ================= */
+
+.kn{
+
+    font-weight:bold;
+
+    color:#18351f;
+
+    margin-bottom:5px;
+}
+
+.en{
+
+    color:#5b675f;
+
+    margin-top:0;
+}
+
+
+/* ================= GRID ================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(230px,1fr)
+    );
+
+    gap:18px;
+
+    margin-top:20px;
+}
+
+
+/* ================= CARD ================= */
+
+.card{
+
+    background:#f8faf7;
+
+    border:1px solid #dce7df;
+
+    border-radius:15px;
+
+    padding:22px;
+
+    transition:.2s;
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 7px 20px
+    rgba(0,0,0,.08);
+}
+
+.card-icon{
+
+    font-size:35px;
+
+    margin-bottom:5px;
+}
+
+.card h3{
+
+    margin:8px 0;
+
+    color:#176b35;
+
+    font-size:19px;
+}
+
+.card p{
+
+    font-size:14px;
+
+    color:#59665d;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.steps{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(200px,1fr)
+    );
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.step{
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:14px;
+
+    background:#f5f8f4;
+
+    border:1px solid #dce7df;
+}
+
+.step-number{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#176b35;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:18px;
+}
+
+
+/* ================= FARMER BENEFITS ================= */
+
+.benefits{
+
+    max-width:800px;
+
+    margin:20px auto 0;
+
+}
+
+.benefits li{
+
+    margin-bottom:10px;
+}
+
+
+/* ================= NOTE ================= */
+
+.note{
+
+    background:#eef6ef;
+
+    border-left:5px solid #176b35;
+
+    padding:18px;
+
+    border-radius:8px;
+
+    margin-top:20px;
+
+    font-size:14px;
+}
+
+
+/* ================= CTA ================= */
+
+.cta{
+
+    background:#123d25;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    border-radius:18px;
+
+    margin-top:25px;
+}
+
+.cta h2{
+
+    color:white;
+
+    margin-top:0;
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#176b35;
+
+    padding:11px 22px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    margin-top:10px;
+}
+
+.btn:hover{
+
+    opacity:.85;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#0c2818;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px 15px;
+
+    margin-top:30px;
+
+    font-size:14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    header{
+
+        padding:22px 15px;
+    }
+
+    header h1{
+
+        font-size:27px;
+    }
+
+    .hero{
+
+        padding:35px 18px;
+    }
+
+    .hero h2{
+
+        font-size:25px;
+    }
+
+    section{
+
+        padding:25px 18px;
+    }
+
+    nav{
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+        text-align:left;
+    }
+
+    nav a{
+
+        display:inline-block;
+
+        margin:0 7px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <img
+    src="logo.png"
+    class="logo"
+    alt="SR CRESCO Logo">
+
+    <h1>
+        SR CRESCO
+    </h1>
+
+    <p>
+        Grow • Prosper • Thrive
+    </p>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="#about">
+        About AI
+    </a>
+
+    <a href="#applications">
+        Applications
+    </a>
+
+    <a href="#benefits">
+        Benefits
+    </a>
+
+    <a href="#future">
+        Future
+    </a>
+
+</nav>
+
+
+<main>
+
+
+<!-- ================= HERO ================= -->
+
+<div class="hero">
+
+    <div class="hero-icon">
+        🤖🌾
+    </div>
+
+    <h2>
+        Artificial Intelligence in Agriculture
+    </h2>
+
+    <p>
+        AI is helping agriculture become
+        smarter, more efficient and
+        data-driven.
+    </p>
+
+    <p class="kn">
+        ಕೃಷಿಯಲ್ಲಿ ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ
+    </p>
+
+    <p>
+        ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (AI) ತಂತ್ರಜ್ಞಾನವು
+        ಬೆಳೆ ಮೇಲ್ವಿಚಾರಣೆ, ರೋಗ ಗುರುತಿಸುವಿಕೆ,
+        ನೀರಾವರಿ ನಿರ್ವಹಣೆ ಮತ್ತು ಕೃಷಿ
+        ನಿರ್ಧಾರಗಳಲ್ಲಿ ರೈತರಿಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
+    </p>
+
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <h2>
+        🌱 What is AI in Agriculture?
+    </h2>
+
+    <p class="kn">
+        ಕೃಷಿಯಲ್ಲಿ AI ಎಂದರೇನು?
+    </p>
+
+    <p>
+        ಕೃಷಿಯಲ್ಲಿ AI ಎಂದರೆ ದೊಡ್ಡ ಪ್ರಮಾಣದ
+        ಕೃಷಿ ಡೇಟಾವನ್ನು ವಿಶ್ಲೇಷಿಸಿ ಉಪಯುಕ್ತ
+        ಮಾಹಿತಿಯನ್ನು ನೀಡಲು Artificial
+        Intelligence ತಂತ್ರಜ್ಞಾನವನ್ನು ಬಳಸುವುದು.
+    </p>
+
+    <p>
+        AI can analyse information from
+        satellites, drones, cameras,
+        weather stations, soil sensors
+        and farm records.
+    </p>
+
+    <p>
+        ಇದರ ಮೂಲಕ ರೈತರು ಬೆಳೆಗಳ ಸ್ಥಿತಿ,
+        ಮಣ್ಣಿನ ಪರಿಸ್ಥಿತಿ, ನೀರಿನ ಅಗತ್ಯತೆ
+        ಮತ್ತು ಕೀಟ/ರೋಗದ ಲಕ್ಷಣಗಳ ಬಗ್ಗೆ
+        ಉತ್ತಮ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಬಹುದು.
+    </p>
+
+</section>
+
+
+<!-- ================= APPLICATIONS ================= -->
+
+<section id="applications">
+
+    <h2>
+        🚜 AI Applications in Agriculture
+    </h2>
+
+    <div class="grid">
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🌿
+            </div>
+
+            <h3>
+                Crop Monitoring
+            </h3>
+
+            <p>
+                AI can analyse crop images
+                and field data to identify
+                changes in crop growth and
+                plant health.
+            </p>
+
+            <p>
+                <strong>
+                ಬೆಳೆ ಮೇಲ್ವಿಚಾರಣೆ:
+                </strong>
+                ಬೆಳೆ ಬೆಳವಣಿಗೆ ಮತ್ತು ಆರೋಗ್ಯದಲ್ಲಿ
+                ಆಗುವ ಬದಲಾವಣೆಗಳನ್ನು ಗುರುತಿಸಲು
+                AI ಸಹಾಯ ಮಾಡಬಹುದು.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🦠
+            </div>
+
+            <h3>
+                Disease Detection
+            </h3>
+
+            <p>
+                Image-based AI systems can
+                help identify possible signs
+                of plant diseases.
+            </p>
+
+            <p>
+                <strong>
+                ರೋಗ ಗುರುತಿಸುವಿಕೆ:
+                </strong>
+                ಎಲೆ ಅಥವಾ ಸಸ್ಯದ ಚಿತ್ರಗಳನ್ನು
+                ವಿಶ್ಲೇಷಿಸಿ ರೋಗದ ಸಾಧ್ಯತೆಯ
+                ಲಕ್ಷಣಗಳನ್ನು ಗುರುತಿಸಲು AI
+                ಸಹಾಯ ಮಾಡಬಹುದು.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🐛
+            </div>
+
+            <h3>
+                Pest Detection
+            </h3>
+
+            <p>
+                AI can support early
+                identification of certain
+                pest problems using images
+                and field observations.
+            </p>
+
+            <p>
+                <strong>
+                ಕೀಟ ನಿರ್ವಹಣೆ:
+                </strong>
+                ಕೀಟ ಸಮಸ್ಯೆಗಳ ಆರಂಭಿಕ
+                ಗುರುತಿಸುವಿಕೆಗೆ AI ಸಹಾಯ
+                ಮಾಡಬಹುದು.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                💧
+            </div>
+
+            <h3>
+                Smart Irrigation
+            </h3>
+
+            <p>
+                AI can combine soil moisture,
+                weather and crop information
+                to support irrigation decisions.
+            </p>
+
+            <p>
+                <strong>
+                ಸ್ಮಾರ್ಟ್ ನೀರಾವರಿ:
+                </strong>
+                ಮಣ್ಣಿನ ತೇವಾಂಶ ಮತ್ತು ಹವಾಮಾನ
+                ಮಾಹಿತಿಯ ಆಧಾರದ ಮೇಲೆ ನೀರಾವರಿ
+                ನಿರ್ಧಾರಗಳಿಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                📊
+            </div>
+
+            <h3>
+                Yield Prediction
+            </h3>
+
+            <p>
+                AI models can analyse historical
+                and current farm data to estimate
+                possible crop yield.
+            </p>
+
+            <p>
+                <strong>
+                ಇಳುವರಿ ಅಂದಾಜು:
+                </strong>
+                ಹಿಂದಿನ ಮತ್ತು ಪ್ರಸ್ತುತ ಕೃಷಿ
+                ಮಾಹಿತಿಯನ್ನು ಬಳಸಿ ಸಾಧ್ಯವಾದ
+                ಇಳುವರಿಯನ್ನು ಅಂದಾಜಿಸಲು AI
+                ಮಾದರಿಗಳು ಸಹಾಯ ಮಾಡಬಹುದು.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                ☁️
+            </div>
+
+            <h3>
+                Weather Insights
+            </h3>
+
+            <p>
+                AI can process weather data
+                to provide useful information
+                for farm planning.
+            </p>
+
+            <p>
+                <strong>
+                ಹವಾಮಾನ ಮಾಹಿತಿ:
+                </strong>
+                ಹವಾಮಾನ ಡೇಟಾವನ್ನು ವಿಶ್ಲೇಷಿಸಿ
+                ಕೃಷಿ ಯೋಜನೆಗೆ ಉಪಯುಕ್ತ ಮಾಹಿತಿ
+                ನೀಡಲು AI ಸಹಾಯ ಮಾಡಬಹುದು.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🌱
+            </div>
+
+            <h3>
+                Soil Analysis
+            </h3>
+
+            <p>
+                AI can help analyse soil
+                information when combined
+                with reliable soil test data.
+            </p>
+
+            <p>
+                <strong>
+                ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ:
+                </strong>
+                ವಿಶ್ವಾಸಾರ್ಹ ಮಣ್ಣು ಪರೀಕ್ಷಾ
+                ಮಾಹಿತಿಯೊಂದಿಗೆ AI ವಿಶ್ಲೇಷಣೆ
+                ಕೃಷಿ ನಿರ್ಧಾರಗಳಿಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🛰️
+            </div>
+
+            <h3>
+                Satellite Data
+            </h3>
+
+            <p>
+                AI can analyse satellite
+                imagery to identify patterns
+                across agricultural fields.
+            </p>
+
+            <p>
+                <strong>
+                ಉಪಗ್ರಹ ಮಾಹಿತಿ:
+                </strong>
+                ಕೃಷಿ ಭೂಮಿಯಲ್ಲಿನ ಬದಲಾವಣೆಗಳನ್ನು
+                ಗುರುತಿಸಲು ಉಪಗ್ರಹ ಚಿತ್ರಗಳನ್ನು
+                AI ವಿಶ್ಲೇಷಿಸಬಹುದು.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section>
+
+    <h2>
+        ⚙️ How AI Can Support a Farm
+    </h2>
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>
+                Collect Data
+            </h3>
+
+            <p>
+                Soil, crop, weather,
+                satellite or drone data.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>
+                Analyse
+            </h3>
+
+            <p>
+                AI processes the available
+                agricultural information.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>
+                Identify Patterns
+            </h3>
+
+            <p>
+                Possible crop, soil,
+                weather or pest patterns
+                can be identified.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <h3>
+                Support Decisions
+            </h3>
+
+            <p>
+                Farmers can use the
+                information along with
+                expert advice.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section id="benefits">
+
+    <h2>
+        👨‍🌾 Benefits for Farmers
+    </h2>
+
+    <ul class="benefits">
+
+        <li>
+            Better crop monitoring
+        </li>
+
+        <li>
+            Early identification of
+            possible crop problems
+        </li>
+
+        <li>
+            More informed irrigation
+            planning
+        </li>
+
+        <li>
+            Data-based farm management
+        </li>
+
+        <li>
+            Better use of agricultural
+            technology
+        </li>
+
+        <li>
+            Support for precision farming
+        </li>
+
+        <li>
+            Improved farm record analysis
+        </li>
+
+    </ul>
+
+
+    <div class="note">
+
+        <strong>
+            Important:
+        </strong>
+
+        AI provides decision-support
+        information. Farmers should verify
+        important crop disease, pesticide,
+        fertilizer and other technical
+        recommendations with qualified
+        agricultural experts and reliable
+        local information.
+
+    </div>
+
+</section>
+
+
+<!-- ================= FUTURE ================= -->
+
+<section id="future">
+
+    <h2>
+        🚀 Future of AI in Agriculture
+    </h2>
+
+    <p class="kn">
+        ಕೃಷಿಯಲ್ಲಿ AI ಯ ಭವಿಷ್ಯ
+    </p>
+
+    <p>
+        AI is expected to become increasingly
+        connected with drones, satellites,
+        IoT sensors, farm machinery,
+        weather systems and digital
+        agriculture platforms.
+    </p>
+
+    <p>
+        ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ AI, ಡ್ರೋನ್‌ಗಳು,
+        ಉಪಗ್ರಹಗಳು, IoT ಸೆನ್ಸರ್‌ಗಳು,
+        ಹವಾಮಾನ ವ್ಯವಸ್ಥೆಗಳು ಮತ್ತು ಕೃಷಿ
+        ಯಂತ್ರೋಪಕರಣಗಳೊಂದಿಗೆ ಇನ್ನಷ್ಟು
+        ಸಂಯೋಜನೆಯಾಗಬಹುದು.
+    </p>
+
+    <p>
+        The goal is not to replace farmers.
+        The goal is to provide farmers with
+        better information so that they can
+        make more informed decisions.
+    </p>
+
+</section>
+
+
+<!-- ================= SR CRESCO ================= -->
+
+<div class="cta">
+
+    <h2>
+        🌾 SR CRESCO
+    </h2>
+
+    <p>
+        Grow • Prosper • Thrive
+    </p>
+
+    <p>
+        Smart Agriculture • Knowledge •
+        Innovation • Farmer Community
+    </p>
+
+    <a
+    href="index.html"
+    class="btn">
+
+        ← Back to SR CRESCO
+
+    </a>
+
+</div>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>
+        SR CRESCO
+    </strong>
+
+    <p>
+        Grow • Prosper • Thrive
+    </p>
+
+    <p>
+        Chamarajanagar, Karnataka, India
+    </p>
+
+    <p>
+        © 2026 SR CRESCO. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= CONTENT PROTECTION ================= -->
+
+<script>
+
+document.addEventListener(
+    "contextmenu",
+    function(e){
+
+        e.preventDefault();
+
+    }
+);
+
+
+document.addEventListener(
+    "selectstart",
+    function(e){
+
+        e.preventDefault();
+
+    }
+);
+
+
+document.addEventListener(
+    "dragstart",
+    function(e){
+
+        if(
+            e.target.tagName === "IMG"
+        ){
+
+            e.preventDefault();
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(
+
+            (e.ctrlKey || e.metaKey)
+
+            &&
+
+            ["c","x","u","s"].includes(
+                e.key.toLowerCase()
+            )
+
+        ){
+
+            e.preventDefault();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+  </html>
