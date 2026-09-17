@@ -635,7 +635,7 @@ textarea:focus{
 
 
 /* =====================================================
-   IMPORTANT API URL
+   API URL
 ===================================================== */
 
 const API_URL =
@@ -1164,13 +1164,24 @@ async function sendMessage(){
 
 
   console.log(
-    "Sending request to:",
+    "================================="
+  );
+
+  console.log(
+    "SR CRESCO KNOWLEDGE AI TEST"
+  );
+
+  console.log(
+    "API URL:",
     API_URL
+  );
+
+  console.log(
+    "================================="
   );
 
 
   try{
-
 
     const response =
       await fetch(
@@ -1178,9 +1189,11 @@ async function sendMessage(){
         {
           method:"POST",
 
+          mode:"cors",
+
           headers:{
             "Content-Type":
-              "application/json"
+              "text/plain;charset=UTF-8"
           },
 
           body:JSON.stringify({
@@ -1194,8 +1207,17 @@ async function sendMessage(){
 
 
     console.log(
-      "API response status:",
+      "FETCH SUCCESS"
+    );
+
+    console.log(
+      "Status:",
       response.status
+    );
+
+    console.log(
+      "Status Text:",
+      response.statusText
     );
 
 
@@ -1204,12 +1226,12 @@ async function sendMessage(){
 
 
     console.log(
-      "API raw response:",
+      "Server Response:",
       raw
     );
 
 
-    let data = null;
+    let data;
 
 
     try{
@@ -1220,7 +1242,7 @@ async function sendMessage(){
     }catch(parseError){
 
       throw new Error(
-        "Server returned an invalid response."
+        "Server returned invalid JSON."
       );
 
     }
@@ -1230,7 +1252,7 @@ async function sendMessage(){
 
       throw new Error(
         data?.error ||
-        `API error: ${response.status}`
+        `Server error: ${response.status}`
       );
 
     }
@@ -1247,7 +1269,7 @@ async function sendMessage(){
     ){
 
       throw new Error(
-        "API returned no AI reply."
+        "Server returned no AI reply."
       );
 
     }
@@ -1277,7 +1299,7 @@ async function sendMessage(){
   }catch(error){
 
     console.error(
-      "SR CRESCO KNOWLEDGE AI ERROR:",
+      "FETCH ERROR:",
       error
     );
 
@@ -1294,6 +1316,7 @@ async function sendMessage(){
     const errorMessage =
       document.createElement("div");
 
+
     errorMessage.className =
       "message assistant";
 
@@ -1308,16 +1331,22 @@ async function sendMessage(){
 
         <div class="error-box">
 
-          ❌ Unable to connect to
-          SR CRESCO KNOWLEDGE AI.
+          ❌ SR CRESCO KNOWLEDGE AI connection failed.
 
           <br><br>
 
           <b>Error:</b>
           ${escapeHTML(
-            error.message ||
+            error?.message ||
             "Unknown error"
           )}
+
+          <br><br>
+
+          <small>
+            API:
+            ${escapeHTML(API_URL)}
+          </small>
 
         </div>
 
@@ -1559,4 +1588,4 @@ console.log(
 
 
 </body>
-</html>
+ </html>
