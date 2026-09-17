@@ -14,12 +14,6 @@
       });
     }
 
-    if (!process.env.OPENAI_API_KEY) {
-      return res.status(500).json({
-        error: "OPENAI_API_KEY is missing in Vercel"
-      });
-    }
-
     const response = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
@@ -42,8 +36,22 @@
       });
     }
 
+    let reply = data.output_text;
+
+    if (!reply && data.output) {
+      for (const item of data.output) {
+        if (item.content) {
+          for (const content of item.content) {
+            if (content.text) {
+              reply = content.text;
+            }
+          }
+        }
+      }
+    }
+
     return res.status(200).json({
-      reply: data.output_text || "No response received."
+      reply: reply || "OpenAI returned no text response."
     });
 
   } catch (error) {
