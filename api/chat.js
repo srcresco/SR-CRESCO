@@ -1,40 +1,50 @@
- const OpenAI = require("openai");
-
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-module.exports = async function handler(req, res) {
+ module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({
-      error: "Method not allowed",
+      error: "Method not allowed"
     });
   }
 
   try {
-    const { message } = req.body;
+    const { message } = req.body || {};
 
     if (!message) {
       return res.status(400).json({
-        error: "Message is required",
+        error: "Message is required"
       });
     }
 
-    const response = await client.responses.create({
-      model: "gpt-5.6-luna",
-      instructions:
-        "You are SR CRESCO Knowledge AI. Help farmers with agriculture, farming, crops, soil, weather, government schemes, market information and smart farming. Give clear and practical answers.",
-      input: message,
+    const response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+      },
+      body: JSON.stringify({
+        model: "gpt-5.6-luna",
+        instructions:
+          "You are SR CRESCO Knowledge AI. Help farmers with agriculture, farming, crops, soil, weather, government schemes, market information and smart farming. Give clear and practical answers.",
+        input: message
+      })
     });
 
-    res.status(200).json({
-      reply: response.output_text,
+    const data = await response.json();
+
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: data.error?.message || "OpenAI API request failed"
+      });
+    }
+
+    return res.status(200).json({
+      reply: data.output_text || "No response received."
     });
+
   } catch (error) {
     console.error(error);
 
-    res.status(500).json({
-      error: "AI request failed",
+    return res.status(500).json({
+      error: error.message || "Server error"
     });
   }
 };
