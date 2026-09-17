@@ -25,12 +25,10 @@ gtag('config', 'G-W9695JZYKH');
 content="SR CRESCO KNOWLEDGE AI — an AI assistant for agriculture, farming, technology, knowledge and everyday questions.">
 
 <meta name="author" content="SUBHASH V S">
-
 <meta name="robots" content="index, follow">
 
 <link rel="canonical"
 href="https://srcresco.github.io/SR-CRESCO/knowledge-ai.html">
-
 
 <style>
 
@@ -51,7 +49,6 @@ body{
 display:flex;
 overflow:hidden;
 }
-
 
 /* ================= SIDEBAR ================= */
 
@@ -153,7 +150,6 @@ background:rgba(255,255,255,.08);
 opacity:1;
 }
 
-
 /* ================= MAIN ================= */
 
 .main{
@@ -163,7 +159,6 @@ display:flex;
 flex-direction:column;
 min-width:0;
 }
-
 
 /* ================= TOP BAR ================= */
 
@@ -177,9 +172,6 @@ gap:14px;
 background:#fff;
 flex-shrink:0;
 }
-
-
-/* ================= BACK BUTTON ================= */
 
 .back-btn{
 text-decoration:none;
@@ -198,9 +190,6 @@ transition:.2s;
 background:#dfeee2;
 transform:translateX(-2px);
 }
-
-
-/* ================= MENU BUTTON ================= */
 
 .menu-btn{
 display:none;
@@ -225,7 +214,6 @@ padding:5px 9px;
 border-radius:20px;
 white-space:nowrap;
 }
-
 
 /* ================= CHAT ================= */
 
@@ -264,7 +252,6 @@ margin:0;
 font-size:14px;
 line-height:1.6;
 }
-
 
 /* ================= MESSAGE ================= */
 
@@ -319,7 +306,6 @@ color:#1f2937;
 padding-top:2px;
 }
 
-
 /* ================= ACTIONS ================= */
 
 .message-actions{
@@ -342,7 +328,6 @@ border-radius:6px;
 background:#f1f3f1;
 color:#176b35;
 }
-
 
 /* ================= TYPING ================= */
 
@@ -380,7 +365,6 @@ opacity:1;
 }
 
 }
-
 
 /* ================= INPUT ================= */
 
@@ -469,7 +453,6 @@ font-size:10px;
 color:#8a918b;
 margin-top:7px;
 }
-
 
 /* ================= MOBILE ================= */
 
@@ -565,7 +548,6 @@ padding:
 
 }
 
-
 /* ================= SCROLLBAR ================= */
 
 ::-webkit-scrollbar{
@@ -581,24 +563,20 @@ border-radius:10px;
 
 </head>
 
-
 <body>
 
-
-<!-- ================= MOBILE OVERLAY ================= -->
+<!-- MOBILE OVERLAY -->
 
 <div
 class="overlay"
 id="overlay">
 </div>
 
-
-<!-- ================= SIDEBAR ================= -->
+<!-- SIDEBAR -->
 
 <aside
 class="sidebar"
 id="sidebar">
-
 
 <div class="brand">
 
@@ -619,7 +597,6 @@ KNOWLEDGE AI
 
 </div>
 
-
 <button
 class="new-chat"
 id="newChat">
@@ -628,19 +605,16 @@ id="newChat">
 
 </button>
 
-
 <div class="history-title">
 
 CHAT HISTORY
 
 </div>
 
-
 <div
 class="history"
 id="history">
 </div>
-
 
 <div class="sidebar-bottom">
 
@@ -656,14 +630,11 @@ id="clearAll">
 
 </aside>
 
-
-<!-- ================= MAIN ================= -->
+<!-- MAIN -->
 
 <section class="main">
 
-
 <header class="topbar">
-
 
 <a
 href="index.html"
@@ -674,7 +645,6 @@ title="Back to SR CRESCO">
 
 </a>
 
-
 <button
 class="menu-btn"
 id="menuBtn"
@@ -684,13 +654,11 @@ title="Open menu">
 
 </button>
 
-
 <div class="top-title">
 
 SR CRESCO KNOWLEDGE AI
 
 </div>
-
 
 <div class="status">
 
@@ -698,39 +666,32 @@ SR CRESCO KNOWLEDGE AI
 
 </div>
 
-
 </header>
 
-
-<!-- ================= CHAT ================= -->
+<!-- CHAT -->
 
 <div
 class="chat-container"
 id="chatContainer">
 
-
 <div
 class="chat-inner"
 id="chatMessages">
 
-
 <div
 class="welcome"
 id="welcome">
-
 
 <img
 src="logo.png"
 class="welcome-logo"
 alt="SR CRESCO">
 
-
 <h1>
 
 How can I help you?
 
 </h1>
-
 
 <p>
 
@@ -748,17 +709,13 @@ agriculture and technology.
 
 </div>
 
-
-<!-- ================= INPUT ================= -->
+<!-- INPUT -->
 
 <div class="input-area">
 
-
 <div class="input-inner">
 
-
 <div class="input-box">
-
 
 <textarea
 id="userMessage"
@@ -766,7 +723,6 @@ rows="1"
 placeholder="Message SR CRESCO KNOWLEDGE AI..."
 autocomplete="off">
 </textarea>
-
 
 <button
 class="send-btn"
@@ -777,9 +733,7 @@ title="Send">
 
 </button>
 
-
 </div>
-
 
 <div class="input-note">
 
@@ -788,14 +742,11 @@ Check important information.
 
 </div>
 
-
 </div>
 
 </div>
-
 
 </section>
-
 
 <script>
 
@@ -806,17 +757,16 @@ Check important information.
 
 /* ================= VERCEL API ================= */
 
-
 /*
  GitHub Pages:
  https://srcresco.github.io/SR-CRESCO/
 
  Vercel backend:
- https://sr-cresco-knowledge-ai-git-main-sr-cresco-ai.vercel.app/api/chat
+ https://sr-cresco-knowledge-l5l5yy3qk-sr-cresco-ai.vercel.app/api/chat
 */
 
 const API_URL =
-"https://sr-cresco-knowledge-ai-git-main-sr-cresco-ai.vercel.app/api/chat";
+"https://sr-cresco-knowledge-l5l5yy3qk-sr-cresco-ai.vercel.app/api/chat";
 
 
 /* ================= ELEMENTS ================= */
@@ -941,7 +891,6 @@ conversation = [];
 
 currentChatId = null;
 
-
 chatMessages.innerHTML = `
 
 <div
@@ -967,7 +916,6 @@ agriculture and technology.
 </div>
 
 `;
-
 
 input.value = "";
 
@@ -1227,7 +1175,6 @@ typing.innerHTML = `
 </div>
 
 `;
-
 
 return typing;
 
@@ -1939,8 +1886,7 @@ chatContainer.scrollTop =
 chatContainer.scrollHeight;
 
 },
-50
-);
+50);
 
 }
 
@@ -1954,7 +1900,6 @@ renderHistory();
 input.focus();
 
 </script>
-
 
 </body>
 
