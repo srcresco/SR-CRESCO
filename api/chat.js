@@ -14,6 +14,12 @@
       });
     }
 
+    if (!process.env.OPENAI_API_KEY) {
+      return res.status(500).json({
+        error: "OPENAI_API_KEY is missing in Vercel"
+      });
+    }
+
     const response = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
@@ -23,7 +29,7 @@
       body: JSON.stringify({
         model: "gpt-5.6-luna",
         instructions:
-          "You are SR CRESCO Knowledge AI. Help farmers with agriculture, farming, crops, soil, weather, government schemes, market information and smart farming. Give clear and practical answers.",
+          "You are SR CRESCO KNOWLEDGE AI. Help farmers with agriculture, crops, soil, weather, government schemes, markets and smart farming. Answer clearly and practically.",
         input: message
       })
     });
@@ -41,8 +47,6 @@
     });
 
   } catch (error) {
-    console.error(error);
-
     return res.status(500).json({
       error: error.message || "Server error"
     });
