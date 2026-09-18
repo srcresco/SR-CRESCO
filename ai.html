@@ -1,1226 +1,1549 @@
  <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ================= GOOGLE ANALYTICS ================= -->
-
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
-
 <script>
 window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-    dataLayer.push(arguments);
-}
-
+function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', 'G-W9695JZYKH');
 </script>
 
-
-<!-- ================= SEO ================= -->
-
-<title>AI in Agriculture | SR CRESCO</title>
-
-<meta name="description"
-content="Learn how Artificial Intelligence is transforming agriculture through crop monitoring, disease detection, smart irrigation, yield prediction, weather insights and precision farming.">
-
-<meta name="keywords"
-content="AI in Agriculture, Artificial Intelligence Farming, Smart Farming, Agriculture Technology, Crop Disease Detection, Precision Agriculture, SR CRESCO">
-
-<meta name="author" content="SUBHASH V S">
-
-<meta name="robots" content="index, follow, max-image-preview:large">
-
-<link rel="canonical"
-href="https://srcresco.github.io/SR-CRESCO/ai.html">
-
-
-<!-- ================= OPEN GRAPH ================= -->
-
-<meta property="og:title"
-content="AI in Agriculture | SR CRESCO">
-
-<meta property="og:description"
-content="Artificial Intelligence for smarter farming, crop monitoring, disease detection, irrigation and agricultural decision-making.">
-
-<meta property="og:type"
-content="article">
-
-<meta property="og:url"
-content="https://srcresco.github.io/SR-CRESCO/ai.html">
-
-<meta property="og:image"
-content="https://srcresco.github.io/SR-CRESCO/logo.png">
-
-<meta property="og:site_name"
-content="SR CRESCO">
-
+<title>SR CRESCO KNOWLEDGE AI</title>
 
 <style>
 
-/* ================= GLOBAL ================= */
-
 *{
-    box-sizing:border-box;
+box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html,body{
+margin:0;
+height:100%;
+font-family:Arial,Helvetica,sans-serif;
+background:#ffffff;
+color:#1f2937;
 }
 
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7f3;
-    color:#18351f;
-    line-height:1.7;
+display:flex;
+overflow:hidden;
 }
 
+/* ================= SIDEBAR ================= */
 
-/* ================= HEADER ================= */
-
-header{
-
-    background:#123d25;
-
-    color:white;
-
-    text-align:center;
-
-    padding:25px 20px;
-
-    box-shadow:
-    0 3px 15px
-    rgba(0,0,0,.15);
+.sidebar{
+width:270px;
+height:100vh;
+background:#123d25;
+color:white;
+display:flex;
+flex-direction:column;
+padding:14px;
+flex-shrink:0;
 }
 
-.logo{
-
-    width:75px;
-
-    height:75px;
-
-    object-fit:contain;
-
-    margin-bottom:8px;
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+padding:8px 5px 18px;
 }
 
-header h1{
-
-    margin:5px 0;
-
-    font-size:32px;
+.brand img{
+width:42px;
+height:42px;
+object-fit:contain;
 }
 
-header p{
-
-    margin:5px 0;
-
-    font-size:16px;
-
-    opacity:.9;
+.brand-text{
+font-size:15px;
+font-weight:bold;
+line-height:1.25;
 }
 
-
-/* ================= NAV ================= */
-
-nav{
-
-    background:#0c2818;
-
-    text-align:center;
-
-    padding:12px 10px;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:100;
+.new-chat{
+width:100%;
+border:1px solid rgba(255,255,255,.25);
+background:rgba(255,255,255,.08);
+color:white;
+padding:12px 14px;
+border-radius:10px;
+cursor:pointer;
+font-size:14px;
+text-align:left;
 }
 
-nav a{
-
-    color:white;
-
-    text-decoration:none;
-
-    margin:0 10px;
-
-    font-size:14px;
-
-    font-weight:bold;
+.new-chat:hover{
+background:rgba(255,255,255,.15);
 }
 
-nav a:hover{
-
-    opacity:.75;
+.history-title{
+font-size:12px;
+opacity:.65;
+margin:22px 8px 8px;
 }
 
+.history{
+flex:1;
+overflow-y:auto;
+}
+
+.history-item{
+padding:10px 11px;
+border-radius:8px;
+font-size:13px;
+cursor:pointer;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+margin-bottom:3px;
+}
+
+.history-item:hover{
+background:rgba(255,255,255,.10);
+}
+
+.sidebar-bottom{
+border-top:1px solid rgba(255,255,255,.15);
+padding-top:12px;
+}
+
+.clear-all{
+width:100%;
+border:0;
+background:transparent;
+color:white;
+opacity:.8;
+padding:10px;
+cursor:pointer;
+text-align:left;
+border-radius:8px;
+}
+
+.clear-all:hover{
+background:rgba(255,255,255,.08);
+opacity:1;
+}
 
 /* ================= MAIN ================= */
 
-main{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:20px;
+.main{
+height:100vh;
+flex:1;
+display:flex;
+flex-direction:column;
+min-width:0;
 }
 
+/* ================= TOP BAR ================= */
 
-/* ================= HERO ================= */
-
-.hero{
-
-    background:white;
-
-    margin-top:25px;
-
-    padding:45px 25px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    box-shadow:
-    0 6px 25px
-    rgba(0,0,0,.08);
+.topbar{
+height:64px;
+border-bottom:1px solid #e5e7eb;
+display:flex;
+align-items:center;
+padding:0 18px;
+gap:14px;
+background:#fff;
 }
 
-.hero-icon{
-
-    font-size:55px;
-
-    margin-bottom:10px;
+.menu-btn{
+display:none;
+border:0;
+background:transparent;
+font-size:24px;
+cursor:pointer;
 }
 
-.hero h2{
-
-    color:#176b35;
-
-    font-size:30px;
-
-    margin:5px 0 15px;
+.top-title{
+font-size:17px;
+font-weight:bold;
+color:#18351f;
 }
 
-.hero p{
-
-    max-width:850px;
-
-    margin:auto;
-
-    color:#526158;
-
-    font-size:16px;
+.status{
+font-size:11px;
+color:#176b35;
+background:#edf7ef;
+padding:5px 9px;
+border-radius:20px;
 }
 
+/* ================= CHAT ================= */
 
-/* ================= SECTION ================= */
-
-section{
-
-    margin-top:25px;
-
-    background:white;
-
-    padding:30px 25px;
-
-    border-radius:18px;
-
-    box-shadow:
-    0 5px 20px
-    rgba(0,0,0,.06);
+.chat-container{
+flex:1;
+overflow-y:auto;
+padding:30px 15px 150px;
 }
 
-section h2{
-
-    color:#176b35;
-
-    text-align:center;
-
-    margin-top:0;
-
-    font-size:26px;
+.chat-inner{
+max-width:820px;
+margin:auto;
 }
 
-
-/* ================= BILINGUAL ================= */
-
-.kn{
-
-    font-weight:bold;
-
-    color:#18351f;
-
-    margin-bottom:5px;
+.welcome{
+text-align:center;
+padding:70px 15px 30px;
 }
 
-.en{
-
-    color:#5b675f;
-
-    margin-top:0;
+.welcome-logo{
+width:70px;
+height:70px;
+object-fit:contain;
+margin-bottom:15px;
 }
 
-
-/* ================= GRID ================= */
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(230px,1fr)
-    );
-
-    gap:18px;
-
-    margin-top:20px;
+.welcome h1{
+font-size:27px;
+margin:5px 0 10px;
+color:#18351f;
 }
 
-
-/* ================= CARD ================= */
-
-.card{
-
-    background:#f8faf7;
-
-    border:1px solid #dce7df;
-
-    border-radius:15px;
-
-    padding:22px;
-
-    transition:.2s;
+.welcome p{
+color:#6b7280;
+margin:0;
+font-size:14px;
+line-height:1.6;
 }
 
-.card:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 7px 20px
-    rgba(0,0,0,.08);
+.message{
+display:flex;
+gap:12px;
+margin:25px 0;
 }
 
-.card-icon{
-
-    font-size:35px;
-
-    margin-bottom:5px;
+.message.user{
+justify-content:flex-end;
 }
 
-.card h3{
-
-    margin:8px 0;
-
-    color:#176b35;
-
-    font-size:19px;
+.avatar{
+width:32px;
+height:32px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+font-size:15px;
 }
 
-.card p{
-
-    font-size:14px;
-
-    color:#59665d;
+.ai-avatar{
+background:#e8f2ea;
 }
 
-
-/* ================= HOW IT WORKS ================= */
-
-.steps{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(200px,1fr)
-    );
-
-    gap:15px;
-
-    margin-top:20px;
+.user-avatar{
+background:#176b35;
+color:white;
 }
 
-.step{
-
-    text-align:center;
-
-    padding:20px;
-
-    border-radius:14px;
-
-    background:#f5f8f4;
-
-    border:1px solid #dce7df;
+.message-content{
+max-width:78%;
+font-size:15px;
+line-height:1.7;
+word-wrap:break-word;
 }
 
-.step-number{
-
-    width:42px;
-
-    height:42px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin:auto;
-
-    border-radius:50%;
-
-    background:#176b35;
-
-    color:white;
-
-    font-weight:bold;
-
-    font-size:18px;
+.message.user .message-content{
+background:#176b35;
+color:white;
+padding:11px 15px;
+border-radius:17px;
+border-bottom-right-radius:5px;
 }
 
+.message.ai .message-content{
+color:#1f2937;
+padding-top:2px;
+}
 
-/* ================= FARMER BENEFITS ================= */
+/* ================= ACTIONS ================= */
 
-.benefits{
+.message-actions{
+display:flex;
+gap:5px;
+margin-top:7px;
+}
 
-    max-width:800px;
+.action-btn{
+border:0;
+background:transparent;
+color:#6b7280;
+cursor:pointer;
+font-size:12px;
+padding:5px 7px;
+border-radius:6px;
+}
 
-    margin:20px auto 0;
+.action-btn:hover{
+background:#f1f3f1;
+color:#176b35;
+}
+
+/* ================= TYPING ================= */
+
+.typing{
+display:flex;
+gap:5px;
+align-items:center;
+padding:8px 0;
+}
+
+.dot{
+width:7px;
+height:7px;
+background:#176b35;
+border-radius:50%;
+animation:blink 1.2s infinite;
+}
+
+.dot:nth-child(2){
+animation-delay:.2s;
+}
+
+.dot:nth-child(3){
+animation-delay:.4s;
+}
+
+@keyframes blink{
+
+0%,80%,100%{
+opacity:.25;
+}
+
+40%{
+opacity:1;
+}
 
 }
 
-.benefits li{
+/* ================= INPUT ================= */
 
-    margin-bottom:10px;
+.input-area{
+position:fixed;
+bottom:0;
+left:270px;
+right:0;
+background:linear-gradient(
+to top,
+#ffffff 75%,
+rgba(255,255,255,0)
+);
+padding:20px 15px 18px;
 }
 
-
-/* ================= NOTE ================= */
-
-.note{
-
-    background:#eef6ef;
-
-    border-left:5px solid #176b35;
-
-    padding:18px;
-
-    border-radius:8px;
-
-    margin-top:20px;
-
-    font-size:14px;
+.input-inner{
+max-width:820px;
+margin:auto;
 }
 
-
-/* ================= CTA ================= */
-
-.cta{
-
-    background:#123d25;
-
-    color:white;
-
-    text-align:center;
-
-    padding:35px 20px;
-
-    border-radius:18px;
-
-    margin-top:25px;
+.input-box{
+display:flex;
+align-items:flex-end;
+gap:8px;
+border:1px solid #cfd5cf;
+border-radius:17px;
+padding:8px 9px 8px 15px;
+background:white;
+box-shadow:0 2px 12px rgba(0,0,0,.06);
 }
 
-.cta h2{
-
-    color:white;
-
-    margin-top:0;
+.input-box:focus-within{
+border-color:#176b35;
+box-shadow:0 2px 15px rgba(23,107,53,.12);
 }
 
-.btn{
-
-    display:inline-block;
-
-    background:white;
-
-    color:#176b35;
-
-    padding:11px 22px;
-
-    border-radius:25px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    margin-top:10px;
+#userMessage{
+flex:1;
+border:0;
+outline:0;
+resize:none;
+font-family:Arial,Helvetica,sans-serif;
+font-size:15px;
+line-height:1.5;
+max-height:150px;
+min-height:26px;
+background:transparent;
+color:#1f2937;
 }
 
-.btn:hover{
-
-    opacity:.85;
+#userMessage::placeholder{
+color:#8a918b;
 }
 
-
-/* ================= FOOTER ================= */
-
-footer{
-
-    background:#0c2818;
-
-    color:white;
-
-    text-align:center;
-
-    padding:25px 15px;
-
-    margin-top:30px;
-
-    font-size:14px;
+.send-btn{
+width:40px;
+height:40px;
+border:0;
+border-radius:11px;
+background:#176b35;
+color:white;
+cursor:pointer;
+font-size:18px;
+flex-shrink:0;
 }
 
+.send-btn:hover{
+background:#12552a;
+}
+
+.send-btn:disabled{
+opacity:.5;
+cursor:not-allowed;
+}
+
+.input-note{
+text-align:center;
+font-size:10px;
+color:#8a918b;
+margin-top:7px;
+}
 
 /* ================= MOBILE ================= */
 
-@media(max-width:700px){
+.overlay{
+display:none;
+}
 
-    header{
+@media(max-width:750px){
 
-        padding:22px 15px;
-    }
+.sidebar{
+position:fixed;
+left:-280px;
+top:0;
+z-index:100;
+transition:left .25s ease;
+box-shadow:5px 0 20px rgba(0,0,0,.15);
+}
 
-    header h1{
+.sidebar.open{
+left:0;
+}
 
-        font-size:27px;
-    }
+.overlay.show{
+display:block;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.35);
+z-index:90;
+}
 
-    .hero{
+.menu-btn{
+display:block;
+}
 
-        padding:35px 18px;
-    }
+.input-area{
+left:0;
+}
 
-    .hero h2{
+.topbar{
+height:58px;
+padding:0 12px;
+}
 
-        font-size:25px;
-    }
+.top-title{
+font-size:15px;
+}
 
-    section{
+.status{
+display:none;
+}
 
-        padding:25px 18px;
-    }
+.chat-container{
+padding:20px 10px 140px;
+}
 
-    nav{
+.welcome{
+padding:55px 10px 25px;
+}
 
-        overflow-x:auto;
+.welcome h1{
+font-size:22px;
+}
 
-        white-space:nowrap;
+.message-content{
+max-width:88%;
+font-size:14px;
+}
 
-        text-align:left;
-    }
+.avatar{
+width:29px;
+height:29px;
+font-size:13px;
+}
 
-    nav a{
+.input-area{
+padding:14px 10px 13px;
+}
 
-        display:inline-block;
+}
 
-        margin:0 7px;
-    }
+/* ================= SCROLLBAR ================= */
 
+::-webkit-scrollbar{
+width:7px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#cfd5cf;
+border-radius:10px;
 }
 
 </style>
 
 </head>
 
-
 <body>
 
+<!-- MOBILE OVERLAY -->
 
-<!-- ================= HEADER ================= -->
+<div class="overlay" id="overlay"></div>
 
-<header>
 
-    <img
-    src="logo.png"
-    class="logo"
-    alt="SR CRESCO Logo">
+<!-- ================= SIDEBAR ================= -->
 
-    <h1>
-        SR CRESCO
-    </h1>
+<aside class="sidebar" id="sidebar">
 
-    <p>
-        Grow • Prosper • Thrive
-    </p>
+<div class="brand">
+
+<a href="index.html">
+<img src="logo.png" alt="SR CRESCO Logo">
+</a>
+
+<div class="brand-text">
+SR CRESCO<br>
+KNOWLEDGE AI
+</div>
+
+</div>
+
+
+<button class="new-chat" id="newChat">
+＋ New chat
+</button>
+
+
+<div class="history-title">
+CHAT HISTORY
+</div>
+
+
+<div class="history" id="history"></div>
+
+
+<div class="sidebar-bottom">
+
+<button class="clear-all" id="clearAll">
+🗑 Clear all chats
+</button>
+
+</div>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<section class="main">
+
+
+<header class="topbar">
+
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
+
+<div class="top-title">
+SR CRESCO KNOWLEDGE AI
+</div>
+
+<div class="status">
+● AI Online
+</div>
 
 </header>
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- ================= CHAT ================= -->
 
-<nav>
+<div class="chat-container" id="chatContainer">
 
-    <a href="index.html">
-        Home
-    </a>
+<div class="chat-inner" id="chatMessages">
 
-    <a href="#about">
-        About AI
-    </a>
+<div class="welcome" id="welcome">
 
-    <a href="#applications">
-        Applications
-    </a>
+<img
+src="logo.png"
+class="welcome-logo"
+alt="SR CRESCO"
+>
 
-    <a href="#benefits">
-        Benefits
-    </a>
+<h1>
+How can I help you?
+</h1>
 
-    <a href="#future">
-        Future
-    </a>
+<p>
+I'm <b>SR CRESCO KNOWLEDGE AI</b>.<br>
+Ask questions, learn, create, research or get help with agriculture and technology.
+</p>
 
-</nav>
+</div>
 
-
-<main>
-
-
-<!-- ================= HERO ================= -->
-
-<div class="hero">
-
-    <div class="hero-icon">
-        🤖🌾
-    </div>
-
-    <h2>
-        Artificial Intelligence in Agriculture
-    </h2>
-
-    <p>
-        AI is helping agriculture become
-        smarter, more efficient and
-        data-driven.
-    </p>
-
-    <p class="kn">
-        ಕೃಷಿಯಲ್ಲಿ ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ
-    </p>
-
-    <p>
-        ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (AI) ತಂತ್ರಜ್ಞಾನವು
-        ಬೆಳೆ ಮೇಲ್ವಿಚಾರಣೆ, ರೋಗ ಗುರುತಿಸುವಿಕೆ,
-        ನೀರಾವರಿ ನಿರ್ವಹಣೆ ಮತ್ತು ಕೃಷಿ
-        ನಿರ್ಧಾರಗಳಲ್ಲಿ ರೈತರಿಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
-    </p>
+</div>
 
 </div>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ================= INPUT ================= -->
 
-<section id="about">
+<div class="input-area">
 
-    <h2>
-        🌱 What is AI in Agriculture?
-    </h2>
+<div class="input-inner">
 
-    <p class="kn">
-        ಕೃಷಿಯಲ್ಲಿ AI ಎಂದರೇನು?
-    </p>
+<div class="input-box">
 
-    <p>
-        ಕೃಷಿಯಲ್ಲಿ AI ಎಂದರೆ ದೊಡ್ಡ ಪ್ರಮಾಣದ
-        ಕೃಷಿ ಡೇಟಾವನ್ನು ವಿಶ್ಲೇಷಿಸಿ ಉಪಯುಕ್ತ
-        ಮಾಹಿತಿಯನ್ನು ನೀಡಲು Artificial
-        Intelligence ತಂತ್ರಜ್ಞಾನವನ್ನು ಬಳಸುವುದು.
-    </p>
+<textarea
+id="userMessage"
+rows="1"
+placeholder="Message SR CRESCO KNOWLEDGE AI..."
+autocomplete="off"
+></textarea>
 
-    <p>
-        AI can analyse information from
-        satellites, drones, cameras,
-        weather stations, soil sensors
-        and farm records.
-    </p>
 
-    <p>
-        ಇದರ ಮೂಲಕ ರೈತರು ಬೆಳೆಗಳ ಸ್ಥಿತಿ,
-        ಮಣ್ಣಿನ ಪರಿಸ್ಥಿತಿ, ನೀರಿನ ಅಗತ್ಯತೆ
-        ಮತ್ತು ಕೀಟ/ರೋಗದ ಲಕ್ಷಣಗಳ ಬಗ್ಗೆ
-        ಉತ್ತಮ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಬಹುದು.
-    </p>
-
-</section>
-
-
-<!-- ================= APPLICATIONS ================= -->
-
-<section id="applications">
-
-    <h2>
-        🚜 AI Applications in Agriculture
-    </h2>
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🌿
-            </div>
-
-            <h3>
-                Crop Monitoring
-            </h3>
-
-            <p>
-                AI can analyse crop images
-                and field data to identify
-                changes in crop growth and
-                plant health.
-            </p>
-
-            <p>
-                <strong>
-                ಬೆಳೆ ಮೇಲ್ವಿಚಾರಣೆ:
-                </strong>
-                ಬೆಳೆ ಬೆಳವಣಿಗೆ ಮತ್ತು ಆರೋಗ್ಯದಲ್ಲಿ
-                ಆಗುವ ಬದಲಾವಣೆಗಳನ್ನು ಗುರುತಿಸಲು
-                AI ಸಹಾಯ ಮಾಡಬಹುದು.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🦠
-            </div>
-
-            <h3>
-                Disease Detection
-            </h3>
-
-            <p>
-                Image-based AI systems can
-                help identify possible signs
-                of plant diseases.
-            </p>
-
-            <p>
-                <strong>
-                ರೋಗ ಗುರುತಿಸುವಿಕೆ:
-                </strong>
-                ಎಲೆ ಅಥವಾ ಸಸ್ಯದ ಚಿತ್ರಗಳನ್ನು
-                ವಿಶ್ಲೇಷಿಸಿ ರೋಗದ ಸಾಧ್ಯತೆಯ
-                ಲಕ್ಷಣಗಳನ್ನು ಗುರುತಿಸಲು AI
-                ಸಹಾಯ ಮಾಡಬಹುದು.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🐛
-            </div>
-
-            <h3>
-                Pest Detection
-            </h3>
-
-            <p>
-                AI can support early
-                identification of certain
-                pest problems using images
-                and field observations.
-            </p>
-
-            <p>
-                <strong>
-                ಕೀಟ ನಿರ್ವಹಣೆ:
-                </strong>
-                ಕೀಟ ಸಮಸ್ಯೆಗಳ ಆರಂಭಿಕ
-                ಗುರುತಿಸುವಿಕೆಗೆ AI ಸಹಾಯ
-                ಮಾಡಬಹುದು.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                💧
-            </div>
-
-            <h3>
-                Smart Irrigation
-            </h3>
-
-            <p>
-                AI can combine soil moisture,
-                weather and crop information
-                to support irrigation decisions.
-            </p>
-
-            <p>
-                <strong>
-                ಸ್ಮಾರ್ಟ್ ನೀರಾವರಿ:
-                </strong>
-                ಮಣ್ಣಿನ ತೇವಾಂಶ ಮತ್ತು ಹವಾಮಾನ
-                ಮಾಹಿತಿಯ ಆಧಾರದ ಮೇಲೆ ನೀರಾವರಿ
-                ನಿರ್ಧಾರಗಳಿಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                📊
-            </div>
-
-            <h3>
-                Yield Prediction
-            </h3>
-
-            <p>
-                AI models can analyse historical
-                and current farm data to estimate
-                possible crop yield.
-            </p>
-
-            <p>
-                <strong>
-                ಇಳುವರಿ ಅಂದಾಜು:
-                </strong>
-                ಹಿಂದಿನ ಮತ್ತು ಪ್ರಸ್ತುತ ಕೃಷಿ
-                ಮಾಹಿತಿಯನ್ನು ಬಳಸಿ ಸಾಧ್ಯವಾದ
-                ಇಳುವರಿಯನ್ನು ಅಂದಾಜಿಸಲು AI
-                ಮಾದರಿಗಳು ಸಹಾಯ ಮಾಡಬಹುದು.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                ☁️
-            </div>
-
-            <h3>
-                Weather Insights
-            </h3>
-
-            <p>
-                AI can process weather data
-                to provide useful information
-                for farm planning.
-            </p>
-
-            <p>
-                <strong>
-                ಹವಾಮಾನ ಮಾಹಿತಿ:
-                </strong>
-                ಹವಾಮಾನ ಡೇಟಾವನ್ನು ವಿಶ್ಲೇಷಿಸಿ
-                ಕೃಷಿ ಯೋಜನೆಗೆ ಉಪಯುಕ್ತ ಮಾಹಿತಿ
-                ನೀಡಲು AI ಸಹಾಯ ಮಾಡಬಹುದು.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🌱
-            </div>
-
-            <h3>
-                Soil Analysis
-            </h3>
-
-            <p>
-                AI can help analyse soil
-                information when combined
-                with reliable soil test data.
-            </p>
-
-            <p>
-                <strong>
-                ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಣೆ:
-                </strong>
-                ವಿಶ್ವಾಸಾರ್ಹ ಮಣ್ಣು ಪರೀಕ್ಷಾ
-                ಮಾಹಿತಿಯೊಂದಿಗೆ AI ವಿಶ್ಲೇಷಣೆ
-                ಕೃಷಿ ನಿರ್ಧಾರಗಳಿಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🛰️
-            </div>
-
-            <h3>
-                Satellite Data
-            </h3>
-
-            <p>
-                AI can analyse satellite
-                imagery to identify patterns
-                across agricultural fields.
-            </p>
-
-            <p>
-                <strong>
-                ಉಪಗ್ರಹ ಮಾಹಿತಿ:
-                </strong>
-                ಕೃಷಿ ಭೂಮಿಯಲ್ಲಿನ ಬದಲಾವಣೆಗಳನ್ನು
-                ಗುರುತಿಸಲು ಉಪಗ್ರಹ ಚಿತ್ರಗಳನ್ನು
-                AI ವಿಶ್ಲೇಷಿಸಬಹುದು.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= HOW IT WORKS ================= -->
-
-<section>
-
-    <h2>
-        ⚙️ How AI Can Support a Farm
-    </h2>
-
-    <div class="steps">
-
-
-        <div class="step">
-
-            <div class="step-number">
-                1
-            </div>
-
-            <h3>
-                Collect Data
-            </h3>
-
-            <p>
-                Soil, crop, weather,
-                satellite or drone data.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                2
-            </div>
-
-            <h3>
-                Analyse
-            </h3>
-
-            <p>
-                AI processes the available
-                agricultural information.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                3
-            </div>
-
-            <h3>
-                Identify Patterns
-            </h3>
-
-            <p>
-                Possible crop, soil,
-                weather or pest patterns
-                can be identified.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">
-                4
-            </div>
-
-            <h3>
-                Support Decisions
-            </h3>
-
-            <p>
-                Farmers can use the
-                information along with
-                expert advice.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= BENEFITS ================= -->
-
-<section id="benefits">
-
-    <h2>
-        👨‍🌾 Benefits for Farmers
-    </h2>
-
-    <ul class="benefits">
-
-        <li>
-            Better crop monitoring
-        </li>
-
-        <li>
-            Early identification of
-            possible crop problems
-        </li>
-
-        <li>
-            More informed irrigation
-            planning
-        </li>
-
-        <li>
-            Data-based farm management
-        </li>
-
-        <li>
-            Better use of agricultural
-            technology
-        </li>
-
-        <li>
-            Support for precision farming
-        </li>
-
-        <li>
-            Improved farm record analysis
-        </li>
-
-    </ul>
-
-
-    <div class="note">
-
-        <strong>
-            Important:
-        </strong>
-
-        AI provides decision-support
-        information. Farmers should verify
-        important crop disease, pesticide,
-        fertilizer and other technical
-        recommendations with qualified
-        agricultural experts and reliable
-        local information.
-
-    </div>
-
-</section>
-
-
-<!-- ================= FUTURE ================= -->
-
-<section id="future">
-
-    <h2>
-        🚀 Future of AI in Agriculture
-    </h2>
-
-    <p class="kn">
-        ಕೃಷಿಯಲ್ಲಿ AI ಯ ಭವಿಷ್ಯ
-    </p>
-
-    <p>
-        AI is expected to become increasingly
-        connected with drones, satellites,
-        IoT sensors, farm machinery,
-        weather systems and digital
-        agriculture platforms.
-    </p>
-
-    <p>
-        ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ AI, ಡ್ರೋನ್‌ಗಳು,
-        ಉಪಗ್ರಹಗಳು, IoT ಸೆನ್ಸರ್‌ಗಳು,
-        ಹವಾಮಾನ ವ್ಯವಸ್ಥೆಗಳು ಮತ್ತು ಕೃಷಿ
-        ಯಂತ್ರೋಪಕರಣಗಳೊಂದಿಗೆ ಇನ್ನಷ್ಟು
-        ಸಂಯೋಜನೆಯಾಗಬಹುದು.
-    </p>
-
-    <p>
-        The goal is not to replace farmers.
-        The goal is to provide farmers with
-        better information so that they can
-        make more informed decisions.
-    </p>
-
-</section>
-
-
-<!-- ================= SR CRESCO ================= -->
-
-<div class="cta">
-
-    <h2>
-        🌾 SR CRESCO
-    </h2>
-
-    <p>
-        Grow • Prosper • Thrive
-    </p>
-
-    <p>
-        Smart Agriculture • Knowledge •
-        Innovation • Farmer Community
-    </p>
-
-    <a
-    href="index.html"
-    class="btn">
-
-        ← Back to SR CRESCO
-
-    </a>
+<button
+class="send-btn"
+id="sendBtn"
+title="Send"
+>
+➤
+</button>
 
 </div>
 
 
-</main>
+<div class="input-note">
+SR CRESCO KNOWLEDGE AI can make mistakes. Check important information.
+</div>
 
+</div>
 
-<!-- ================= FOOTER ================= -->
+</div>
 
-<footer>
+</section>
 
-    <strong>
-        SR CRESCO
-    </strong>
-
-    <p>
-        Grow • Prosper • Thrive
-    </p>
-
-    <p>
-        Chamarajanagar, Karnataka, India
-    </p>
-
-    <p>
-        © 2026 SR CRESCO. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<!-- ================= CONTENT PROTECTION ================= -->
 
 <script>
 
-document.addEventListener(
-    "contextmenu",
-    function(e){
+/* ================= ELEMENTS ================= */
 
-        e.preventDefault();
+const input = document.getElementById("userMessage");
 
-    }
+const sendBtn = document.getElementById("sendBtn");
+
+const chatMessages = document.getElementById("chatMessages");
+
+const chatContainer = document.getElementById("chatContainer");
+
+const sidebar = document.getElementById("sidebar");
+
+const menuBtn = document.getElementById("menuBtn");
+
+const overlay = document.getElementById("overlay");
+
+const newChatBtn = document.getElementById("newChat");
+
+const clearAllBtn = document.getElementById("clearAll");
+
+const historyDiv = document.getElementById("history");
+
+
+/* ================= STATE ================= */
+
+let conversation = [];
+
+let chats = JSON.parse(
+localStorage.getItem("srcresco_chats") || "[]"
+);
+
+let currentChatId = null;
+
+
+/* ================= SEND BUTTON ================= */
+
+/* THIS WAS MISSING */
+
+sendBtn.addEventListener("click", function(){
+
+sendMessage();
+
+});
+
+
+/* ================= MOBILE SIDEBAR ================= */
+
+menuBtn.addEventListener("click",function(){
+
+sidebar.classList.add("open");
+
+overlay.classList.add("show");
+
+});
+
+
+overlay.addEventListener("click",function(){
+
+sidebar.classList.remove("open");
+
+overlay.classList.remove("show");
+
+});
+
+
+/* ================= NEW CHAT ================= */
+
+newChatBtn.addEventListener("click",function(){
+
+startNewChat();
+
+sidebar.classList.remove("open");
+
+overlay.classList.remove("show");
+
+});
+
+
+function startNewChat(){
+
+conversation = [];
+
+currentChatId = Date.now();
+
+chatMessages.innerHTML = `
+
+<div class="welcome" id="welcome">
+
+<img
+src="logo.png"
+class="welcome-logo"
+alt="SR CRESCO"
+>
+
+<h1>
+How can I help you?
+</h1>
+
+<p>
+I'm <b>SR CRESCO KNOWLEDGE AI</b>.<br>
+Ask questions, learn, create, research or get help with agriculture and technology.
+</p>
+
+</div>
+
+`;
+
+input.value = "";
+
+autoResize();
+
+input.focus();
+
+}
+
+
+/* ================= SEND MESSAGE ================= */
+
+async function sendMessage(){
+
+const message = input.value.trim();
+
+if(!message || sendBtn.disabled){
+
+return;
+
+}
+
+
+/* Remove welcome */
+
+const welcome =
+document.getElementById("welcome");
+
+if(welcome){
+
+welcome.remove();
+
+}
+
+
+/* Add user message */
+
+addMessage(
+"user",
+message
 );
 
 
-document.addEventListener(
-    "selectstart",
-    function(e){
+conversation.push({
 
-        e.preventDefault();
+role:"user",
 
-    }
+content:message
+
+});
+
+
+input.value = "";
+
+autoResize();
+
+sendBtn.disabled = true;
+
+
+/* ================= TYPING ================= */
+
+const typing =
+document.createElement("div");
+
+typing.className =
+"message ai";
+
+typing.id =
+"typing";
+
+typing.innerHTML = `
+
+<div class="avatar ai-avatar">
+🌱
+</div>
+
+<div class="message-content">
+
+<div class="typing">
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+</div>
+
+</div>
+
+`;
+
+chatMessages.appendChild(typing);
+
+scrollBottom();
+
+
+/* ================= API ================= */
+
+try{
+
+const response =
+await fetch(
+"/api/chat",
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+messages:conversation
+
+})
+
+}
 );
 
 
-document.addEventListener(
-    "dragstart",
-    function(e){
+const data =
+await response.json();
 
-        if(
-            e.target.tagName === "IMG"
-        ){
 
-            e.preventDefault();
+if(typing){
 
-        }
+typing.remove();
 
-    }
+}
+
+
+if(!response.ok){
+
+addMessage(
+"ai",
+"❌ " +
+(data.error ||
+"AI request failed.")
+);
+
+}else{
+
+const reply =
+data.reply ||
+"No response received from SR CRESCO KNOWLEDGE AI.";
+
+
+conversation.push({
+
+role:"assistant",
+
+content:reply
+
+});
+
+
+addMessage(
+"ai",
+reply
 );
 
 
-document.addEventListener(
-    "keydown",
-    function(e){
+saveCurrentChat();
 
-        if(
+}
 
-            (e.ctrlKey || e.metaKey)
+}catch(error){
 
-            &&
+if(typing){
 
-            ["c","x","u","s"].includes(
-                e.key.toLowerCase()
-            )
+typing.remove();
 
-        ){
+}
 
-            e.preventDefault();
 
-        }
-
-    }
+addMessage(
+"ai",
+"❌ Unable to connect to SR CRESCO KNOWLEDGE AI. Please try again."
 );
+
+}
+
+
+sendBtn.disabled = false;
+
+input.focus();
+
+scrollBottom();
+
+renderHistory();
+
+}
+
+
+/* ================= ADD MESSAGE ================= */
+
+function addMessage(type,text){
+
+const messageDiv =
+document.createElement("div");
+
+messageDiv.className =
+"message " + type;
+
+
+const avatar =
+document.createElement("div");
+
+avatar.className =
+"avatar " +
+(
+type === "ai"
+?
+"ai-avatar"
+:
+"user-avatar"
+);
+
+
+avatar.textContent =
+type === "ai"
+?
+"🌱"
+:
+"U";
+
+
+const content =
+document.createElement("div");
+
+content.className =
+"message-content";
+
+
+content.innerHTML =
+escapeHTML(text)
+.replace(/\n/g,"<br>");
+
+
+/* ================= AI ACTIONS ================= */
+
+if(type === "ai"){
+
+const actions =
+document.createElement("div");
+
+actions.className =
+"message-actions";
+
+
+actions.innerHTML = `
+
+<button class="action-btn copy-btn">
+📋 Copy
+</button>
+
+<button class="action-btn regenerate-btn">
+↻ Regenerate
+</button>
+
+`;
+
+
+/* COPY */
+
+actions
+.querySelector(".copy-btn")
+.addEventListener(
+"click",
+function(){
+
+navigator.clipboard
+.writeText(text);
+
+this.textContent =
+"✓ Copied";
+
+setTimeout(
+()=>{
+this.textContent =
+"📋 Copy";
+},
+1500
+);
+
+}
+);
+
+
+/* REGENERATE */
+
+actions
+.querySelector(".regenerate-btn")
+.addEventListener(
+"click",
+function(){
+
+regenerateLast();
+
+}
+);
+
+
+content.appendChild(actions);
+
+}
+
+
+/* ================= MESSAGE POSITION ================= */
+
+if(type === "user"){
+
+messageDiv.appendChild(content);
+
+messageDiv.appendChild(avatar);
+
+}else{
+
+messageDiv.appendChild(avatar);
+
+messageDiv.appendChild(content);
+
+}
+
+
+chatMessages.appendChild(messageDiv);
+
+scrollBottom();
+
+}
+
+
+/* ================= REGENERATE ================= */
+
+async function regenerateLast(){
+
+if(sendBtn.disabled){
+
+return;
+
+}
+
+if(conversation.length < 2){
+
+return;
+
+}
+
+
+/* Remove assistant message */
+
+if(
+conversation[
+conversation.length - 1
+].role === "assistant"
+){
+
+conversation.pop();
+
+}
+
+
+/* Remove AI UI */
+
+const messages =
+chatMessages.querySelectorAll(
+".message.ai"
+);
+
+
+if(messages.length){
+
+messages[
+messages.length - 1
+].remove();
+
+}
+
+
+sendBtn.disabled = true;
+
+
+/* Typing */
+
+const typing =
+document.createElement("div");
+
+typing.className =
+"message ai";
+
+typing.id =
+"typing";
+
+typing.innerHTML = `
+
+<div class="avatar ai-avatar">
+🌱
+</div>
+
+<div class="message-content">
+
+<div class="typing">
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+</div>
+
+</div>
+
+`;
+
+chatMessages.appendChild(typing);
+
+scrollBottom();
+
+
+try{
+
+const response =
+await fetch(
+"/api/chat",
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+messages:conversation
+
+})
+
+}
+);
+
+
+const data =
+await response.json();
+
+
+typing.remove();
+
+
+if(response.ok){
+
+const reply =
+data.reply ||
+"No response received.";
+
+
+conversation.push({
+
+role:"assistant",
+
+content:reply
+
+});
+
+
+addMessage(
+"ai",
+reply
+);
+
+
+saveCurrentChat();
+
+
+}else{
+
+addMessage(
+"ai",
+"❌ " +
+(data.error ||
+"Regeneration failed.")
+);
+
+}
+
+}catch(error){
+
+typing.remove();
+
+addMessage(
+"ai",
+"❌ Unable to regenerate response."
+);
+
+}
+
+
+sendBtn.disabled = false;
+
+}
+
+
+/* ================= SAVE CHAT ================= */
+
+function saveCurrentChat(){
+
+if(!conversation.length){
+
+return;
+
+}
+
+
+if(!currentChatId){
+
+currentChatId =
+Date.now();
+
+}
+
+
+const firstUser =
+conversation.find(
+x => x.role === "user"
+);
+
+
+const title =
+firstUser
+?
+firstUser.content.substring(0,35)
+:
+"New chat";
+
+
+const existing =
+chats.find(
+x => x.id === currentChatId
+);
+
+
+if(existing){
+
+existing.messages =
+conversation;
+
+existing.title =
+title;
+
+}else{
+
+chats.unshift({
+
+id:currentChatId,
+
+title:title,
+
+messages:conversation
+
+});
+
+}
+
+
+/* Keep last 30 */
+
+chats =
+chats.slice(0,30);
+
+
+localStorage.setItem(
+"srcresco_chats",
+JSON.stringify(chats)
+);
+
+}
+
+
+/* ================= HISTORY ================= */
+
+function renderHistory(){
+
+historyDiv.innerHTML = "";
+
+
+chats.forEach(chat => {
+
+const item =
+document.createElement("div");
+
+
+item.className =
+"history-item";
+
+
+item.textContent =
+chat.title;
+
+
+item.title =
+chat.title;
+
+
+item.addEventListener(
+"click",
+function(){
+
+loadChat(chat.id);
+
+sidebar.classList.remove("open");
+
+overlay.classList.remove("show");
+
+}
+);
+
+
+historyDiv.appendChild(item);
+
+});
+
+}
+
+
+/* ================= LOAD CHAT ================= */
+
+function loadChat(id){
+
+const chat =
+chats.find(
+x => x.id === id
+);
+
+
+if(!chat){
+
+return;
+
+}
+
+
+currentChatId =
+chat.id;
+
+
+conversation =
+[...chat.messages];
+
+
+chatMessages.innerHTML = "";
+
+
+conversation.forEach(
+message => {
+
+addMessage(
+
+message.role === "assistant"
+?
+"ai"
+:
+"user",
+
+message.content
+
+);
+
+}
+);
+
+
+scrollBottom();
+
+}
+
+
+/* ================= CLEAR ALL ================= */
+
+clearAllBtn.addEventListener(
+"click",
+function(){
+
+if(
+!confirm(
+"Delete all saved chats?"
+)
+){
+
+return;
+
+}
+
+
+chats = [];
+
+
+localStorage.removeItem(
+"srcresco_chats"
+);
+
+
+startNewChat();
+
+
+renderHistory();
+
+}
+);
+
+
+/* ================= ENTER ================= */
+
+input.addEventListener(
+"keydown",
+function(event){
+
+if(
+event.key === "Enter" &&
+!event.shiftKey
+){
+
+event.preventDefault();
+
+sendMessage();
+
+}
+
+}
+);
+
+
+/* ================= AUTO RESIZE ================= */
+
+input.addEventListener(
+"input",
+autoResize
+);
+
+
+function autoResize(){
+
+input.style.height =
+"auto";
+
+
+input.style.height =
+Math.min(
+input.scrollHeight,
+150
+) + "px";
+
+}
+
+
+/* ================= SECURITY ================= */
+
+function escapeHTML(text){
+
+const div =
+document.createElement("div");
+
+
+div.textContent =
+text;
+
+
+return div.innerHTML;
+
+}
+
+
+/* ================= SCROLL ================= */
+
+function scrollBottom(){
+
+setTimeout(
+function(){
+
+chatContainer.scrollTop =
+chatContainer.scrollHeight;
+
+},
+50
+);
+
+}
+
+
+/* ================= START ================= */
+
+renderHistory();
+
+input.focus();
 
 </script>
 
-
 </body>
-
-  </html>
+</html>
