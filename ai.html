@@ -434,6 +434,63 @@ color:#8a918b;
 margin-top:7px;
 }
 
+/* ================= COMMUNITY ================= */
+
+.community-box{
+margin-top:15px;
+padding:18px;
+border:1px solid #d9e5dc;
+border-radius:14px;
+background:#f8fbf9;
+max-width:420px;
+}
+
+.community-box input{
+width:100%;
+padding:12px;
+border:1px solid #cfd5cf;
+border-radius:9px;
+outline:none;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.community-box input:focus{
+border-color:#176b35;
+}
+
+.community-box button{
+width:100%;
+border:0;
+padding:11px;
+border-radius:9px;
+background:#176b35;
+color:#fff;
+font-size:14px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.community-box button:disabled{
+opacity:.5;
+cursor:not-allowed;
+}
+
+.community-message{
+margin-top:10px;
+font-size:13px;
+line-height:1.5;
+}
+
+.community-success{
+color:#176b35;
+font-weight:bold;
+}
+
+.community-error{
+color:#b42318;
+}
+
 /* ================= MOBILE ================= */
 
 .overlay{
@@ -540,7 +597,6 @@ border-radius:10px;
 
 <div class="overlay" id="overlay"></div>
 
-
 <!-- ================= SIDEBAR ================= -->
 
 <aside class="sidebar" id="sidebar">
@@ -558,19 +614,15 @@ KNOWLEDGE AI
 
 </div>
 
-
 <button class="new-chat" id="newChat">
 ＋ New chat
 </button>
-
 
 <div class="history-title">
 CHAT HISTORY
 </div>
 
-
 <div class="history" id="history"></div>
-
 
 <div class="sidebar-bottom">
 
@@ -582,11 +634,9 @@ CHAT HISTORY
 
 </aside>
 
-
 <!-- ================= MAIN ================= -->
 
 <section class="main">
-
 
 <header class="topbar">
 
@@ -611,7 +661,6 @@ SR CRESCO KNOWLEDGE AI
 </div>
 
 </header>
-
 
 <!-- ================= CHAT ================= -->
 
@@ -642,7 +691,6 @@ Ask questions, learn, create, research or get help with agriculture and technolo
 
 </div>
 
-
 <!-- ================= INPUT ================= -->
 
 <div class="input-area">
@@ -658,7 +706,6 @@ placeholder="Message SR CRESCO KNOWLEDGE AI..."
 autocomplete="off"
 ></textarea>
 
-
 <button
 class="send-btn"
 id="sendBtn"
@@ -668,7 +715,6 @@ title="Send"
 </button>
 
 </div>
-
 
 <div class="input-note">
 SR CRESCO KNOWLEDGE AI can make mistakes. Check important information.
@@ -680,17 +726,17 @@ SR CRESCO KNOWLEDGE AI can make mistakes. Check important information.
 
 </section>
 
-
 <script>
 
 /* =========================================================
    SR CRESCO KNOWLEDGE AI
-   API CONNECTION
 ========================================================= */
 
 const API_URL =
 "https://sr-cresco.vercel.app/api/chat";
 
+const COMMUNITY_API_URL =
+"https://sr-cresco.vercel.app/api/community";
 
 /* ================= ELEMENTS ================= */
 
@@ -724,7 +770,6 @@ document.getElementById("clearAll");
 const historyDiv =
 document.getElementById("history");
 
-
 /* ================= STATE ================= */
 
 let conversation = [];
@@ -736,7 +781,6 @@ localStorage.getItem("srcresco_chats") || "[]"
 
 let currentChatId = null;
 
-
 /* ================= SEND BUTTON ================= */
 
 sendBtn.addEventListener(
@@ -745,7 +789,6 @@ function(){
 sendMessage();
 }
 );
-
 
 /* ================= MOBILE SIDEBAR ================= */
 
@@ -760,7 +803,6 @@ overlay.classList.add("show");
 }
 );
 
-
 overlay.addEventListener(
 "click",
 function(){
@@ -771,7 +813,6 @@ overlay.classList.remove("show");
 
 }
 );
-
 
 /* ================= NEW CHAT ================= */
 
@@ -787,7 +828,6 @@ overlay.classList.remove("show");
 
 }
 );
-
 
 function startNewChat(){
 
@@ -826,7 +866,6 @@ input.focus();
 
 }
 
-
 /* =========================================================
    SEND MESSAGE
 ========================================================= */
@@ -845,26 +884,17 @@ return;
 
 }
 
-
-/* Remove welcome */
-
 const welcome =
 document.getElementById("welcome");
 
 if(welcome){
-
 welcome.remove();
-
 }
-
-
-/* Add user message */
 
 addMessage(
 "user",
 message
 );
-
 
 conversation.push({
 
@@ -874,13 +904,11 @@ content:message
 
 });
 
-
 input.value = "";
 
 autoResize();
 
 sendBtn.disabled = true;
-
 
 /* ================= TYPING ================= */
 
@@ -919,7 +947,6 @@ chatMessages.appendChild(typing);
 
 scrollBottom();
 
-
 /* =========================================================
    API REQUEST
 ========================================================= */
@@ -946,9 +973,6 @@ messages:conversation
 }
 );
 
-
-/* ================= SAFE JSON ================= */
-
 let data = {};
 
 try{
@@ -962,17 +986,11 @@ data = {};
 
 }
 
-
-/* Remove typing */
-
 if(typing){
 
 typing.remove();
 
 }
-
-
-/* ================= API ERROR ================= */
 
 if(!response.ok){
 
@@ -987,12 +1005,9 @@ addMessage(
 
 }else{
 
-/* ================= SUCCESS ================= */
-
 const reply =
 data.reply ||
 "No response received from SR CRESCO KNOWLEDGE AI.";
-
 
 conversation.push({
 
@@ -1002,12 +1017,10 @@ content:reply
 
 });
 
-
 addMessage(
 "ai",
 reply
 );
-
 
 saveCurrentChat();
 
@@ -1033,7 +1046,6 @@ addMessage(
 
 }
 
-
 sendBtn.disabled = false;
 
 input.focus();
@@ -1043,7 +1055,6 @@ scrollBottom();
 renderHistory();
 
 }
-
 
 /* =========================================================
    ADD MESSAGE
@@ -1060,7 +1071,6 @@ document.createElement("div");
 messageDiv.className =
 "message " + type;
 
-
 const avatar =
 document.createElement("div");
 
@@ -1074,7 +1084,6 @@ type === "ai"
 "user-avatar"
 );
 
-
 avatar.textContent =
 type === "ai"
 ?
@@ -1082,18 +1091,15 @@ type === "ai"
 :
 "U";
 
-
 const content =
 document.createElement("div");
 
 content.className =
 "message-content";
 
-
 content.innerHTML =
 escapeHTML(text)
 .replace(/\n/g,"<br>");
-
 
 /* ================= AI ACTIONS ================= */
 
@@ -1104,7 +1110,6 @@ document.createElement("div");
 
 actions.className =
 "message-actions";
-
 
 actions.innerHTML = `
 
@@ -1117,7 +1122,6 @@ actions.innerHTML = `
 </button>
 
 `;
-
 
 actions
 .querySelector(".copy-btn")
@@ -1150,7 +1154,6 @@ this.textContent =
 }
 );
 
-
 actions
 .querySelector(".regenerate-btn")
 .addEventListener(
@@ -1162,11 +1165,9 @@ regenerateLast();
 }
 );
 
-
 content.appendChild(actions);
 
 }
-
 
 if(type === "user"){
 
@@ -1182,13 +1183,11 @@ messageDiv.appendChild(content);
 
 }
 
-
 chatMessages.appendChild(messageDiv);
 
 scrollBottom();
 
 }
-
 
 /* =========================================================
    REGENERATE
@@ -1202,13 +1201,11 @@ return;
 
 }
 
-
 if(conversation.length < 1){
 
 return;
 
 }
-
 
 if(
 conversation[
@@ -1220,12 +1217,10 @@ conversation.pop();
 
 }
 
-
 const messages =
 chatMessages.querySelectorAll(
 ".message.ai"
 );
-
 
 if(messages.length){
 
@@ -1235,9 +1230,7 @@ messages.length - 1
 
 }
 
-
 sendBtn.disabled = true;
-
 
 const typing =
 document.createElement("div");
@@ -1274,7 +1267,6 @@ chatMessages.appendChild(typing);
 
 scrollBottom();
 
-
 try{
 
 const response =
@@ -1297,7 +1289,6 @@ messages:conversation
 }
 );
 
-
 let data = {};
 
 try{
@@ -1311,20 +1302,17 @@ data = {};
 
 }
 
-
 if(typing){
 
 typing.remove();
 
 }
 
-
 if(response.ok){
 
 const reply =
 data.reply ||
 "No response received.";
-
 
 conversation.push({
 
@@ -1334,15 +1322,12 @@ content:reply
 
 });
 
-
 addMessage(
 "ai",
 reply
 );
 
-
 saveCurrentChat();
-
 
 }else{
 
@@ -1377,7 +1362,6 @@ addMessage(
 
 }
 
-
 sendBtn.disabled = false;
 
 input.focus();
@@ -1387,7 +1371,6 @@ scrollBottom();
 renderHistory();
 
 }
-
 
 /* =========================================================
    SAVE CHAT
@@ -1401,7 +1384,6 @@ return;
 
 }
 
-
 if(!currentChatId){
 
 currentChatId =
@@ -1409,12 +1391,10 @@ Date.now();
 
 }
 
-
 const firstUser =
 conversation.find(
 x => x.role === "user"
 );
-
 
 const title =
 firstUser
@@ -1423,12 +1403,10 @@ firstUser.content.substring(0,35)
 :
 "New chat";
 
-
 const existing =
 chats.find(
 x => x.id === currentChatId
 );
-
 
 if(existing){
 
@@ -1452,10 +1430,8 @@ messages:conversation
 
 }
 
-
 chats =
 chats.slice(0,30);
-
 
 localStorage.setItem(
 "srcresco_chats",
@@ -1464,7 +1440,6 @@ JSON.stringify(chats)
 
 }
 
-
 /* =========================================================
    HISTORY
 ========================================================= */
@@ -1472,7 +1447,6 @@ JSON.stringify(chats)
 function renderHistory(){
 
 historyDiv.innerHTML = "";
-
 
 chats.forEach(
 chat => {
@@ -1489,7 +1463,6 @@ chat.title;
 item.title =
 chat.title;
 
-
 item.addEventListener(
 "click",
 function(){
@@ -1503,14 +1476,12 @@ overlay.classList.remove("show");
 }
 );
 
-
 historyDiv.appendChild(item);
 
 }
 );
 
 }
-
 
 /* =========================================================
    LOAD CHAT
@@ -1523,24 +1494,19 @@ chats.find(
 x => x.id === id
 );
 
-
 if(!chat){
 
 return;
 
 }
 
-
 currentChatId =
 chat.id;
-
 
 conversation =
 [...chat.messages];
 
-
 chatMessages.innerHTML = "";
-
 
 conversation.forEach(
 message => {
@@ -1560,11 +1526,9 @@ message.content
 }
 );
 
-
 scrollBottom();
 
 }
-
 
 /* =========================================================
    CLEAR ALL
@@ -1584,18 +1548,15 @@ return;
 
 }
 
-
 chats = [];
 
 conversation = [];
 
 currentChatId = null;
 
-
 localStorage.removeItem(
 "srcresco_chats"
 );
-
 
 startNewChat();
 
@@ -1603,7 +1564,6 @@ renderHistory();
 
 }
 );
-
 
 /* =========================================================
    AUTO RESIZE
@@ -1613,7 +1573,6 @@ input.addEventListener(
 "input",
 autoResize
 );
-
 
 function autoResize(){
 
@@ -1627,7 +1586,6 @@ input.scrollHeight,
 ) + "px";
 
 }
-
 
 /* =========================================================
    SECURITY
@@ -1644,7 +1602,6 @@ String(text);
 return div.innerHTML;
 
 }
-
 
 /* =========================================================
    SCROLL
@@ -1664,6 +1621,525 @@ chatContainer.scrollHeight;
 
 }
 
+/* =========================================================
+   COMMUNITY JOIN
+========================================================= */
+
+function startCommunityJoin(){
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+if(
+params.get("community") !== "join"
+){
+
+return;
+
+}
+
+const welcome =
+document.getElementById("welcome");
+
+if(welcome){
+welcome.remove();
+}
+
+addMessage(
+"ai",
+"🌱 Welcome to SR CRESCO Community.\n\nTo request community membership, please verify your email address first."
+);
+
+const box =
+document.createElement("div");
+
+box.className =
+"community-box";
+
+box.innerHTML = `
+
+<div style="
+font-weight:bold;
+margin-bottom:10px;
+">
+📧 Email Verification
+</div>
+
+<input
+type="email"
+id="communityEmail"
+placeholder="Enter your email address"
+autocomplete="email"
+>
+
+<button
+id="sendOtpBtn"
+>
+Send OTP
+</button>
+
+<div
+id="communityStatus"
+class="community-message"
+></div>
+
+`;
+
+chatMessages.appendChild(box);
+
+scrollBottom();
+
+const emailInput =
+document.getElementById(
+"communityEmail"
+);
+
+const sendOtpBtn =
+document.getElementById(
+"sendOtpBtn"
+);
+
+const status =
+document.getElementById(
+"communityStatus"
+);
+
+sendOtpBtn.addEventListener(
+"click",
+async function(){
+
+const email =
+emailInput.value.trim();
+
+if(!email){
+
+status.className =
+"community-message community-error";
+
+status.textContent =
+"Please enter your email address.";
+
+return;
+
+}
+
+sendOtpBtn.disabled = true;
+
+status.className =
+"community-message";
+
+status.textContent =
+"Sending OTP...";
+
+try{
+
+const response =
+await fetch(
+COMMUNITY_API_URL,
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+action:"send_otp",
+
+email:email
+
+})
+
+}
+);
+
+const data =
+await response.json();
+
+if(!response.ok){
+
+throw new Error(
+data.error ||
+"Unable to send OTP."
+);
+
+}
+
+status.className =
+"community-message community-success";
+
+status.textContent =
+"✅ OTP sent to your email.";
+
+showOtpForm(
+data.requestId,
+email,
+box
+);
+
+}catch(error){
+
+status.className =
+"community-message community-error";
+
+status.textContent =
+"❌ " + error.message;
+
+sendOtpBtn.disabled = false;
+
+}
+
+}
+);
+
+}
+
+/* =========================================================
+   OTP FORM
+========================================================= */
+
+function showOtpForm(
+requestId,
+email,
+box
+){
+
+box.innerHTML = `
+
+<div style="
+font-weight:bold;
+margin-bottom:10px;
+">
+🔐 Email Verification
+</div>
+
+<div style="
+font-size:13px;
+margin-bottom:12px;
+color:#6b7280;
+">
+OTP sent to ${escapeHTML(email)}
+</div>
+
+<input
+type="text"
+id="communityOtp"
+placeholder="Enter 6-digit OTP"
+inputmode="numeric"
+maxlength="6"
+autocomplete="one-time-code"
+>
+
+<button
+id="verifyOtpBtn"
+>
+Verify OTP
+</button>
+
+<div
+id="otpStatus"
+class="community-message"
+></div>
+
+`;
+
+const otpInput =
+document.getElementById(
+"communityOtp"
+);
+
+const verifyBtn =
+document.getElementById(
+"verifyOtpBtn"
+);
+
+const status =
+document.getElementById(
+"otpStatus"
+);
+
+verifyBtn.addEventListener(
+"click",
+async function(){
+
+const otp =
+otpInput.value.trim();
+
+if(!/^\d{6}$/.test(otp)){
+
+status.className =
+"community-message community-error";
+
+status.textContent =
+"Please enter the 6-digit OTP.";
+
+return;
+
+}
+
+verifyBtn.disabled = true;
+
+status.className =
+"community-message";
+
+status.textContent =
+"Verifying OTP...";
+
+try{
+
+const response =
+await fetch(
+COMMUNITY_API_URL,
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+action:"verify_otp",
+
+requestId:requestId,
+
+otp:otp
+
+})
+
+}
+);
+
+const data =
+await response.json();
+
+if(!response.ok){
+
+throw new Error(
+data.error ||
+"OTP verification failed."
+);
+
+}
+
+status.className =
+"community-message community-success";
+
+status.textContent =
+"✅ Email verified successfully.";
+
+setTimeout(
+function(){
+
+box.innerHTML = `
+
+<div style="
+font-weight:bold;
+font-size:16px;
+margin-bottom:10px;
+">
+🌱 Request Submitted
+</div>
+
+<div style="
+font-size:14px;
+line-height:1.6;
+">
+Your email has been verified successfully.
+
+<br><br>
+
+Your SR CRESCO Community request has been
+sent for admin approval.
+
+<br><br>
+
+📩 You will receive an email after approval.
+
+<br><br>
+
+Please wait for the approval email.
+</div>
+
+`;
+
+},
+500
+);
+
+}catch(error){
+
+status.className =
+"community-message community-error";
+
+status.textContent =
+"❌ " + error.message;
+
+verifyBtn.disabled = false;
+
+}
+
+}
+);
+
+}
+
+/* =========================================================
+   APPROVED COMMUNITY ACCESS
+========================================================= */
+
+async function checkCommunityAccess(){
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+if(
+params.get("community") !== "access"
+){
+
+return;
+
+}
+
+const token =
+params.get("token");
+
+if(!token){
+
+return;
+
+}
+
+const welcome =
+document.getElementById("welcome");
+
+if(welcome){
+welcome.remove();
+}
+
+addMessage(
+"ai",
+"🔐 Checking your SR CRESCO Community approval..."
+);
+
+try{
+
+const response =
+await fetch(
+COMMUNITY_API_URL,
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+action:"check_access",
+
+token:token
+
+})
+
+}
+);
+
+const data =
+await response.json();
+
+if(!response.ok){
+
+addMessage(
+"ai",
+"❌ " +
+(
+data.error ||
+"Community access is not approved."
+)
+);
+
+return;
+
+}
+
+addMessage(
+"ai",
+"✅ Your SR CRESCO Community access has been approved."
+);
+
+const accessBox =
+document.createElement("div");
+
+accessBox.className =
+"community-box";
+
+accessBox.innerHTML = `
+
+<div style="
+font-weight:bold;
+margin-bottom:12px;
+">
+🌱 SR CRESCO Community
+</div>
+
+<div style="
+font-size:14px;
+line-height:1.6;
+margin-bottom:14px;
+">
+Your membership request has been approved.
+</div>
+
+<button id="joinCommunityFinal">
+Join SR CRESCO Community →
+</button>
+
+`;
+
+chatMessages.appendChild(
+accessBox
+);
+
+scrollBottom();
+
+document
+.getElementById(
+"joinCommunityFinal"
+)
+.addEventListener(
+"click",
+function(){
+
+window.location.href =
+data.communityLink;
+
+}
+);
+
+}catch(error){
+
+console.error(
+"Community access error:",
+error
+);
+
+addMessage(
+"ai",
+"❌ Unable to verify community access. Please try again."
+);
+
+}
+
+}
 
 /* =========================================================
    START
@@ -1672,6 +2148,12 @@ chatContainer.scrollHeight;
 renderHistory();
 
 input.focus();
+
+/* Community URL handling */
+
+startCommunityJoin();
+
+checkCommunityAccess();
 
 </script>
 
