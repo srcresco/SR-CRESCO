@@ -26,7 +26,7 @@ html,body{
 margin:0;
 height:100%;
 font-family:Arial,Helvetica,sans-serif;
-background:#ffffff;
+background:#fff;
 color:#1f2937;
 }
 
@@ -41,7 +41,7 @@ overflow:hidden;
 width:270px;
 height:100vh;
 background:#123d25;
-color:white;
+color:#fff;
 display:flex;
 flex-direction:column;
 padding:14px;
@@ -53,6 +53,10 @@ display:flex;
 align-items:center;
 gap:10px;
 padding:8px 5px 18px;
+}
+
+.brand a{
+display:flex;
 }
 
 .brand img{
@@ -71,7 +75,7 @@ line-height:1.25;
 width:100%;
 border:1px solid rgba(255,255,255,.25);
 background:rgba(255,255,255,.08);
-color:white;
+color:#fff;
 padding:12px 14px;
 border-radius:10px;
 cursor:pointer;
@@ -118,7 +122,7 @@ padding-top:12px;
 width:100%;
 border:0;
 background:transparent;
-color:white;
+color:#fff;
 opacity:.8;
 padding:10px;
 cursor:pointer;
@@ -151,6 +155,7 @@ align-items:center;
 padding:0 18px;
 gap:14px;
 background:#fff;
+flex-shrink:0;
 }
 
 .menu-btn{
@@ -240,7 +245,7 @@ background:#e8f2ea;
 
 .user-avatar{
 background:#176b35;
-color:white;
+color:#fff;
 }
 
 .message-content{
@@ -248,11 +253,12 @@ max-width:78%;
 font-size:15px;
 line-height:1.7;
 word-wrap:break-word;
+overflow-wrap:anywhere;
 }
 
 .message.user .message-content{
 background:#176b35;
-color:white;
+color:#fff;
 padding:11px 15px;
 border-radius:17px;
 border-bottom-right-radius:5px;
@@ -332,10 +338,11 @@ left:270px;
 right:0;
 background:linear-gradient(
 to top,
-#ffffff 75%,
+#fff 75%,
 rgba(255,255,255,0)
 );
 padding:20px 15px 18px;
+z-index:20;
 }
 
 .input-inner{
@@ -350,7 +357,7 @@ gap:8px;
 border:1px solid #cfd5cf;
 border-radius:17px;
 padding:8px 9px 8px 15px;
-background:white;
+background:#fff;
 box-shadow:0 2px 12px rgba(0,0,0,.06);
 }
 
@@ -383,7 +390,7 @@ height:40px;
 border:0;
 border-radius:11px;
 background:#176b35;
-color:white;
+color:#fff;
 cursor:pointer;
 font-size:18px;
 flex-shrink:0;
@@ -640,34 +647,64 @@ SR CRESCO KNOWLEDGE AI can make mistakes. Check important information.
 
 <script>
 
+/* =========================================================
+   SR CRESCO KNOWLEDGE AI
+   API CONNECTION
+========================================================= */
+
+/*
+IMPORTANT:
+ai.html is hosted on GitHub Pages.
+
+Therefore DO NOT use:
+fetch("/api/chat")
+
+Use the Vercel API directly.
+*/
+
+const API_URL =
+"https://sr-cresco.vercel.app/api/chat";
+
+
 /* ================= ELEMENTS ================= */
 
-const input = document.getElementById("userMessage");
+const input =
+document.getElementById("userMessage");
 
-const sendBtn = document.getElementById("sendBtn");
+const sendBtn =
+document.getElementById("sendBtn");
 
-const chatMessages = document.getElementById("chatMessages");
+const chatMessages =
+document.getElementById("chatMessages");
 
-const chatContainer = document.getElementById("chatContainer");
+const chatContainer =
+document.getElementById("chatContainer");
 
-const sidebar = document.getElementById("sidebar");
+const sidebar =
+document.getElementById("sidebar");
 
-const menuBtn = document.getElementById("menuBtn");
+const menuBtn =
+document.getElementById("menuBtn");
 
-const overlay = document.getElementById("overlay");
+const overlay =
+document.getElementById("overlay");
 
-const newChatBtn = document.getElementById("newChat");
+const newChatBtn =
+document.getElementById("newChat");
 
-const clearAllBtn = document.getElementById("clearAll");
+const clearAllBtn =
+document.getElementById("clearAll");
 
-const historyDiv = document.getElementById("history");
+const historyDiv =
+document.getElementById("history");
 
 
 /* ================= STATE ================= */
 
 let conversation = [];
 
-let chats = JSON.parse(
+let chats =
+JSON.parse(
 localStorage.getItem("srcresco_chats") || "[]"
 );
 
@@ -676,38 +713,45 @@ let currentChatId = null;
 
 /* ================= SEND BUTTON ================= */
 
-/* THIS WAS MISSING */
-
-sendBtn.addEventListener("click", function(){
-
+sendBtn.addEventListener(
+"click",
+function(){
 sendMessage();
-
-});
+}
+);
 
 
 /* ================= MOBILE SIDEBAR ================= */
 
-menuBtn.addEventListener("click",function(){
+menuBtn.addEventListener(
+"click",
+function(){
 
 sidebar.classList.add("open");
 
 overlay.classList.add("show");
 
-});
+}
+);
 
 
-overlay.addEventListener("click",function(){
+overlay.addEventListener(
+"click",
+function(){
 
 sidebar.classList.remove("open");
 
 overlay.classList.remove("show");
 
-});
+}
+);
 
 
 /* ================= NEW CHAT ================= */
 
-newChatBtn.addEventListener("click",function(){
+newChatBtn.addEventListener(
+"click",
+function(){
 
 startNewChat();
 
@@ -715,7 +759,8 @@ sidebar.classList.remove("open");
 
 overlay.classList.remove("show");
 
-});
+}
+);
 
 
 function startNewChat(){
@@ -756,13 +801,19 @@ input.focus();
 }
 
 
-/* ================= SEND MESSAGE ================= */
+/* =========================================================
+   SEND MESSAGE
+========================================================= */
 
 async function sendMessage(){
 
-const message = input.value.trim();
+const message =
+input.value.trim();
 
-if(!message || sendBtn.disabled){
+if(
+!message ||
+sendBtn.disabled
+){
 
 return;
 
@@ -843,13 +894,15 @@ chatMessages.appendChild(typing);
 scrollBottom();
 
 
-/* ================= API ================= */
+/* =========================================================
+   API REQUEST
+========================================================= */
 
 try{
 
 const response =
 await fetch(
-"/api/chat",
+API_URL,
 {
 
 method:"POST",
@@ -868,9 +921,23 @@ messages:conversation
 );
 
 
-const data =
+/* ================= SAFE JSON ================= */
+
+let data = {};
+
+try{
+
+data =
 await response.json();
 
+}catch(jsonError){
+
+data = {};
+
+}
+
+
+/* Remove typing */
 
 if(typing){
 
@@ -879,16 +946,22 @@ typing.remove();
 }
 
 
+/* ================= API ERROR ================= */
+
 if(!response.ok){
+
+const errorMessage =
+data.error ||
+`AI request failed (${response.status}).`;
 
 addMessage(
 "ai",
-"❌ " +
-(data.error ||
-"AI request failed.")
+"❌ " + errorMessage
 );
 
 }else{
+
+/* ================= SUCCESS ================= */
 
 const reply =
 data.reply ||
@@ -916,12 +989,18 @@ saveCurrentChat();
 
 }catch(error){
 
+/* ================= CONNECTION ERROR ================= */
+
 if(typing){
 
 typing.remove();
 
 }
 
+console.error(
+"SR CRESCO AI connection error:",
+error
+);
 
 addMessage(
 "ai",
@@ -930,6 +1009,8 @@ addMessage(
 
 }
 
+
+/* ================= FINISH ================= */
 
 sendBtn.disabled = false;
 
@@ -942,9 +1023,14 @@ renderHistory();
 }
 
 
-/* ================= ADD MESSAGE ================= */
+/* =========================================================
+   ADD MESSAGE
+========================================================= */
 
-function addMessage(type,text){
+function addMessage(
+type,
+text
+){
 
 const messageDiv =
 document.createElement("div");
@@ -1011,16 +1097,17 @@ actions.innerHTML = `
 `;
 
 
-/* COPY */
+/* ================= COPY ================= */
 
 actions
 .querySelector(".copy-btn")
 .addEventListener(
 "click",
-function(){
+async function(){
 
-navigator.clipboard
-.writeText(text);
+try{
+
+await navigator.clipboard.writeText(text);
 
 this.textContent =
 "✓ Copied";
@@ -1033,11 +1120,18 @@ this.textContent =
 1500
 );
 
+}catch(error){
+
+this.textContent =
+"Copy failed";
+
+}
+
 }
 );
 
 
-/* REGENERATE */
+/* ================= REGENERATE ================= */
 
 actions
 .querySelector(".regenerate-btn")
@@ -1080,7 +1174,9 @@ scrollBottom();
 }
 
 
-/* ================= REGENERATE ================= */
+/* =========================================================
+   REGENERATE
+========================================================= */
 
 async function regenerateLast(){
 
@@ -1090,14 +1186,15 @@ return;
 
 }
 
-if(conversation.length < 2){
+
+if(conversation.length < 1){
 
 return;
 
 }
 
 
-/* Remove assistant message */
+/* Remove previous assistant message */
 
 if(
 conversation[
@@ -1110,7 +1207,7 @@ conversation.pop();
 }
 
 
-/* Remove AI UI */
+/* Remove last AI UI */
 
 const messages =
 chatMessages.querySelectorAll(
@@ -1130,7 +1227,7 @@ messages.length - 1
 sendBtn.disabled = true;
 
 
-/* Typing */
+/* ================= TYPING ================= */
 
 const typing =
 document.createElement("div");
@@ -1168,11 +1265,13 @@ chatMessages.appendChild(typing);
 scrollBottom();
 
 
+/* ================= API ================= */
+
 try{
 
 const response =
 await fetch(
-"/api/chat",
+API_URL,
 {
 
 method:"POST",
@@ -1191,11 +1290,25 @@ messages:conversation
 );
 
 
-const data =
+let data = {};
+
+try{
+
+data =
 await response.json();
 
+}catch(error){
+
+data = {};
+
+}
+
+
+if(typing){
 
 typing.remove();
+
+}
 
 
 if(response.ok){
@@ -1228,15 +1341,26 @@ saveCurrentChat();
 addMessage(
 "ai",
 "❌ " +
-(data.error ||
-"Regeneration failed.")
+(
+data.error ||
+`Regeneration failed (${response.status}).`
+)
 );
 
 }
 
 }catch(error){
 
+if(typing){
+
 typing.remove();
+
+}
+
+console.error(
+"Regenerate error:",
+error
+);
 
 addMessage(
 "ai",
@@ -1248,10 +1372,18 @@ addMessage(
 
 sendBtn.disabled = false;
 
+input.focus();
+
+scrollBottom();
+
+renderHistory();
+
 }
 
 
-/* ================= SAVE CHAT ================= */
+/* =========================================================
+   SAVE CHAT
+========================================================= */
 
 function saveCurrentChat(){
 
@@ -1313,7 +1445,7 @@ messages:conversation
 }
 
 
-/* Keep last 30 */
+/* Keep last 30 chats */
 
 chats =
 chats.slice(0,30);
@@ -1327,14 +1459,17 @@ JSON.stringify(chats)
 }
 
 
-/* ================= HISTORY ================= */
+/* =========================================================
+   HISTORY
+========================================================= */
 
 function renderHistory(){
 
 historyDiv.innerHTML = "";
 
 
-chats.forEach(chat => {
+chats.forEach(
+chat => {
 
 const item =
 document.createElement("div");
@@ -1368,12 +1503,15 @@ overlay.classList.remove("show");
 
 historyDiv.appendChild(item);
 
-});
+}
+);
 
 }
 
 
-/* ================= LOAD CHAT ================= */
+/* =========================================================
+   LOAD CHAT
+========================================================= */
 
 function loadChat(id){
 
@@ -1425,7 +1563,9 @@ scrollBottom();
 }
 
 
-/* ================= CLEAR ALL ================= */
+/* =========================================================
+   CLEAR ALL
+========================================================= */
 
 clearAllBtn.addEventListener(
 "click",
@@ -1444,6 +1584,10 @@ return;
 
 chats = [];
 
+conversation = [];
+
+currentChatId = null;
+
 
 localStorage.removeItem(
 "srcresco_chats"
@@ -1452,14 +1596,15 @@ localStorage.removeItem(
 
 startNewChat();
 
-
 renderHistory();
 
 }
 );
 
 
-/* ================= ENTER ================= */
+/* =========================================================
+   ENTER KEY
+========================================================= */
 
 input.addEventListener(
 "keydown",
@@ -1480,7 +1625,9 @@ sendMessage();
 );
 
 
-/* ================= AUTO RESIZE ================= */
+/* =========================================================
+   AUTO RESIZE
+========================================================= */
 
 input.addEventListener(
 "input",
@@ -1503,24 +1650,26 @@ input.scrollHeight,
 }
 
 
-/* ================= SECURITY ================= */
+/* =========================================================
+   SECURITY
+========================================================= */
 
 function escapeHTML(text){
 
 const div =
 document.createElement("div");
 
-
 div.textContent =
-text;
-
+String(text);
 
 return div.innerHTML;
 
 }
 
 
-/* ================= SCROLL ================= */
+/* =========================================================
+   SCROLL
+========================================================= */
 
 function scrollBottom(){
 
@@ -1537,7 +1686,9 @@ chatContainer.scrollHeight;
 }
 
 
-/* ================= START ================= */
+/* =========================================================
+   START
+========================================================= */
 
 renderHistory();
 
