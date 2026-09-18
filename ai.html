@@ -158,6 +158,28 @@ background:#fff;
 flex-shrink:0;
 }
 
+/* ================= BACK BUTTON ================= */
+
+.back-btn{
+border:0;
+background:#f1f5f2;
+color:#176b35;
+padding:8px 12px;
+border-radius:9px;
+font-size:14px;
+font-weight:bold;
+cursor:pointer;
+white-space:nowrap;
+}
+
+.back-btn:hover{
+background:#e4eee6;
+}
+
+.back-btn:active{
+transform:scale(.96);
+}
+
 .menu-btn{
 display:none;
 border:0;
@@ -451,7 +473,13 @@ left:0;
 
 .topbar{
 height:58px;
-padding:0 12px;
+padding:0 10px;
+gap:8px;
+}
+
+.back-btn{
+padding:7px 10px;
+font-size:13px;
 }
 
 .top-title{
@@ -562,6 +590,14 @@ CHAT HISTORY
 
 <header class="topbar">
 
+<button
+class="back-btn"
+onclick="history.back()"
+title="Go Back"
+>
+← Back
+</button>
+
 <button class="menu-btn" id="menuBtn">
 ☰
 </button>
@@ -651,16 +687,6 @@ SR CRESCO KNOWLEDGE AI can make mistakes. Check important information.
    SR CRESCO KNOWLEDGE AI
    API CONNECTION
 ========================================================= */
-
-/*
-IMPORTANT:
-ai.html is hosted on GitHub Pages.
-
-Therefore DO NOT use:
-fetch("/api/chat")
-
-Use the Vercel API directly.
-*/
 
 const API_URL =
 "https://sr-cresco.vercel.app/api/chat";
@@ -989,8 +1015,6 @@ saveCurrentChat();
 
 }catch(error){
 
-/* ================= CONNECTION ERROR ================= */
-
 if(typing){
 
 typing.remove();
@@ -1009,8 +1033,6 @@ addMessage(
 
 }
 
-
-/* ================= FINISH ================= */
 
 sendBtn.disabled = false;
 
@@ -1097,8 +1119,6 @@ actions.innerHTML = `
 `;
 
 
-/* ================= COPY ================= */
-
 actions
 .querySelector(".copy-btn")
 .addEventListener(
@@ -1131,8 +1151,6 @@ this.textContent =
 );
 
 
-/* ================= REGENERATE ================= */
-
 actions
 .querySelector(".regenerate-btn")
 .addEventListener(
@@ -1149,8 +1167,6 @@ content.appendChild(actions);
 
 }
 
-
-/* ================= MESSAGE POSITION ================= */
 
 if(type === "user"){
 
@@ -1194,8 +1210,6 @@ return;
 }
 
 
-/* Remove previous assistant message */
-
 if(
 conversation[
 conversation.length - 1
@@ -1206,8 +1220,6 @@ conversation.pop();
 
 }
 
-
-/* Remove last AI UI */
 
 const messages =
 chatMessages.querySelectorAll(
@@ -1226,8 +1238,6 @@ messages.length - 1
 
 sendBtn.disabled = true;
 
-
-/* ================= TYPING ================= */
 
 const typing =
 document.createElement("div");
@@ -1264,8 +1274,6 @@ chatMessages.appendChild(typing);
 
 scrollBottom();
 
-
-/* ================= API ================= */
 
 try{
 
@@ -1445,8 +1453,6 @@ messages:conversation
 }
 
 
-/* Keep last 30 chats */
-
 chats =
 chats.slice(0,30);
 
@@ -1474,14 +1480,11 @@ chat => {
 const item =
 document.createElement("div");
 
-
 item.className =
 "history-item";
 
-
 item.textContent =
 chat.title;
-
 
 item.title =
 chat.title;
@@ -1639,7 +1642,6 @@ function autoResize(){
 
 input.style.height =
 "auto";
-
 
 input.style.height =
 Math.min(
