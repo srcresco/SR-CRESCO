@@ -1,420 +1,1264 @@
- <!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<!-- Google tag (gtag.js) -->  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>  
-<script>  
-  window.dataLayer = window.dataLayer || [];  
-  function gtag(){dataLayer.push(arguments);}  
-  gtag('js', new Date());  gtag('config', 'G-W9695JZYKH');
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9695JZYKH"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-W9695JZYKH');
 </script>
 
-<title>SR CRESCO | Smart Agriculture, Farming & Farmer Community</title>  <meta name="description" content="SR CRESCO is a modern agriculture platform focused on smart farming, sustainable agriculture, farmer knowledge, agricultural products, AI, drones, satellite monitoring and farmer community.">  <meta name="keywords" content="SR CRESCO, smart agriculture, modern farming, agriculture Karnataka, farmer community, avocado farming, coconut farming, macadamia farming, mushroom farming, beekeeping, dairy farming, AI agriculture, drone agriculture, satellite agriculture">  <meta name="author" content="SUBHASH V S">  <meta name="robots" content="index, follow, max-image-preview:large">  <link rel="canonical" href="https://srcresco.github.io/SR-CRESCO/">  <!-- Open Graph -->  <meta property="og:title" content="SR CRESCO | Smart Agriculture">  
-<meta property="og:description" content="Grow • Prosper • Thrive — Smart agriculture, farming knowledge, agricultural products and farmer community.">  
-<meta property="og:type" content="website">  
-<meta property="og:url" content="https://srcresco.github.io/SR-CRESCO/">  
-<meta property="og:image" content="https://srcresco.github.io/SR-CRESCO/logo.png">  
-<meta property="og:site_name" content="SR CRESCO">  <!-- Twitter -->  <meta name="twitter:card" content="summary_large_image">  
-<meta name="twitter:title" content="SR CRESCO | Smart Agriculture">  
-<meta name="twitter:description" content="Smart agriculture, farming knowledge, agricultural products and farmer community.">  
-<meta name="twitter:image" content="https://srcresco.github.io/SR-CRESCO/logo.png">  <!-- Structured Data -->  <script type="application/ld+json">  
-{  
-  "@context": "https://schema.org",  
-  "@type": "Organization",  
-  "name": "SR CRESCO",  
-  "url": "https://srcresco.github.io/SR-CRESCO/",  
-  "logo": "https://srcresco.github.io/SR-CRESCO/logo.png",  
-  "description": "SR CRESCO is a modern agriculture platform focused on smart farming, sustainable agriculture, agricultural knowledge and farmer community.",  
-  "founder": {  
-    "@type": "Person",  
-    "name": "SUBHASH V S"  
-  },  
-  "address": {  
-    "@type": "PostalAddress",  
-    "addressLocality": "Chamarajanagar",  
-    "addressRegion": "Karnataka",  
-    "addressCountry": "India"  
-  }  
-}  
-</script>  <style>  
-  
-*{box-sizing:border-box}  
-body{  
-    margin:0;  
-    font-family:Arial,sans-serif;  
-    background:#f5f7f3;  
-    color:#18351f;  
-}  
-nav{  
-    background:#123d25;  
-    padding:12px 6%;  
-    display:flex;  
-    align-items:center;  
-    justify-content:space-between;  
-    position:sticky;  
-    top:0;  
-    z-index:10;  
-}  
-nav img{width:55px;height:55px;object-fit:contain}  
-nav a{  
-    color:white;  
-    text-decoration:none;  
-    margin-left:18px;  
-    font-size:14px;  
-}  
-.hero{  
-    background:linear-gradient(135deg,#123d25,#2f7044);  
-    color:white;  
-    text-align:center;  
-    padding:65px 20px;  
-}  
-.hero-logo{  
-    width:min(240px,65vw);  
-    max-height:180px;  
-    object-fit:contain;  
-    margin-bottom:15px;  
-}  
-.hero h1{font-size:42px;margin:8px 0}  
-.hero p{font-size:19px}  
-section{  
-    max-width:1100px;  
-    margin:auto;  
-    padding:55px 20px;  
-}  
-h2{  
-    text-align:center;  
-    font-size:30px;  
-    margin-bottom:30px;  
-}  
-.founder{  
-    text-align:center;  
-    background:white;  
-    padding:30px;  
-    border-radius:18px;  
-    box-shadow:0 5px 20px #0001;  
-}  
-.grid{  
-    display:grid;  
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));  
-    gap:18px;  
-}  
-.card{  
-    background:white;  
-    padding:25px;  
-    border-radius:16px;  
-    text-align:center;  
-    box-shadow:0 5px 18px #0001;  
-}  
-.card h3{margin:10px 0}  
-.card a{  
-    display:inline-block;  
-    margin-top:10px;  
-    color:#176b35;  
-    font-weight:bold;  
-    text-decoration:none;  
-}  
-.btn{  
-    display:inline-block;  
-    background:#176b35;  
-    color:white;  
-    padding:11px 20px;  
-    border-radius:25px;  
-    text-decoration:none;  
-    margin-top:10px;  
-}  
-.community{  
-    background:#123d25;  
-    color:white;  
-    text-align:center;  
-    border-radius:20px;  
-}  
-footer{  
-    background:#0c2818;  
-    color:white;  
-    text-align:center;  
-    padding:25px;  
-}  
-</style>  </head>  <body>  <nav>  
-    <a href="index.html">  
-        <img src="logo.png" alt="SR CRESCO Logo">  
-    </a>  
-    <div>  
-        <a href="#about">About</a>  
-        <a href="#products">Products</a>  
-        <a href="#smart">Smart Agriculture</a>  
-        <a href="#knowledge">Knowledge</a>  
-        <a href="#news">News</a>  
-        <a href="#community">Community</a>  
-    </div>  
-</nav>  <header class="hero">  
-    <img class="hero-logo" src="logo.png" alt="SR CRESCO Logo">  
-    <h1>SR CRESCO</h1>  
-    <p>Grow • Prosper • Thrive</p>  
-    <a class="btn" href="#products">Explore Agriculture</a>  
-</header>  <section>  
-    <h2>Founder</h2>  <div class="founder">  
+<title>SR CRESCO | Smart Agriculture, Farming & Farmer Community</title>
 
-    <h3>SUBHASH V S</h3>  
-    <p><strong>Founder — SR CRESCO</strong></p>  
+<meta
+name="description"
+content="SR CRESCO is a modern agriculture platform focused on smart farming, sustainable agriculture, farmer knowledge, agricultural products, AI, drones, satellite monitoring and farmer community."
+>
 
-    <p>  
-        Building a smarter, sustainable and connected future for  
-        agriculture through technology, knowledge and farmer community.  
-    </p>  
+<meta
+name="keywords"
+content="SR CRESCO, smart agriculture, modern farming, agriculture Karnataka, farmer community, avocado farming, coconut farming, macadamia farming, mushroom farming, beekeeping, dairy farming, AI agriculture, drone agriculture, satellite agriculture"
+>
 
-    <a class="btn" href="founder.html">Read More →</a>  
-</div>
+<meta name="author" content="SUBHASH V S">
 
-</section>  
-<section id="about">  
-    <h2>🌾 About SR CRESCO</h2>  <div class="founder">  
-    <h3>SR CRESCO — Grow • Prosper • Thrive</h3>  
+<meta
+name="robots"
+content="index, follow, max-image-preview:large"
+>
 
-    <p>  
-        SR CRESCO is a modern agriculture platform focused on
+<link
+rel="canonical"
+href="https://srcresco.github.io/SR-CRESCO/"
+>
 
-smart farming, sustainable agriculture, agriculture technology,
-farmer knowledge, agricultural products and farmer community
-in Karnataka, India.
-</p>
 
-<p>  
-        We explore agriculture opportunities including avocado,  
-        coconut, macadamia, mushroom cultivation, beekeeping,  
-        dairy farming and smart agriculture technologies.  
-    </p>  
+<!-- Open Graph -->
 
-    <p>  
-        SR CRESCO aims to connect agriculture with knowledge,  
-        innovation and technology for a smarter and more  
-        sustainable future of farming.  
-    </p>  
+<meta
+property="og:title"
+content="SR CRESCO | Smart Agriculture"
+>
 
-    <p>  
-        <strong>Founded by Subhash V S</strong><br>  
-        Chamarajanagar, Karnataka, India  
-    </p>  
-</div>
+<meta
+property="og:description"
+content="Grow • Prosper • Thrive — Smart agriculture, farming knowledge, agricultural products and farmer community."
+>
 
-</section>  
-<section id="products">  
-    <h2>🌱 Agriculture Products</h2>  <div class="grid">  
+<meta
+property="og:type"
+content="website"
+>
 
-    <div class="card">  
-        <h3>🥑 Avocado</h3>  
-        <p>Modern avocado cultivation and farm management.</p>  
-        <a href="avocado.html">Explore →</a>  
-    </div>  
+<meta
+property="og:url"
+content="https://srcresco.github.io/SR-CRESCO/"
+>
 
-    <div class="card">  
-        <h3>🥥 Coconut</h3>  
-        <p>Coconut farming, production and sustainable practices.</p>  
-        <a href="coconut.html">Explore →</a>  
-    </div>  
+<meta
+property="og:image"
+content="https://srcresco.github.io/SR-CRESCO/logo.png"
+>
 
-    <div class="card">  
-        <h3>🌰 Macadamia</h3>  
-        <p>Knowledge about macadamia cultivation and management.</p>  
-        <a href="macadamia.html">Explore →</a>  
-    </div>  
+<meta
+property="og:site_name"
+content="SR CRESCO"
+>
 
-    <div class="card">  
-        <h3>🍄 Mushroom</h3>  
-        <p>Mushroom cultivation and business opportunities.</p>  
-        <a href="mushroom.html">Explore →</a>  
-    </div>  
 
-    <div class="card">  
-        <h3>🐝 Beekeeping</h3>  
-        <p>Beekeeping, honey production and pollination.</p>  
-        <a href="beekeeping.html">Explore →</a>  
-    </div>  
+<!-- Twitter -->
 
-    <div class="card">  
-        <h3>🐄 Dairy</h3>  
-        <p>Modern dairy farming and livestock management.</p>  
-        <a href="dairy.html">Explore →</a>  
-    </div>  
+<meta
+name="twitter:card"
+content="summary_large_image"
+>
 
-</div>
+<meta
+name="twitter:title"
+content="SR CRESCO | Smart Agriculture"
+>
 
-</section>  <section id="smart">  
-    <h2>🚀 Smart Agriculture</h2>  <div class="grid">  
+<meta
+name="twitter:description"
+content="Smart agriculture, farming knowledge, agricultural products and farmer community."
+>
 
-    <div class="card">  
-        <h3>🤖 AI in Agriculture</h3>  
-        <p>AI-powered insights for smarter farming decisions.</p>  
-        <a href="ai.html">Learn More →</a>  
-    </div>  
+<meta
+name="twitter:image"
+content="https://srcresco.github.io/SR-CRESCO/logo.png"
+>
 
-    <div class="card">  
-        <h3>🚁 Drone Technology</h3>  
-        <p>Crop monitoring, mapping and precision agriculture.</p>  
-        <a href="drone.html">Learn More →</a>  
-    </div>  
 
-    <div class="card">  
-        <h3>🛰️ Satellite Monitoring</h3>  
-        <p>Monitor crop health and agricultural land using satellites.</p>  
-        <a href="satellite.html">Learn More →</a>  
-    </div>  
+<!-- Structured Data -->
 
-</div>
+<script type="application/ld+json">
 
-</section>  <section id="knowledge">  
-    <h2>📚 Knowledge Center</h2>  <div class="grid">  
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SR CRESCO",
+  "url": "https://srcresco.github.io/SR-CRESCO/",
+  "logo": "https://srcresco.github.io/SR-CRESCO/logo.png",
+  "description": "SR CRESCO is a modern agriculture platform focused on smart farming, sustainable agriculture, agricultural knowledge and farmer community.",
+  "founder": {
+    "@type": "Person",
+    "name": "SUBHASH V S"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chamarajanagar",
+    "addressRegion": "Karnataka",
+    "addressCountry": "India"
+  }
+}
 
-    <div class="card">  
-        <h3>🌾 Farming Knowledge</h3>  
-        <p>Practical knowledge and modern farming information.</p>  
-        <a href="knowledge.html">Read More →</a>  
-    </div>  
+</script>
 
-    <div class="card">  
-        <h3>🏛️ Government Schemes</h3>  
-        <p>Information about agricultural schemes and support.</p>  
-        <a href="schemes.html">Explore →</a>  
-    </div>  
 
-    <div class="card">  
-        <h3>📈 Market & Agriculture Updates</h3>  
-        <p>Useful agriculture and market updates for farmers.</p>  
-        <a href="market.html">View Updates →</a>  
-    </div>  
+<style>
 
-</div>
+/* =========================
+   GLOBAL
+========================= */
 
-</section>     <section id="news">  
-    <h2>🌱 Agriculture News</h2>  <div class="grid">  
+*{
+    box-sizing:border-box;
+}
 
-    <div class="card">  
-        <h3>📰 Latest Agriculture News</h3>  
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
+}
 
-        <p>  
-            Latest agriculture news, farming updates,  
-            market information and useful information  
-            for farmers.  
-        </p>  
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7f3;
+    color:#18351f;
+}
 
-        <a href="news.html">Read More →</a>  
-    </div>  
 
-</div>
+/* =========================
+   NAVIGATION
+========================= */
 
-   </section>  </section>
+nav{
+    background:#123d25;
+    padding:10px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-<!-- WHATSAPP POLL -->  <section id="poll">  <h2>📊 WhatsApp Poll</h2>  
+nav img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
 
-<div class="grid">  
+.nav-links{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:14px;
+}
 
-    <div class="card">  
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+}
 
-        <h3>📊 SR CRESCO Farmer Poll</h3>  
+nav a:hover{
+    opacity:.8;
+}
 
-        <p>  
-            Participate in the latest farmer poll  
-            and share your opinion.  
-        </p>  
 
-        <a href="poll.html"
+/* =========================
+   HERO / LOGO
+========================= */
 
-style="
-display:inline-block;
-background:#187a3d;
-color:#ffffff;
-text-decoration:none;
-padding:10px 22px;
-border-radius:25px;
-font-weight:bold;
-font-size:14px;
-line-height:1.4;
-">
-Read More →
-</a>
+.hero{
+    background:linear-gradient(
+        135deg,
+        #123d25,
+        #2f7044
+    );
 
-</div>
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
 
-</section>  <section id="contact">  
-    <h2>📩 Contact SR CRESCO</h2>  <div class="founder">  
-    <h3>SR CRESCO</h3>  
+.hero-logo{
+    width:min(240px,65vw);
+    max-height:180px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
 
-    <p>For agriculture, farmer community and collaboration enquiries.</p>  
+.hero h1{
+    font-size:42px;
+    margin:8px 0;
+}
 
-    <p>  
-        📧 <strong>SR CRESCO:</strong>  
-        <a href="mailto:srcresco@gmail.com">srcresco@gmail.com</a>  
-    </p>  
+.hero p{
+    font-size:19px;
+    margin:10px 0 20px;
+}
 
-    <p>  
-        👤 <strong>Founder:</strong>  
-        <a href="mailto:subhashvs955@gmail.com">subhashvs955@gmail.com</a>  
-    </p>  
 
-    <a class="btn" href="mailto:srcresco@gmail.com">  
-        Email SR CRESCO →  
-    </a>  
-</div>
+/* =========================
+   SECTIONS
+========================= */
 
-</section>  
-<section id="community">  
-    <div class="community">  
-        <h2>👨‍🌾 Farmer Community</h2>  
-        <p>  
-            Connect, learn and grow together with the SR CRESCO  
-            farmer community.  
-        </p>  <a class="btn" href="https://chat.whatsapp.com/K1CE6RH9eDP7M3OoUISTG5?s=cl&p=a&mlu=4">  
-Join WhatsApp Community →  
-    </a>  
-</div>
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:55px 20px;
+}
 
-</section>  <footer>  
-    <h3>🌾 SR CRESCO</h3>  
-    <p>Grow • Prosper • Thrive</p>  
-    <p>Chamarajanagar, Karnataka, India</p>  
-    <p>© 2026 SR CRESCO. All Rights Reserved.</p>  
-</footer>  <script>  
-function shareNews() {  
-    const shareText =  
-        "🌱 SR CRESCO | Agriculture News\n\n" +  
-        "Latest agriculture news and updates from SR CRESCO.\n\n" +  
-        "Visit SR CRESCO:\n" +  
-        "https://srcresco.github.io/SR-CRESCO/";  
-  
-    if (navigator.share) {  
-        navigator.share({  
-            title: "SR CRESCO | Agriculture News",  
-            text: shareText  
-        }).catch(() => {});  
-    } else {  
-        window.open(  
-            "https://wa.me/?text=" + encodeURIComponent(shareText),  
-            "_blank"  
-        );  
-    }  
-}  
-</script>  <!-- SR CRESCO Content Protection -->  <script>  
-document.addEventListener("contextmenu", function(e) {  
-    e.preventDefault();  
-});  
-  
-document.addEventListener("selectstart", function(e) {  
-    e.preventDefault();  
-});  
-  
-document.addEventListener("dragstart", function(e) {  
-    if (e.target.tagName === "IMG") {  
-        e.preventDefault();  
-    }  
-});  
-  
-document.addEventListener("keydown", function(e) {  
-    if (  
-        (e.ctrlKey || e.metaKey) &&  
-        ["c", "x", "u", "s"].includes(e.key.toLowerCase())  
-    ) {  
-        e.preventDefault();  
-    }  
-});  
-</script>  </body>  
- </html>
+h2{
+    text-align:center;
+    font-size:30px;
+    margin:0 0 30px;
+}
+
+
+/* =========================
+   CONTENT BOX
+========================= */
+
+.content-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 20px #0001;
+    text-align:center;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:18px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 5px 18px #0001;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:10px;
+    color:#176b35;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    display:inline-block;
+    background:#176b35;
+    color:white;
+    padding:11px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+
+/* =========================
+   SR CRESCO AI
+========================= */
+
+.ai-launch-box{
+    background:white;
+    padding:40px 20px;
+    border-radius:28px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.06);
+    max-width:650px;
+    margin:0 auto;
+}
+
+.ai-icon-btn{
+    width:100px;
+    height:100px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    padding:8px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 7px 22px rgba(0,0,0,0.14);
+    transition:0.2s;
+}
+
+.ai-icon-btn img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.ai-icon-btn:hover{
+    transform:scale(1.06);
+}
+
+.ai-icon-btn:active{
+    transform:scale(.95);
+}
+
+.ai-launch-box h3{
+    margin:20px 0 8px;
+    color:#183b28;
+    font-size:23px;
+}
+
+.ai-launch-box p{
+    color:#34483b;
+    line-height:1.7;
+    margin:0;
+}
+
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community{
+    background:#123d25;
+    color:white;
+    text-align:center;
+    border-radius:20px;
+    padding:35px 20px;
+}
+
+.community .btn{
+    background:white;
+    color:#176b35;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0c2818;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    nav{
+        padding:9px 4%;
+        align-items:flex-start;
+    }
+
+    nav img{
+        width:48px;
+        height:48px;
+    }
+
+    .nav-links{
+        gap:7px 10px;
+        max-width:280px;
+        justify-content:flex-end;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .hero{
+        padding:50px 18px;
+    }
+
+    .hero-logo{
+        width:min(210px,65vw);
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:45px 16px;
+    }
+
+    h2{
+        font-size:26px;
+    }
+
+    .content-box{
+        padding:24px 18px;
+    }
+
+    .card{
+        padding:22px 18px;
+    }
+
+    .ai-launch-box{
+        padding:32px 18px;
+    }
+
+    .ai-icon-btn{
+        width:88px;
+        height:88px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:430px){
+
+    .nav-links{
+        max-width:235px;
+        gap:5px 8px;
+    }
+
+    nav a{
+        font-size:10px;
+    }
+
+    nav img{
+        width:43px;
+        height:43px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     1. LOGO
+================================================= -->
+
+<nav>
+
+    <a href="index.html">
+
+        <img
+            src="logo.png"
+            alt="SR CRESCO Logo"
+        >
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#ai">AI</a>
+
+        <a href="#news">News</a>
+
+        <a href="#poll">Poll</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#smart">Smart</a>
+
+        <a href="#knowledge">Knowledge</a>
+
+        <a href="#founder">Founder</a>
+
+        <a href="#contact">Contact</a>
+
+        <a href="#community">Community</a>
+
+    </div>
+
+</nav>
+
+
+<header class="hero">
+
+    <img
+        class="hero-logo"
+        src="logo.png"
+        alt="SR CRESCO Logo"
+    >
+
+    <h1>
+        SR CRESCO
+    </h1>
+
+    <p>
+        Grow • Prosper • Thrive
+    </p>
+
+    <a
+        class="btn"
+        href="#about"
+    >
+        Explore SR CRESCO
+    </a>
+
+</header>
+
+
+
+<!-- =================================================
+     2. ABOUT
+================================================= -->
+
+<section id="about">
+
+    <h2>
+        🌾 About SR CRESCO
+    </h2>
+
+    <div class="content-box">
+
+        <h3>
+            SR CRESCO — Grow • Prosper • Thrive
+        </h3>
+
+        <p>
+            SR CRESCO is a modern agriculture platform focused on
+            smart farming, sustainable agriculture, agriculture
+            technology, farmer knowledge, agricultural products
+            and farmer community in Karnataka, India.
+        </p>
+
+        <p>
+            We explore agriculture opportunities including avocado,
+            coconut, macadamia, mushroom cultivation, beekeeping,
+            dairy farming and smart agriculture technologies.
+        </p>
+
+        <p>
+            SR CRESCO aims to connect agriculture with knowledge,
+            innovation and technology for a smarter and more
+            sustainable future of farming.
+        </p>
+
+        <p>
+            <strong>
+                Founded by Subhash V S
+            </strong>
+            <br>
+            Chamarajanagar, Karnataka, India
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     3. AI
+================================================= -->
+
+<section id="ai">
+
+    <h2>
+        SR CRESCO AI
+    </h2>
+
+    <div class="ai-launch-box">
+
+        <button
+            class="ai-icon-btn"
+            onclick="window.location.href='ai.html'"
+            title="Open SR CRESCO AI"
+            aria-label="Open SR CRESCO AI"
+        >
+
+            <img
+                src="logo.png"
+                alt="SR CRESCO AI"
+            >
+
+        </button>
+
+        <h3>
+            SR CRESCO AI
+        </h3>
+
+        <p>
+            Ask questions and explore agriculture knowledge
+            with SR CRESCO AI.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     4. NEWS
+================================================= -->
+
+<section id="news">
+
+    <h2>
+        📰 Agriculture News
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                🌱 Latest Agriculture News
+            </h3>
+
+            <p>
+                Latest agriculture news, farming updates,
+                market information and useful information
+                for farmers.
+            </p>
+
+            <a href="news.html">
+                Read News →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     5. POLL
+================================================= -->
+
+<section id="poll">
+
+    <h2>
+        📊 WhatsApp Poll
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                📊 SR CRESCO Farmer Poll
+            </h3>
+
+            <p>
+                Participate in the latest farmer poll
+                and share your opinion.
+            </p>
+
+            <a
+                href="poll.html"
+                class="btn"
+            >
+                Read More →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     6. PRODUCTS
+================================================= -->
+
+<section id="products">
+
+    <h2>
+        🌱 Agriculture Products
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>🥑 Avocado</h3>
+
+            <p>
+                Modern avocado cultivation and farm management.
+            </p>
+
+            <a href="avocado.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🥥 Coconut</h3>
+
+            <p>
+                Coconut farming, production and sustainable practices.
+            </p>
+
+            <a href="coconut.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🌰 Macadamia</h3>
+
+            <p>
+                Knowledge about macadamia cultivation and management.
+            </p>
+
+            <a href="macadamia.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🍄 Mushroom</h3>
+
+            <p>
+                Mushroom cultivation and business opportunities.
+            </p>
+
+            <a href="mushroom.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🐝 Beekeeping</h3>
+
+            <p>
+                Beekeeping, honey production and pollination.
+            </p>
+
+            <a href="beekeeping.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🐄 Dairy</h3>
+
+            <p>
+                Modern dairy farming and livestock management.
+            </p>
+
+            <a href="dairy.html">
+                Explore →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     7. SMART AGRICULTURE
+================================================= -->
+
+<section id="smart">
+
+    <h2>
+        🚀 Smart Agriculture
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                🤖 AI in Agriculture
+            </h3>
+
+            <p>
+                AI-powered insights for smarter farming decisions.
+            </p>
+
+            <a href="ai.html">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                🚁 Drone Technology
+            </h3>
+
+            <p>
+                Crop monitoring, mapping and precision agriculture.
+            </p>
+
+            <a href="drone.html">
+                Learn More →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                🛰️ Satellite Monitoring
+            </h3>
+
+            <p>
+                Monitor crop health and agricultural land
+                using satellites.
+            </p>
+
+            <a href="satellite.html">
+                Learn More →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     8. KNOWLEDGE
+================================================= -->
+
+<section id="knowledge">
+
+    <h2>
+        📚 Knowledge Center
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>
+                🌾 Farming Knowledge
+            </h3>
+
+            <p>
+                Practical knowledge and modern farming information.
+            </p>
+
+            <a href="knowledge.html">
+                Read More →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                🏛️ Government Schemes
+            </h3>
+
+            <p>
+                Information about agricultural schemes and support.
+            </p>
+
+            <a href="schemes.html">
+                Explore →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                📈 Market & Agriculture Updates
+            </h3>
+
+            <p>
+                Useful agriculture and market updates for farmers.
+            </p>
+
+            <a href="market.html">
+                View Updates →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     9. FOUNDER
+================================================= -->
+
+<section id="founder">
+
+    <h2>
+        Founder
+    </h2>
+
+    <div class="content-box">
+
+        <h3>
+            SUBHASH V S
+        </h3>
+
+        <p>
+            <strong>
+                Founder — SR CRESCO
+            </strong>
+        </p>
+
+        <p>
+            Building a smarter, sustainable and connected future
+            for agriculture through technology, knowledge and
+            farmer community.
+        </p>
+
+        <a
+            class="btn"
+            href="founder.html"
+        >
+            Read More →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     10. CONTACT
+================================================= -->
+
+<section id="contact">
+
+    <h2>
+        📩 Contact SR CRESCO
+    </h2>
+
+    <div class="content-box">
+
+        <h3>
+            SR CRESCO
+        </h3>
+
+        <p>
+            For agriculture, farmer community and collaboration
+            enquiries.
+        </p>
+
+        <p>
+
+            📧
+            <strong>
+                SR CRESCO:
+            </strong>
+
+            <a href="mailto:srcresco@gmail.com">
+                srcresco@gmail.com
+            </a>
+
+        </p>
+
+        <p>
+
+            👤
+            <strong>
+                Founder:
+            </strong>
+
+            <a href="mailto:subhashvs955@gmail.com">
+                subhashvs955@gmail.com
+            </a>
+
+        </p>
+
+        <a
+            class="btn"
+            href="mailto:srcresco@gmail.com"
+        >
+            Email SR CRESCO →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     11. COMMUNITY
+================================================= -->
+
+<section id="community">
+
+    <div class="community">
+
+        <h2>
+            👨‍🌾 Farmer Community
+        </h2>
+
+        <p>
+            Connect, learn and grow together with the
+            SR CRESCO farmer community.
+        </p>
+
+        <a
+            class="btn"
+            href="https://chat.whatsapp.com/K1CE6RH9eDP7M3OoUISTG5?s=cl&p=a&mlu=4"
+        >
+            Join WhatsApp Community →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     12. FOOTER
+================================================= -->
+
+<footer>
+
+    <h3>
+        🌾 SR CRESCO
+    </h3>
+
+    <p>
+        Grow • Prosper • Thrive
+    </p>
+
+    <p>
+        Chamarajanagar, Karnataka, India
+    </p>
+
+    <p>
+        © 2026 SR CRESCO. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =================================================
+     SHARE FUNCTION
+================================================= -->
+
+<script>
+
+function shareNews(){
+
+    const shareText =
+        "🌱 SR CRESCO | Agriculture News\n\n" +
+        "Latest agriculture news and updates from SR CRESCO.\n\n" +
+        "Visit SR CRESCO:\n" +
+        "https://srcresco.github.io/SR-CRESCO/";
+
+    if(navigator.share){
+
+        navigator.share({
+
+            title:"SR CRESCO | Agriculture News",
+
+            text:shareText
+
+        }).catch(() => {});
+
+    }
+
+    else{
+
+        window.open(
+
+            "https://wa.me/?text=" +
+            encodeURIComponent(shareText),
+
+            "_blank"
+
+        );
+
+    }
+
+}
+
+</script>
+
+
+
+<!-- =================================================
+     CONTENT PROTECTION
+================================================= -->
+
+<script>
+
+document.addEventListener(
+    "contextmenu",
+    function(e){
+
+        e.preventDefault();
+
+    }
+);
+
+
+document.addEventListener(
+    "selectstart",
+    function(e){
+
+        e.preventDefault();
+
+    }
+);
+
+
+document.addEventListener(
+    "dragstart",
+    function(e){
+
+        if(e.target.tagName === "IMG"){
+
+            e.preventDefault();
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(
+
+            (e.ctrlKey || e.metaKey) &&
+
+            ["c","x","u","s"].includes(
+                e.key.toLowerCase()
+            )
+
+        ){
+
+            e.preventDefault();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
