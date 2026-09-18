@@ -1,5 +1,9 @@
  module.exports = async function handler(req, res) {
 
+  /* =========================================
+     CORS
+  ========================================= */
+
   res.setHeader(
     "Access-Control-Allow-Origin",
     "https://srcresco.github.io"
@@ -15,9 +19,19 @@
     "Content-Type"
   );
 
+
+  /* =========================================
+     OPTIONS / PREFLIGHT
+  ========================================= */
+
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
+
+
+  /* =========================================
+     ONLY POST ALLOWED
+  ========================================= */
 
   if (req.method !== "POST") {
     return res.status(405).json({
@@ -25,7 +39,12 @@
     });
   }
 
+
   try {
+
+    /* =========================================
+       OPENAI API KEY
+    ========================================= */
 
     const apiKey = process.env.OPENAI_API_KEY;
 
@@ -35,6 +54,11 @@
       });
     }
 
+
+    /* =========================================
+       GET USER MESSAGES
+    ========================================= */
+
     const { messages } = req.body || {};
 
     if (!Array.isArray(messages) || messages.length === 0) {
@@ -42,6 +66,11 @@
         error: "Messages are required"
       });
     }
+
+
+    /* =========================================
+       OPENAI RESPONSES API
+    ========================================= */
 
     const response = await fetch(
       "https://api.openai.com/v1/responses",
@@ -54,84 +83,57 @@
         },
 
         body: JSON.stringify({
+
           model: "gpt-5.6-luna",
-          input: messages
-        })
-      }
-    );
 
-    const data = await response.json();
+          /* =====================================
+             SR CRESCO KNOWLEDGE AI INSTRUCTIONS
+          ===================================== */
 
-    if (!response.ok) {
+          instructions: `
+You are SR CRESCO KNOWLEDGE AI.
 
-      console.error("OpenAI ERROR:", data);
+You are the knowledge assistant of SR CRESCO.
 
-      return res.status(response.status).json({
-        error:
-          data?.error?.message ||
-          "OpenAI API request failed"
-      });
-    }
+Your job is to provide clear, accurate, useful and practical answers,
+especially for agriculture, farming, farmer information,
+government schemes, agricultural markets, technology,
+smart farming, AI, drones, satellites and general knowledge.
 
-    /* =========================================
-       EXTRACT TEXT FROM RAW RESPONSES API
-    ========================================= */
+LANGUAGE RULES:
 
-    let reply = "";
+1. Always identify the language used by the user.
 
-    if (Array.isArray(data.output)) {
+2. Reply in the SAME language used by the user.
 
-      for (const item of data.output) {
+3. If the user writes in Kannada, reply in Kannada.
 
-        if (
-          item.type === "message" &&
-          Array.isArray(item.content)
-        ) {
+4. If the user writes in Kannada-English mixed language (Kanglish),
+reply in simple and natural Kanglish.
 
-          for (const content of item.content) {
+5. If the user writes in English, reply in English.
 
-            if (
-              content.type === "output_text" &&
-              typeof content.text === "string"
-            ) {
+6. If the user writes in Hindi, reply in Hindi.
 
-              reply += content.text;
-            }
+7. NEVER switch to Hindi automatically.
 
-          }
-        }
-      }
-    }
+8. NEVER switch to another language unless the user asks you to.
 
-    reply = reply.trim();
+9. If the user mixes Kannada and English,
+understand the meaning and reply naturally in the same style.
 
-    if (!reply) {
+10. Do not translate the user's question into another language
+unless the user specifically asks for translation.
 
-      console.error(
-        "No text found in OpenAI response:",
-        JSON.stringify(data)
-      );
+11. Match the user's language naturally throughout the answer.
 
-      return res.status(500).json({
-        error: "OpenAI returned no text response"
-      });
-    }
+12. Keep answers simple, clear and easy to understand.
 
-    return res.status(200).json({
-      reply: reply
-    });
 
-  } catch (error) {
+FORMATTING RULES:
 
-    console.error(
-      "SR CRESCO AI ERROR:",
-      error
-    );
-
-    return res.status(500).json({
-      error:
-        error?.message ||
-        "Internal server error"
-    });
-  }
-};
+1. Do NOT use Markdown symbols such as:
+#
+*
+**
+_
