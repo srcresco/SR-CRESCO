@@ -76,7 +76,6 @@ module.exports = async function handler(req, res) {
     ========================================= */
 
     const body = req.body || {};
-
     const messages = body.messages;
 
     if (
@@ -90,11 +89,6 @@ module.exports = async function handler(req, res) {
 
     /* =========================================
        GET LATEST MESSAGE ONLY
-       
-       We intentionally do NOT send the
-       complete frontend chat history.
-       
-       This reduces token usage.
     ========================================= */
 
     const latestMessage =
@@ -114,8 +108,6 @@ module.exports = async function handler(req, res) {
     ========================================= */
 
     let content = latestMessage.content;
-
-    /* Handle array-style message content */
 
     if (Array.isArray(content)) {
 
@@ -157,8 +149,6 @@ module.exports = async function handler(req, res) {
 
     /* =========================================
        USER MESSAGE LIMIT
-       
-       Prevents extremely large requests.
     ========================================= */
 
     const MAX_MESSAGE_LENGTH = 4000;
@@ -173,11 +163,6 @@ module.exports = async function handler(req, res) {
 
     /* =========================================
        DETECT WHETHER WEB SEARCH IS NEEDED
-       
-       Normal questions do NOT automatically
-       trigger web search.
-       
-       Current/latest questions DO.
     ========================================= */
 
     const lowerContent =
@@ -302,23 +287,13 @@ module.exports = async function handler(req, res) {
 
       apiKey: apiKey,
 
-      /*
-       * Prevent Vercel from waiting indefinitely.
-       */
-
       timeout: 30000,
-
-      /*
-       * We handle errors ourselves.
-       */
 
       maxRetries: 0
     });
 
     /* =========================================
-       SHORT SYSTEM INSTRUCTIONS
-       
-       Keeping this short saves tokens.
+       SYSTEM INSTRUCTIONS
     ========================================= */
 
     const instructions = `
@@ -366,26 +341,18 @@ You are SR CRESCO KNOWLEDGE AI.
 
     /* =========================================
        OPENAI REQUEST
+       
+       MODEL CHANGED:
+       gpt-5.6-luna → gpt-5.4-mini
     ========================================= */
 
     const request = {
 
-      model:
-        process.env.OPENAI_MODEL ||
-        "gpt-5.6-luna",
-
-      /*
-       * Reduced from 1200.
-       * Helps control output token usage.
-       */
+      model: "gpt-5.4-mini",
 
       max_output_tokens: 800,
 
       instructions: instructions,
-
-      /*
-       * Only latest user message.
-       */
 
       input: [
         {
@@ -397,10 +364,6 @@ You are SR CRESCO KNOWLEDGE AI.
 
     /* =========================================
        CONDITIONAL WEB SEARCH
-       
-       Web search is added ONLY when the
-       question appears to require current
-       information.
     ========================================= */
 
     if (needsWebSearch) {
@@ -414,16 +377,12 @@ You are SR CRESCO KNOWLEDGE AI.
 
     /* =========================================
        LOG BASIC REQUEST INFORMATION
-       
-       Do NOT log the API key.
     ========================================= */
 
     console.log(
       "SR CRESCO AI request:",
       {
-        model:
-          process.env.OPENAI_MODEL ||
-          "gpt-5.6-luna",
+        model: "gpt-5.4-mini",
 
         webSearch:
           needsWebSearch,
@@ -472,19 +431,12 @@ You are SR CRESCO KNOWLEDGE AI.
       );
 
       /* =====================================
-         RATE LIMIT / TOKEN LIMIT
-         
-         IMPORTANT:
-         Do NOT retry immediately.
-         
-         Your current limit is already being
-         reached, so retrying wastes requests.
+         RATE LIMIT
       ===================================== */
 
       if (
         status === 429 ||
-        errorCode ===
-          "rate_limit_exceeded"
+        errorCode === "rate_limit_exceeded"
       ) {
 
         return res.status(429).json({
@@ -498,10 +450,8 @@ You are SR CRESCO KNOWLEDGE AI.
       ===================================== */
 
       if (
-        errorCode ===
-          "insufficient_quota" ||
-        errorCode ===
-          "billing_hard_limit_reached"
+        errorCode === "insufficient_quota" ||
+        errorCode === "billing_hard_limit_reached"
       ) {
 
         return res.status(429).json({
@@ -516,8 +466,7 @@ You are SR CRESCO KNOWLEDGE AI.
 
       if (
         status === 401 ||
-        errorCode ===
-          "invalid_api_key"
+        errorCode === "invalid_api_key"
       ) {
 
         return res.status(500).json({
