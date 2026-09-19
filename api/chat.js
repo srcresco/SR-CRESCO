@@ -58,6 +58,20 @@ module.exports = async function handler(req, res) {
     }
 
     /* =========================================
+       LATEST MESSAGE ONLY
+       Old chat history will NOT be sent
+       to the OpenAI API.
+    ========================================= */
+
+    const latestMessage = messages[messages.length - 1];
+
+    if (!latestMessage) {
+      return res.status(400).json({
+        error: "Latest message is required"
+      });
+    }
+
+    /* =========================================
        OPENAI CLIENT
     ========================================= */
 
@@ -281,7 +295,12 @@ You are SR CRESCO KNOWLEDGE AI.
 
 `,
 
-      input: messages
+      /* =========================================
+         ONLY CURRENT/LATEST MESSAGE IS SENT
+         OLD CHAT HISTORY IS NOT SENT
+      ========================================= */
+
+      input: [latestMessage]
     });
 
     /* =========================================
@@ -306,6 +325,16 @@ You are SR CRESCO KNOWLEDGE AI.
       "SR CRESCO AI ERROR:",
       error
     );
+
+    /* =========================================
+       RATE LIMIT ERROR
+    ========================================= */
+
+    if (error?.status === 429) {
+      return res.status(429).json({
+        error: "SR CRESCO KNOWLEDGE AI rate limit reached. Please try again later."
+      });
+    }
 
     return res.status(500).json({
       error: error?.message || "Internal server error"
