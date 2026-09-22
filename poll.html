@@ -39,9 +39,11 @@ gtag('js', new Date());
 
 gtag('config', 'G-W9695JZYKH');
 </script>
-<!-- Vercel Web Analytics -->
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
+
+<!-- Vercel Web Analytics -->
+
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
 
 <style>
@@ -147,6 +149,64 @@ nav{
 .english{
     font-size:16px;
     color:#555;
+}
+
+.poll-options{
+    margin-top:20px;
+}
+
+.poll-option{
+    width:100%;
+    padding:13px 15px;
+    margin:8px 0;
+    background:#f7faf7;
+    border:1px solid #d8e2d8;
+    border-radius:9px;
+    text-align:left;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.poll-option:hover{
+    background:#edf6ed;
+    border-color:#0b6b3a;
+}
+
+.poll-option.selected{
+    background:#e4f2e7;
+    border-color:#0b6b3a;
+    font-weight:bold;
+}
+
+.vote-btn{
+    width:100%;
+    margin-top:12px;
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    background:#0b6b3a;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.vote-btn:disabled{
+    background:#9aa89d;
+    cursor:not-allowed;
+}
+
+.vote-message{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f0f7f1;
+    border-radius:9px;
+    text-align:center;
+    color:#0b6b3a;
+    font-weight:bold;
+    line-height:1.5;
 }
 
 .buttons{
@@ -271,9 +331,122 @@ footer p{
 📊 Farmer Polls
 </h1>
 
- <!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SEPTEMBER 21 – FARMING SUCCESS POLL -->
+<!-- ================================================= -->
+
+<div class="poll-card">
+
+<div class="poll-date">
+September 21, 2026
+</div>
+
+<div class="poll-category">
+🌱 SR CRESCO Farmers Poll
+</div>
+
+<h2>
+
+<div class="kannada">
+🌾 ರೈತರೇ, ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ನೀವು ಯಾವುದನ್ನು ಹೆಚ್ಚು ನಂಬುತ್ತೀರಿ?
+</div>
+
+<br>
+
+<div class="english">
+🌾 Farmers, what do you believe matters most for success in farming?
+</div>
+
+</h2>
+
+<p>
+<strong>ವಿಷಯ / Topic:</strong>
+ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ಅನುಭವ, ಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ವಿಜ್ಞಾನದ ಪಾತ್ರ
+</p>
+
+<p>
+ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸು ಪಡೆಯಲು ರೈತರ ಅನುಭವದ ಜೊತೆಗೆ
+ಸರಿಯಾದ ಜ್ಞಾನ, ಹೊಸ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ವೈಜ್ಞಾನಿಕ ವಿಧಾನಗಳೂ
+ಮುಖ್ಯವಾಗಿವೆ. ನಿಮ್ಮ ಪ್ರಕಾರ ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ
+ಯಾವುದು ಹೆಚ್ಚು ಮುಖ್ಯ?
+</p>
+
+<p>
+<strong>
+Experience, knowledge, technology and science can all play
+an important role in farming. What do you believe matters
+most for achieving success in agriculture?
+</strong>
+</p>
+
+
+<div class="poll-options">
+
+<button class="poll-option"
+onclick="selectVote(this,'experience')">
+👨‍🌾 ಅನುಭವ — Experience
+</button>
+
+<button class="poll-option"
+onclick="selectVote(this,'knowledge')">
+📚 ಜ್ಞಾನ — Knowledge
+</button>
+
+<button class="poll-option"
+onclick="selectVote(this,'technology')">
+🤖 ತಂತ್ರಜ್ಞಾನ — Technology
+</button>
+
+<button class="poll-option"
+onclick="selectVote(this,'science')">
+🧪 ವಿಜ್ಞಾನ — Science
+</button>
+
+<button
+id="voteButton"
+class="vote-btn"
+onclick="submitVote()"
+disabled>
+Vote ಮಾಡಿ
+</button>
+
+<div id="voteMessage" class="vote-message">
+
+ನಿಮ್ಮ ಮತಕ್ಕೆ ಧನ್ಯವಾದಗಳು 🙏<br>
+
+Thank you for participating!<br><br>
+
+Results Coming Soon | ಫಲಿತಾಂಶ ಶೀಘ್ರದಲ್ಲೇ
+
+</div>
+
+</div>
+
+
+<div class="buttons">
+
+<button
+class="btn share-btn"
+onclick="sharePoll(
+'🌱 SR CRESCO Farmers Poll – September 21, 2026',
+'🌾 ರೈತರೇ, ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ನೀವು ಯಾವುದನ್ನು ಹೆಚ್ಚು ನಂಬುತ್ತೀರಿ?\\n\\nFarmers, what do you believe matters most for success in farming?\\n\\n👨‍🌾 Experience\\n📚 Knowledge\\n🤖 Technology\\n🧪 Science\\n\\nVote now on SR CRESCO:\\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
+)">
+
+Share on WhatsApp
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
 <!-- SEPTEMBER 15 – ROBOTS & MACHINES FARMING POLL -->
 <!-- ================================================= -->
+
+<hr class="divider">
 
 <div class="poll-card">
 
@@ -334,7 +507,7 @@ Read More →
 class="btn share-btn"
 onclick="sharePoll(
 '🤖🌾 SR CRESCO Farmer Poll – September 15, 2026',
-'🤖🌾 ನಾಳೆ ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಕೆಲಸ ಮಾಡುವವರು ಮನುಷ್ಯರಲ್ಲ — Machines ಆಗಿದ್ರೆ?\n\nWhat if machines worked on your farm tomorrow?\n\nVote now on SR CRESCO:\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
+'🤖🌾 ನಾಳೆ ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಕೆಲಸ ಮಾಡುವವರು ಮನುಷ್ಯರಲ್ಲ — Machines ಆಗಿದ್ರೆ?\\n\\nWhat if machines worked on your farm tomorrow?\\n\\nVote now on SR CRESCO:\\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
 )">
 
 Share on WhatsApp
@@ -344,6 +517,7 @@ Share on WhatsApp
 </div>
 
 </div>
+
 
 <!-- ================================================= -->
 <!-- SEPTEMBER 13 – FARMER PRICE POLL -->
@@ -410,7 +584,7 @@ Read More →
 class="btn share-btn"
 onclick="sharePoll(
 '🌾 SR CRESCO Farmer Poll – September 13, 2026',
-'ರೈತನೇ ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡಬೇಕಾ?\n\nShould Farmers Have More Control Over the Price of Their Produce?\n\nVote now on SR CRESCO:\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
+'ರೈತನೇ ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡಬೇಕಾ?\\n\\nShould Farmers Have More Control Over the Price of Their Produce?\\n\\nVote now on SR CRESCO:\\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
 )">
 
 Share on WhatsApp
@@ -420,6 +594,7 @@ Share on WhatsApp
 </div>
 
 </div>
+
 
 <!-- ================================================= -->
 <!-- SEPTEMBER 12 – BEEKEEPING POLL -->
@@ -435,7 +610,6 @@ September 12, 2026
 📊 WhatsApp Poll
 </div>
 
-
 <h2>
 
 <div class="kannada">
@@ -450,29 +624,26 @@ Would you be interested in starting beekeeping on your farm?
 
 </h2>
 
-
 <p>
 <strong>ವಿಷಯ / Topic:</strong>
 ಜೇನು ಸಾಕಾಣಿಕೆ – ರೈತರಿಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಉತ್ತಮ ಅವಕಾಶ
 </p>
 
-
 <p>
-<strong>Beekeeping – An Extra Income Opportunity for Farmers</strong>
+<strong>
+Beekeeping – An Extra Income Opportunity for Farmers
+</strong>
 </p>
-
 
 <p>
 ಜೇನು ಸಾಕಾಣಿಕೆ ಕೃಷಿಯ ಜೊತೆಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯ ಪಡೆಯಲು ರೈತರಿಗೆ ಸಹಾಯಕವಾಗಬಹುದು.
 ತರಬೇತಿ, ಸರಿಯಾದ ಜೇನು ಪೆಟ್ಟಿಗೆ, ಜೇನುನೊಣಗಳ ಆರೈಕೆ ಮತ್ತು ಮಾರುಕಟ್ಟೆ ಮಾಹಿತಿ ಹೊಂದಿರುವುದು ಮುಖ್ಯ.
 </p>
 
-
 <p>
 Beekeeping can be a useful supplementary farm activity for additional income.
 Proper training, bee-box management, bee care and market knowledge are important.
 </p>
-
 
 <div class="buttons">
 
@@ -485,12 +656,11 @@ Read More →
 
 </a>
 
-
 <button
 class="btn share-btn"
 onclick="sharePoll(
 '🐝 SR CRESCO Farmer Poll – September 12, 2026',
-'ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಜೇನು ಸಾಕಾಣಿಕೆ ಆರಂಭಿಸಲು ನಿಮಗೆ ಆಸಕ್ತಿ ಇದೆಯೇ?\n\nWould you be interested in starting beekeeping on your farm?\n\nVote now on SR CRESCO:\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
+'ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಜೇನು ಸಾಕಾಣಿಕೆ ಆರಂಭಿಸಲು ನಿಮಗೆ ಆಸಕ್ತಿ ಇದೆಯೇ?\\n\\nWould you be interested in starting beekeeping on your farm?\\n\\nVote now on SR CRESCO:\\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
 )">
 
 Share on WhatsApp
@@ -502,13 +672,11 @@ Share on WhatsApp
 </div>
 
 
-
 <!-- ================================================= -->
 <!-- SEPTEMBER 11 – SOIL TESTING POLL -->
 <!-- ================================================= -->
 
 <hr class="divider">
-
 
 <div class="poll-card">
 
@@ -519,7 +687,6 @@ September 11, 2026
 <div class="poll-category">
 📊 WhatsApp Poll
 </div>
-
 
 <h2>
 
@@ -535,18 +702,15 @@ Have you tested the soil of your farm?
 
 </h2>
 
-
 <p>
 <strong>ವಿಷಯ / Topic:</strong>
 ಮಣ್ಣಿನ ಪರೀಕ್ಷೆಯ ಮಹತ್ವ
 </p>
 
-
 <p>
 ಮಣ್ಣಿನ ಪರೀಕ್ಷೆಯಿಂದ ಜಮೀನಿನಲ್ಲಿ ಇರುವ ಪೋಷಕಾಂಶಗಳ ಸ್ಥಿತಿ ತಿಳಿದುಕೊಂಡು,
 ಬೆಳೆಗೆ ಬೇಕಾದ ಗೊಬ್ಬರ ಮತ್ತು ಪೋಷಕಾಂಶಗಳನ್ನು ಸರಿಯಾದ ಪ್ರಮಾಣದಲ್ಲಿ ಬಳಸಲು ಸಹಾಯವಾಗುತ್ತದೆ.
 </p>
-
 
 <p>
 <strong>
@@ -554,7 +718,6 @@ Soil testing helps farmers understand the nutrient status of their soil
 and apply the right fertilizers and nutrients in the right quantity.
 </strong>
 </p>
-
 
 <div class="buttons">
 
@@ -567,12 +730,11 @@ Read More →
 
 </a>
 
-
 <button
 class="btn share-btn"
 onclick="sharePoll(
 '🌱 SR CRESCO Farmer Poll – September 11, 2026',
-'ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?\n\nHave you tested the soil of your farm?\n\nVote now on SR CRESCO:\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
+'ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?\\n\\nHave you tested the soil of your farm?\\n\\nVote now on SR CRESCO:\\nhttps://srcresco.github.io/SR-CRESCO/poll.html'
 )">
 
 Share on WhatsApp
@@ -584,9 +746,7 @@ Share on WhatsApp
 </div>
 
 
-
 </div>
-
 
 
 <!-- FOOTER -->
@@ -604,11 +764,72 @@ Share on WhatsApp
 </footer>
 
 
-
 <script>
 
+/* =========================================
+   NEW FARMERS POLL
+========================================= */
 
-/* POLL TRACKING */
+let selectedVote = "";
+
+function selectVote(button, option){
+
+    document.querySelectorAll(".poll-option").forEach(function(btn){
+
+        btn.classList.remove("selected");
+
+    });
+
+    button.classList.add("selected");
+
+    selectedVote = option;
+
+    document.getElementById("voteButton").disabled = false;
+
+}
+
+
+function submitVote(){
+
+    if(!selectedVote){
+        return;
+    }
+
+    if(typeof gtag === 'function'){
+
+        gtag('event','poll_option_selected',{
+
+            poll_date:'2026-09-21',
+
+            poll_topic:'farming-success',
+
+            poll_option:selectedVote
+
+        });
+
+    }
+
+    localStorage.setItem(
+        'srcresco_poll_2026_09_21',
+        selectedVote
+    );
+
+    document.getElementById("voteButton").disabled = true;
+
+    document.querySelectorAll(".poll-option").forEach(function(btn){
+
+        btn.disabled = true;
+
+    });
+
+    document.getElementById("voteMessage").style.display = "block";
+
+}
+
+
+/* =========================================
+   POLL TRACKING
+========================================= */
 
 function trackPoll(date, topic){
 
@@ -627,8 +848,9 @@ function trackPoll(date, topic){
 }
 
 
-
-/* WHATSAPP SHARE */
+/* =========================================
+   WHATSAPP SHARE
+========================================= */
 
 function sharePoll(title, text){
 
@@ -642,11 +864,9 @@ function sharePoll(title, text){
 
     }
 
-
     const whatsappURL =
     'https://wa.me/?text=' +
     encodeURIComponent(text);
-
 
     window.open(
         whatsappURL,
@@ -654,6 +874,47 @@ function sharePoll(title, text){
     );
 
 }
+
+
+/* =========================================
+   CHECK PREVIOUS VOTE
+========================================= */
+
+window.addEventListener('load', function(){
+
+    const previousVote =
+    localStorage.getItem(
+        'srcresco_poll_2026_09_21'
+    );
+
+    if(previousVote){
+
+        selectedVote = previousVote;
+
+        document.querySelectorAll(".poll-option").forEach(function(btn){
+
+            btn.disabled = true;
+
+            if(
+                btn.getAttribute("onclick") &&
+                btn.getAttribute("onclick").includes(
+                    "'" + previousVote + "'"
+                )
+            ){
+
+                btn.classList.add("selected");
+
+            }
+
+        });
+
+        document.getElementById("voteButton").disabled = true;
+
+        document.getElementById("voteMessage").style.display = "block";
+
+    }
+
+});
 
 </script>
 
