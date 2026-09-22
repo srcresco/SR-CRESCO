@@ -118,21 +118,6 @@ nav{
     margin-bottom:20px;
 }
 
-h1{
-    color:#123d25;
-    font-size:27px;
-    line-height:1.5;
-}
-
-h2{
-    color:#176b35;
-    margin-top:25px;
-}
-
-.english{
-    color:#555;
-}
-
 .option{
     display:block;
     background:#f5f7f3;
@@ -149,6 +134,11 @@ h2{
 .option:hover{
     background:#e7f2e9;
     transform:translateY(-2px);
+}
+
+.option.selected{
+    background:#dff1e3;
+    border-color:#176b35;
 }
 
 .back{
@@ -214,10 +204,6 @@ footer p{
         padding:20px;
     }
 
-    h1{
-        font-size:23px;
-    }
-
     .option{
         padding:14px;
     }
@@ -270,7 +256,7 @@ Poll
 
 
 <!-- ================================================= -->
-<!-- SEPTEMBER 21, 2026 – FARMING SUCCESS POLL -->
+<!-- SEPTEMBER 21, 2026 – OPTIONS ONLY -->
 <!-- ================================================= -->
 
 <div class="poll-card latest">
@@ -283,69 +269,13 @@ Poll
 September 21, 2026
 </div>
 
-<h1>
-
-🌾 ರೈತರೇ, ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ನೀವು
-ಯಾವುದನ್ನು ಹೆಚ್ಚು ನಂಬುತ್ತೀರಿ?
-
-</h1>
-
-<p class="english">
-
-<strong>
-🌾 Farmers, what do you believe matters most
-for success in farming?
-</strong>
-
-</p>
-
-<p>
-
-<strong>
-ವಿಷಯ / Topic:
-</strong>
-
-ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ಅನುಭವ, ಜ್ಞಾನ,
-ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ವಿಜ್ಞಾನದ ಪಾತ್ರ
-
-</p>
-
-<p>
-
-ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸು ಪಡೆಯಲು ರೈತರ ಅನುಭವದ ಜೊತೆಗೆ
-ಸರಿಯಾದ ಜ್ಞಾನ, ಹೊಸ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ವೈಜ್ಞಾನಿಕ
-ವಿಧಾನಗಳೂ ಮುಖ್ಯವಾಗಿವೆ.
-
-ನಿಮ್ಮ ಪ್ರಕಾರ ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ
-ಯಾವುದು ಹೆಚ್ಚು ಮುಖ್ಯ?
-
-</p>
-
-<p>
-
-<strong>
-
-Experience, knowledge, technology and science
-can all play an important role in farming.
-
-What do you believe matters most for
-achieving success in agriculture?
-
-</strong>
-
-</p>
-
-<h2>
-🗳️ ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ
-</h2>
-
 
 <!-- OPTION A -->
 
 <a
-href="poll-options.html"
+href="javascript:void(0)"
 class="option"
-onclick="trackOption('farming_success_experience')">
+onclick="trackOption(this,'farming_success_experience')">
 
 <strong>
 A. 👨‍🌾 ಅನುಭವ
@@ -363,9 +293,9 @@ Experience
 <!-- OPTION B -->
 
 <a
-href="poll-options.html"
+href="javascript:void(0)"
 class="option"
-onclick="trackOption('farming_success_knowledge')">
+onclick="trackOption(this,'farming_success_knowledge')">
 
 <strong>
 B. 📚 ಜ್ಞಾನ
@@ -383,9 +313,9 @@ Knowledge
 <!-- OPTION C -->
 
 <a
-href="poll-options.html"
+href="javascript:void(0)"
 class="option"
-onclick="trackOption('farming_success_technology')">
+onclick="trackOption(this,'farming_success_technology')">
 
 <strong>
 C. 🤖 ತಂತ್ರಜ್ಞಾನ
@@ -403,9 +333,9 @@ Technology
 <!-- OPTION D -->
 
 <a
-href="poll-options.html"
+href="javascript:void(0)"
 class="option"
-onclick="trackOption('farming_success_science')">
+onclick="trackOption(this,'farming_success_science')">
 
 <strong>
 D. 🧪 ವಿಜ್ಞಾನ
@@ -441,10 +371,10 @@ Share on WhatsApp
 
 
 <!-- ================================================= -->
-<!-- SEPTEMBER 15, 2026 – ROBOTS & MACHINES POLL -->
+<!-- SEPTEMBER 15, 2026 – ROBOTS & MACHINES -->
 <!-- ================================================= -->
 
-<div class="poll-card latest">
+<div class="poll-card">
 
 <div class="category">
 🤖🌾 Future Farming Poll
@@ -454,67 +384,11 @@ Share on WhatsApp
 September 15, 2026
 </div>
 
-<h1>
-
-🤖🌾 ನಾಳೆ ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಕೆಲಸ ಮಾಡುವವರು
-ಮನುಷ್ಯರಲ್ಲ — Machines ಆಗಿದ್ರೆ?
-
-</h1>
-
-<p class="english">
-
-<strong>
-What if machines worked on your farm tomorrow?
-</strong>
-
-</p>
-
-<p>
-
-<strong>
-ವಿಷಯ / Topic:
-</strong>
-
-ಕೃಷಿಯಲ್ಲಿ Robots, Smart Machines ಮತ್ತು Automation
-
-</p>
-
-<p>
-
-ಕೃಷಿಯಲ್ಲಿ ಕಾರ್ಮಿಕರ ಕೊರತೆ, ಹೆಚ್ಚುತ್ತಿರುವ ಕೂಲಿ ವೆಚ್ಚ
-ಮತ್ತು ಸಮಯದ ಒತ್ತಡ ರೈತರಿಗೆ ಸವಾಲಾಗುತ್ತಿದೆ.
-
-ಇಂತಹ ಸಂದರ್ಭದಲ್ಲಿ Robots ಮತ್ತು Smart Machines
-ಕೆಲವು ಕೃಷಿ ಕೆಲಸಗಳನ್ನು ಮಾಡಿದರೆ,
-ನೀವು ಅವುಗಳನ್ನು ಸ್ವೀಕರಿಸುತ್ತೀರಾ?
-
-</p>
-
-<p>
-
-<strong>
-
-Labour shortages, rising labour costs and time pressure
-are major challenges in agriculture.
-
-If robots and smart machines could perform some
-farm tasks, would you accept them?
-
-</strong>
-
-</p>
-
-<h2>
-🗳️ ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ
-</h2>
-
-
-<!-- OPTION A -->
 
 <a
 href="ai-details.html#robots-option-a"
 class="option"
-onclick="trackOption('robots_option_a')">
+onclick="trackOption(this,'robots_option_a')">
 
 <strong>
 A. ✅ ಹೌದು — Labour ಸಮಸ್ಯೆ ಕಡಿಮೆಯಾಗುತ್ತದೆ
@@ -529,12 +403,10 @@ Yes — It can reduce labour problems
 </a>
 
 
-<!-- OPTION B -->
-
 <a
 href="ai-details.html#robots-option-b"
 class="option"
-onclick="trackOption('robots_option_b')">
+onclick="trackOption(this,'robots_option_b')">
 
 <strong>
 B. 💰 ಸಣ್ಣ ರೈತರಿಗೆ affordable ಇದ್ದರೆ
@@ -549,12 +421,10 @@ If affordable for small farmers
 </a>
 
 
-<!-- OPTION C -->
-
 <a
 href="ai-details.html#robots-option-c"
 class="option"
-onclick="trackOption('robots_option_c')">
+onclick="trackOption(this,'robots_option_c')">
 
 <strong>
 C. 👨‍🌾 ಮನುಷ್ಯರ ಕೆಲಸವೇ ಉತ್ತಮ
@@ -569,12 +439,10 @@ Human workers are better
 </a>
 
 
-<!-- OPTION D -->
-
 <a
 href="ai-details.html#robots-option-d"
 class="option"
-onclick="trackOption('robots_option_d')">
+onclick="trackOption(this,'robots_option_d')">
 
 <strong>
 D. 👀 ಮೊದಲು ನೋಡಿ, ನಂತರ ನಿರ್ಧಾರ
@@ -610,7 +478,7 @@ Share on WhatsApp
 
 
 <!-- ================================================= -->
-<!-- SEPTEMBER 13, 2026 – FARMER PRICE POLL -->
+<!-- SEPTEMBER 13, 2026 – FARMER PRICE -->
 <!-- ================================================= -->
 
 <div class="poll-card">
@@ -623,27 +491,11 @@ Share on WhatsApp
 September 13, 2026
 </div>
 
-<h1>
-🌾💰 ರೈತನೇ ತನ್ನ ಉತ್ಪನ್ನಕ್ಕೆ ಬೆಲೆ ನಿಗದಿ ಮಾಡಬೇಕಾ?
-</h1>
-
-<p class="english">
-
-<strong>
-Should Farmers Have More Control Over the Price
-of Their Produce?
-</strong>
-
-</p>
-
-<h2>
-🗳️ ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ
-</h2>
 
 <a
 href="farmers-explanation.html#option1"
 class="option"
-onclick="trackOption('farmer_price_option1')">
+onclick="trackOption(this,'farmer_price_option1')">
 
 <strong>
 A. ✅ ರೈತನಿಗೆ ಹೆಚ್ಚಿನ ಬೆಲೆ ನಿರ್ಧಾರ ಅಧಿಕಾರ
@@ -657,10 +509,11 @@ More pricing power for farmers
 
 </a>
 
+
 <a
 href="farmers-explanation.html#option2"
 class="option"
-onclick="trackOption('farmer_price_option2')">
+onclick="trackOption(this,'farmer_price_option2')">
 
 <strong>
 B. 🤝 FPO ಮೂಲಕ ಒಟ್ಟಾಗಿ ಮಾರಾಟ
@@ -674,10 +527,11 @@ Collective selling through FPOs
 
 </a>
 
+
 <a
 href="farmers-explanation.html#option3"
 class="option"
-onclick="trackOption('farmer_price_option3')">
+onclick="trackOption(this,'farmer_price_option3')">
 
 <strong>
 C. 📱 ನೇರವಾಗಿ ಗ್ರಾಹಕರಿಗೆ ಮಾರಾಟ
@@ -691,10 +545,11 @@ Direct selling to consumers
 
 </a>
 
+
 <a
 href="farmers-explanation.html#option4"
 class="option"
-onclick="trackOption('farmer_price_option4')">
+onclick="trackOption(this,'farmer_price_option4')">
 
 <strong>
 D. 📊 Real-time market price ಮಾಹಿತಿ
@@ -707,6 +562,7 @@ Real-time market price information
 </span>
 
 </a>
+
 
 <div class="btn-row">
 
@@ -729,7 +585,7 @@ Share on WhatsApp
 
 
 <!-- ================================================= -->
-<!-- SEPTEMBER 12, 2026 – BEEKEEPING POLL -->
+<!-- SEPTEMBER 12, 2026 – BEEKEEPING -->
 <!-- ================================================= -->
 
 <div class="poll-card">
@@ -742,52 +598,50 @@ Share on WhatsApp
 September 12, 2026
 </div>
 
-<h1>
-ಜೇನು ಸಾಕಾಣಿಕೆ –
-ರೈತರಿಗೆ ಹೆಚ್ಚುವರಿ ಆದಾಯದ ಅವಕಾಶ
-</h1>
-
-<h2>
-ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಜೇನು ಸಾಕಾಣಿಕೆ
-ಆರಂಭಿಸಲು ನಿಮಗೆ ಆಸಕ್ತಿ ಇದೆಯೇ?
-</h2>
-
-<p class="english">
-Would you be interested in starting
-beekeeping on your farm?
-</p>
 
 <a
 href="beekeeping-beginner-guide.html"
 class="option"
-onclick="trackOption('beekeeping_option1')">
+onclick="trackOption(this,'beekeeping_option1')">
+
 1️⃣ ಹೌದು, ಆಸಕ್ತಿ ಇದೆ /
 Yes, I’m interested →
+
 </a>
+
 
 <a
 href="beekeeping-beginner-guide.html"
 class="option"
-onclick="trackOption('beekeeping_option2')">
+onclick="trackOption(this,'beekeeping_option2')">
+
 2️⃣ ಮಾಹಿತಿ ಸಿಕ್ಕರೆ ಆರಂಭಿಸುತ್ತೇನೆ /
 I would start if I get more information →
+
 </a>
+
 
 <a
 href="beekeeping-beginner-guide.html"
 class="option"
-onclick="trackOption('beekeeping_option3')">
+onclick="trackOption(this,'beekeeping_option3')">
+
 3️⃣ ಈಗಾಗಲೇ ಮಾಡುತ್ತಿದ್ದೇನೆ /
 I’m already doing it →
+
 </a>
+
 
 <a
 href="beekeeping-beginner-guide.html"
 class="option"
-onclick="trackOption('beekeeping_option4')">
+onclick="trackOption(this,'beekeeping_option4')">
+
 4️⃣ ಆಸಕ್ತಿ ಇಲ್ಲ /
 Not interested →
+
 </a>
+
 
 <div class="btn-row">
 
@@ -810,7 +664,7 @@ Share on WhatsApp
 
 
 <!-- ================================================= -->
-<!-- SEPTEMBER 11, 2026 – SOIL TEST POLL -->
+<!-- SEPTEMBER 11, 2026 – SOIL TEST -->
 <!-- ================================================= -->
 
 <div class="poll-card">
@@ -823,46 +677,46 @@ Share on WhatsApp
 September 11, 2026
 </div>
 
-<h1>
-ಮಣ್ಣು ಪರೀಕ್ಷೆ –
-ನಿಮ್ಮ ಜಮೀನಿನ ಮಣ್ಣಿನ ಸ್ಥಿತಿ ನಿಮಗೆ ಗೊತ್ತಿದೆಯೇ?
-</h1>
-
-<h2>
-ನೀವು ಇತ್ತೀಚೆಗೆ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮಾಡಿಸಿದ್ದೀರಾ?
-</h2>
-
-<p class="english">
-Have you tested your farm soil recently?
-</p>
 
 <a
 href="poll-details.html#option1"
 class="option"
-onclick="trackOption('soil_option1')">
+onclick="trackOption(this,'soil_option1')">
+
 1️⃣ ಹೌದು, ಇತ್ತೀಚೆಗೆ ಮಾಡಿಸಿದ್ದೇನೆ →
+
 </a>
+
 
 <a
 href="poll-details.html#option2"
 class="option"
-onclick="trackOption('soil_option2')">
+onclick="trackOption(this,'soil_option2')">
+
 2️⃣ ಹೌದು, ಆದರೆ ಬಹಳ ಹಿಂದೆಯೇ →
+
 </a>
+
 
 <a
 href="poll-details.html#option3"
 class="option"
-onclick="trackOption('soil_option3')">
+onclick="trackOption(this,'soil_option3')">
+
 3️⃣ ಇನ್ನೂ ಮಾಡಿಸಿಲ್ಲ →
+
 </a>
+
 
 <a
 href="poll-details.html#option4"
 class="option"
-onclick="trackOption('soil_option4')">
+onclick="trackOption(this,'soil_option4')">
+
 4️⃣ ಮಣ್ಣು ಪರೀಕ್ಷೆ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ಮಾಹಿತಿ ಬೇಕು →
+
 </a>
+
 
 <a
 href="poll.html"
@@ -904,7 +758,13 @@ Chamarajanagar, Karnataka, India
    POLL OPTION TRACKING
 ========================================= */
 
-function trackOption(optionName){
+function trackOption(element, optionName){
+
+    if(element){
+
+        element.classList.add("selected");
+
+    }
 
     if(typeof gtag === "function"){
 
@@ -961,7 +821,7 @@ function trackOption(optionName){
 
 
 /* =========================================
-   SEPTEMBER 21 – FARMING SUCCESS SHARE
+   SEPTEMBER 21 – SHARE
 ========================================= */
 
 function shareFarmingSuccess(){
@@ -1004,7 +864,7 @@ September 21, 2026`;
 
 
 /* =========================================
-   ROBOTS POLL SHARE
+   ROBOTS SHARE
 ========================================= */
 
 function shareRobotsPoll(){
