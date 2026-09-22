@@ -9,7 +9,7 @@
 <title>SR CRESCO | Poll Options</title>
 
 <meta name="description"
-content="SR CRESCO Farmer Poll Options – Robots & Machines, Farmer Price, Beekeeping and Soil Testing awareness polls.">
+content="SR CRESCO Farmer Poll Options – Farming Success, Robots & Machines, Farmer Price, Beekeeping and Soil Testing awareness polls.">
 
 <link rel="canonical"
 href="https://srcresco.github.io/SR-CRESCO/poll-options.html">
@@ -27,6 +27,7 @@ function gtag(){
 gtag('js', new Date());
 gtag('config', 'G-W9695JZYKH');
 </script>
+
 <!-- Vercel Web Analytics -->
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
@@ -229,6 +230,7 @@ footer p{
 
 <body>
 
+
 <!-- ================= NAVIGATION ================= -->
 
 <nav>
@@ -265,6 +267,177 @@ Poll
 
 
 <div class="container">
+
+
+<!-- ================================================= -->
+<!-- SEPTEMBER 21, 2026 – FARMING SUCCESS POLL -->
+<!-- ================================================= -->
+
+<div class="poll-card latest">
+
+<div class="category">
+🌱 SR CRESCO Farmers Poll
+</div>
+
+<div class="date">
+September 21, 2026
+</div>
+
+<h1>
+
+🌾 ರೈತರೇ, ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ನೀವು
+ಯಾವುದನ್ನು ಹೆಚ್ಚು ನಂಬುತ್ತೀರಿ?
+
+</h1>
+
+<p class="english">
+
+<strong>
+🌾 Farmers, what do you believe matters most
+for success in farming?
+</strong>
+
+</p>
+
+<p>
+
+<strong>
+ವಿಷಯ / Topic:
+</strong>
+
+ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ಅನುಭವ, ಜ್ಞಾನ,
+ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ವಿಜ್ಞಾನದ ಪಾತ್ರ
+
+</p>
+
+<p>
+
+ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸು ಪಡೆಯಲು ರೈತರ ಅನುಭವದ ಜೊತೆಗೆ
+ಸರಿಯಾದ ಜ್ಞಾನ, ಹೊಸ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ವೈಜ್ಞಾನಿಕ
+ವಿಧಾನಗಳೂ ಮುಖ್ಯವಾಗಿವೆ.
+
+ನಿಮ್ಮ ಪ್ರಕಾರ ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ
+ಯಾವುದು ಹೆಚ್ಚು ಮುಖ್ಯ?
+
+</p>
+
+<p>
+
+<strong>
+
+Experience, knowledge, technology and science
+can all play an important role in farming.
+
+What do you believe matters most for
+achieving success in agriculture?
+
+</strong>
+
+</p>
+
+<h2>
+🗳️ ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ
+</h2>
+
+
+<!-- OPTION A -->
+
+<a
+href="javascript:void(0)"
+class="option"
+onclick="trackOption('farming_success_experience')">
+
+<strong>
+A. 👨‍🌾 ಅನುಭವ
+</strong>
+
+<br>
+
+<span class="english">
+Experience
+</span>
+
+</a>
+
+
+<!-- OPTION B -->
+
+<a
+href="javascript:void(0)"
+class="option"
+onclick="trackOption('farming_success_knowledge')">
+
+<strong>
+B. 📚 ಜ್ಞಾನ
+</strong>
+
+<br>
+
+<span class="english">
+Knowledge
+</span>
+
+</a>
+
+
+<!-- OPTION C -->
+
+<a
+href="javascript:void(0)"
+class="option"
+onclick="trackOption('farming_success_technology')">
+
+<strong>
+C. 🤖 ತಂತ್ರಜ್ಞಾನ
+</strong>
+
+<br>
+
+<span class="english">
+Technology
+</span>
+
+</a>
+
+
+<!-- OPTION D -->
+
+<a
+href="javascript:void(0)"
+class="option"
+onclick="trackOption('farming_success_science')">
+
+<strong>
+D. 🧪 ವಿಜ್ಞಾನ
+</strong>
+
+<br>
+
+<span class="english">
+Science
+</span>
+
+</a>
+
+
+<div class="btn-row">
+
+<a
+href="poll.html"
+class="back">
+← Back to Poll
+</a>
+
+<a
+href="javascript:void(0)"
+class="share-btn"
+onclick="shareFarmingSuccess()">
+Share on WhatsApp
+</a>
+
+</div>
+
+</div>
 
 
 <!-- ================================================= -->
@@ -738,7 +911,14 @@ function trackOption(optionName){
         let pollDate = "";
         let pollType = "";
 
-        if(optionName.startsWith("robots")){
+        if(optionName.startsWith("farming_success")){
+
+            pollDate = "2026-09-21";
+            pollType = "farming-success";
+
+        }
+
+        else if(optionName.startsWith("robots")){
 
             pollDate = "2026-09-15";
             pollType = "robots-machines-farming";
@@ -776,6 +956,49 @@ function trackOption(optionName){
         });
 
     }
+
+}
+
+
+/* =========================================
+   SEPTEMBER 21 – FARMING SUCCESS SHARE
+========================================= */
+
+function shareFarmingSuccess(){
+
+    if(typeof gtag === "function"){
+
+        gtag('event','poll_share',{
+
+            poll_date:'2026-09-21',
+            poll_topic:'farming-success'
+
+        });
+
+    }
+
+    const text =
+`🌱 SR CRESCO Farmers Poll
+
+🌾 ರೈತರೇ, ಕೃಷಿಯಲ್ಲಿ ಯಶಸ್ಸಿಗೆ ನೀವು ಯಾವುದನ್ನು ಹೆಚ್ಚು ನಂಬುತ್ತೀರಿ?
+
+🌾 Farmers, what do you believe matters most for success in farming?
+
+👨‍🌾 Experience
+📚 Knowledge
+🤖 Technology
+🧪 Science
+
+Vote now on SR CRESCO 👇
+
+https://srcresco.github.io/SR-CRESCO/poll.html
+
+September 21, 2026`;
+
+    window.open(
+        "https://wa.me/?text="+encodeURIComponent(text),
+        "_blank"
+    );
 
 }
 
@@ -904,4 +1127,4 @@ September 12, 2026`;
 </script>
 
 </body>
-</html>
+ </html>
